@@ -3611,7 +3611,7 @@ namespace DotPostHog.Model
             if (this.SessionRecordingSampleRate != null) {
                 // SessionRecordingSampleRate (decimal?) pattern
                 Regex regexSessionRecordingSampleRate = new Regex(@"^-?\d{0,1}(?:\.\d{0,2})?$", RegexOptions.CultureInvariant);
-                if (!regexSessionRecordingSampleRate.Match(this.SessionRecordingSampleRate).Success)
+                if (!regexSessionRecordingSampleRate.Match(this.SessionRecordingSampleRate.GetValueOrDefault().ToString()).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SessionRecordingSampleRate, must match a pattern of " + regexSessionRecordingSampleRate, new [] { "SessionRecordingSampleRate" });
                 }
