@@ -1,0 +1,52 @@
+# DotPostHog.Model.Team
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | **int** |  | [readonly] 
+**Uuid** | **Guid** |  | [readonly] 
+**Organization** | **Guid** |  | [readonly] 
+**ApiToken** | **string** |  | [readonly] 
+**AppUrls** | **List&lt;string&gt;** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**SlackIncomingWebhook** | **string** |  | [optional] 
+**CreatedAt** | **DateTime** |  | [readonly] 
+**UpdatedAt** | **DateTime** |  | [readonly] 
+**AnonymizeIps** | **bool** |  | [optional] 
+**CompletedSnippetOnboarding** | **bool** |  | [optional] 
+**IngestedEvent** | **bool** |  | [readonly] 
+**TestAccountFilters** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**TestAccountFiltersDefaultChecked** | **bool?** |  | [optional] 
+**PathCleaningFilters** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**IsDemo** | **bool** |  | [optional] 
+**Timezone** | **string** |  | [optional] 
+**DataAttributes** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**PersonDisplayNameProperties** | **List&lt;string&gt;** |  | [optional] 
+**CorrelationConfig** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**AutocaptureOptOut** | **bool?** |  | [optional] 
+**AutocaptureExceptionsOptIn** | **bool?** |  | [optional] 
+**AutocaptureExceptionsErrorsToIgnore** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**CaptureConsoleLogOptIn** | **bool?** |  | [optional] 
+**CapturePerformanceOptIn** | **bool?** |  | [optional] 
+**SessionRecordingOptIn** | **bool** |  | [optional] 
+**SessionRecordingSampleRate** | **decimal?** |  | [optional] 
+**SessionRecordingMinimumDurationMilliseconds** | **int?** |  | [optional] 
+**SessionRecordingLinkedFlag** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**SessionRecordingNetworkPayloadCaptureConfig** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**EffectiveMembershipLevel** | **int?** |  | [readonly] 
+**AccessControl** | **bool** |  | [optional] 
+**WeekStartDay** | **int?** |  | [optional] 
+**HasGroupTypes** | **bool** |  | [readonly] 
+**PrimaryDashboard** | **int?** |  | [optional] 
+**LiveEventsColumns** | **List&lt;string&gt;** |  | [optional] 
+**RecordingDomains** | **List&lt;string&gt;** |  | [optional] 
+**PersonOnEventsQueryingEnabled** | **bool** |  | [readonly] 
+**GroupsOnEventsQueryingEnabled** | **bool** |  | [readonly] 
+**InjectWebApps** | **bool?** |  | [optional] 
+**ExtraSettings** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**HasCompletedOnboardingFor** | **Dictionary&lt;string, Object&gt;** |  | [optional] 
+**SurveysOptIn** | **bool?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -1,0 +1,28 @@
+{
+  "name": "posthog-dotnet",
+  "version": "1.0.0",
+  "description": "PostHog community .NET wrapper",
+  "main": "index.js",
+  "scripts": {
+    "generate": "npx @openapitools/openapi-generator-cli generate -i schema.yaml -g csharp -o . -c openapi-config.yaml",
+    "build": "dotnet build",
+    "test": "dotnet test",
+    "validate": "npx @openapitools/openapi-generator-cli validate -i schema.yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamranayub/dotposthog.git"
+  },
+  "keywords": [
+    "posthog"
+  ],
+  "author": "Kamran Ayub",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kamranayub/dotposthog/issues"
+  },
+  "homepage": "https://github.com/kamranayub/dotposthog#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.7.0"
+  }
+}
