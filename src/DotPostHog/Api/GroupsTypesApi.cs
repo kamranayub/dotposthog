@@ -32,8 +32,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;GroupType&gt;</returns>
-        List<GroupType> GroupsTypesList(string projectId, int operationIndex = 0);
+        /// <returns>List&lt;PostHogGroupType&gt;</returns>
+        List<PostHogGroupType> GroupsTypesList(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,17 +44,17 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;GroupType&gt;</returns>
-        ApiResponse<List<GroupType>> GroupsTypesListWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;PostHogGroupType&gt;</returns>
+        ApiResponse<List<PostHogGroupType>> GroupsTypesListWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GroupType</returns>
-        GroupType GroupsTypesUpdateMetadataPartialUpdate(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0);
+        /// <returns>PostHogGroupType</returns>
+        PostHogGroupType GroupsTypesUpdateMetadataPartialUpdate(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -64,10 +64,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GroupType</returns>
-        ApiResponse<GroupType> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogGroupType</returns>
+        ApiResponse<PostHogGroupType> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -87,8 +87,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;GroupType&gt;</returns>
-        System.Threading.Tasks.Task<List<GroupType>> GroupsTypesListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;PostHogGroupType&gt;</returns>
+        System.Threading.Tasks.Task<List<PostHogGroupType>> GroupsTypesListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -100,8 +100,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;GroupType&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<GroupType>>> GroupsTypesListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;PostHogGroupType&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PostHogGroupType>>> GroupsTypesListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -110,11 +110,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GroupType</returns>
-        System.Threading.Tasks.Task<GroupType> GroupsTypesUpdateMetadataPartialUpdateAsync(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogGroupType</returns>
+        System.Threading.Tasks.Task<PostHogGroupType> GroupsTypesUpdateMetadataPartialUpdateAsync(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -124,11 +124,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GroupType)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupType>> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogGroupType)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogGroupType>> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -255,10 +255,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;GroupType&gt;</returns>
-        public List<GroupType> GroupsTypesList(string projectId, int operationIndex = 0)
+        /// <returns>List&lt;PostHogGroupType&gt;</returns>
+        public List<PostHogGroupType> GroupsTypesList(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<List<GroupType>> localVarResponse = GroupsTypesListWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<List<PostHogGroupType>> localVarResponse = GroupsTypesListWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -268,8 +268,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;GroupType&gt;</returns>
-        public DotPostHog.Client.ApiResponse<List<GroupType>> GroupsTypesListWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;PostHogGroupType&gt;</returns>
+        public DotPostHog.Client.ApiResponse<List<PostHogGroupType>> GroupsTypesListWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -306,7 +306,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<GroupType>>("/api/projects/{project_id}/groups_types/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<PostHogGroupType>>("/api/projects/{project_id}/groups_types/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsTypesList", localVarResponse);
@@ -326,10 +326,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;GroupType&gt;</returns>
-        public async System.Threading.Tasks.Task<List<GroupType>> GroupsTypesListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;PostHogGroupType&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PostHogGroupType>> GroupsTypesListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<List<GroupType>> localVarResponse = await GroupsTypesListWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<List<PostHogGroupType>> localVarResponse = await GroupsTypesListWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -340,8 +340,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;GroupType&gt;)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<List<GroupType>>> GroupsTypesListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;PostHogGroupType&gt;)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<List<PostHogGroupType>>> GroupsTypesListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -379,7 +379,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<GroupType>>("/api/projects/{project_id}/groups_types/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PostHogGroupType>>("/api/projects/{project_id}/groups_types/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -398,12 +398,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>GroupType</returns>
-        public GroupType GroupsTypesUpdateMetadataPartialUpdate(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0)
+        /// <returns>PostHogGroupType</returns>
+        public PostHogGroupType GroupsTypesUpdateMetadataPartialUpdate(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<GroupType> localVarResponse = GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(projectId, patchedGroupType);
+            DotPostHog.Client.ApiResponse<PostHogGroupType> localVarResponse = GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(projectId, postHogPatchedGroupType);
             return localVarResponse.Data;
         }
 
@@ -412,10 +412,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of GroupType</returns>
-        public DotPostHog.Client.ApiResponse<GroupType> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogGroupType</returns>
+        public DotPostHog.Client.ApiResponse<PostHogGroupType> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -449,14 +449,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedGroupType;
+            localVarRequestOptions.Data = postHogPatchedGroupType;
 
             localVarRequestOptions.Operation = "GroupsTypesApi.GroupsTypesUpdateMetadataPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<GroupType>("/api/projects/{project_id}/groups_types/update_metadata/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogGroupType>("/api/projects/{project_id}/groups_types/update_metadata/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsTypesUpdateMetadataPartialUpdate", localVarResponse);
@@ -474,13 +474,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of GroupType</returns>
-        public async System.Threading.Tasks.Task<GroupType> GroupsTypesUpdateMetadataPartialUpdateAsync(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogGroupType</returns>
+        public async System.Threading.Tasks.Task<PostHogGroupType> GroupsTypesUpdateMetadataPartialUpdateAsync(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<GroupType> localVarResponse = await GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(projectId, patchedGroupType, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogGroupType> localVarResponse = await GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(projectId, postHogPatchedGroupType, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -489,11 +489,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedGroupType"> (optional)</param>
+        /// <param name="postHogPatchedGroupType"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (GroupType)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<GroupType>> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(string projectId, PatchedGroupType patchedGroupType = default(PatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogGroupType)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogGroupType>> GroupsTypesUpdateMetadataPartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedGroupType postHogPatchedGroupType = default(PostHogPatchedGroupType), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -528,14 +528,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedGroupType;
+            localVarRequestOptions.Data = postHogPatchedGroupType;
 
             localVarRequestOptions.Operation = "GroupsTypesApi.GroupsTypesUpdateMetadataPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<GroupType>("/api/projects/{project_id}/groups_types/update_metadata/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogGroupType>("/api/projects/{project_id}/groups_types/update_metadata/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

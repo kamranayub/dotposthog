@@ -16,7 +16,7 @@ All URIs are relative to *http://localhost*
 
 <a id="sessionrecordingplaylistscreate"></a>
 # **SessionRecordingPlaylistsCreate**
-> SessionRecordingPlaylist SessionRecordingPlaylistsCreate (string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = null)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsCreate (string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null)
 
 
 
@@ -38,11 +38,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new SessionRecordingPlaylistsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var sessionRecordingPlaylist = new SessionRecordingPlaylist(); // SessionRecordingPlaylist |  (optional) 
+            var postHogSessionRecordingPlaylist = new PostHogSessionRecordingPlaylist(); // PostHogSessionRecordingPlaylist |  (optional) 
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsCreate(projectId, sessionRecordingPlaylist);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsCreate(projectId, postHogSessionRecordingPlaylist);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsCreateWithHttpInfo(projectId, sessionRecordingPlaylist);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsCreateWithHttpInfo(projectId, postHogSessionRecordingPlaylist);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -80,11 +80,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **sessionRecordingPlaylist** | [**SessionRecordingPlaylist**](SessionRecordingPlaylist.md) |  | [optional]  |
+| **postHogSessionRecordingPlaylist** | [**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md) |  | [optional]  |
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistslist"></a>
 # **SessionRecordingPlaylistsList**
-> PaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList (string projectId, int? createdBy = null, int? limit = null, int? offset = null, string shortId = null)
+> PostHogPaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList (string projectId, int? createdBy = null, int? limit = null, int? offset = null, string shortId = null)
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                PaginatedSessionRecordingPlaylistList result = apiInstance.SessionRecordingPlaylistsList(projectId, createdBy, limit, offset, shortId);
+                PostHogPaginatedSessionRecordingPlaylistList result = apiInstance.SessionRecordingPlaylistsList(projectId, createdBy, limit, offset, shortId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -241,7 +241,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedSessionRecordingPlaylistList> response = apiInstance.SessionRecordingPlaylistsListWithHttpInfo(projectId, createdBy, limit, offset, shortId);
+    ApiResponse<PostHogPaginatedSessionRecordingPlaylistList> response = apiInstance.SessionRecordingPlaylistsListWithHttpInfo(projectId, createdBy, limit, offset, shortId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -266,7 +266,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedSessionRecordingPlaylistList**](PaginatedSessionRecordingPlaylistList.md)
+[**PostHogPaginatedSessionRecordingPlaylistList**](PostHogPaginatedSessionRecordingPlaylistList.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistspartialupdate"></a>
 # **SessionRecordingPlaylistsPartialUpdate**
-> SessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate (string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = null)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate (string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = null)
 
 
 
@@ -310,11 +310,11 @@ namespace Example
             var apiInstance = new SessionRecordingPlaylistsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var shortId = "shortId_example";  // string | 
-            var patchedSessionRecordingPlaylist = new PatchedSessionRecordingPlaylist(); // PatchedSessionRecordingPlaylist |  (optional) 
+            var postHogPatchedSessionRecordingPlaylist = new PostHogPatchedSessionRecordingPlaylist(); // PostHogPatchedSessionRecordingPlaylist |  (optional) 
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsPartialUpdate(projectId, shortId, patchedSessionRecordingPlaylist);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsPartialUpdate(projectId, shortId, postHogPatchedSessionRecordingPlaylist);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -334,7 +334,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsPartialUpdateWithHttpInfo(projectId, shortId, patchedSessionRecordingPlaylist);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsPartialUpdateWithHttpInfo(projectId, shortId, postHogPatchedSessionRecordingPlaylist);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -353,11 +353,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **shortId** | **string** |  |  |
-| **patchedSessionRecordingPlaylist** | [**PatchedSessionRecordingPlaylist**](PatchedSessionRecordingPlaylist.md) |  | [optional]  |
+| **postHogPatchedSessionRecordingPlaylist** | [**PostHogPatchedSessionRecordingPlaylist**](PostHogPatchedSessionRecordingPlaylist.md) |  | [optional]  |
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistsrecordingscreate"></a>
 # **SessionRecordingPlaylistsRecordingsCreate**
-> SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate (string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = null)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate (string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null)
 
 
 
@@ -402,11 +402,11 @@ namespace Example
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var sessionRecordingId = "sessionRecordingId_example";  // string | 
             var shortId = "shortId_example";  // string | 
-            var sessionRecordingPlaylist = new SessionRecordingPlaylist(); // SessionRecordingPlaylist |  (optional) 
+            var postHogSessionRecordingPlaylist = new PostHogSessionRecordingPlaylist(); // PostHogSessionRecordingPlaylist |  (optional) 
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRecordingsCreate(projectId, sessionRecordingId, shortId, sessionRecordingPlaylist);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRecordingsCreate(projectId, sessionRecordingId, shortId, postHogSessionRecordingPlaylist);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -426,7 +426,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(projectId, sessionRecordingId, shortId, sessionRecordingPlaylist);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(projectId, sessionRecordingId, shortId, postHogSessionRecordingPlaylist);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -446,11 +446,11 @@ catch (ApiException e)
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **sessionRecordingId** | **string** |  |  |
 | **shortId** | **string** |  |  |
-| **sessionRecordingPlaylist** | [**SessionRecordingPlaylist**](SessionRecordingPlaylist.md) |  | [optional]  |
+| **postHogSessionRecordingPlaylist** | [**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md) |  | [optional]  |
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 
@@ -558,7 +558,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistsrecordingsretrieve"></a>
 # **SessionRecordingPlaylistsRecordingsRetrieve**
-> SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve (string projectId, string shortId)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve (string projectId, string shortId)
 
 
 
@@ -584,7 +584,7 @@ namespace Example
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRecordingsRetrieve(projectId, shortId);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRecordingsRetrieve(projectId, shortId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -604,7 +604,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(projectId, shortId);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(projectId, shortId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -626,7 +626,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 
@@ -647,7 +647,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistsretrieve"></a>
 # **SessionRecordingPlaylistsRetrieve**
-> SessionRecordingPlaylist SessionRecordingPlaylistsRetrieve (string projectId, string shortId)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRetrieve (string projectId, string shortId)
 
 
 
@@ -673,7 +673,7 @@ namespace Example
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRetrieve(projectId, shortId);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsRetrieve(projectId, shortId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -693,7 +693,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRetrieveWithHttpInfo(projectId, shortId);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsRetrieveWithHttpInfo(projectId, shortId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -715,7 +715,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 
@@ -736,7 +736,7 @@ No authorization required
 
 <a id="sessionrecordingplaylistsupdate"></a>
 # **SessionRecordingPlaylistsUpdate**
-> SessionRecordingPlaylist SessionRecordingPlaylistsUpdate (string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = null)
+> PostHogSessionRecordingPlaylist SessionRecordingPlaylistsUpdate (string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null)
 
 
 
@@ -759,11 +759,11 @@ namespace Example
             var apiInstance = new SessionRecordingPlaylistsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var shortId = "shortId_example";  // string | 
-            var sessionRecordingPlaylist = new SessionRecordingPlaylist(); // SessionRecordingPlaylist |  (optional) 
+            var postHogSessionRecordingPlaylist = new PostHogSessionRecordingPlaylist(); // PostHogSessionRecordingPlaylist |  (optional) 
 
             try
             {
-                SessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsUpdate(projectId, shortId, sessionRecordingPlaylist);
+                PostHogSessionRecordingPlaylist result = apiInstance.SessionRecordingPlaylistsUpdate(projectId, shortId, postHogSessionRecordingPlaylist);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -783,7 +783,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsUpdateWithHttpInfo(projectId, shortId, sessionRecordingPlaylist);
+    ApiResponse<PostHogSessionRecordingPlaylist> response = apiInstance.SessionRecordingPlaylistsUpdateWithHttpInfo(projectId, shortId, postHogSessionRecordingPlaylist);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -802,11 +802,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **shortId** | **string** |  |  |
-| **sessionRecordingPlaylist** | [**SessionRecordingPlaylist**](SessionRecordingPlaylist.md) |  | [optional]  |
+| **postHogSessionRecordingPlaylist** | [**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md) |  | [optional]  |
 
 ### Return type
 
-[**SessionRecordingPlaylist**](SessionRecordingPlaylist.md)
+[**PostHogSessionRecordingPlaylist**](PostHogSessionRecordingPlaylist.md)
 
 ### Authorization
 

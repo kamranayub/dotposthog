@@ -64,7 +64,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.ExportsContentRetrieve(id, projectId);
-            //Assert.IsType<ExportedAsset>(response);
+            //Assert.IsType<PostHogExportedAsset>(response);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //ExportedAsset exportedAsset = null;
-            //var response = instance.ExportsCreate(projectId, exportedAsset);
-            //Assert.IsType<ExportedAsset>(response);
+            //PostHogExportedAsset postHogExportedAsset = null;
+            //var response = instance.ExportsCreate(projectId, postHogExportedAsset);
+            //Assert.IsType<PostHogExportedAsset>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.ExportsRetrieve(id, projectId);
-            //Assert.IsType<ExportedAsset>(response);
+            //Assert.IsType<PostHogExportedAsset>(response);
         }
     }
 }

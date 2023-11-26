@@ -110,8 +110,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedActionList</returns>
-        PaginatedActionList ActionsList(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedActionList</returns>
+        PostHogPaginatedActionList ActionsList(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -125,8 +125,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedActionList</returns>
-        ApiResponse<PaginatedActionList> ActionsListWithHttpInfo(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedActionList</returns>
+        ApiResponse<PostHogPaginatedActionList> ActionsListWithHttpInfo(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -134,10 +134,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PostHogAction</returns>
-        PostHogAction ActionsPartialUpdate(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0);
+        PostHogAction ActionsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -149,10 +149,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PostHogAction</returns>
-        ApiResponse<PostHogAction> ActionsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0);
+        ApiResponse<PostHogAction> ActionsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -334,8 +334,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedActionList</returns>
-        System.Threading.Tasks.Task<PaginatedActionList> ActionsListAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedActionList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedActionList> ActionsListAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -350,8 +350,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedActionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedActionList>> ActionsListWithHttpInfoAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedActionList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedActionList>> ActionsListWithHttpInfoAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -362,11 +362,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PostHogAction</returns>
-        System.Threading.Tasks.Task<PostHogAction> ActionsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PostHogAction> ActionsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -378,11 +378,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PostHogAction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PostHogAction>> ActionsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PostHogAction>> ActionsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1091,10 +1091,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedActionList</returns>
-        public PaginatedActionList ActionsList(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedActionList</returns>
+        public PostHogPaginatedActionList ActionsList(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedActionList> localVarResponse = ActionsListWithHttpInfo(projectId, format, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedActionList> localVarResponse = ActionsListWithHttpInfo(projectId, format, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1107,8 +1107,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedActionList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedActionList> ActionsListWithHttpInfo(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedActionList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedActionList> ActionsListWithHttpInfo(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1158,7 +1158,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedActionList>("/api/projects/{project_id}/actions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedActionList>("/api/projects/{project_id}/actions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ActionsList", localVarResponse);
@@ -1181,10 +1181,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedActionList</returns>
-        public async System.Threading.Tasks.Task<PaginatedActionList> ActionsListAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedActionList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedActionList> ActionsListAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedActionList> localVarResponse = await ActionsListWithHttpInfoAsync(projectId, format, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedActionList> localVarResponse = await ActionsListWithHttpInfoAsync(projectId, format, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1198,8 +1198,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedActionList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedActionList>> ActionsListWithHttpInfoAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedActionList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedActionList>> ActionsListWithHttpInfoAsync(string projectId, string format = default(string), int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1250,7 +1250,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedActionList>("/api/projects/{project_id}/actions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedActionList>("/api/projects/{project_id}/actions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1271,12 +1271,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PostHogAction</returns>
-        public PostHogAction ActionsPartialUpdate(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0)
+        public PostHogAction ActionsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PostHogAction> localVarResponse = ActionsPartialUpdateWithHttpInfo(id, projectId, format, patchedAction);
+            DotPostHog.Client.ApiResponse<PostHogAction> localVarResponse = ActionsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedAction);
             return localVarResponse.Data;
         }
 
@@ -1287,10 +1287,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PostHogAction</returns>
-        public DotPostHog.Client.ApiResponse<PostHogAction> ActionsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0)
+        public DotPostHog.Client.ApiResponse<PostHogAction> ActionsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1330,7 +1330,7 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedAction;
+            localVarRequestOptions.Data = postHogPatchedAction;
 
             localVarRequestOptions.Operation = "ActionsApi.ActionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1357,13 +1357,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PostHogAction</returns>
-        public async System.Threading.Tasks.Task<PostHogAction> ActionsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PostHogAction> ActionsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PostHogAction> localVarResponse = await ActionsPartialUpdateWithHttpInfoAsync(id, projectId, format, patchedAction, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogAction> localVarResponse = await ActionsPartialUpdateWithHttpInfoAsync(id, projectId, format, postHogPatchedAction, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1374,11 +1374,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this action.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedAction"> (optional)</param>
+        /// <param name="postHogPatchedAction"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PostHogAction)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAction>> ActionsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedAction patchedAction = default(PatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAction>> ActionsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedAction postHogPatchedAction = default(PostHogPatchedAction), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1419,7 +1419,7 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedAction;
+            localVarRequestOptions.Data = postHogPatchedAction;
 
             localVarRequestOptions.Operation = "ActionsApi.ActionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;

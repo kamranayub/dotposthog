@@ -63,9 +63,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Funnel funnel = null;
-            //var response = instance.Funnels(projectId, format, funnel);
-            //Assert.IsType<FunnelStepsResults>(response);
+            //PostHogFunnel postHogFunnel = null;
+            //var response = instance.Funnels(projectId, format, postHogFunnel);
+            //Assert.IsType<PostHogFunnelStepsResults>(response);
         }
     }
 }

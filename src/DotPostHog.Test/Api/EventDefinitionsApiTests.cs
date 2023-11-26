@@ -77,7 +77,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.EventDefinitionsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedEnterpriseEventDefinitionList>(response);
+            //Assert.IsType<PostHogPaginatedEnterpriseEventDefinitionList>(response);
         }
 
         /// <summary>
@@ -89,9 +89,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = null;
-            //var response = instance.EventDefinitionsPartialUpdate(id, projectId, patchedEnterpriseEventDefinition);
-            //Assert.IsType<EnterpriseEventDefinition>(response);
+            //PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = null;
+            //var response = instance.EventDefinitionsPartialUpdate(id, projectId, postHogPatchedEnterpriseEventDefinition);
+            //Assert.IsType<PostHogEnterpriseEventDefinition>(response);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace DotPostHog.Test.Api
             //string id = null;
             //string projectId = null;
             //var response = instance.EventDefinitionsRetrieve(id, projectId);
-            //Assert.IsType<EnterpriseEventDefinition>(response);
+            //Assert.IsType<PostHogEnterpriseEventDefinition>(response);
         }
 
         /// <summary>
@@ -116,9 +116,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //EnterpriseEventDefinition enterpriseEventDefinition = null;
-            //var response = instance.EventDefinitionsUpdate(id, projectId, enterpriseEventDefinition);
-            //Assert.IsType<EnterpriseEventDefinition>(response);
+            //PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = null;
+            //var response = instance.EventDefinitionsUpdate(id, projectId, postHogEnterpriseEventDefinition);
+            //Assert.IsType<PostHogEnterpriseEventDefinition>(response);
         }
     }
 }

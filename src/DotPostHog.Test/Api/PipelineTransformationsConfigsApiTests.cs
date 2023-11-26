@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PipelineTransformationsConfigsCreate(projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PipelineTransformationsConfigsCreate(projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.PipelineTransformationsConfigsFrontendRetrieve(id, projectId);
-            //Assert.IsType<PluginConfig>(response);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -101,9 +101,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PipelineTransformationsConfigsJobCreate(id, projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PipelineTransformationsConfigsJobCreate(id, projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.PipelineTransformationsConfigsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedPluginConfigList>(response);
+            //Assert.IsType<PostHogPaginatedPluginConfigList>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedPluginConfig patchedPluginConfig = null;
-            //var response = instance.PipelineTransformationsConfigsPartialUpdate(id, projectId, patchedPluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPatchedPluginConfig postHogPatchedPluginConfig = null;
+            //var response = instance.PipelineTransformationsConfigsPartialUpdate(id, projectId, postHogPatchedPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -142,9 +142,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //PatchedPluginConfig patchedPluginConfig = null;
-            //var response = instance.PipelineTransformationsConfigsRearrangePartialUpdate(projectId, patchedPluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPatchedPluginConfig postHogPatchedPluginConfig = null;
+            //var response = instance.PipelineTransformationsConfigsRearrangePartialUpdate(projectId, postHogPatchedPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.PipelineTransformationsConfigsRetrieve(id, projectId);
-            //Assert.IsType<PluginConfig>(response);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -169,9 +169,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PipelineTransformationsConfigsUpdate(id, projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PipelineTransformationsConfigsUpdate(id, projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
     }
 }

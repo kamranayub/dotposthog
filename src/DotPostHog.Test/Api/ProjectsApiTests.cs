@@ -61,9 +61,9 @@ namespace DotPostHog.Test.Api
         public void CreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Team team = null;
-            //var response = instance.Create(team);
-            //Assert.IsType<Team>(response);
+            //PostHogTeam postHogTeam = null;
+            //var response = instance.Create(postHogTeam);
+            //Assert.IsType<PostHogTeam>(response);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.List(limit, offset);
-            //Assert.IsType<PaginatedTeamBasicList>(response);
+            //Assert.IsType<PostHogPaginatedTeamBasicList>(response);
         }
 
         /// <summary>
@@ -98,9 +98,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //PatchedTeam patchedTeam = null;
-            //var response = instance.PartialUpdate(id, patchedTeam);
-            //Assert.IsType<Team>(response);
+            //PostHogPatchedTeam postHogPatchedTeam = null;
+            //var response = instance.PartialUpdate(id, postHogPatchedTeam);
+            //Assert.IsType<PostHogTeam>(response);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //var response = instance.Retrieve(id);
-            //Assert.IsType<Team>(response);
+            //Assert.IsType<PostHogTeam>(response);
         }
 
         /// <summary>
@@ -123,9 +123,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //Team team = null;
-            //var response = instance.Update(id, team);
-            //Assert.IsType<Team>(response);
+            //PostHogTeam postHogTeam = null;
+            //var response = instance.Update(id, postHogTeam);
+            //Assert.IsType<PostHogTeam>(response);
         }
     }
 }

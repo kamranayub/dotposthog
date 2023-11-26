@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ActivityLog</returns>
-        ActivityLog ActivityLogBookmarkActivityNotificationCreate(string projectId, ActivityLog activityLog, int operationIndex = 0);
+        /// <returns>PostHogActivityLog</returns>
+        PostHogActivityLog ActivityLogBookmarkActivityNotificationCreate(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,18 +44,18 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ActivityLog</returns>
-        ApiResponse<ActivityLog> ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(string projectId, ActivityLog activityLog, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogActivityLog</returns>
+        ApiResponse<PostHogActivityLog> ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ActivityLog</returns>
-        ActivityLog ActivityLogImportantChangesRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogActivityLog</returns>
+        PostHogActivityLog ActivityLogImportantChangesRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -66,8 +66,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ActivityLog</returns>
-        ApiResponse<ActivityLog> ActivityLogImportantChangesRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogActivityLog</returns>
+        ApiResponse<PostHogActivityLog> ActivityLogImportantChangesRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -85,11 +85,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ActivityLog</returns>
-        System.Threading.Tasks.Task<ActivityLog> ActivityLogBookmarkActivityNotificationCreateAsync(string projectId, ActivityLog activityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogActivityLog</returns>
+        System.Threading.Tasks.Task<PostHogActivityLog> ActivityLogBookmarkActivityNotificationCreateAsync(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -99,11 +99,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ActivityLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivityLog>> ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(string projectId, ActivityLog activityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogActivityLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogActivityLog>> ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -114,8 +114,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ActivityLog</returns>
-        System.Threading.Tasks.Task<ActivityLog> ActivityLogImportantChangesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogActivityLog</returns>
+        System.Threading.Tasks.Task<PostHogActivityLog> ActivityLogImportantChangesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -127,8 +127,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ActivityLog)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivityLog>> ActivityLogImportantChangesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogActivityLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogActivityLog>> ActivityLogImportantChangesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -254,12 +254,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ActivityLog</returns>
-        public ActivityLog ActivityLogBookmarkActivityNotificationCreate(string projectId, ActivityLog activityLog, int operationIndex = 0)
+        /// <returns>PostHogActivityLog</returns>
+        public PostHogActivityLog ActivityLogBookmarkActivityNotificationCreate(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ActivityLog> localVarResponse = ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(projectId, activityLog);
+            DotPostHog.Client.ApiResponse<PostHogActivityLog> localVarResponse = ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(projectId, postHogActivityLog);
             return localVarResponse.Data;
         }
 
@@ -268,10 +268,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ActivityLog</returns>
-        public DotPostHog.Client.ApiResponse<ActivityLog> ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(string projectId, ActivityLog activityLog, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogActivityLog</returns>
+        public DotPostHog.Client.ApiResponse<PostHogActivityLog> ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -279,10 +279,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
             }
 
-            // verify the required parameter 'activityLog' is set
-            if (activityLog == null)
+            // verify the required parameter 'postHogActivityLog' is set
+            if (postHogActivityLog == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'activityLog' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogActivityLog' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -311,14 +311,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = activityLog;
+            localVarRequestOptions.Data = postHogActivityLog;
 
             localVarRequestOptions.Operation = "ActivityLogApi.ActivityLogBookmarkActivityNotificationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ActivityLog>("/api/projects/{project_id}/activity_log/bookmark_activity_notification/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogActivityLog>("/api/projects/{project_id}/activity_log/bookmark_activity_notification/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ActivityLogBookmarkActivityNotificationCreate", localVarResponse);
@@ -336,13 +336,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ActivityLog</returns>
-        public async System.Threading.Tasks.Task<ActivityLog> ActivityLogBookmarkActivityNotificationCreateAsync(string projectId, ActivityLog activityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogActivityLog</returns>
+        public async System.Threading.Tasks.Task<PostHogActivityLog> ActivityLogBookmarkActivityNotificationCreateAsync(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ActivityLog> localVarResponse = await ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(projectId, activityLog, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogActivityLog> localVarResponse = await ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(projectId, postHogActivityLog, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -351,11 +351,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="activityLog"></param>
+        /// <param name="postHogActivityLog"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ActivityLog)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ActivityLog>> ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(string projectId, ActivityLog activityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogActivityLog)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogActivityLog>> ActivityLogBookmarkActivityNotificationCreateWithHttpInfoAsync(string projectId, PostHogActivityLog postHogActivityLog, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -363,10 +363,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
             }
 
-            // verify the required parameter 'activityLog' is set
-            if (activityLog == null)
+            // verify the required parameter 'postHogActivityLog' is set
+            if (postHogActivityLog == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'activityLog' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogActivityLog' when calling ActivityLogApi->ActivityLogBookmarkActivityNotificationCreate");
             }
 
 
@@ -396,14 +396,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = activityLog;
+            localVarRequestOptions.Data = postHogActivityLog;
 
             localVarRequestOptions.Operation = "ActivityLogApi.ActivityLogBookmarkActivityNotificationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ActivityLog>("/api/projects/{project_id}/activity_log/bookmark_activity_notification/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogActivityLog>("/api/projects/{project_id}/activity_log/bookmark_activity_notification/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -423,10 +423,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ActivityLog</returns>
-        public ActivityLog ActivityLogImportantChangesRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogActivityLog</returns>
+        public PostHogActivityLog ActivityLogImportantChangesRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ActivityLog> localVarResponse = ActivityLogImportantChangesRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogActivityLog> localVarResponse = ActivityLogImportantChangesRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -436,8 +436,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ActivityLog</returns>
-        public DotPostHog.Client.ApiResponse<ActivityLog> ActivityLogImportantChangesRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogActivityLog</returns>
+        public DotPostHog.Client.ApiResponse<PostHogActivityLog> ActivityLogImportantChangesRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -474,7 +474,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ActivityLog>("/api/projects/{project_id}/activity_log/important_changes/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogActivityLog>("/api/projects/{project_id}/activity_log/important_changes/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ActivityLogImportantChangesRetrieve", localVarResponse);
@@ -494,10 +494,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ActivityLog</returns>
-        public async System.Threading.Tasks.Task<ActivityLog> ActivityLogImportantChangesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogActivityLog</returns>
+        public async System.Threading.Tasks.Task<PostHogActivityLog> ActivityLogImportantChangesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ActivityLog> localVarResponse = await ActivityLogImportantChangesRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogActivityLog> localVarResponse = await ActivityLogImportantChangesRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -508,8 +508,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ActivityLog)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ActivityLog>> ActivityLogImportantChangesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogActivityLog)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogActivityLog>> ActivityLogImportantChangesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -547,7 +547,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ActivityLog>("/api/projects/{project_id}/activity_log/important_changes/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogActivityLog>("/api/projects/{project_id}/activity_log/important_changes/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

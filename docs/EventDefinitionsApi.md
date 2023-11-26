@@ -97,7 +97,7 @@ No authorization required
 
 <a id="eventdefinitionslist"></a>
 # **EventDefinitionsList**
-> PaginatedEnterpriseEventDefinitionList EventDefinitionsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedEnterpriseEventDefinitionList EventDefinitionsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -124,7 +124,7 @@ namespace Example
 
             try
             {
-                PaginatedEnterpriseEventDefinitionList result = apiInstance.EventDefinitionsList(projectId, limit, offset);
+                PostHogPaginatedEnterpriseEventDefinitionList result = apiInstance.EventDefinitionsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -144,7 +144,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedEnterpriseEventDefinitionList> response = apiInstance.EventDefinitionsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList> response = apiInstance.EventDefinitionsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -167,7 +167,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedEnterpriseEventDefinitionList**](PaginatedEnterpriseEventDefinitionList.md)
+[**PostHogPaginatedEnterpriseEventDefinitionList**](PostHogPaginatedEnterpriseEventDefinitionList.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 <a id="eventdefinitionspartialupdate"></a>
 # **EventDefinitionsPartialUpdate**
-> EnterpriseEventDefinition EventDefinitionsPartialUpdate (string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = null)
+> PostHogEnterpriseEventDefinition EventDefinitionsPartialUpdate (string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = null)
 
 
 
@@ -211,11 +211,11 @@ namespace Example
             var apiInstance = new EventDefinitionsApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedEnterpriseEventDefinition = new PatchedEnterpriseEventDefinition(); // PatchedEnterpriseEventDefinition |  (optional) 
+            var postHogPatchedEnterpriseEventDefinition = new PostHogPatchedEnterpriseEventDefinition(); // PostHogPatchedEnterpriseEventDefinition |  (optional) 
 
             try
             {
-                EnterpriseEventDefinition result = apiInstance.EventDefinitionsPartialUpdate(id, projectId, patchedEnterpriseEventDefinition);
+                PostHogEnterpriseEventDefinition result = apiInstance.EventDefinitionsPartialUpdate(id, projectId, postHogPatchedEnterpriseEventDefinition);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterpriseEventDefinition> response = apiInstance.EventDefinitionsPartialUpdateWithHttpInfo(id, projectId, patchedEnterpriseEventDefinition);
+    ApiResponse<PostHogEnterpriseEventDefinition> response = apiInstance.EventDefinitionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedEnterpriseEventDefinition);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -254,11 +254,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedEnterpriseEventDefinition** | [**PatchedEnterpriseEventDefinition**](PatchedEnterpriseEventDefinition.md) |  | [optional]  |
+| **postHogPatchedEnterpriseEventDefinition** | [**PostHogPatchedEnterpriseEventDefinition**](PostHogPatchedEnterpriseEventDefinition.md) |  | [optional]  |
 
 ### Return type
 
-[**EnterpriseEventDefinition**](EnterpriseEventDefinition.md)
+[**PostHogEnterpriseEventDefinition**](PostHogEnterpriseEventDefinition.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 <a id="eventdefinitionsretrieve"></a>
 # **EventDefinitionsRetrieve**
-> EnterpriseEventDefinition EventDefinitionsRetrieve (string id, string projectId)
+> PostHogEnterpriseEventDefinition EventDefinitionsRetrieve (string id, string projectId)
 
 
 
@@ -305,7 +305,7 @@ namespace Example
 
             try
             {
-                EnterpriseEventDefinition result = apiInstance.EventDefinitionsRetrieve(id, projectId);
+                PostHogEnterpriseEventDefinition result = apiInstance.EventDefinitionsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -325,7 +325,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterpriseEventDefinition> response = apiInstance.EventDefinitionsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogEnterpriseEventDefinition> response = apiInstance.EventDefinitionsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -347,7 +347,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EnterpriseEventDefinition**](EnterpriseEventDefinition.md)
+[**PostHogEnterpriseEventDefinition**](PostHogEnterpriseEventDefinition.md)
 
 ### Authorization
 
@@ -368,7 +368,7 @@ No authorization required
 
 <a id="eventdefinitionsupdate"></a>
 # **EventDefinitionsUpdate**
-> EnterpriseEventDefinition EventDefinitionsUpdate (string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = null)
+> PostHogEnterpriseEventDefinition EventDefinitionsUpdate (string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = null)
 
 
 
@@ -391,11 +391,11 @@ namespace Example
             var apiInstance = new EventDefinitionsApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var enterpriseEventDefinition = new EnterpriseEventDefinition(); // EnterpriseEventDefinition |  (optional) 
+            var postHogEnterpriseEventDefinition = new PostHogEnterpriseEventDefinition(); // PostHogEnterpriseEventDefinition |  (optional) 
 
             try
             {
-                EnterpriseEventDefinition result = apiInstance.EventDefinitionsUpdate(id, projectId, enterpriseEventDefinition);
+                PostHogEnterpriseEventDefinition result = apiInstance.EventDefinitionsUpdate(id, projectId, postHogEnterpriseEventDefinition);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterpriseEventDefinition> response = apiInstance.EventDefinitionsUpdateWithHttpInfo(id, projectId, enterpriseEventDefinition);
+    ApiResponse<PostHogEnterpriseEventDefinition> response = apiInstance.EventDefinitionsUpdateWithHttpInfo(id, projectId, postHogEnterpriseEventDefinition);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -434,11 +434,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **enterpriseEventDefinition** | [**EnterpriseEventDefinition**](EnterpriseEventDefinition.md) |  | [optional]  |
+| **postHogEnterpriseEventDefinition** | [**PostHogEnterpriseEventDefinition**](PostHogEnterpriseEventDefinition.md) |  | [optional]  |
 
 ### Return type
 
-[**EnterpriseEventDefinition**](EnterpriseEventDefinition.md)
+[**PostHogEnterpriseEventDefinition**](PostHogEnterpriseEventDefinition.md)
 
 ### Authorization
 

@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Table table = null;
-            //var response = instance.WarehouseTablesCreate(projectId, table);
-            //Assert.IsType<Table>(response);
+            //PostHogTable postHogTable = null;
+            //var response = instance.WarehouseTablesCreate(projectId, postHogTable);
+            //Assert.IsType<PostHogTable>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string search = null;
             //var response = instance.WarehouseTablesList(projectId, limit, offset, search);
-            //Assert.IsType<PaginatedTableList>(response);
+            //Assert.IsType<PostHogPaginatedTableList>(response);
         }
 
         /// <summary>
@@ -103,9 +103,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedTable patchedTable = null;
-            //var response = instance.WarehouseTablesPartialUpdate(id, projectId, patchedTable);
-            //Assert.IsType<Table>(response);
+            //PostHogPatchedTable postHogPatchedTable = null;
+            //var response = instance.WarehouseTablesPartialUpdate(id, projectId, postHogPatchedTable);
+            //Assert.IsType<PostHogTable>(response);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.WarehouseTablesRetrieve(id, projectId);
-            //Assert.IsType<Table>(response);
+            //Assert.IsType<PostHogTable>(response);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //Table table = null;
-            //var response = instance.WarehouseTablesUpdate(id, projectId, table);
-            //Assert.IsType<Table>(response);
+            //PostHogTable postHogTable = null;
+            //var response = instance.WarehouseTablesUpdate(id, projectId, postHogTable);
+            //Assert.IsType<PostHogTable>(response);
         }
     }
 }

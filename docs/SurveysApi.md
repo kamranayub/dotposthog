@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="surveyscreate"></a>
 # **SurveysCreate**
-> SurveySerializerCreateUpdateOnly SurveysCreate (string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly)
+> PostHogSurveySerializerCreateUpdateOnly SurveysCreate (string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly)
 
 
 
@@ -36,11 +36,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new SurveysApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var surveySerializerCreateUpdateOnly = new SurveySerializerCreateUpdateOnly(); // SurveySerializerCreateUpdateOnly | 
+            var postHogSurveySerializerCreateUpdateOnly = new PostHogSurveySerializerCreateUpdateOnly(); // PostHogSurveySerializerCreateUpdateOnly | 
 
             try
             {
-                SurveySerializerCreateUpdateOnly result = apiInstance.SurveysCreate(projectId, surveySerializerCreateUpdateOnly);
+                PostHogSurveySerializerCreateUpdateOnly result = apiInstance.SurveysCreate(projectId, postHogSurveySerializerCreateUpdateOnly);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SurveySerializerCreateUpdateOnly> response = apiInstance.SurveysCreateWithHttpInfo(projectId, surveySerializerCreateUpdateOnly);
+    ApiResponse<PostHogSurveySerializerCreateUpdateOnly> response = apiInstance.SurveysCreateWithHttpInfo(projectId, postHogSurveySerializerCreateUpdateOnly);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,11 +78,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **surveySerializerCreateUpdateOnly** | [**SurveySerializerCreateUpdateOnly**](SurveySerializerCreateUpdateOnly.md) |  |  |
+| **postHogSurveySerializerCreateUpdateOnly** | [**PostHogSurveySerializerCreateUpdateOnly**](PostHogSurveySerializerCreateUpdateOnly.md) |  |  |
 
 ### Return type
 
-[**SurveySerializerCreateUpdateOnly**](SurveySerializerCreateUpdateOnly.md)
+[**PostHogSurveySerializerCreateUpdateOnly**](PostHogSurveySerializerCreateUpdateOnly.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 <a id="surveyslist"></a>
 # **SurveysList**
-> PaginatedSurveyList SurveysList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedSurveyList SurveysList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -215,7 +215,7 @@ namespace Example
 
             try
             {
-                PaginatedSurveyList result = apiInstance.SurveysList(projectId, limit, offset);
+                PostHogPaginatedSurveyList result = apiInstance.SurveysList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedSurveyList> response = apiInstance.SurveysListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedSurveyList> response = apiInstance.SurveysListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -258,7 +258,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedSurveyList**](PaginatedSurveyList.md)
+[**PostHogPaginatedSurveyList**](PostHogPaginatedSurveyList.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 <a id="surveyspartialupdate"></a>
 # **SurveysPartialUpdate**
-> SurveySerializerCreateUpdateOnly SurveysPartialUpdate (Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = null)
+> PostHogSurveySerializerCreateUpdateOnly SurveysPartialUpdate (Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = null)
 
 
 
@@ -302,11 +302,11 @@ namespace Example
             var apiInstance = new SurveysApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this survey.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedSurveySerializerCreateUpdateOnly = new PatchedSurveySerializerCreateUpdateOnly(); // PatchedSurveySerializerCreateUpdateOnly |  (optional) 
+            var postHogPatchedSurveySerializerCreateUpdateOnly = new PostHogPatchedSurveySerializerCreateUpdateOnly(); // PostHogPatchedSurveySerializerCreateUpdateOnly |  (optional) 
 
             try
             {
-                SurveySerializerCreateUpdateOnly result = apiInstance.SurveysPartialUpdate(id, projectId, patchedSurveySerializerCreateUpdateOnly);
+                PostHogSurveySerializerCreateUpdateOnly result = apiInstance.SurveysPartialUpdate(id, projectId, postHogPatchedSurveySerializerCreateUpdateOnly);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -326,7 +326,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SurveySerializerCreateUpdateOnly> response = apiInstance.SurveysPartialUpdateWithHttpInfo(id, projectId, patchedSurveySerializerCreateUpdateOnly);
+    ApiResponse<PostHogSurveySerializerCreateUpdateOnly> response = apiInstance.SurveysPartialUpdateWithHttpInfo(id, projectId, postHogPatchedSurveySerializerCreateUpdateOnly);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -345,11 +345,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this survey. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedSurveySerializerCreateUpdateOnly** | [**PatchedSurveySerializerCreateUpdateOnly**](PatchedSurveySerializerCreateUpdateOnly.md) |  | [optional]  |
+| **postHogPatchedSurveySerializerCreateUpdateOnly** | [**PostHogPatchedSurveySerializerCreateUpdateOnly**](PostHogPatchedSurveySerializerCreateUpdateOnly.md) |  | [optional]  |
 
 ### Return type
 
-[**SurveySerializerCreateUpdateOnly**](SurveySerializerCreateUpdateOnly.md)
+[**PostHogSurveySerializerCreateUpdateOnly**](PostHogSurveySerializerCreateUpdateOnly.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 
 <a id="surveysresponsescountretrieve"></a>
 # **SurveysResponsesCountRetrieve**
-> Survey SurveysResponsesCountRetrieve (string projectId)
+> PostHogSurvey SurveysResponsesCountRetrieve (string projectId)
 
 
 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                Survey result = apiInstance.SurveysResponsesCountRetrieve(projectId);
+                PostHogSurvey result = apiInstance.SurveysResponsesCountRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Survey> response = apiInstance.SurveysResponsesCountRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogSurvey> response = apiInstance.SurveysResponsesCountRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -436,7 +436,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Survey**](Survey.md)
+[**PostHogSurvey**](PostHogSurvey.md)
 
 ### Authorization
 
@@ -457,7 +457,7 @@ No authorization required
 
 <a id="surveysretrieve"></a>
 # **SurveysRetrieve**
-> Survey SurveysRetrieve (Guid id, string projectId)
+> PostHogSurvey SurveysRetrieve (Guid id, string projectId)
 
 
 
@@ -483,7 +483,7 @@ namespace Example
 
             try
             {
-                Survey result = apiInstance.SurveysRetrieve(id, projectId);
+                PostHogSurvey result = apiInstance.SurveysRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -503,7 +503,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Survey> response = apiInstance.SurveysRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogSurvey> response = apiInstance.SurveysRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -525,7 +525,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Survey**](Survey.md)
+[**PostHogSurvey**](PostHogSurvey.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ No authorization required
 
 <a id="surveysupdate"></a>
 # **SurveysUpdate**
-> Survey SurveysUpdate (Guid id, string projectId, Survey survey)
+> PostHogSurvey SurveysUpdate (Guid id, string projectId, PostHogSurvey postHogSurvey)
 
 
 
@@ -569,11 +569,11 @@ namespace Example
             var apiInstance = new SurveysApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this survey.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var survey = new Survey(); // Survey | 
+            var postHogSurvey = new PostHogSurvey(); // PostHogSurvey | 
 
             try
             {
-                Survey result = apiInstance.SurveysUpdate(id, projectId, survey);
+                PostHogSurvey result = apiInstance.SurveysUpdate(id, projectId, postHogSurvey);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -593,7 +593,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Survey> response = apiInstance.SurveysUpdateWithHttpInfo(id, projectId, survey);
+    ApiResponse<PostHogSurvey> response = apiInstance.SurveysUpdateWithHttpInfo(id, projectId, postHogSurvey);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -612,11 +612,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this survey. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **survey** | [**Survey**](Survey.md) |  |  |
+| **postHogSurvey** | [**PostHogSurvey**](PostHogSurvey.md) |  |  |
 
 ### Return type
 
-[**Survey**](Survey.md)
+[**PostHogSurvey**](PostHogSurvey.md)
 
 ### Authorization
 

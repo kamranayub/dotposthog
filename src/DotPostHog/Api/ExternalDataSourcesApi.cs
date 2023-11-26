@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        ExternalDataSourceSerializers ExternalDataSourcesCreate(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        PostHogExternalDataSourceSerializers ExternalDataSourcesCreate(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesCreateWithHttpInfo(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesCreateWithHttpInfo(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedExternalDataSourceSerializersList</returns>
-        PaginatedExternalDataSourceSerializersList ExternalDataSourcesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedExternalDataSourceSerializersList</returns>
+        PostHogPaginatedExternalDataSourceSerializersList ExternalDataSourcesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedExternalDataSourceSerializersList</returns>
-        ApiResponse<PaginatedExternalDataSourceSerializersList> ExternalDataSourcesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedExternalDataSourceSerializersList</returns>
+        ApiResponse<PostHogPaginatedExternalDataSourceSerializersList> ExternalDataSourcesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        ExternalDataSourceSerializers ExternalDataSourcesPartialUpdate(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0);
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        PostHogExternalDataSourceSerializers ExternalDataSourcesPartialUpdate(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -141,10 +141,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        ExternalDataSourceSerializers ExternalDataSourcesReloadCreate(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        PostHogExternalDataSourceSerializers ExternalDataSourcesReloadCreate(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -155,10 +155,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesReloadCreateWithHttpInfo(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesReloadCreateWithHttpInfo(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -169,8 +169,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        ExternalDataSourceSerializers ExternalDataSourcesRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        PostHogExternalDataSourceSerializers ExternalDataSourcesRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -182,8 +182,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -193,10 +193,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        ExternalDataSourceSerializers ExternalDataSourcesUpdate(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        PostHogExternalDataSourceSerializers ExternalDataSourcesUpdate(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -207,10 +207,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesUpdateWithHttpInfo(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesUpdateWithHttpInfo(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -228,11 +228,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesCreateAsync(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesCreateAsync(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -242,11 +242,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesCreateWithHttpInfoAsync(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesCreateWithHttpInfoAsync(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,8 +287,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedExternalDataSourceSerializersList</returns>
-        System.Threading.Tasks.Task<PaginatedExternalDataSourceSerializersList> ExternalDataSourcesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedExternalDataSourceSerializersList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedExternalDataSourceSerializersList> ExternalDataSourcesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -303,8 +303,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedExternalDataSourceSerializersList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedExternalDataSourceSerializersList>> ExternalDataSourcesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedExternalDataSourceSerializersList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedExternalDataSourceSerializersList>> ExternalDataSourcesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -314,11 +314,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateAsync(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -329,11 +329,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -343,11 +343,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesReloadCreateAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesReloadCreateAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,11 +358,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesReloadCreateWithHttpInfoAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesReloadCreateWithHttpInfoAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -374,8 +374,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -388,8 +388,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -399,11 +399,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesUpdateAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesUpdateAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -414,11 +414,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesUpdateWithHttpInfoAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -544,12 +544,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        public ExternalDataSourceSerializers ExternalDataSourcesCreate(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        public PostHogExternalDataSourceSerializers ExternalDataSourcesCreate(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesCreateWithHttpInfo(projectId, externalDataSourceSerializers);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesCreateWithHttpInfo(projectId, postHogExternalDataSourceSerializers);
             return localVarResponse.Data;
         }
 
@@ -558,10 +558,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        public DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesCreateWithHttpInfo(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesCreateWithHttpInfo(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -569,10 +569,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -601,14 +601,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesCreate", localVarResponse);
@@ -626,13 +626,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        public async System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesCreateAsync(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        public async System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesCreateAsync(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesCreateWithHttpInfoAsync(projectId, externalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesCreateWithHttpInfoAsync(projectId, postHogExternalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -641,11 +641,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesCreateWithHttpInfoAsync(string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesCreateWithHttpInfoAsync(string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -653,10 +653,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesCreate");
             }
 
 
@@ -686,14 +686,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -862,10 +862,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedExternalDataSourceSerializersList</returns>
-        public PaginatedExternalDataSourceSerializersList ExternalDataSourcesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedExternalDataSourceSerializersList</returns>
+        public PostHogPaginatedExternalDataSourceSerializersList ExternalDataSourcesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedExternalDataSourceSerializersList> localVarResponse = ExternalDataSourcesListWithHttpInfo(projectId, limit, offset, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedExternalDataSourceSerializersList> localVarResponse = ExternalDataSourcesListWithHttpInfo(projectId, limit, offset, search);
             return localVarResponse.Data;
         }
 
@@ -878,8 +878,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedExternalDataSourceSerializersList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedExternalDataSourceSerializersList> ExternalDataSourcesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedExternalDataSourceSerializersList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedExternalDataSourceSerializersList> ExternalDataSourcesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -928,7 +928,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedExternalDataSourceSerializersList>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedExternalDataSourceSerializersList>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesList", localVarResponse);
@@ -951,10 +951,10 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedExternalDataSourceSerializersList</returns>
-        public async System.Threading.Tasks.Task<PaginatedExternalDataSourceSerializersList> ExternalDataSourcesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedExternalDataSourceSerializersList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedExternalDataSourceSerializersList> ExternalDataSourcesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedExternalDataSourceSerializersList> localVarResponse = await ExternalDataSourcesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedExternalDataSourceSerializersList> localVarResponse = await ExternalDataSourcesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -968,8 +968,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedExternalDataSourceSerializersList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedExternalDataSourceSerializersList>> ExternalDataSourcesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedExternalDataSourceSerializersList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedExternalDataSourceSerializersList>> ExternalDataSourcesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1019,7 +1019,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedExternalDataSourceSerializersList>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedExternalDataSourceSerializersList>("/api/projects/{project_id}/external_data_sources/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1039,12 +1039,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        public ExternalDataSourceSerializers ExternalDataSourcesPartialUpdate(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0)
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        public PostHogExternalDataSourceSerializers ExternalDataSourcesPartialUpdate(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesPartialUpdateWithHttpInfo(id, projectId, patchedExternalDataSourceSerializers);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedExternalDataSourceSerializers);
             return localVarResponse.Data;
         }
 
@@ -1054,10 +1054,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        public DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1092,14 +1092,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExternalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogPatchedExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesPartialUpdate", localVarResponse);
@@ -1118,13 +1118,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        public async System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateAsync(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        public async System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesPartialUpdateWithHttpInfoAsync(id, projectId, patchedExternalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedExternalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1134,11 +1134,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExternalDataSourceSerializers"> (optional)</param>
+        /// <param name="postHogPatchedExternalDataSourceSerializers"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = default(PatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = default(PostHogPatchedExternalDataSourceSerializers), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1174,14 +1174,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExternalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogPatchedExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1201,12 +1201,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        public ExternalDataSourceSerializers ExternalDataSourcesReloadCreate(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        public PostHogExternalDataSourceSerializers ExternalDataSourcesReloadCreate(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesReloadCreateWithHttpInfo(id, projectId, externalDataSourceSerializers);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesReloadCreateWithHttpInfo(id, projectId, postHogExternalDataSourceSerializers);
             return localVarResponse.Data;
         }
 
@@ -1216,10 +1216,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        public DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesReloadCreateWithHttpInfo(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesReloadCreateWithHttpInfo(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1227,10 +1227,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1260,14 +1260,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesReloadCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/reload/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/reload/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesReloadCreate", localVarResponse);
@@ -1286,13 +1286,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        public async System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesReloadCreateAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        public async System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesReloadCreateAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesReloadCreateWithHttpInfoAsync(id, projectId, externalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesReloadCreateWithHttpInfoAsync(id, projectId, postHogExternalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1302,11 +1302,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesReloadCreateWithHttpInfoAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesReloadCreateWithHttpInfoAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1314,10 +1314,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesReloadCreate");
             }
 
 
@@ -1348,14 +1348,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesReloadCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/reload/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/reload/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1376,10 +1376,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        public ExternalDataSourceSerializers ExternalDataSourcesRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        public PostHogExternalDataSourceSerializers ExternalDataSourcesRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1390,8 +1390,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        public DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1429,7 +1429,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesRetrieve", localVarResponse);
@@ -1450,10 +1450,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        public async System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        public async System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1465,8 +1465,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1505,7 +1505,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1525,12 +1525,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExternalDataSourceSerializers</returns>
-        public ExternalDataSourceSerializers ExternalDataSourcesUpdate(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>PostHogExternalDataSourceSerializers</returns>
+        public PostHogExternalDataSourceSerializers ExternalDataSourcesUpdate(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesUpdateWithHttpInfo(id, projectId, externalDataSourceSerializers);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = ExternalDataSourcesUpdateWithHttpInfo(id, projectId, postHogExternalDataSourceSerializers);
             return localVarResponse.Data;
         }
 
@@ -1540,10 +1540,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExternalDataSourceSerializers</returns>
-        public DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> ExternalDataSourcesUpdateWithHttpInfo(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExternalDataSourceSerializers</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> ExternalDataSourcesUpdateWithHttpInfo(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1551,10 +1551,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1584,14 +1584,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalDataSourcesUpdate", localVarResponse);
@@ -1610,13 +1610,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExternalDataSourceSerializers</returns>
-        public async System.Threading.Tasks.Task<ExternalDataSourceSerializers> ExternalDataSourcesUpdateAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExternalDataSourceSerializers</returns>
+        public async System.Threading.Tasks.Task<PostHogExternalDataSourceSerializers> ExternalDataSourcesUpdateAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesUpdateWithHttpInfoAsync(id, projectId, externalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers> localVarResponse = await ExternalDataSourcesUpdateWithHttpInfoAsync(id, projectId, postHogExternalDataSourceSerializers, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1626,11 +1626,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this external data source.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="externalDataSourceSerializers"></param>
+        /// <param name="postHogExternalDataSourceSerializers"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExternalDataSourceSerializers)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExternalDataSourceSerializers>> ExternalDataSourcesUpdateWithHttpInfoAsync(Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExternalDataSourceSerializers)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExternalDataSourceSerializers>> ExternalDataSourcesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1638,10 +1638,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
             }
 
-            // verify the required parameter 'externalDataSourceSerializers' is set
-            if (externalDataSourceSerializers == null)
+            // verify the required parameter 'postHogExternalDataSourceSerializers' is set
+            if (postHogExternalDataSourceSerializers == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'externalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExternalDataSourceSerializers' when calling ExternalDataSourcesApi->ExternalDataSourcesUpdate");
             }
 
 
@@ -1672,14 +1672,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = externalDataSourceSerializers;
+            localVarRequestOptions.Data = postHogExternalDataSourceSerializers;
 
             localVarRequestOptions.Operation = "ExternalDataSourcesApi.ExternalDataSourcesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<ExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogExternalDataSourceSerializers>("/api/projects/{project_id}/external_data_sources/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

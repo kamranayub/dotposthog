@@ -70,11 +70,11 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //int? personId = null;
-            //List<Property> properties = null;
+            //List<PostHogProperty> properties = null;
             //List<string> select = null;
             //List<string> where = null;
             //var response = instance.EventsList(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
-            //Assert.IsType<PaginatedClickhouseEventList>(response);
+            //Assert.IsType<PostHogPaginatedClickhouseEventList>(response);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.EventsRetrieve(id, projectId, format);
-            //Assert.IsType<ClickhouseEvent>(response);
+            //Assert.IsType<PostHogClickhouseEvent>(response);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.EventsValuesRetrieve(projectId, format);
-            //Assert.IsType<ClickhouseEvent>(response);
+            //Assert.IsType<PostHogClickhouseEvent>(response);
         }
     }
 }

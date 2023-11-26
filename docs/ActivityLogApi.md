@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="activitylogbookmarkactivitynotificationcreate"></a>
 # **ActivityLogBookmarkActivityNotificationCreate**
-> ActivityLog ActivityLogBookmarkActivityNotificationCreate (string projectId, ActivityLog activityLog)
+> PostHogActivityLog ActivityLogBookmarkActivityNotificationCreate (string projectId, PostHogActivityLog postHogActivityLog)
 
 
 
@@ -31,11 +31,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ActivityLogApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var activityLog = new ActivityLog(); // ActivityLog | 
+            var postHogActivityLog = new PostHogActivityLog(); // PostHogActivityLog | 
 
             try
             {
-                ActivityLog result = apiInstance.ActivityLogBookmarkActivityNotificationCreate(projectId, activityLog);
+                PostHogActivityLog result = apiInstance.ActivityLogBookmarkActivityNotificationCreate(projectId, postHogActivityLog);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ActivityLog> response = apiInstance.ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(projectId, activityLog);
+    ApiResponse<PostHogActivityLog> response = apiInstance.ActivityLogBookmarkActivityNotificationCreateWithHttpInfo(projectId, postHogActivityLog);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -73,11 +73,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **activityLog** | [**ActivityLog**](ActivityLog.md) |  |  |
+| **postHogActivityLog** | [**PostHogActivityLog**](PostHogActivityLog.md) |  |  |
 
 ### Return type
 
-[**ActivityLog**](ActivityLog.md)
+[**PostHogActivityLog**](PostHogActivityLog.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ No authorization required
 
 <a id="activitylogimportantchangesretrieve"></a>
 # **ActivityLogImportantChangesRetrieve**
-> ActivityLog ActivityLogImportantChangesRetrieve (string projectId)
+> PostHogActivityLog ActivityLogImportantChangesRetrieve (string projectId)
 
 
 
@@ -123,7 +123,7 @@ namespace Example
 
             try
             {
-                ActivityLog result = apiInstance.ActivityLogImportantChangesRetrieve(projectId);
+                PostHogActivityLog result = apiInstance.ActivityLogImportantChangesRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -143,7 +143,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ActivityLog> response = apiInstance.ActivityLogImportantChangesRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogActivityLog> response = apiInstance.ActivityLogImportantChangesRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -164,7 +164,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ActivityLog**](ActivityLog.md)
+[**PostHogActivityLog**](PostHogActivityLog.md)
 
 ### Authorization
 

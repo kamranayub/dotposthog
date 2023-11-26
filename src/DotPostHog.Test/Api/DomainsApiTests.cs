@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
-            //OrganizationDomain organizationDomain = null;
-            //var response = instance.DomainsCreate(parentLookupOrganizationId, organizationDomain);
-            //Assert.IsType<OrganizationDomain>(response);
+            //PostHogOrganizationDomain postHogOrganizationDomain = null;
+            //var response = instance.DomainsCreate(parentLookupOrganizationId, postHogOrganizationDomain);
+            //Assert.IsType<PostHogOrganizationDomain>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.DomainsList(parentLookupOrganizationId, limit, offset);
-            //Assert.IsType<PaginatedOrganizationDomainList>(response);
+            //Assert.IsType<PostHogPaginatedOrganizationDomainList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string parentLookupOrganizationId = null;
-            //PatchedOrganizationDomain patchedOrganizationDomain = null;
-            //var response = instance.DomainsPartialUpdate(id, parentLookupOrganizationId, patchedOrganizationDomain);
-            //Assert.IsType<OrganizationDomain>(response);
+            //PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = null;
+            //var response = instance.DomainsPartialUpdate(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain);
+            //Assert.IsType<PostHogOrganizationDomain>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string parentLookupOrganizationId = null;
             //var response = instance.DomainsRetrieve(id, parentLookupOrganizationId);
-            //Assert.IsType<OrganizationDomain>(response);
+            //Assert.IsType<PostHogOrganizationDomain>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string parentLookupOrganizationId = null;
-            //OrganizationDomain organizationDomain = null;
-            //var response = instance.DomainsUpdate(id, parentLookupOrganizationId, organizationDomain);
-            //Assert.IsType<OrganizationDomain>(response);
+            //PostHogOrganizationDomain postHogOrganizationDomain = null;
+            //var response = instance.DomainsUpdate(id, parentLookupOrganizationId, postHogOrganizationDomain);
+            //Assert.IsType<PostHogOrganizationDomain>(response);
         }
 
         /// <summary>
@@ -143,9 +143,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string parentLookupOrganizationId = null;
-            //OrganizationDomain organizationDomain = null;
-            //var response = instance.DomainsVerifyCreate(id, parentLookupOrganizationId, organizationDomain);
-            //Assert.IsType<OrganizationDomain>(response);
+            //PostHogOrganizationDomain postHogOrganizationDomain = null;
+            //var response = instance.DomainsVerifyCreate(id, parentLookupOrganizationId, postHogOrganizationDomain);
+            //Assert.IsType<PostHogOrganizationDomain>(response);
         }
     }
 }

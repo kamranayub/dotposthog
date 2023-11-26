@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //SessionRecordingPlaylist sessionRecordingPlaylist = null;
-            //var response = instance.SessionRecordingPlaylistsCreate(projectId, sessionRecordingPlaylist);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null;
+            //var response = instance.SessionRecordingPlaylistsCreate(projectId, postHogSessionRecordingPlaylist);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string shortId = null;
             //var response = instance.SessionRecordingPlaylistsList(projectId, createdBy, limit, offset, shortId);
-            //Assert.IsType<PaginatedSessionRecordingPlaylistList>(response);
+            //Assert.IsType<PostHogPaginatedSessionRecordingPlaylistList>(response);
         }
 
         /// <summary>
@@ -104,9 +104,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string shortId = null;
-            //PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = null;
-            //var response = instance.SessionRecordingPlaylistsPartialUpdate(projectId, shortId, patchedSessionRecordingPlaylist);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = null;
+            //var response = instance.SessionRecordingPlaylistsPartialUpdate(projectId, shortId, postHogPatchedSessionRecordingPlaylist);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
 
         /// <summary>
@@ -119,9 +119,9 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string sessionRecordingId = null;
             //string shortId = null;
-            //SessionRecordingPlaylist sessionRecordingPlaylist = null;
-            //var response = instance.SessionRecordingPlaylistsRecordingsCreate(projectId, sessionRecordingId, shortId, sessionRecordingPlaylist);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null;
+            //var response = instance.SessionRecordingPlaylistsRecordingsCreate(projectId, sessionRecordingId, shortId, postHogSessionRecordingPlaylist);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string shortId = null;
             //var response = instance.SessionRecordingPlaylistsRecordingsRetrieve(projectId, shortId);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string shortId = null;
             //var response = instance.SessionRecordingPlaylistsRetrieve(projectId, shortId);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
 
         /// <summary>
@@ -172,9 +172,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string shortId = null;
-            //SessionRecordingPlaylist sessionRecordingPlaylist = null;
-            //var response = instance.SessionRecordingPlaylistsUpdate(projectId, shortId, sessionRecordingPlaylist);
-            //Assert.IsType<SessionRecordingPlaylist>(response);
+            //PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = null;
+            //var response = instance.SessionRecordingPlaylistsUpdate(projectId, shortId, postHogSessionRecordingPlaylist);
+            //Assert.IsType<PostHogSessionRecordingPlaylist>(response);
         }
     }
 }

@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="funnels"></a>
 # **Funnels**
-> FunnelStepsResults Funnels (string projectId, string format = null, Funnel funnel = null)
+> PostHogFunnelStepsResults Funnels (string projectId, string format = null, PostHogFunnel postHogFunnel = null)
 
 
 
@@ -31,11 +31,11 @@ namespace Example
             var apiInstance = new FunnelApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var funnel = new Funnel(); // Funnel |  (optional) 
+            var postHogFunnel = new PostHogFunnel(); // PostHogFunnel |  (optional) 
 
             try
             {
-                FunnelStepsResults result = apiInstance.Funnels(projectId, format, funnel);
+                PostHogFunnelStepsResults result = apiInstance.Funnels(projectId, format, postHogFunnel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FunnelStepsResults> response = apiInstance.FunnelsWithHttpInfo(projectId, format, funnel);
+    ApiResponse<PostHogFunnelStepsResults> response = apiInstance.FunnelsWithHttpInfo(projectId, format, postHogFunnel);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -74,11 +74,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **funnel** | [**Funnel**](Funnel.md) |  | [optional]  |
+| **postHogFunnel** | [**PostHogFunnel**](PostHogFunnel.md) |  | [optional]  |
 
 ### Return type
 
-[**FunnelStepsResults**](FunnelStepsResults.md)
+[**PostHogFunnelStepsResults**](PostHogFunnelStepsResults.md)
 
 ### Authorization
 

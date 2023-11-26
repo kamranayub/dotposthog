@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="groupstypeslist"></a>
 # **GroupsTypesList**
-> List&lt;GroupType&gt; GroupsTypesList (string projectId)
+> List&lt;PostHogGroupType&gt; GroupsTypesList (string projectId)
 
 
 
@@ -34,7 +34,7 @@ namespace Example
 
             try
             {
-                List<GroupType> result = apiInstance.GroupsTypesList(projectId);
+                List<PostHogGroupType> result = apiInstance.GroupsTypesList(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -54,7 +54,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<GroupType>> response = apiInstance.GroupsTypesListWithHttpInfo(projectId);
+    ApiResponse<List<PostHogGroupType>> response = apiInstance.GroupsTypesListWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -75,7 +75,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;GroupType&gt;**](GroupType.md)
+[**List&lt;PostHogGroupType&gt;**](PostHogGroupType.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ No authorization required
 
 <a id="groupstypesupdatemetadatapartialupdate"></a>
 # **GroupsTypesUpdateMetadataPartialUpdate**
-> GroupType GroupsTypesUpdateMetadataPartialUpdate (string projectId, PatchedGroupType patchedGroupType = null)
+> PostHogGroupType GroupsTypesUpdateMetadataPartialUpdate (string projectId, PostHogPatchedGroupType postHogPatchedGroupType = null)
 
 
 
@@ -118,11 +118,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new GroupsTypesApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedGroupType = new PatchedGroupType(); // PatchedGroupType |  (optional) 
+            var postHogPatchedGroupType = new PostHogPatchedGroupType(); // PostHogPatchedGroupType |  (optional) 
 
             try
             {
-                GroupType result = apiInstance.GroupsTypesUpdateMetadataPartialUpdate(projectId, patchedGroupType);
+                PostHogGroupType result = apiInstance.GroupsTypesUpdateMetadataPartialUpdate(projectId, postHogPatchedGroupType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -142,7 +142,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<GroupType> response = apiInstance.GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(projectId, patchedGroupType);
+    ApiResponse<PostHogGroupType> response = apiInstance.GroupsTypesUpdateMetadataPartialUpdateWithHttpInfo(projectId, postHogPatchedGroupType);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -160,11 +160,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedGroupType** | [**PatchedGroupType**](PatchedGroupType.md) |  | [optional]  |
+| **postHogPatchedGroupType** | [**PostHogPatchedGroupType**](PostHogPatchedGroupType.md) |  | [optional]  |
 
 ### Return type
 
-[**GroupType**](GroupType.md)
+[**PostHogGroupType**](PostHogGroupType.md)
 
 ### Authorization
 

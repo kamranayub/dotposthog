@@ -34,8 +34,8 @@ namespace DotPostHog.Api
         /// <param name="groupTypeIndex">Specify the group type to find</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        Group GroupsFindRetrieve(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0);
+        /// <returns>PostHogGroup</returns>
+        PostHogGroup GroupsFindRetrieve(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -48,8 +48,8 @@ namespace DotPostHog.Api
         /// <param name="groupTypeIndex">Specify the group type to find</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GroupsFindRetrieveWithHttpInfo(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        ApiResponse<PostHogGroup> GroupsFindRetrieveWithHttpInfo(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -62,8 +62,8 @@ namespace DotPostHog.Api
         /// <param name="search">Search the group name</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedGroupList</returns>
-        PaginatedGroupList GroupsList(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedGroupList</returns>
+        PostHogPaginatedGroupList GroupsList(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -77,16 +77,16 @@ namespace DotPostHog.Api
         /// <param name="search">Search the group name</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedGroupList</returns>
-        ApiResponse<PaginatedGroupList> GroupsListWithHttpInfo(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedGroupList</returns>
+        ApiResponse<PostHogPaginatedGroupList> GroupsListWithHttpInfo(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        Group GroupsPropertyDefinitionsRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogGroup</returns>
+        PostHogGroup GroupsPropertyDefinitionsRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -97,8 +97,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GroupsPropertyDefinitionsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        ApiResponse<PostHogGroup> GroupsPropertyDefinitionsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -107,8 +107,8 @@ namespace DotPostHog.Api
         /// <param name="key">Specify the property key to find values for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        Group GroupsPropertyValuesRetrieve(int groupTypeIndex, string key, string projectId, int operationIndex = 0);
+        /// <returns>PostHogGroup</returns>
+        PostHogGroup GroupsPropertyValuesRetrieve(int groupTypeIndex, string key, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -121,8 +121,8 @@ namespace DotPostHog.Api
         /// <param name="key">Specify the property key to find values for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GroupsPropertyValuesRetrieveWithHttpInfo(int groupTypeIndex, string key, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        ApiResponse<PostHogGroup> GroupsPropertyValuesRetrieveWithHttpInfo(int groupTypeIndex, string key, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -131,8 +131,8 @@ namespace DotPostHog.Api
         /// <param name="id">Specify the id of the user to find groups for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        Group GroupsRelatedRetrieve(int groupTypeIndex, string id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogGroup</returns>
+        PostHogGroup GroupsRelatedRetrieve(int groupTypeIndex, string id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -145,8 +145,8 @@ namespace DotPostHog.Api
         /// <param name="id">Specify the id of the user to find groups for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GroupsRelatedRetrieveWithHttpInfo(int groupTypeIndex, string id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        ApiResponse<PostHogGroup> GroupsRelatedRetrieveWithHttpInfo(int groupTypeIndex, string id, string projectId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -168,8 +168,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GroupsFindRetrieveAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogGroup</returns>
+        System.Threading.Tasks.Task<PostHogGroup> GroupsFindRetrieveAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -183,8 +183,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GroupsFindRetrieveWithHttpInfoAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogGroup>> GroupsFindRetrieveWithHttpInfoAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -198,8 +198,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedGroupList</returns>
-        System.Threading.Tasks.Task<PaginatedGroupList> GroupsListAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedGroupList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedGroupList> GroupsListAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -214,8 +214,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedGroupList>> GroupsListWithHttpInfoAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedGroupList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedGroupList>> GroupsListWithHttpInfoAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -226,8 +226,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GroupsPropertyDefinitionsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogGroup</returns>
+        System.Threading.Tasks.Task<PostHogGroup> GroupsPropertyDefinitionsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -239,8 +239,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogGroup>> GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -253,8 +253,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GroupsPropertyValuesRetrieveAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogGroup</returns>
+        System.Threading.Tasks.Task<PostHogGroup> GroupsPropertyValuesRetrieveAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -268,8 +268,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GroupsPropertyValuesRetrieveWithHttpInfoAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogGroup>> GroupsPropertyValuesRetrieveWithHttpInfoAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -282,8 +282,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GroupsRelatedRetrieveAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogGroup</returns>
+        System.Threading.Tasks.Task<PostHogGroup> GroupsRelatedRetrieveAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -297,8 +297,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GroupsRelatedRetrieveWithHttpInfoAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogGroup>> GroupsRelatedRetrieveWithHttpInfoAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -427,10 +427,10 @@ namespace DotPostHog.Api
         /// <param name="groupTypeIndex">Specify the group type to find</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        public Group GroupsFindRetrieve(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0)
+        /// <returns>PostHogGroup</returns>
+        public PostHogGroup GroupsFindRetrieve(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = GroupsFindRetrieveWithHttpInfo(groupKey, groupTypeIndex, projectId);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = GroupsFindRetrieveWithHttpInfo(groupKey, groupTypeIndex, projectId);
             return localVarResponse.Data;
         }
 
@@ -442,8 +442,8 @@ namespace DotPostHog.Api
         /// <param name="groupTypeIndex">Specify the group type to find</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        public DotPostHog.Client.ApiResponse<Group> GroupsFindRetrieveWithHttpInfo(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        public DotPostHog.Client.ApiResponse<PostHogGroup> GroupsFindRetrieveWithHttpInfo(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'groupKey' is set
             if (groupKey == null)
@@ -488,7 +488,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Group>("/api/projects/{project_id}/groups/find/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogGroup>("/api/projects/{project_id}/groups/find/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsFindRetrieve", localVarResponse);
@@ -510,10 +510,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GroupsFindRetrieveAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogGroup</returns>
+        public async System.Threading.Tasks.Task<PostHogGroup> GroupsFindRetrieveAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = await GroupsFindRetrieveWithHttpInfoAsync(groupKey, groupTypeIndex, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = await GroupsFindRetrieveWithHttpInfoAsync(groupKey, groupTypeIndex, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -526,8 +526,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Group>> GroupsFindRetrieveWithHttpInfoAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogGroup>> GroupsFindRetrieveWithHttpInfoAsync(string groupKey, int groupTypeIndex, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'groupKey' is set
             if (groupKey == null)
@@ -573,7 +573,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Group>("/api/projects/{project_id}/groups/find/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogGroup>("/api/projects/{project_id}/groups/find/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -596,10 +596,10 @@ namespace DotPostHog.Api
         /// <param name="search">Search the group name</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedGroupList</returns>
-        public PaginatedGroupList GroupsList(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedGroupList</returns>
+        public PostHogPaginatedGroupList GroupsList(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedGroupList> localVarResponse = GroupsListWithHttpInfo(groupTypeIndex, projectId, search, cursor);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedGroupList> localVarResponse = GroupsListWithHttpInfo(groupTypeIndex, projectId, search, cursor);
             return localVarResponse.Data;
         }
 
@@ -612,8 +612,8 @@ namespace DotPostHog.Api
         /// <param name="search">Search the group name</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedGroupList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedGroupList> GroupsListWithHttpInfo(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedGroupList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedGroupList> GroupsListWithHttpInfo(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -662,7 +662,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedGroupList>("/api/projects/{project_id}/groups/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedGroupList>("/api/projects/{project_id}/groups/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsList", localVarResponse);
@@ -685,10 +685,10 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedGroupList</returns>
-        public async System.Threading.Tasks.Task<PaginatedGroupList> GroupsListAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedGroupList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedGroupList> GroupsListAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedGroupList> localVarResponse = await GroupsListWithHttpInfoAsync(groupTypeIndex, projectId, search, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedGroupList> localVarResponse = await GroupsListWithHttpInfoAsync(groupTypeIndex, projectId, search, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -702,8 +702,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedGroupList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedGroupList>> GroupsListWithHttpInfoAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedGroupList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedGroupList>> GroupsListWithHttpInfoAsync(int groupTypeIndex, string projectId, string search, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -753,7 +753,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedGroupList>("/api/projects/{project_id}/groups/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedGroupList>("/api/projects/{project_id}/groups/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -773,10 +773,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        public Group GroupsPropertyDefinitionsRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogGroup</returns>
+        public PostHogGroup GroupsPropertyDefinitionsRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = GroupsPropertyDefinitionsRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = GroupsPropertyDefinitionsRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -786,8 +786,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        public DotPostHog.Client.ApiResponse<Group> GroupsPropertyDefinitionsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        public DotPostHog.Client.ApiResponse<PostHogGroup> GroupsPropertyDefinitionsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -824,7 +824,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Group>("/api/projects/{project_id}/groups/property_definitions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogGroup>("/api/projects/{project_id}/groups/property_definitions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsPropertyDefinitionsRetrieve", localVarResponse);
@@ -844,10 +844,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GroupsPropertyDefinitionsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogGroup</returns>
+        public async System.Threading.Tasks.Task<PostHogGroup> GroupsPropertyDefinitionsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = await GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = await GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -858,8 +858,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Group>> GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogGroup>> GroupsPropertyDefinitionsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -897,7 +897,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Group>("/api/projects/{project_id}/groups/property_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogGroup>("/api/projects/{project_id}/groups/property_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -919,10 +919,10 @@ namespace DotPostHog.Api
         /// <param name="key">Specify the property key to find values for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        public Group GroupsPropertyValuesRetrieve(int groupTypeIndex, string key, string projectId, int operationIndex = 0)
+        /// <returns>PostHogGroup</returns>
+        public PostHogGroup GroupsPropertyValuesRetrieve(int groupTypeIndex, string key, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = GroupsPropertyValuesRetrieveWithHttpInfo(groupTypeIndex, key, projectId);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = GroupsPropertyValuesRetrieveWithHttpInfo(groupTypeIndex, key, projectId);
             return localVarResponse.Data;
         }
 
@@ -934,8 +934,8 @@ namespace DotPostHog.Api
         /// <param name="key">Specify the property key to find values for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        public DotPostHog.Client.ApiResponse<Group> GroupsPropertyValuesRetrieveWithHttpInfo(int groupTypeIndex, string key, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        public DotPostHog.Client.ApiResponse<PostHogGroup> GroupsPropertyValuesRetrieveWithHttpInfo(int groupTypeIndex, string key, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -980,7 +980,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Group>("/api/projects/{project_id}/groups/property_values/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogGroup>("/api/projects/{project_id}/groups/property_values/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsPropertyValuesRetrieve", localVarResponse);
@@ -1002,10 +1002,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GroupsPropertyValuesRetrieveAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogGroup</returns>
+        public async System.Threading.Tasks.Task<PostHogGroup> GroupsPropertyValuesRetrieveAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = await GroupsPropertyValuesRetrieveWithHttpInfoAsync(groupTypeIndex, key, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = await GroupsPropertyValuesRetrieveWithHttpInfoAsync(groupTypeIndex, key, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1018,8 +1018,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Group>> GroupsPropertyValuesRetrieveWithHttpInfoAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogGroup>> GroupsPropertyValuesRetrieveWithHttpInfoAsync(int groupTypeIndex, string key, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -1065,7 +1065,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Group>("/api/projects/{project_id}/groups/property_values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogGroup>("/api/projects/{project_id}/groups/property_values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1087,10 +1087,10 @@ namespace DotPostHog.Api
         /// <param name="id">Specify the id of the user to find groups for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Group</returns>
-        public Group GroupsRelatedRetrieve(int groupTypeIndex, string id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogGroup</returns>
+        public PostHogGroup GroupsRelatedRetrieve(int groupTypeIndex, string id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = GroupsRelatedRetrieveWithHttpInfo(groupTypeIndex, id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = GroupsRelatedRetrieveWithHttpInfo(groupTypeIndex, id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1102,8 +1102,8 @@ namespace DotPostHog.Api
         /// <param name="id">Specify the id of the user to find groups for</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Group</returns>
-        public DotPostHog.Client.ApiResponse<Group> GroupsRelatedRetrieveWithHttpInfo(int groupTypeIndex, string id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogGroup</returns>
+        public DotPostHog.Client.ApiResponse<PostHogGroup> GroupsRelatedRetrieveWithHttpInfo(int groupTypeIndex, string id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1148,7 +1148,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Group>("/api/projects/{project_id}/groups/related/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogGroup>("/api/projects/{project_id}/groups/related/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GroupsRelatedRetrieve", localVarResponse);
@@ -1170,10 +1170,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GroupsRelatedRetrieveAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogGroup</returns>
+        public async System.Threading.Tasks.Task<PostHogGroup> GroupsRelatedRetrieveAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Group> localVarResponse = await GroupsRelatedRetrieveWithHttpInfoAsync(groupTypeIndex, id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogGroup> localVarResponse = await GroupsRelatedRetrieveWithHttpInfoAsync(groupTypeIndex, id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1186,8 +1186,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Group>> GroupsRelatedRetrieveWithHttpInfoAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogGroup)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogGroup>> GroupsRelatedRetrieveWithHttpInfoAsync(int groupTypeIndex, string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1233,7 +1233,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Group>("/api/projects/{project_id}/groups/related/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogGroup>("/api/projects/{project_id}/groups/related/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

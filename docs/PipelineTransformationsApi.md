@@ -20,7 +20,7 @@ All URIs are relative to *http://localhost*
 
 <a id="pipelinetransformationsactivityretrieve"></a>
 # **PipelineTransformationsActivityRetrieve**
-> Plugin PipelineTransformationsActivityRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsActivityRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -45,7 +45,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsActivityRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsActivityRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +65,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -86,7 +86,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 <a id="pipelinetransformationscheckforupdatesretrieve"></a>
 # **PipelineTransformationsCheckForUpdatesRetrieve**
-> Plugin PipelineTransformationsCheckForUpdatesRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsCheckForUpdatesRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -133,7 +133,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsCheckForUpdatesRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsCheckForUpdatesRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -153,7 +153,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -175,7 +175,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 
 <a id="pipelinetransformationscreate"></a>
 # **PipelineTransformationsCreate**
-> Plugin PipelineTransformationsCreate (string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PipelineTransformationsCreate (string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -218,11 +218,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new PipelineTransformationsApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsCreate(parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PipelineTransformationsCreate(parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -242,7 +242,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsCreateWithHttpInfo(parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsCreateWithHttpInfo(parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -260,11 +260,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 
 <a id="pipelinetransformationslist"></a>
 # **PipelineTransformationsList**
-> PaginatedPluginList PipelineTransformationsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedPluginList PipelineTransformationsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -397,7 +397,7 @@ namespace Example
 
             try
             {
-                PaginatedPluginList result = apiInstance.PipelineTransformationsList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedPluginList result = apiInstance.PipelineTransformationsList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -417,7 +417,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedPluginList> response = apiInstance.PipelineTransformationsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedPluginList> response = apiInstance.PipelineTransformationsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -440,7 +440,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedPluginList**](PaginatedPluginList.md)
+[**PostHogPaginatedPluginList**](PostHogPaginatedPluginList.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ No authorization required
 
 <a id="pipelinetransformationspartialupdate"></a>
 # **PipelineTransformationsPartialUpdate**
-> Plugin PipelineTransformationsPartialUpdate (int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = null)
+> PostHogPlugin PipelineTransformationsPartialUpdate (int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = null)
 
 
 
@@ -484,11 +484,11 @@ namespace Example
             var apiInstance = new PipelineTransformationsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedPlugin = new PatchedPlugin(); // PatchedPlugin |  (optional) 
+            var postHogPatchedPlugin = new PostHogPatchedPlugin(); // PostHogPatchedPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsPartialUpdate(id, parentLookupOrganizationId, patchedPlugin);
+                PostHogPlugin result = apiInstance.PipelineTransformationsPartialUpdate(id, parentLookupOrganizationId, postHogPatchedPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -508,7 +508,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -527,11 +527,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedPlugin** | [**PatchedPlugin**](PatchedPlugin.md) |  | [optional]  |
+| **postHogPatchedPlugin** | [**PostHogPatchedPlugin**](PostHogPatchedPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ No authorization required
 
 <a id="pipelinetransformationsrepositoryretrieve"></a>
 # **PipelineTransformationsRepositoryRetrieve**
-> Plugin PipelineTransformationsRepositoryRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsRepositoryRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -577,7 +577,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsRepositoryRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsRepositoryRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -597,7 +597,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -618,7 +618,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -639,7 +639,7 @@ No authorization required
 
 <a id="pipelinetransformationsretrieve"></a>
 # **PipelineTransformationsRetrieve**
-> Plugin PipelineTransformationsRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -665,7 +665,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -685,7 +685,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -707,7 +707,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ No authorization required
 
 <a id="pipelinetransformationssourceretrieve"></a>
 # **PipelineTransformationsSourceRetrieve**
-> Plugin PipelineTransformationsSourceRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsSourceRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -754,7 +754,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsSourceRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsSourceRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -774,7 +774,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -796,7 +796,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -817,7 +817,7 @@ No authorization required
 
 <a id="pipelinetransformationsunusedretrieve"></a>
 # **PipelineTransformationsUnusedRetrieve**
-> Plugin PipelineTransformationsUnusedRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PipelineTransformationsUnusedRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -842,7 +842,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsUnusedRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PipelineTransformationsUnusedRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -862,7 +862,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -883,7 +883,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -904,7 +904,7 @@ No authorization required
 
 <a id="pipelinetransformationsupdate"></a>
 # **PipelineTransformationsUpdate**
-> Plugin PipelineTransformationsUpdate (int id, string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PipelineTransformationsUpdate (int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -927,11 +927,11 @@ namespace Example
             var apiInstance = new PipelineTransformationsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsUpdate(id, parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PipelineTransformationsUpdate(id, parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -951,7 +951,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsUpdateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -970,11 +970,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -995,7 +995,7 @@ No authorization required
 
 <a id="pipelinetransformationsupdatesourcepartialupdate"></a>
 # **PipelineTransformationsUpdateSourcePartialUpdate**
-> Plugin PipelineTransformationsUpdateSourcePartialUpdate (int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = null)
+> PostHogPlugin PipelineTransformationsUpdateSourcePartialUpdate (int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = null)
 
 
 
@@ -1018,11 +1018,11 @@ namespace Example
             var apiInstance = new PipelineTransformationsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedPlugin = new PatchedPlugin(); // PatchedPlugin |  (optional) 
+            var postHogPatchedPlugin = new PostHogPatchedPlugin(); // PostHogPatchedPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsUpdateSourcePartialUpdate(id, parentLookupOrganizationId, patchedPlugin);
+                PostHogPlugin result = apiInstance.PipelineTransformationsUpdateSourcePartialUpdate(id, parentLookupOrganizationId, postHogPatchedPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1042,7 +1042,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1061,11 +1061,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedPlugin** | [**PatchedPlugin**](PatchedPlugin.md) |  | [optional]  |
+| **postHogPatchedPlugin** | [**PostHogPatchedPlugin**](PostHogPatchedPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -1086,7 +1086,7 @@ No authorization required
 
 <a id="pipelinetransformationsupgradecreate"></a>
 # **PipelineTransformationsUpgradeCreate**
-> Plugin PipelineTransformationsUpgradeCreate (int id, string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PipelineTransformationsUpgradeCreate (int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -1109,11 +1109,11 @@ namespace Example
             var apiInstance = new PipelineTransformationsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PipelineTransformationsUpgradeCreate(id, parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PipelineTransformationsUpgradeCreate(id, parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1133,7 +1133,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PipelineTransformationsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PipelineTransformationsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1152,11 +1152,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 

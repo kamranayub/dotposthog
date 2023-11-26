@@ -63,7 +63,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //var response = instance.IsGeneratingDemoDataRetrieve(id);
-            //Assert.IsType<Team>(response);
+            //Assert.IsType<PostHogTeam>(response);
         }
     }
 }

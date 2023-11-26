@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        Hook HooksCreate(string projectId, Hook hook, int operationIndex = 0);
+        /// <returns>PostHogHook</returns>
+        PostHogHook HooksCreate(string projectId, PostHogHook postHogHook, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        ApiResponse<Hook> HooksCreateWithHttpInfo(string projectId, Hook hook, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogHook</returns>
+        ApiResponse<PostHogHook> HooksCreateWithHttpInfo(string projectId, PostHogHook postHogHook, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -87,8 +87,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedHookList</returns>
-        PaginatedHookList HooksList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedHookList</returns>
+        PostHogPaginatedHookList HooksList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -101,8 +101,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedHookList</returns>
-        ApiResponse<PaginatedHookList> HooksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedHookList</returns>
+        ApiResponse<PostHogPaginatedHookList> HooksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -112,10 +112,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        Hook HooksPartialUpdate(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0);
+        /// <returns>PostHogHook</returns>
+        PostHogHook HooksPartialUpdate(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -126,10 +126,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        ApiResponse<Hook> HooksPartialUpdateWithHttpInfo(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogHook</returns>
+        ApiResponse<PostHogHook> HooksPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -140,8 +140,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        Hook HooksRetrieve(string id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogHook</returns>
+        PostHogHook HooksRetrieve(string id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -153,8 +153,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        ApiResponse<Hook> HooksRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogHook</returns>
+        ApiResponse<PostHogHook> HooksRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -164,10 +164,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        Hook HooksUpdate(string id, string projectId, Hook hook, int operationIndex = 0);
+        /// <returns>PostHogHook</returns>
+        PostHogHook HooksUpdate(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -178,10 +178,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        ApiResponse<Hook> HooksUpdateWithHttpInfo(string id, string projectId, Hook hook, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogHook</returns>
+        ApiResponse<PostHogHook> HooksUpdateWithHttpInfo(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -199,11 +199,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        System.Threading.Tasks.Task<Hook> HooksCreateAsync(string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogHook</returns>
+        System.Threading.Tasks.Task<PostHogHook> HooksCreateAsync(string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -213,11 +213,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Hook>> HooksCreateWithHttpInfoAsync(string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogHook>> HooksCreateWithHttpInfoAsync(string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -257,8 +257,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedHookList</returns>
-        System.Threading.Tasks.Task<PaginatedHookList> HooksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedHookList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedHookList> HooksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -272,8 +272,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedHookList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedHookList>> HooksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedHookList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedHookList>> HooksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -283,11 +283,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        System.Threading.Tasks.Task<Hook> HooksPartialUpdateAsync(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogHook</returns>
+        System.Threading.Tasks.Task<PostHogHook> HooksPartialUpdateAsync(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -298,11 +298,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Hook>> HooksPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogHook>> HooksPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -314,8 +314,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        System.Threading.Tasks.Task<Hook> HooksRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogHook</returns>
+        System.Threading.Tasks.Task<PostHogHook> HooksRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -328,8 +328,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Hook>> HooksRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogHook>> HooksRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -339,11 +339,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        System.Threading.Tasks.Task<Hook> HooksUpdateAsync(string id, string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogHook</returns>
+        System.Threading.Tasks.Task<PostHogHook> HooksUpdateAsync(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -354,11 +354,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Hook>> HooksUpdateWithHttpInfoAsync(string id, string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogHook>> HooksUpdateWithHttpInfoAsync(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -484,12 +484,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        public Hook HooksCreate(string projectId, Hook hook, int operationIndex = 0)
+        /// <returns>PostHogHook</returns>
+        public PostHogHook HooksCreate(string projectId, PostHogHook postHogHook, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = HooksCreateWithHttpInfo(projectId, hook);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = HooksCreateWithHttpInfo(projectId, postHogHook);
             return localVarResponse.Data;
         }
 
@@ -498,10 +498,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        public DotPostHog.Client.ApiResponse<Hook> HooksCreateWithHttpInfo(string projectId, Hook hook, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogHook</returns>
+        public DotPostHog.Client.ApiResponse<PostHogHook> HooksCreateWithHttpInfo(string projectId, PostHogHook postHogHook, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -509,10 +509,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling HooksApi->HooksCreate");
             }
 
-            // verify the required parameter 'hook' is set
-            if (hook == null)
+            // verify the required parameter 'postHogHook' is set
+            if (postHogHook == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'hook' when calling HooksApi->HooksCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogHook' when calling HooksApi->HooksCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -541,14 +541,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = hook;
+            localVarRequestOptions.Data = postHogHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Hook>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogHook>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HooksCreate", localVarResponse);
@@ -566,13 +566,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        public async System.Threading.Tasks.Task<Hook> HooksCreateAsync(string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogHook</returns>
+        public async System.Threading.Tasks.Task<PostHogHook> HooksCreateAsync(string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = await HooksCreateWithHttpInfoAsync(projectId, hook, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = await HooksCreateWithHttpInfoAsync(projectId, postHogHook, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -581,11 +581,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Hook>> HooksCreateWithHttpInfoAsync(string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogHook>> HooksCreateWithHttpInfoAsync(string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -593,10 +593,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling HooksApi->HooksCreate");
             }
 
-            // verify the required parameter 'hook' is set
-            if (hook == null)
+            // verify the required parameter 'postHogHook' is set
+            if (postHogHook == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'hook' when calling HooksApi->HooksCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogHook' when calling HooksApi->HooksCreate");
             }
 
 
@@ -626,14 +626,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = hook;
+            localVarRequestOptions.Data = postHogHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Hook>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogHook>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -813,10 +813,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedHookList</returns>
-        public PaginatedHookList HooksList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedHookList</returns>
+        public PostHogPaginatedHookList HooksList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedHookList> localVarResponse = HooksListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedHookList> localVarResponse = HooksListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -828,8 +828,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedHookList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedHookList> HooksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedHookList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedHookList> HooksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -874,7 +874,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedHookList>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedHookList>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HooksList", localVarResponse);
@@ -896,10 +896,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedHookList</returns>
-        public async System.Threading.Tasks.Task<PaginatedHookList> HooksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedHookList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedHookList> HooksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedHookList> localVarResponse = await HooksListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedHookList> localVarResponse = await HooksListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -912,8 +912,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedHookList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedHookList>> HooksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedHookList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedHookList>> HooksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -959,7 +959,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedHookList>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedHookList>("/api/projects/{project_id}/hooks/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -979,12 +979,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        public Hook HooksPartialUpdate(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0)
+        /// <returns>PostHogHook</returns>
+        public PostHogHook HooksPartialUpdate(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = HooksPartialUpdateWithHttpInfo(id, projectId, patchedHook);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = HooksPartialUpdateWithHttpInfo(id, projectId, postHogPatchedHook);
             return localVarResponse.Data;
         }
 
@@ -994,10 +994,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        public DotPostHog.Client.ApiResponse<Hook> HooksPartialUpdateWithHttpInfo(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogHook</returns>
+        public DotPostHog.Client.ApiResponse<PostHogHook> HooksPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1038,14 +1038,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedHook;
+            localVarRequestOptions.Data = postHogPatchedHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HooksPartialUpdate", localVarResponse);
@@ -1064,13 +1064,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        public async System.Threading.Tasks.Task<Hook> HooksPartialUpdateAsync(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogHook</returns>
+        public async System.Threading.Tasks.Task<PostHogHook> HooksPartialUpdateAsync(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = await HooksPartialUpdateWithHttpInfoAsync(id, projectId, patchedHook, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = await HooksPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedHook, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1080,11 +1080,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedHook"> (optional)</param>
+        /// <param name="postHogPatchedHook"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Hook>> HooksPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedHook patchedHook = default(PatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogHook>> HooksPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedHook postHogPatchedHook = default(PostHogPatchedHook), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1126,14 +1126,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedHook;
+            localVarRequestOptions.Data = postHogPatchedHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1154,10 +1154,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        public Hook HooksRetrieve(string id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogHook</returns>
+        public PostHogHook HooksRetrieve(string id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = HooksRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = HooksRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1168,8 +1168,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        public DotPostHog.Client.ApiResponse<Hook> HooksRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogHook</returns>
+        public DotPostHog.Client.ApiResponse<PostHogHook> HooksRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1213,7 +1213,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HooksRetrieve", localVarResponse);
@@ -1234,10 +1234,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        public async System.Threading.Tasks.Task<Hook> HooksRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogHook</returns>
+        public async System.Threading.Tasks.Task<PostHogHook> HooksRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = await HooksRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = await HooksRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1249,8 +1249,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Hook>> HooksRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogHook>> HooksRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1295,7 +1295,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1315,12 +1315,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Hook</returns>
-        public Hook HooksUpdate(string id, string projectId, Hook hook, int operationIndex = 0)
+        /// <returns>PostHogHook</returns>
+        public PostHogHook HooksUpdate(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = HooksUpdateWithHttpInfo(id, projectId, hook);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = HooksUpdateWithHttpInfo(id, projectId, postHogHook);
             return localVarResponse.Data;
         }
 
@@ -1330,10 +1330,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Hook</returns>
-        public DotPostHog.Client.ApiResponse<Hook> HooksUpdateWithHttpInfo(string id, string projectId, Hook hook, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogHook</returns>
+        public DotPostHog.Client.ApiResponse<PostHogHook> HooksUpdateWithHttpInfo(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1347,10 +1347,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling HooksApi->HooksUpdate");
             }
 
-            // verify the required parameter 'hook' is set
-            if (hook == null)
+            // verify the required parameter 'postHogHook' is set
+            if (postHogHook == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'hook' when calling HooksApi->HooksUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogHook' when calling HooksApi->HooksUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1380,14 +1380,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = hook;
+            localVarRequestOptions.Data = postHogHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HooksUpdate", localVarResponse);
@@ -1406,13 +1406,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Hook</returns>
-        public async System.Threading.Tasks.Task<Hook> HooksUpdateAsync(string id, string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogHook</returns>
+        public async System.Threading.Tasks.Task<PostHogHook> HooksUpdateAsync(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Hook> localVarResponse = await HooksUpdateWithHttpInfoAsync(id, projectId, hook, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogHook> localVarResponse = await HooksUpdateWithHttpInfoAsync(id, projectId, postHogHook, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1422,11 +1422,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique value identifying this hook.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="hook"></param>
+        /// <param name="postHogHook"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Hook)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Hook>> HooksUpdateWithHttpInfoAsync(string id, string projectId, Hook hook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogHook)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogHook>> HooksUpdateWithHttpInfoAsync(string id, string projectId, PostHogHook postHogHook, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1440,10 +1440,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling HooksApi->HooksUpdate");
             }
 
-            // verify the required parameter 'hook' is set
-            if (hook == null)
+            // verify the required parameter 'postHogHook' is set
+            if (postHogHook == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'hook' when calling HooksApi->HooksUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogHook' when calling HooksApi->HooksUpdate");
             }
 
 
@@ -1474,14 +1474,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = hook;
+            localVarRequestOptions.Data = postHogHook;
 
             localVarRequestOptions.Operation = "HooksApi.HooksUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Hook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogHook>("/api/projects/{project_id}/hooks/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

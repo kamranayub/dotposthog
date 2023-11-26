@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="hookscreate"></a>
 # **HooksCreate**
-> Hook HooksCreate (string projectId, Hook hook)
+> PostHogHook HooksCreate (string projectId, PostHogHook postHogHook)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new HooksApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var hook = new Hook(); // Hook | 
+            var postHogHook = new PostHogHook(); // PostHogHook | 
 
             try
             {
-                Hook result = apiInstance.HooksCreate(projectId, hook);
+                PostHogHook result = apiInstance.HooksCreate(projectId, postHogHook);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Hook> response = apiInstance.HooksCreateWithHttpInfo(projectId, hook);
+    ApiResponse<PostHogHook> response = apiInstance.HooksCreateWithHttpInfo(projectId, postHogHook);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **hook** | [**Hook**](Hook.md) |  |  |
+| **postHogHook** | [**PostHogHook**](PostHogHook.md) |  |  |
 
 ### Return type
 
-[**Hook**](Hook.md)
+[**PostHogHook**](PostHogHook.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="hookslist"></a>
 # **HooksList**
-> PaginatedHookList HooksList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedHookList HooksList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -220,7 +220,7 @@ namespace Example
 
             try
             {
-                PaginatedHookList result = apiInstance.HooksList(projectId, limit, offset);
+                PostHogPaginatedHookList result = apiInstance.HooksList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -240,7 +240,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedHookList> response = apiInstance.HooksListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedHookList> response = apiInstance.HooksListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -263,7 +263,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedHookList**](PaginatedHookList.md)
+[**PostHogPaginatedHookList**](PostHogPaginatedHookList.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ No authorization required
 
 <a id="hookspartialupdate"></a>
 # **HooksPartialUpdate**
-> Hook HooksPartialUpdate (string id, string projectId, PatchedHook patchedHook = null)
+> PostHogHook HooksPartialUpdate (string id, string projectId, PostHogPatchedHook postHogPatchedHook = null)
 
 
 
@@ -309,11 +309,11 @@ namespace Example
             var apiInstance = new HooksApi(config);
             var id = "id_example";  // string | A unique value identifying this hook.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedHook = new PatchedHook(); // PatchedHook |  (optional) 
+            var postHogPatchedHook = new PostHogPatchedHook(); // PostHogPatchedHook |  (optional) 
 
             try
             {
-                Hook result = apiInstance.HooksPartialUpdate(id, projectId, patchedHook);
+                PostHogHook result = apiInstance.HooksPartialUpdate(id, projectId, postHogPatchedHook);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -333,7 +333,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Hook> response = apiInstance.HooksPartialUpdateWithHttpInfo(id, projectId, patchedHook);
+    ApiResponse<PostHogHook> response = apiInstance.HooksPartialUpdateWithHttpInfo(id, projectId, postHogPatchedHook);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -352,11 +352,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | A unique value identifying this hook. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedHook** | [**PatchedHook**](PatchedHook.md) |  | [optional]  |
+| **postHogPatchedHook** | [**PostHogPatchedHook**](PostHogPatchedHook.md) |  | [optional]  |
 
 ### Return type
 
-[**Hook**](Hook.md)
+[**PostHogHook**](PostHogHook.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ No authorization required
 
 <a id="hooksretrieve"></a>
 # **HooksRetrieve**
-> Hook HooksRetrieve (string id, string projectId)
+> PostHogHook HooksRetrieve (string id, string projectId)
 
 
 
@@ -405,7 +405,7 @@ namespace Example
 
             try
             {
-                Hook result = apiInstance.HooksRetrieve(id, projectId);
+                PostHogHook result = apiInstance.HooksRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -425,7 +425,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Hook> response = apiInstance.HooksRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogHook> response = apiInstance.HooksRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -447,7 +447,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Hook**](Hook.md)
+[**PostHogHook**](PostHogHook.md)
 
 ### Authorization
 
@@ -468,7 +468,7 @@ No authorization required
 
 <a id="hooksupdate"></a>
 # **HooksUpdate**
-> Hook HooksUpdate (string id, string projectId, Hook hook)
+> PostHogHook HooksUpdate (string id, string projectId, PostHogHook postHogHook)
 
 
 
@@ -493,11 +493,11 @@ namespace Example
             var apiInstance = new HooksApi(config);
             var id = "id_example";  // string | A unique value identifying this hook.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var hook = new Hook(); // Hook | 
+            var postHogHook = new PostHogHook(); // PostHogHook | 
 
             try
             {
-                Hook result = apiInstance.HooksUpdate(id, projectId, hook);
+                PostHogHook result = apiInstance.HooksUpdate(id, projectId, postHogHook);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -517,7 +517,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Hook> response = apiInstance.HooksUpdateWithHttpInfo(id, projectId, hook);
+    ApiResponse<PostHogHook> response = apiInstance.HooksUpdateWithHttpInfo(id, projectId, postHogHook);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -536,11 +536,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** | A unique value identifying this hook. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **hook** | [**Hook**](Hook.md) |  |  |
+| **postHogHook** | [**PostHogHook**](PostHogHook.md) |  |  |
 
 ### Return type
 
-[**Hook**](Hook.md)
+[**PostHogHook**](PostHogHook.md)
 
 ### Authorization
 

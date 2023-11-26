@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PluginConfigsCreate(projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PluginConfigsCreate(projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.PluginConfigsFrontendRetrieve(id, projectId);
-            //Assert.IsType<PluginConfig>(response);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -101,9 +101,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PluginConfigsJobCreate(id, projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PluginConfigsJobCreate(id, projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.PluginConfigsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedPluginConfigList>(response);
+            //Assert.IsType<PostHogPaginatedPluginConfigList>(response);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.PluginConfigsLogsList(parentLookupPluginConfigId, projectId, limit, offset);
-            //Assert.IsType<PaginatedPluginLogEntryList>(response);
+            //Assert.IsType<PostHogPaginatedPluginLogEntryList>(response);
         }
 
         /// <summary>
@@ -144,9 +144,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedPluginConfig patchedPluginConfig = null;
-            //var response = instance.PluginConfigsPartialUpdate(id, projectId, patchedPluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPatchedPluginConfig postHogPatchedPluginConfig = null;
+            //var response = instance.PluginConfigsPartialUpdate(id, projectId, postHogPatchedPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -157,9 +157,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //PatchedPluginConfig patchedPluginConfig = null;
-            //var response = instance.PluginConfigsRearrangePartialUpdate(projectId, patchedPluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPatchedPluginConfig postHogPatchedPluginConfig = null;
+            //var response = instance.PluginConfigsRearrangePartialUpdate(projectId, postHogPatchedPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.PluginConfigsRetrieve(id, projectId);
-            //Assert.IsType<PluginConfig>(response);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
 
         /// <summary>
@@ -184,9 +184,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PluginConfig pluginConfig = null;
-            //var response = instance.PluginConfigsUpdate(id, projectId, pluginConfig);
-            //Assert.IsType<PluginConfig>(response);
+            //PostHogPluginConfig postHogPluginConfig = null;
+            //var response = instance.PluginConfigsUpdate(id, projectId, postHogPluginConfig);
+            //Assert.IsType<PostHogPluginConfig>(response);
         }
     }
 }

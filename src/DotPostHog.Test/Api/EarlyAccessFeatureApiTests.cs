@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly = null;
-            //var response = instance.EarlyAccessFeatureCreate(projectId, earlyAccessFeatureSerializerCreateOnly);
-            //Assert.IsType<EarlyAccessFeatureSerializerCreateOnly>(response);
+            //PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly = null;
+            //var response = instance.EarlyAccessFeatureCreate(projectId, postHogEarlyAccessFeatureSerializerCreateOnly);
+            //Assert.IsType<PostHogEarlyAccessFeatureSerializerCreateOnly>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.EarlyAccessFeatureList(projectId, limit, offset);
-            //Assert.IsType<PaginatedEarlyAccessFeatureList>(response);
+            //Assert.IsType<PostHogPaginatedEarlyAccessFeatureList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedEarlyAccessFeature patchedEarlyAccessFeature = null;
-            //var response = instance.EarlyAccessFeaturePartialUpdate(id, projectId, patchedEarlyAccessFeature);
-            //Assert.IsType<EarlyAccessFeature>(response);
+            //PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = null;
+            //var response = instance.EarlyAccessFeaturePartialUpdate(id, projectId, postHogPatchedEarlyAccessFeature);
+            //Assert.IsType<PostHogEarlyAccessFeature>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.EarlyAccessFeatureRetrieve(id, projectId);
-            //Assert.IsType<EarlyAccessFeature>(response);
+            //Assert.IsType<PostHogEarlyAccessFeature>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //EarlyAccessFeature earlyAccessFeature = null;
-            //var response = instance.EarlyAccessFeatureUpdate(id, projectId, earlyAccessFeature);
-            //Assert.IsType<EarlyAccessFeature>(response);
+            //PostHogEarlyAccessFeature postHogEarlyAccessFeature = null;
+            //var response = instance.EarlyAccessFeatureUpdate(id, projectId, postHogEarlyAccessFeature);
+            //Assert.IsType<PostHogEarlyAccessFeature>(response);
         }
     }
 }

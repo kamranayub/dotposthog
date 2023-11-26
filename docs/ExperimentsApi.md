@@ -16,7 +16,7 @@ All URIs are relative to *http://localhost*
 
 <a id="experimentscreate"></a>
 # **ExperimentsCreate**
-> Experiment ExperimentsCreate (string projectId, Experiment experiment)
+> PostHogExperiment ExperimentsCreate (string projectId, PostHogExperiment postHogExperiment)
 
 
 
@@ -38,11 +38,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ExperimentsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var experiment = new Experiment(); // Experiment | 
+            var postHogExperiment = new PostHogExperiment(); // PostHogExperiment | 
 
             try
             {
-                Experiment result = apiInstance.ExperimentsCreate(projectId, experiment);
+                PostHogExperiment result = apiInstance.ExperimentsCreate(projectId, postHogExperiment);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsCreateWithHttpInfo(projectId, experiment);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsCreateWithHttpInfo(projectId, postHogExperiment);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -80,11 +80,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **experiment** | [**Experiment**](Experiment.md) |  |  |
+| **postHogExperiment** | [**PostHogExperiment**](PostHogExperiment.md) |  |  |
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 <a id="experimentslist"></a>
 # **ExperimentsList**
-> PaginatedExperimentList ExperimentsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedExperimentList ExperimentsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                PaginatedExperimentList result = apiInstance.ExperimentsList(projectId, limit, offset);
+                PostHogPaginatedExperimentList result = apiInstance.ExperimentsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -237,7 +237,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedExperimentList> response = apiInstance.ExperimentsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedExperimentList> response = apiInstance.ExperimentsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -260,7 +260,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedExperimentList**](PaginatedExperimentList.md)
+[**PostHogPaginatedExperimentList**](PostHogPaginatedExperimentList.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ No authorization required
 
 <a id="experimentspartialupdate"></a>
 # **ExperimentsPartialUpdate**
-> Experiment ExperimentsPartialUpdate (int id, string projectId, PatchedExperiment patchedExperiment = null)
+> PostHogExperiment ExperimentsPartialUpdate (int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = null)
 
 
 
@@ -304,11 +304,11 @@ namespace Example
             var apiInstance = new ExperimentsApi(config);
             var id = 56;  // int | A unique integer value identifying this experiment.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedExperiment = new PatchedExperiment(); // PatchedExperiment |  (optional) 
+            var postHogPatchedExperiment = new PostHogPatchedExperiment(); // PostHogPatchedExperiment |  (optional) 
 
             try
             {
-                Experiment result = apiInstance.ExperimentsPartialUpdate(id, projectId, patchedExperiment);
+                PostHogExperiment result = apiInstance.ExperimentsPartialUpdate(id, projectId, postHogPatchedExperiment);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -328,7 +328,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsPartialUpdateWithHttpInfo(id, projectId, patchedExperiment);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedExperiment);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -347,11 +347,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this experiment. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedExperiment** | [**PatchedExperiment**](PatchedExperiment.md) |  | [optional]  |
+| **postHogPatchedExperiment** | [**PostHogPatchedExperiment**](PostHogPatchedExperiment.md) |  | [optional]  |
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ No authorization required
 
 <a id="experimentsrequiresflagimplementationretrieve"></a>
 # **ExperimentsRequiresFlagImplementationRetrieve**
-> Experiment ExperimentsRequiresFlagImplementationRetrieve (string projectId)
+> PostHogExperiment ExperimentsRequiresFlagImplementationRetrieve (string projectId)
 
 
 
@@ -397,7 +397,7 @@ namespace Example
 
             try
             {
-                Experiment result = apiInstance.ExperimentsRequiresFlagImplementationRetrieve(projectId);
+                PostHogExperiment result = apiInstance.ExperimentsRequiresFlagImplementationRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -417,7 +417,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -438,7 +438,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ No authorization required
 
 <a id="experimentsresultsretrieve"></a>
 # **ExperimentsResultsRetrieve**
-> Experiment ExperimentsResultsRetrieve (int id, string projectId)
+> PostHogExperiment ExperimentsResultsRetrieve (int id, string projectId)
 
 
 
@@ -485,7 +485,7 @@ namespace Example
 
             try
             {
-                Experiment result = apiInstance.ExperimentsResultsRetrieve(id, projectId);
+                PostHogExperiment result = apiInstance.ExperimentsResultsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -505,7 +505,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsResultsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsResultsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -527,7 +527,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ No authorization required
 
 <a id="experimentsretrieve"></a>
 # **ExperimentsRetrieve**
-> Experiment ExperimentsRetrieve (int id, string projectId)
+> PostHogExperiment ExperimentsRetrieve (int id, string projectId)
 
 
 
@@ -574,7 +574,7 @@ namespace Example
 
             try
             {
-                Experiment result = apiInstance.ExperimentsRetrieve(id, projectId);
+                PostHogExperiment result = apiInstance.ExperimentsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -594,7 +594,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -616,7 +616,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -637,7 +637,7 @@ No authorization required
 
 <a id="experimentssecondaryresultsretrieve"></a>
 # **ExperimentsSecondaryResultsRetrieve**
-> Experiment ExperimentsSecondaryResultsRetrieve (int id, string projectId)
+> PostHogExperiment ExperimentsSecondaryResultsRetrieve (int id, string projectId)
 
 
 
@@ -663,7 +663,7 @@ namespace Example
 
             try
             {
-                Experiment result = apiInstance.ExperimentsSecondaryResultsRetrieve(id, projectId);
+                PostHogExperiment result = apiInstance.ExperimentsSecondaryResultsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -683,7 +683,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsSecondaryResultsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsSecondaryResultsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -705,7 +705,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 
@@ -726,7 +726,7 @@ No authorization required
 
 <a id="experimentsupdate"></a>
 # **ExperimentsUpdate**
-> Experiment ExperimentsUpdate (int id, string projectId, Experiment experiment)
+> PostHogExperiment ExperimentsUpdate (int id, string projectId, PostHogExperiment postHogExperiment)
 
 
 
@@ -749,11 +749,11 @@ namespace Example
             var apiInstance = new ExperimentsApi(config);
             var id = 56;  // int | A unique integer value identifying this experiment.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var experiment = new Experiment(); // Experiment | 
+            var postHogExperiment = new PostHogExperiment(); // PostHogExperiment | 
 
             try
             {
-                Experiment result = apiInstance.ExperimentsUpdate(id, projectId, experiment);
+                PostHogExperiment result = apiInstance.ExperimentsUpdate(id, projectId, postHogExperiment);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -773,7 +773,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Experiment> response = apiInstance.ExperimentsUpdateWithHttpInfo(id, projectId, experiment);
+    ApiResponse<PostHogExperiment> response = apiInstance.ExperimentsUpdateWithHttpInfo(id, projectId, postHogExperiment);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -792,11 +792,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this experiment. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **experiment** | [**Experiment**](Experiment.md) |  |  |
+| **postHogExperiment** | [**PostHogExperiment**](PostHogExperiment.md) |  |  |
 
 ### Return type
 
-[**Experiment**](Experiment.md)
+[**PostHogExperiment**](PostHogExperiment.md)
 
 ### Authorization
 

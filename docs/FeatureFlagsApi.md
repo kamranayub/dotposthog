@@ -28,7 +28,7 @@ All URIs are relative to *http://localhost*
 
 <a id="featureflagsactivityretrieve"></a>
 # **FeatureFlagsActivityRetrieve**
-> FeatureFlag FeatureFlagsActivityRetrieve (string projectId)
+> PostHogFeatureFlag FeatureFlagsActivityRetrieve (string projectId)
 
 
 
@@ -55,7 +55,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsActivityRetrieve(projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsActivityRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -75,7 +75,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsActivityRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsActivityRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -96,7 +96,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 
 <a id="featureflagsactivityretrieve2"></a>
 # **FeatureFlagsActivityRetrieve2**
-> FeatureFlag FeatureFlagsActivityRetrieve2 (int id, string projectId)
+> PostHogFeatureFlag FeatureFlagsActivityRetrieve2 (int id, string projectId)
 
 
 
@@ -145,7 +145,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsActivityRetrieve2(id, projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsActivityRetrieve2(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -165,7 +165,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsActivityRetrieve2WithHttpInfo(id, projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsActivityRetrieve2WithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -187,7 +187,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ No authorization required
 
 <a id="featureflagscreate"></a>
 # **FeatureFlagsCreate**
-> FeatureFlag FeatureFlagsCreate (string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsCreate (string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -317,11 +317,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new FeatureFlagsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsCreate(projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsCreate(projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -341,7 +341,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsCreateWithHttpInfo(projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsCreateWithHttpInfo(projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -359,11 +359,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ No authorization required
 
 <a id="featureflagscreatestaticcohortforflagcreate"></a>
 # **FeatureFlagsCreateStaticCohortForFlagCreate**
-> FeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate (int id, string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate (int id, string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -409,11 +409,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var id = 56;  // int | A unique integer value identifying this feature flag.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsCreateStaticCohortForFlagCreate(id, projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsCreateStaticCohortForFlagCreate(id, projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -433,7 +433,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(id, projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -452,11 +452,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this feature flag. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -477,7 +477,7 @@ No authorization required
 
 <a id="featureflagsdashboardcreate"></a>
 # **FeatureFlagsDashboardCreate**
-> FeatureFlag FeatureFlagsDashboardCreate (int id, string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsDashboardCreate (int id, string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -502,11 +502,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var id = 56;  // int | A unique integer value identifying this feature flag.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsDashboardCreate(id, projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsDashboardCreate(id, projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -526,7 +526,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsDashboardCreateWithHttpInfo(id, projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsDashboardCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -545,11 +545,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this feature flag. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -657,7 +657,7 @@ No authorization required
 
 <a id="featureflagsenrichusagedashboardcreate"></a>
 # **FeatureFlagsEnrichUsageDashboardCreate**
-> FeatureFlag FeatureFlagsEnrichUsageDashboardCreate (int id, string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsEnrichUsageDashboardCreate (int id, string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -682,11 +682,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var id = 56;  // int | A unique integer value identifying this feature flag.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsEnrichUsageDashboardCreate(id, projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsEnrichUsageDashboardCreate(id, projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -706,7 +706,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(id, projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -725,11 +725,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this feature flag. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -750,7 +750,7 @@ No authorization required
 
 <a id="featureflagsevaluationreasonsretrieve"></a>
 # **FeatureFlagsEvaluationReasonsRetrieve**
-> FeatureFlag FeatureFlagsEvaluationReasonsRetrieve (string projectId)
+> PostHogFeatureFlag FeatureFlagsEvaluationReasonsRetrieve (string projectId)
 
 
 
@@ -777,7 +777,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsEvaluationReasonsRetrieve(projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsEvaluationReasonsRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -797,7 +797,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -818,7 +818,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -839,7 +839,7 @@ No authorization required
 
 <a id="featureflagslist"></a>
 # **FeatureFlagsList**
-> PaginatedFeatureFlagList FeatureFlagsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedFeatureFlagList FeatureFlagsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -868,7 +868,7 @@ namespace Example
 
             try
             {
-                PaginatedFeatureFlagList result = apiInstance.FeatureFlagsList(projectId, limit, offset);
+                PostHogPaginatedFeatureFlagList result = apiInstance.FeatureFlagsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -888,7 +888,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedFeatureFlagList> response = apiInstance.FeatureFlagsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedFeatureFlagList> response = apiInstance.FeatureFlagsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -911,7 +911,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedFeatureFlagList**](PaginatedFeatureFlagList.md)
+[**PostHogPaginatedFeatureFlagList**](PostHogPaginatedFeatureFlagList.md)
 
 ### Authorization
 
@@ -932,7 +932,7 @@ No authorization required
 
 <a id="featureflagslocalevaluationretrieve"></a>
 # **FeatureFlagsLocalEvaluationRetrieve**
-> FeatureFlag FeatureFlagsLocalEvaluationRetrieve (string projectId)
+> PostHogFeatureFlag FeatureFlagsLocalEvaluationRetrieve (string projectId)
 
 
 
@@ -959,7 +959,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsLocalEvaluationRetrieve(projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsLocalEvaluationRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -979,7 +979,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1000,7 +1000,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -1021,7 +1021,7 @@ No authorization required
 
 <a id="featureflagsmyflagsretrieve"></a>
 # **FeatureFlagsMyFlagsRetrieve**
-> FeatureFlag FeatureFlagsMyFlagsRetrieve (string projectId)
+> PostHogFeatureFlag FeatureFlagsMyFlagsRetrieve (string projectId)
 
 
 
@@ -1048,7 +1048,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsMyFlagsRetrieve(projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsMyFlagsRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1068,7 +1068,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsMyFlagsRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsMyFlagsRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1089,7 +1089,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -1110,7 +1110,7 @@ No authorization required
 
 <a id="featureflagspartialupdate"></a>
 # **FeatureFlagsPartialUpdate**
-> FeatureFlag FeatureFlagsPartialUpdate (int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = null)
+> PostHogFeatureFlag FeatureFlagsPartialUpdate (int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = null)
 
 
 
@@ -1135,11 +1135,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var id = 56;  // int | A unique integer value identifying this feature flag.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedFeatureFlag = new PatchedFeatureFlag(); // PatchedFeatureFlag |  (optional) 
+            var postHogPatchedFeatureFlag = new PostHogPatchedFeatureFlag(); // PostHogPatchedFeatureFlag |  (optional) 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsPartialUpdate(id, projectId, patchedFeatureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsPartialUpdate(id, projectId, postHogPatchedFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1159,7 +1159,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsPartialUpdateWithHttpInfo(id, projectId, patchedFeatureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1178,11 +1178,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this feature flag. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedFeatureFlag** | [**PatchedFeatureFlag**](PatchedFeatureFlag.md) |  | [optional]  |
+| **postHogPatchedFeatureFlag** | [**PostHogPatchedFeatureFlag**](PostHogPatchedFeatureFlag.md) |  | [optional]  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -1290,7 +1290,7 @@ No authorization required
 
 <a id="featureflagsretrieve2"></a>
 # **FeatureFlagsRetrieve2**
-> FeatureFlag FeatureFlagsRetrieve2 (int id, string projectId)
+> PostHogFeatureFlag FeatureFlagsRetrieve2 (int id, string projectId)
 
 
 
@@ -1318,7 +1318,7 @@ namespace Example
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsRetrieve2(id, projectId);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsRetrieve2(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1338,7 +1338,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsRetrieve2WithHttpInfo(id, projectId);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsRetrieve2WithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1360,7 +1360,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -1381,7 +1381,7 @@ No authorization required
 
 <a id="featureflagsroleaccesscreate"></a>
 # **FeatureFlagsRoleAccessCreate**
-> FeatureFlagRoleAccess FeatureFlagsRoleAccessCreate (string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess)
+> PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessCreate (string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess)
 
 
 
@@ -1404,11 +1404,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var parentLookupFeatureFlagId = "parentLookupFeatureFlagId_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlagRoleAccess = new FeatureFlagRoleAccess(); // FeatureFlagRoleAccess | 
+            var postHogFeatureFlagRoleAccess = new PostHogFeatureFlagRoleAccess(); // PostHogFeatureFlagRoleAccess | 
 
             try
             {
-                FeatureFlagRoleAccess result = apiInstance.FeatureFlagsRoleAccessCreate(parentLookupFeatureFlagId, projectId, featureFlagRoleAccess);
+                PostHogFeatureFlagRoleAccess result = apiInstance.FeatureFlagsRoleAccessCreate(parentLookupFeatureFlagId, projectId, postHogFeatureFlagRoleAccess);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1428,7 +1428,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlagRoleAccess> response = apiInstance.FeatureFlagsRoleAccessCreateWithHttpInfo(parentLookupFeatureFlagId, projectId, featureFlagRoleAccess);
+    ApiResponse<PostHogFeatureFlagRoleAccess> response = apiInstance.FeatureFlagsRoleAccessCreateWithHttpInfo(parentLookupFeatureFlagId, projectId, postHogFeatureFlagRoleAccess);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1447,11 +1447,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentLookupFeatureFlagId** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlagRoleAccess** | [**FeatureFlagRoleAccess**](FeatureFlagRoleAccess.md) |  |  |
+| **postHogFeatureFlagRoleAccess** | [**PostHogFeatureFlagRoleAccess**](PostHogFeatureFlagRoleAccess.md) |  |  |
 
 ### Return type
 
-[**FeatureFlagRoleAccess**](FeatureFlagRoleAccess.md)
+[**PostHogFeatureFlagRoleAccess**](PostHogFeatureFlagRoleAccess.md)
 
 ### Authorization
 
@@ -1559,7 +1559,7 @@ No authorization required
 
 <a id="featureflagsroleaccesslist"></a>
 # **FeatureFlagsRoleAccessList**
-> PaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList (string parentLookupFeatureFlagId, string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList (string parentLookupFeatureFlagId, string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -1587,7 +1587,7 @@ namespace Example
 
             try
             {
-                PaginatedFeatureFlagRoleAccessList result = apiInstance.FeatureFlagsRoleAccessList(parentLookupFeatureFlagId, projectId, limit, offset);
+                PostHogPaginatedFeatureFlagRoleAccessList result = apiInstance.FeatureFlagsRoleAccessList(parentLookupFeatureFlagId, projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1607,7 +1607,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedFeatureFlagRoleAccessList> response = apiInstance.FeatureFlagsRoleAccessListWithHttpInfo(parentLookupFeatureFlagId, projectId, limit, offset);
+    ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList> response = apiInstance.FeatureFlagsRoleAccessListWithHttpInfo(parentLookupFeatureFlagId, projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1631,7 +1631,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedFeatureFlagRoleAccessList**](PaginatedFeatureFlagRoleAccessList.md)
+[**PostHogPaginatedFeatureFlagRoleAccessList**](PostHogPaginatedFeatureFlagRoleAccessList.md)
 
 ### Authorization
 
@@ -1652,7 +1652,7 @@ No authorization required
 
 <a id="featureflagsroleaccessretrieve"></a>
 # **FeatureFlagsRoleAccessRetrieve**
-> FeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve (int id, string parentLookupFeatureFlagId, string projectId)
+> PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve (int id, string parentLookupFeatureFlagId, string projectId)
 
 
 
@@ -1679,7 +1679,7 @@ namespace Example
 
             try
             {
-                FeatureFlagRoleAccess result = apiInstance.FeatureFlagsRoleAccessRetrieve(id, parentLookupFeatureFlagId, projectId);
+                PostHogFeatureFlagRoleAccess result = apiInstance.FeatureFlagsRoleAccessRetrieve(id, parentLookupFeatureFlagId, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1699,7 +1699,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlagRoleAccess> response = apiInstance.FeatureFlagsRoleAccessRetrieveWithHttpInfo(id, parentLookupFeatureFlagId, projectId);
+    ApiResponse<PostHogFeatureFlagRoleAccess> response = apiInstance.FeatureFlagsRoleAccessRetrieveWithHttpInfo(id, parentLookupFeatureFlagId, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1722,7 +1722,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**FeatureFlagRoleAccess**](FeatureFlagRoleAccess.md)
+[**PostHogFeatureFlagRoleAccess**](PostHogFeatureFlagRoleAccess.md)
 
 ### Authorization
 
@@ -1743,7 +1743,7 @@ No authorization required
 
 <a id="featureflagsupdate"></a>
 # **FeatureFlagsUpdate**
-> FeatureFlag FeatureFlagsUpdate (int id, string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsUpdate (int id, string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -1768,11 +1768,11 @@ namespace Example
             var apiInstance = new FeatureFlagsApi(config);
             var id = 56;  // int | A unique integer value identifying this feature flag.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsUpdate(id, projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsUpdate(id, projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1792,7 +1792,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsUpdateWithHttpInfo(id, projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsUpdateWithHttpInfo(id, projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1811,11 +1811,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this feature flag. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 
@@ -1836,7 +1836,7 @@ No authorization required
 
 <a id="featureflagsuserblastradiuscreate"></a>
 # **FeatureFlagsUserBlastRadiusCreate**
-> FeatureFlag FeatureFlagsUserBlastRadiusCreate (string projectId, FeatureFlag featureFlag)
+> PostHogFeatureFlag FeatureFlagsUserBlastRadiusCreate (string projectId, PostHogFeatureFlag postHogFeatureFlag)
 
 
 
@@ -1860,11 +1860,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new FeatureFlagsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var featureFlag = new FeatureFlag(); // FeatureFlag | 
+            var postHogFeatureFlag = new PostHogFeatureFlag(); // PostHogFeatureFlag | 
 
             try
             {
-                FeatureFlag result = apiInstance.FeatureFlagsUserBlastRadiusCreate(projectId, featureFlag);
+                PostHogFeatureFlag result = apiInstance.FeatureFlagsUserBlastRadiusCreate(projectId, postHogFeatureFlag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1884,7 +1884,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FeatureFlag> response = apiInstance.FeatureFlagsUserBlastRadiusCreateWithHttpInfo(projectId, featureFlag);
+    ApiResponse<PostHogFeatureFlag> response = apiInstance.FeatureFlagsUserBlastRadiusCreateWithHttpInfo(projectId, postHogFeatureFlag);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1902,11 +1902,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **featureFlag** | [**FeatureFlag**](FeatureFlag.md) |  |  |
+| **postHogFeatureFlag** | [**PostHogFeatureFlag**](PostHogFeatureFlag.md) |  |  |
 
 ### Return type
 
-[**FeatureFlag**](FeatureFlag.md)
+[**PostHogFeatureFlag**](PostHogFeatureFlag.md)
 
 ### Authorization
 

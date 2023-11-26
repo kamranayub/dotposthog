@@ -56,8 +56,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSessionRecordingList</returns>
-        PaginatedSessionRecordingList SessionRecordingsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedSessionRecordingList</returns>
+        PostHogPaginatedSessionRecordingList SessionRecordingsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -70,8 +70,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSessionRecordingList</returns>
-        ApiResponse<PaginatedSessionRecordingList> SessionRecordingsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedSessionRecordingList</returns>
+        ApiResponse<PostHogPaginatedSessionRecordingList> SessionRecordingsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -81,8 +81,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        SessionRecording SessionRecordingsMatchingEventsRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecording</returns>
+        PostHogSessionRecording SessionRecordingsMatchingEventsRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -93,18 +93,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        ApiResponse<SessionRecording> SessionRecordingsMatchingEventsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        ApiResponse<PostHogSessionRecording> SessionRecordingsMatchingEventsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        SessionRecording SessionRecordingsPersistCreate(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0);
+        /// <returns>PostHogSessionRecording</returns>
+        PostHogSessionRecording SessionRecordingsPersistCreate(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -115,18 +115,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        ApiResponse<SessionRecording> SessionRecordingsPersistCreateWithHttpInfo(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        ApiResponse<PostHogSessionRecording> SessionRecordingsPersistCreateWithHttpInfo(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        SessionRecording SessionRecordingsPropertiesRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecording</returns>
+        PostHogSessionRecording SessionRecordingsPropertiesRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -137,8 +137,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        ApiResponse<SessionRecording> SessionRecordingsPropertiesRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        ApiResponse<PostHogSessionRecording> SessionRecordingsPropertiesRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -146,8 +146,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        SessionRecording SessionRecordingsRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecording</returns>
+        PostHogSessionRecording SessionRecordingsRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -159,8 +159,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        ApiResponse<SessionRecording> SessionRecordingsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        ApiResponse<PostHogSessionRecording> SessionRecordingsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -171,8 +171,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        SessionRecording SessionRecordingsSnapshotsRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecording</returns>
+        PostHogSessionRecording SessionRecordingsSnapshotsRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -184,8 +184,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        ApiResponse<SessionRecording> SessionRecordingsSnapshotsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        ApiResponse<PostHogSessionRecording> SessionRecordingsSnapshotsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -234,8 +234,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSessionRecordingList</returns>
-        System.Threading.Tasks.Task<PaginatedSessionRecordingList> SessionRecordingsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedSessionRecordingList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedSessionRecordingList> SessionRecordingsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -249,8 +249,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSessionRecordingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedSessionRecordingList>> SessionRecordingsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedSessionRecordingList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedSessionRecordingList>> SessionRecordingsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -261,8 +261,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        System.Threading.Tasks.Task<SessionRecording> SessionRecordingsMatchingEventsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecording</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsMatchingEventsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -274,8 +274,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecording>> SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecording>> SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -285,11 +285,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        System.Threading.Tasks.Task<SessionRecording> SessionRecordingsPersistCreateAsync(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecording</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsPersistCreateAsync(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -300,11 +300,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecording>> SessionRecordingsPersistCreateWithHttpInfoAsync(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecording>> SessionRecordingsPersistCreateWithHttpInfoAsync(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -315,8 +315,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        System.Threading.Tasks.Task<SessionRecording> SessionRecordingsPropertiesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecording</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsPropertiesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -328,8 +328,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecording>> SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecording>> SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -341,8 +341,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        System.Threading.Tasks.Task<SessionRecording> SessionRecordingsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecording</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -355,8 +355,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecording>> SessionRecordingsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecording>> SessionRecordingsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -368,8 +368,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        System.Threading.Tasks.Task<SessionRecording> SessionRecordingsSnapshotsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecording</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsSnapshotsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -382,8 +382,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecording>> SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecording>> SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -658,10 +658,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSessionRecordingList</returns>
-        public PaginatedSessionRecordingList SessionRecordingsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedSessionRecordingList</returns>
+        public PostHogPaginatedSessionRecordingList SessionRecordingsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedSessionRecordingList> localVarResponse = SessionRecordingsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingList> localVarResponse = SessionRecordingsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -673,8 +673,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSessionRecordingList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedSessionRecordingList> SessionRecordingsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedSessionRecordingList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingList> SessionRecordingsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -719,7 +719,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedSessionRecordingList>("/api/projects/{project_id}/session_recordings/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedSessionRecordingList>("/api/projects/{project_id}/session_recordings/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsList", localVarResponse);
@@ -741,10 +741,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSessionRecordingList</returns>
-        public async System.Threading.Tasks.Task<PaginatedSessionRecordingList> SessionRecordingsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedSessionRecordingList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedSessionRecordingList> SessionRecordingsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedSessionRecordingList> localVarResponse = await SessionRecordingsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingList> localVarResponse = await SessionRecordingsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -757,8 +757,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSessionRecordingList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedSessionRecordingList>> SessionRecordingsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedSessionRecordingList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingList>> SessionRecordingsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -804,7 +804,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedSessionRecordingList>("/api/projects/{project_id}/session_recordings/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedSessionRecordingList>("/api/projects/{project_id}/session_recordings/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -824,10 +824,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        public SessionRecording SessionRecordingsMatchingEventsRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecording</returns>
+        public PostHogSessionRecording SessionRecordingsMatchingEventsRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = SessionRecordingsMatchingEventsRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = SessionRecordingsMatchingEventsRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -837,8 +837,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecording> SessionRecordingsMatchingEventsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecording> SessionRecordingsMatchingEventsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -875,7 +875,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecording>("/api/projects/{project_id}/session_recordings/matching_events/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/matching_events/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsMatchingEventsRetrieve", localVarResponse);
@@ -895,10 +895,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        public async System.Threading.Tasks.Task<SessionRecording> SessionRecordingsMatchingEventsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecording</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsMatchingEventsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = await SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = await SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -909,8 +909,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecording>> SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecording>> SessionRecordingsMatchingEventsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -948,7 +948,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecording>("/api/projects/{project_id}/session_recordings/matching_events/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/matching_events/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -968,12 +968,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        public SessionRecording SessionRecordingsPersistCreate(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0)
+        /// <returns>PostHogSessionRecording</returns>
+        public PostHogSessionRecording SessionRecordingsPersistCreate(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = SessionRecordingsPersistCreateWithHttpInfo(id, projectId, sessionRecording);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = SessionRecordingsPersistCreateWithHttpInfo(id, projectId, postHogSessionRecording);
             return localVarResponse.Data;
         }
 
@@ -983,10 +983,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecording> SessionRecordingsPersistCreateWithHttpInfo(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecording> SessionRecordingsPersistCreateWithHttpInfo(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1021,14 +1021,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = sessionRecording;
+            localVarRequestOptions.Data = postHogSessionRecording;
 
             localVarRequestOptions.Operation = "SessionRecordingsApi.SessionRecordingsPersistCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/persist/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/persist/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsPersistCreate", localVarResponse);
@@ -1047,13 +1047,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        public async System.Threading.Tasks.Task<SessionRecording> SessionRecordingsPersistCreateAsync(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecording</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsPersistCreateAsync(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = await SessionRecordingsPersistCreateWithHttpInfoAsync(id, projectId, sessionRecording, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = await SessionRecordingsPersistCreateWithHttpInfoAsync(id, projectId, postHogSessionRecording, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1063,11 +1063,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecording"> (optional)</param>
+        /// <param name="postHogSessionRecording"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecording>> SessionRecordingsPersistCreateWithHttpInfoAsync(Guid id, string projectId, SessionRecording sessionRecording = default(SessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecording>> SessionRecordingsPersistCreateWithHttpInfoAsync(Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = default(PostHogSessionRecording), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1103,14 +1103,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = sessionRecording;
+            localVarRequestOptions.Data = postHogSessionRecording;
 
             localVarRequestOptions.Operation = "SessionRecordingsApi.SessionRecordingsPersistCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/persist/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/persist/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1130,10 +1130,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        public SessionRecording SessionRecordingsPropertiesRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecording</returns>
+        public PostHogSessionRecording SessionRecordingsPropertiesRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = SessionRecordingsPropertiesRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = SessionRecordingsPropertiesRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -1143,8 +1143,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecording> SessionRecordingsPropertiesRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecording> SessionRecordingsPropertiesRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1181,7 +1181,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecording>("/api/projects/{project_id}/session_recordings/properties/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/properties/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsPropertiesRetrieve", localVarResponse);
@@ -1201,10 +1201,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        public async System.Threading.Tasks.Task<SessionRecording> SessionRecordingsPropertiesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecording</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsPropertiesRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = await SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = await SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1215,8 +1215,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecording>> SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecording>> SessionRecordingsPropertiesRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1254,7 +1254,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecording>("/api/projects/{project_id}/session_recordings/properties/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/properties/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1275,10 +1275,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        public SessionRecording SessionRecordingsRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecording</returns>
+        public PostHogSessionRecording SessionRecordingsRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = SessionRecordingsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = SessionRecordingsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1289,8 +1289,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecording> SessionRecordingsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecording> SessionRecordingsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1328,7 +1328,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsRetrieve", localVarResponse);
@@ -1349,10 +1349,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        public async System.Threading.Tasks.Task<SessionRecording> SessionRecordingsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecording</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = await SessionRecordingsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = await SessionRecordingsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1364,8 +1364,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecording>> SessionRecordingsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecording>> SessionRecordingsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1404,7 +1404,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1425,10 +1425,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecording</returns>
-        public SessionRecording SessionRecordingsSnapshotsRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecording</returns>
+        public PostHogSessionRecording SessionRecordingsSnapshotsRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = SessionRecordingsSnapshotsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = SessionRecordingsSnapshotsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1439,8 +1439,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this session recording.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecording</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecording> SessionRecordingsSnapshotsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecording</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecording> SessionRecordingsSnapshotsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1478,7 +1478,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/snapshots/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/snapshots/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingsSnapshotsRetrieve", localVarResponse);
@@ -1499,10 +1499,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecording</returns>
-        public async System.Threading.Tasks.Task<SessionRecording> SessionRecordingsSnapshotsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecording</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecording> SessionRecordingsSnapshotsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecording> localVarResponse = await SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecording> localVarResponse = await SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1514,8 +1514,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecording)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecording>> SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecording)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecording>> SessionRecordingsSnapshotsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1554,7 +1554,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecording>("/api/projects/{project_id}/session_recordings/{id}/snapshots/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecording>("/api/projects/{project_id}/session_recordings/{id}/snapshots/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

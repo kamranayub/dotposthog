@@ -5,6 +5,182 @@ info:
 servers:
 - url: /
 paths:
+  /capture/:
+    post:
+      description: |
+        > Note: Timestamp is optional. If not set, it'll automatically be set to the current time.
+
+        Capture an event. Events are the core of PostHog, and are what you use
+        to track user behavior, and then analyze and visualize in
+        PostHog.
+      parameters:
+      - explode: true
+        in: query
+        name: ip
+        required: false
+        schema:
+          description: |
+            The IP address of the user. This is used to geolocate the user.
+          format: ipv4
+          type: string
+        style: form
+      - description: |
+          The compression method used to compress the request body.
+        explode: true
+        in: query
+        name: compression
+        required: false
+        schema:
+          enum:
+          - gzip-js
+          - gzip
+          - lz64
+          type: string
+        style: form
+      requestBody:
+        content:
+          application/json:
+            example:
+              api_key: <ph_project_api_key>
+              event: "[event name]"
+              properties:
+                distinct_id: "[your users' distinct id]"
+                key1: value1
+                key2: value2
+              timestamp: "[optional timestamp in ISO 8601 format]"
+            schema:
+              $ref: '#/components/schemas/EventCaptureRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EventCaptureRequest'
+          text/plain:
+            examples:
+              gzip_event:
+                summary: |
+                  Gzipped request body as per the
+                  application/json schema.
+        description: |
+          Provides a method to capture events. Events are the core of PostHog,
+          and are what you use to track user behavior, and then analyze and
+          visualize in PostHog.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureResponse'
+          description: |
+            On successful capture of an event or events, we notify you with a
+            200 response. A 200 response guarantees that the event was persisted
+            by PostHog, but does not guarantee that it will be processed
+            successfully.
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureUnauthenticatedResponse'
+          description: |
+            If you send an invalid API key, we will return a 401 response.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureClientErrorResponse'
+          description: |
+            If you send an invalid request, we will return a 400 response. This
+            can happen if you send an invalid JSON payload among
+            other things.
+      summary: Sending an event
+  /batch/:
+    post:
+      description: |
+        You can send multiple events in one go with the Batch API.
+
+        There is no limit on the number of events you can send in a
+        batch, but the entire request body must be less than 20MB by
+        default (see API overview).
+
+        > Note: Timestamp is optional. If not set, it'll automatically
+        be set to the current time.
+      parameters:
+      - explode: true
+        in: query
+        name: ip
+        required: false
+        schema:
+          description: |
+            The IP address of the user. This is used to geolocate the user.
+          format: ipv4
+          type: string
+        style: form
+      - description: |
+          The compression method used to compress the request body.
+        explode: true
+        in: query
+        name: compression
+        required: false
+        schema:
+          enum:
+          - gzip-js
+          - gzip
+          - lz64
+          type: string
+        style: form
+      requestBody:
+        content:
+          application/json:
+            example:
+              api_key: <ph_project_api_key>
+              batch:
+              - event: "[event name]"
+                properties:
+                  distinct_id: "[your users' distinct id]"
+                  key1: value1
+                  key2: value2
+                timestamp: "[optional timestamp in ISO 8601 format]"
+            schema:
+              $ref: '#/components/schemas/EventsCaptureRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EventsCaptureRequest'
+          text/plain:
+            examples:
+              gzip_event:
+                summary: |
+                  Gzipped request body as per the
+                  application/json schema.
+        description: |
+          Provides a method to capture events. Events are the core of PostHog,
+          and are what you use to track user behavior, and then analyze and
+          visualize in PostHog.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureResponse'
+          description: |
+            On successful capture of an event or events, we notify you with a
+            200 response. A 200 response guarantees that the event was persisted
+            by PostHog, but does not guarantee that it will be processed
+            successfully.
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureUnauthenticatedResponse'
+          description: |
+            If you send an invalid API key, we will return a 401 response.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsCaptureClientErrorResponse'
+          description: |
+            If you send an invalid request, we will return a 400 response. This
+            can happen if you send an invalid JSON payload among
+            other things.
+      summary: Sending multiple events
   /api/organizations/{parent_lookup_organization_id}/domains/:
     get:
       operationId: domains_list
@@ -11961,6 +12137,130 @@ paths:
       - prompts
 components:
   schemas:
+    Event:
+      additionalProperties: false
+      properties:
+        event:
+          type: string
+        offset:
+          type: number
+        distinct_id:
+          type: string
+        $distinct_id:
+          type: string
+        $token:
+          type: string
+        project_id:
+          type: integer
+        api_key:
+          type: string
+        timestamp:
+          format: date-time
+          type: string
+        uuid:
+          format: uuid
+          type: string
+        type:
+          type: string
+        $set:
+          additionalProperties: true
+          description: "Set person property to a given values. If the property does\
+            \ not \nexist, it will be set. If the property already exists, it\nwill\
+            \ be updated to the new value. The type of the property\nwill be inferred\
+            \ from the value.\n"
+          example:
+            $set:
+              country: UK
+              city: Cambridge
+          type: object
+        $set_once:
+          description: |
+            Set person property to a given value, but only if it is not
+            currently set. It will not override existing values. The type
+            of the property will be inferred from the value.
+          example:
+            $set_once:
+              initial_referrer: https://google.com
+          type: object
+        properties:
+          $ref: '#/components/schemas/Event_properties'
+      type: object
+    SetPersonProperties:
+      additionalProperties: true
+      description: "Set person property to a given values. If the property does not\
+        \ \nexist, it will be set. If the property already exists, it\nwill be updated\
+        \ to the new value. The type of the property\nwill be inferred from the value.\n"
+      example:
+        $set:
+          country: UK
+          city: Cambridge
+      type: object
+    SetOncePersonProperties:
+      description: |
+        Set person property to a given value, but only if it is not
+        currently set. It will not override existing values. The type
+        of the property will be inferred from the value.
+      example:
+        $set_once:
+          initial_referrer: https://google.com
+      type: object
+    EventCaptureRequest:
+      $ref: '#/components/schemas/Event'
+    EventsCaptureRequest:
+      anyOf:
+      - $ref: '#/components/schemas/EventsCaptureRequest_anyOf'
+      - $ref: '#/components/schemas/EventsCaptureRequest_anyOf_1'
+      - items:
+          $ref: '#/components/schemas/Event'
+        type: array
+    EventsCaptureResponse:
+      example:
+        status: 1
+      properties:
+        status:
+          enum:
+          - 0
+          - 1
+          example: 1
+          type: number
+      type: object
+    EventsCaptureClientErrorResponse:
+      properties:
+        type:
+          enum:
+          - validation_error
+          type: string
+        code:
+          example: invalid_input
+          type: string
+        detail:
+          example: Malformed request
+          type: string
+        attr:
+          example: api_key
+          type: string
+      required:
+      - code
+      - detail
+      - type
+      type: object
+    EventsCaptureUnauthenticatedResponse:
+      properties:
+        type:
+          enum:
+          - authentication_error
+          type: string
+        code:
+          example: invalid_token
+          type: string
+        detail:
+          example: Invalid API key
+          type: string
+      required:
+      - code
+      - detail
+      - type
+      type: object
     Action:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
@@ -13720,30 +14020,6 @@ components:
       - updated_at
       type: object
     FilterAction:
-      example:
-        id: id
-        math: total
-        properties:
-        - values:
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          type: AND
-        - values:
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          type: AND
       properties:
         id:
           description: ID of the action to filter on. For example `2841`.
@@ -13798,30 +14074,6 @@ components:
       - id
       type: object
     FilterEvent:
-      example:
-        id: id
-        math: total
-        properties:
-        - values:
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          type: AND
-        - values:
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          - type: event
-            value: value
-            key: key
-            operator: exact
-          type: AND
       properties:
         id:
           description: Name of the event to filter on. For example `$pageview` or
@@ -13877,123 +14129,6 @@ components:
       - id
       type: object
     Funnel:
-      example:
-        filter_test_accounts: false
-        breakdown_type: event
-        funnel_window_interval_type: DAY
-        breakdown: breakdown
-        funnel_window_interval: 0
-        exclusions:
-        - funnel_from_step: 6
-          funnel_to_step: 1
-          id: id
-          properties: ""
-        - funnel_from_step: 6
-          funnel_to_step: 1
-          id: id
-          properties: ""
-        date_to: -7d
-        aggregation_group_type_index: 5
-        funnel_order_type: ordered
-        breakdown_limit: 5
-        funnel_window_days: 2
-        funnel_viz_type: steps
-        actions:
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        events:
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        properties: ""
-        date_from: -7d
       properties:
         events:
           description: Events to filter on. One of `events` or `actions` is required.
@@ -14107,11 +14242,6 @@ components:
           type: integer
       type: object
     FunnelExclusion:
-      example:
-        funnel_from_step: 6
-        funnel_to_step: 1
-        id: id
-        properties: ""
       properties:
         id:
           description: Name of the event to filter on. For example `$pageview` or
@@ -17410,50 +17540,6 @@ components:
     PatchedAction:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
-      example:
-        slack_message_format: slack_message_format
-        is_calculating: true
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        post_to_slack: true
-        team_id: 6
-        steps:
-        - tag_name: tag_name
-          url_matching: contains
-          text_matching: contains
-          name: name
-          href_matching: contains
-          selector: selector
-          id: id
-          text: text
-          href: href
-          event: event
-          url: url
-          properties:
-            key: ""
-        - tag_name: tag_name
-          url_matching: contains
-          text_matching: contains
-          name: name
-          href_matching: contains
-          selector: selector
-          id: id
-          text: text
-          href: href
-          event: event
-          url: url
-          properties:
-            key: ""
-        created_by: ""
-        tags:
-        - ""
-        - ""
-        deleted: true
-        last_calculated_at: 2000-01-23T04:56:07.000+00:00
-        is_action: true
-        bytecode_error: bytecode_error
-        name: name
-        id: 0
       properties:
         id:
           readOnly: true
@@ -17505,19 +17591,6 @@ components:
           type: string
       type: object
     PatchedAnnotation:
-      example:
-        insight_name: insight_name
-        deleted: true
-        date_marker: 2000-01-23T04:56:07.000+00:00
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        creation_type: USR
-        scope: dashboard_item
-        created_at: 2000-01-23T04:56:07.000+00:00
-        insight_short_id: insight_short_id
-        id: 0
-        created_by: ""
-        content: content
-        dashboard_item: 6
       properties:
         id:
           readOnly: true
@@ -17570,43 +17643,6 @@ components:
       type: object
     PatchedBatchExport:
       description: Serializer for a BatchExport model.
-      example:
-        end_at: 2000-01-23T04:56:07.000+00:00
-        paused: true
-        last_updated_at: 2000-01-23T04:56:07.000+00:00
-        last_paused_at: 2000-01-23T04:56:07.000+00:00
-        latest_runs:
-        - cursor: cursor
-          data_interval_end: 2000-01-23T04:56:07.000+00:00
-          batch_export: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          finished_at: 2000-01-23T04:56:07.000+00:00
-          last_updated_at: 2000-01-23T04:56:07.000+00:00
-          created_at: 2000-01-23T04:56:07.000+00:00
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          latest_error: latest_error
-          data_interval_start: 2000-01-23T04:56:07.000+00:00
-          status: Cancelled
-          records_completed: -1803530559
-        - cursor: cursor
-          data_interval_end: 2000-01-23T04:56:07.000+00:00
-          batch_export: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          finished_at: 2000-01-23T04:56:07.000+00:00
-          last_updated_at: 2000-01-23T04:56:07.000+00:00
-          created_at: 2000-01-23T04:56:07.000+00:00
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          latest_error: latest_error
-          data_interval_start: 2000-01-23T04:56:07.000+00:00
-          status: Cancelled
-          records_completed: -1803530559
-        name: name
-        destination:
-          type: S3
-          config:
-            key: ""
-        created_at: 2000-01-23T04:56:07.000+00:00
-        interval: hour
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        start_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           format: uuid
@@ -17659,22 +17695,6 @@ components:
           type: array
       type: object
     PatchedCohort:
-      example:
-        last_calculation: 2000-01-23T04:56:07.000+00:00
-        is_calculating: true
-        count: 1
-        description: description
-        groups:
-          key: ""
-        created_at: 2000-01-23T04:56:07.000+00:00
-        filters:
-          key: ""
-        created_by: ""
-        errors_calculating: 6
-        deleted: true
-        is_static: true
-        name: name
-        id: 0
       properties:
         id:
           readOnly: true
@@ -17725,28 +17745,6 @@ components:
     PatchedDashboard:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
-      example:
-        pinned: true
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        use_dashboard: 6
-        creation_mode: default
-        filters:
-          key: ""
-        effective_restriction_level: 5
-        created_by: ""
-        tags:
-        - ""
-        - ""
-        tiles: tiles
-        effective_privilege_level: 5
-        deleted: true
-        use_template: use_template
-        is_shared: true
-        name: name
-        id: 0
-        delete_insights: false
-        restriction_level: 4803
       properties:
         id:
           readOnly: true
@@ -17820,25 +17818,6 @@ components:
           type: integer
       type: object
     PatchedDashboardTemplate:
-      example:
-        dashboard_filters:
-          key: ""
-        variables:
-          key: ""
-        image_url: image_url
-        created_at: 2000-01-23T04:56:07.000+00:00
-        team_id: 6
-        dashboard_description: dashboard_description
-        created_by: 0
-        tags:
-        - tags
-        - tags
-        tiles:
-          key: ""
-        template_name: template_name
-        deleted: true
-        scope: team
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         id:
           format: uuid
@@ -17900,33 +17879,6 @@ components:
           type: string
       type: object
     PatchedDataWarehouseSavedQuery:
-      example:
-        deleted: true
-        columns:
-        - chain:
-          - chain
-          - chain
-          type: integer
-          fields:
-          - fields
-          - fields
-          key: key
-          table: table
-        - chain:
-          - chain
-          - chain
-          type: integer
-          fields:
-          - fields
-          - fields
-          key: key
-          table: table
-        query:
-          key: ""
-        name: name
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        created_by: ""
       properties:
         id:
           format: uuid
@@ -17958,14 +17910,6 @@ components:
           type: array
       type: object
     PatchedEarlyAccessFeature:
-      example:
-        stage: draft
-        name: name
-        feature_flag: ""
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        documentation_url: https://openapi-generator.tech
       properties:
         id:
           format: uuid
@@ -18001,28 +17945,6 @@ components:
     PatchedEnterpriseEventDefinition:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
-      example:
-        owner: 0
-        is_calculating: true
-        verified: true
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        post_to_slack: false
-        created_by: ""
-        tags:
-        - ""
-        - ""
-        verified_by: ""
-        is_action: is_action
-        last_calculated_at: 2000-01-23T04:56:07.000+00:00
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        verified_at: 2000-01-23T04:56:07.000+00:00
-        action_id: 6
-        last_updated_at: 2000-01-23T04:56:07.000+00:00
-        name: name
-        updated_by: ""
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        last_seen_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           format: uuid
@@ -18097,21 +18019,6 @@ components:
     PatchedEnterprisePropertyDefinition:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
-      example:
-        is_numerical: true
-        verified_by: ""
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        verified_at: 2000-01-23T04:56:07.000+00:00
-        is_seen_on_filtered_events: is_seen_on_filtered_events
-        name: name
-        updated_by: ""
-        verified: true
-        description: description
-        property_type: DateTime
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        tags:
-        - ""
-        - ""
       properties:
         id:
           format: uuid
@@ -18163,24 +18070,6 @@ components:
           readOnly: true
       type: object
     PatchedExperiment:
-      example:
-        end_date: 2000-01-23T04:56:07.000+00:00
-        feature_flag_key: feature_flag_key
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        filters:
-          key: ""
-        created_by: ""
-        archived: true
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        secondary_metrics:
-          key: ""
-        name: name
-        feature_flag: ""
-        id: 0
-        parameters:
-          key: ""
-        start_date: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           readOnly: true
@@ -18233,16 +18122,6 @@ components:
           type: string
       type: object
     PatchedExplicitTeamMember:
-      example:
-        joined_at: 2000-01-23T04:56:07.000+00:00
-        user_uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        level: 2624
-        parent_level: 6
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        parent_membership_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        user: ""
-        effective_level: 1
       properties:
         id:
           format: uuid
@@ -18287,15 +18166,6 @@ components:
           type: integer
       type: object
     PatchedExternalDataSourceSerializers:
-      example:
-        account_id: account_id
-        created_at: 2000-01-23T04:56:07.000+00:00
-        source_type: Stripe
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        source_id: source_id
-        client_secret: client_secret
-        created_by: 0
-        status: status
       properties:
         id:
           format: uuid
@@ -18330,38 +18200,6 @@ components:
     PatchedFeatureFlag:
       description: Serializer mixin that resolves appropriate response for tags depending
         on license.
-      example:
-        is_simple_flag: true
-        ensure_experience_continuity: true
-        rollout_percentage: 6
-        surveys:
-          key: ""
-        has_enriched_analytics: true
-        active: true
-        created_at: 2000-01-23T04:56:07.000+00:00
-        can_edit: true
-        filters:
-          key: ""
-        created_by: ""
-        tags:
-        - ""
-        - ""
-        analytics_dashboards:
-        - 5
-        - 5
-        features:
-          key: ""
-        deleted: true
-        performed_rollback: true
-        name: name
-        usage_dashboard: 5
-        rollback_conditions:
-          key: ""
-        id: 0
-        key: key
-        experiment_set:
-        - 1
-        - 1
       properties:
         id:
           readOnly: true
@@ -18435,11 +18273,6 @@ components:
           type: boolean
       type: object
     PatchedGroupType:
-      example:
-        name_plural: name_plural
-        name_singular: name_singular
-        group_type_index: 0
-        group_type: group_type
       properties:
         group_type:
           readOnly: true
@@ -18457,14 +18290,6 @@ components:
           type: string
       type: object
     PatchedHook:
-      example:
-        created: 2000-01-23T04:56:07.000+00:00
-        resource_id: -1803530559
-        id: id
-        team: 6
-        event: event
-        updated: 2000-01-23T04:56:07.000+00:00
-        target: https://openapi-generator.tech
       properties:
         id:
           maxLength: 50
@@ -18497,46 +18322,6 @@ components:
     PatchedInsight:
       description: Simplified serializer to speed response times when loading large
         amounts of objects.
-      example:
-        saved: true
-        timezone: timezone
-        created_at: 2000-01-23T04:56:07.000+00:00
-        description: description
-        is_cached: is_cached
-        effective_restriction_level: 5
-        dashboards:
-        - 1
-        - 1
-        last_modified_at: 2000-01-23T04:56:07.000+00:00
-        result: result
-        effective_privilege_level: 5
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        id: 0
-        order: 441289069
-        favorited: true
-        dashboard_tiles:
-        - deleted: true
-          id: 5
-          dashboard_id: 5
-        - deleted: true
-          id: 5
-          dashboard_id: 5
-        query:
-          key: ""
-        last_refresh: last_refresh
-        short_id: short_id
-        filters:
-          key: ""
-        last_modified_by: ""
-        created_by: ""
-        tags:
-        - ""
-        - ""
-        is_sample: true
-        deleted: true
-        next_allowed_client_refresh: next_allowed_client_refresh
-        name: name
-        derived_name: derived_name
       properties:
         id:
           readOnly: true
@@ -18654,18 +18439,6 @@ components:
           type: string
       type: object
     PatchedOrganizationDomain:
-      example:
-        jit_provisioning_enabled: true
-        verification_challenge: verification_challenge
-        verified_at: 2000-01-23T04:56:07.000+00:00
-        sso_enforcement: sso_enforcement
-        has_saml: true
-        domain: domain
-        saml_entity_id: saml_entity_id
-        saml_acs_url: saml_acs_url
-        saml_x509_cert: saml_x509_cert
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        is_verified: true
       properties:
         id:
           format: uuid
@@ -18706,14 +18479,6 @@ components:
           type: string
       type: object
     PatchedOrganizationMember:
-      example:
-        joined_at: 2000-01-23T04:56:07.000+00:00
-        is_2fa_enabled: true
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        level: 2624
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        user: ""
-        has_social_auth: true
       properties:
         id:
           format: uuid
@@ -18747,14 +18512,6 @@ components:
           type: boolean
       type: object
     PatchedOrganizationResourceAccess:
-      example:
-        access_level: 19750
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        resource: feature flags
-        organization: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0
-        created_by: 1
       properties:
         id:
           readOnly: true
@@ -18794,16 +18551,6 @@ components:
           type: integer
       type: object
     PatchedPerson:
-      example:
-        name: name
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        properties:
-          key: ""
-        distinct_ids:
-        - distinct_ids
-        - distinct_ids
       properties:
         id:
           readOnly: true
@@ -18829,26 +18576,6 @@ components:
           type: string
       type: object
     PatchedPlugin:
-      example:
-        capabilities:
-          key: ""
-        icon: icon
-        description: description
-        is_global: true
-        config_schema:
-          key: ""
-        organization_name: organization_name
-        url: url
-        latest_tag: latest_tag
-        public_jobs:
-          key: ""
-        organization_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        plugin_type: local
-        name: name
-        id: 0
-        tag: tag
-        metrics:
-          key: ""
       properties:
         id:
           readOnly: true
@@ -18911,22 +18638,6 @@ components:
           type: object
       type: object
     PatchedPluginConfig:
-      example:
-        plugin_info: plugin_info
-        created_at: 2000-01-23T04:56:07.000+00:00
-        description: description
-        team_id: 5
-        error:
-          key: ""
-        enabled: true
-        deleted: true
-        plugin: 6
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        name: name
-        id: 0
-        delivery_rate_24h: delivery_rate_24h
-        config: config
-        order: -1517921766
       properties:
         id:
           readOnly: true
@@ -18977,14 +18688,6 @@ components:
           type: boolean
       type: object
     PatchedRole:
-      example:
-        associated_flags: associated_flags
-        members: members
-        name: name
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        feature_flags_access_level: 2624
-        created_by: ""
       properties:
         id:
           format: uuid
@@ -19016,20 +18719,6 @@ components:
           type: string
       type: object
     PatchedSessionRecordingPlaylist:
-      example:
-        pinned: true
-        deleted: true
-        name: name
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        derived_name: derived_name
-        id: 0
-        short_id: short_id
-        filters:
-          key: ""
-        last_modified_by: ""
-        created_by: ""
-        last_modified_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           readOnly: true
@@ -19073,28 +18762,6 @@ components:
       type: object
     PatchedSubscription:
       description: Standard Subscription serializer.
-      example:
-        summary: summary
-        bysetpos: 273751188
-        invite_message: invite_message
-        target_type: email
-        count: -1158723813
-        created_at: 2000-01-23T04:56:07.000+00:00
-        until_date: 2000-01-23T04:56:07.000+00:00
-        title: title
-        created_by: ""
-        frequency: daily
-        byweekday:
-        - monday
-        - monday
-        insight: 1
-        deleted: true
-        next_delivery_date: 2000-01-23T04:56:07.000+00:00
-        target_value: target_value
-        interval: 413233370
-        id: 0
-        dashboard: 6
-        start_date: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           readOnly: true
@@ -19181,29 +18848,6 @@ components:
           type: string
       type: object
     PatchedSurveySerializerCreateUpdateOnly:
-      example:
-        end_date: 2000-01-23T04:56:07.000+00:00
-        targeting_flag_id: 6
-        linked_flag_id: 0
-        questions:
-          key: ""
-        description: description
-        created_at: 2000-01-23T04:56:07.000+00:00
-        remove_targeting_flag: true
-        type: popover
-        targeting_flag: ""
-        created_by: ""
-        archived: true
-        appearance:
-          key: ""
-        linked_flag: ""
-        name: name
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        targeting_flag_filters:
-          key: ""
-        conditions:
-          key: ""
-        start_date: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           format: uuid
@@ -19278,39 +18922,6 @@ components:
           type: boolean
       type: object
     PatchedTable:
-      example:
-        url_pattern: url_pattern
-        deleted: true
-        credential:
-          access_key: access_key
-          access_secret: access_secret
-          created_at: 2000-01-23T04:56:07.000+00:00
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          created_by: ""
-        columns:
-        - chain:
-          - chain
-          - chain
-          type: integer
-          fields:
-          - fields
-          - fields
-          key: key
-          table: table
-        - chain:
-          - chain
-          - chain
-          type: integer
-          fields:
-          - fields
-          - fields
-          key: key
-          table: table
-        name: name
-        format: CSV
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        created_by: ""
       properties:
         id:
           format: uuid
@@ -19348,67 +18959,6 @@ components:
           type: array
       type: object
     PatchedTeam:
-      example:
-        session_recording_sample_rate: session_recording_sample_rate
-        completed_snippet_onboarding: true
-        test_account_filters_default_checked: true
-        timezone: Africa/Abidjan
-        api_token: api_token
-        live_events_columns:
-        - live_events_columns
-        - live_events_columns
-        created_at: 2000-01-23T04:56:07.000+00:00
-        autocapture_opt_out: true
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        is_demo: true
-        person_display_name_properties:
-        - person_display_name_properties
-        - person_display_name_properties
-        capture_console_log_opt_in: true
-        primary_dashboard: 5
-        recording_domains:
-        - recording_domains
-        - recording_domains
-        inject_web_apps: true
-        extra_settings:
-          key: ""
-        person_on_events_querying_enabled: true
-        groups_on_events_querying_enabled: true
-        has_completed_onboarding_for:
-          key: ""
-        updated_at: 2000-01-23T04:56:07.000+00:00
-        capture_performance_opt_in: true
-        session_recording_linked_flag:
-          key: ""
-        id: 0
-        app_urls:
-        - app_urls
-        - app_urls
-        has_group_types: true
-        anonymize_ips: true
-        session_recording_opt_in: true
-        week_start_day: 6304
-        access_control: true
-        autocapture_exceptions_errors_to_ignore:
-          key: ""
-        session_recording_minimum_duration_milliseconds: 9041
-        surveys_opt_in: true
-        autocapture_exceptions_opt_in: true
-        correlation_config:
-          key: ""
-        session_recording_network_payload_capture_config:
-          key: ""
-        data_attributes:
-          key: ""
-        organization: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        path_cleaning_filters:
-          key: ""
-        effective_membership_level: 1
-        name: name
-        slack_incoming_webhook: slack_incoming_webhook
-        test_account_filters:
-          key: ""
-        ingested_event: true
       properties:
         id:
           readOnly: true
@@ -20014,16 +19564,6 @@ components:
           type: boolean
       type: object
     PatchedViewLink:
-      example:
-        deleted: true
-        from_join_key: from_join_key
-        saved_query_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        to_join_key: to_join_key
-        created_at: 2000-01-23T04:56:07.000+00:00
-        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        saved_query: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        created_by: ""
-        table: table
       properties:
         id:
           format: uuid
@@ -20318,17 +19858,6 @@ components:
       - type
       type: object
     Property:
-      example:
-        values:
-        - type: event
-          value: value
-          key: key
-          operator: exact
-        - type: event
-          value: value
-          key: key
-          operator: exact
-        type: AND
       properties:
         type:
           default: AND
@@ -20384,11 +19913,6 @@ components:
       - values
       type: object
     PropertyItem:
-      example:
-        type: event
-        value: value
-        key: key
-        operator: exact
       properties:
         key:
           description: Key of the property you're filtering on. For example `email`
@@ -22290,110 +21814,6 @@ components:
       - uuid
       type: object
     Trend:
-      example:
-        filter_test_accounts: false
-        breakdown_type: event
-        compare: true
-        breakdown: breakdown
-        display: ActionsLineGraph
-        formula: formula
-        date_to: -7d
-        actions:
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        events:
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        - id: id
-          math: total
-          properties:
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-          - values:
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            - type: event
-              value: value
-              key: key
-              operator: exact
-            type: AND
-        properties: ""
-        date_from: -7d
       properties:
         events:
           description: Events to filter on. One of `events` or `actions` is required.
@@ -23096,6 +22516,64 @@ components:
       - saved_query_id
       - table
       - to_join_key
+      type: object
+    Event_properties:
+      additionalProperties: true
+      properties:
+        $set:
+          additionalProperties: true
+          description: "Set person property to a given values. If the property does\
+            \ not \nexist, it will be set. If the property already exists, it\nwill\
+            \ be updated to the new value. The type of the property\nwill be inferred\
+            \ from the value.\n"
+          example:
+            $set:
+              country: UK
+              city: Cambridge
+          type: object
+        $set_once:
+          description: |
+            Set person property to a given value, but only if it is not
+            currently set. It will not override existing values. The type
+            of the property will be inferred from the value.
+          example:
+            $set_once:
+              initial_referrer: https://google.com
+          type: object
+      type: object
+    EventsCaptureRequest_anyOf:
+      properties:
+        api_key:
+          description: |
+            The API key for your project. You can find this in your project
+            settings.
+          type: string
+        batch:
+          items:
+            $ref: '#/components/schemas/Event'
+          type: array
+      required:
+      - batch
+      type: object
+    EventsCaptureRequest_anyOf_1_data:
+      oneOf:
+      - items:
+          $ref: '#/components/schemas/Event'
+        type: array
+      - description: |
+          A JSON stringified array of events. Optionally base64 encoded.
+        type: string
+    EventsCaptureRequest_anyOf_1:
+      properties:
+        api_key:
+          description: |
+            The API key for your project. You can find this in your project
+            settings.
+          type: string
+        data:
+          $ref: '#/components/schemas/EventsCaptureRequest_anyOf_1_data'
+      required:
+      - data
       type: object
     DataWarehouseSavedQuery_columns_inner:
       example:

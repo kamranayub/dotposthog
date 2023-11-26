@@ -43,8 +43,8 @@ namespace DotPostHog.Api
         /// <param name="select">(Experimental) JSON-serialized array of HogQL expressions to return (optional)</param>
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedClickhouseEventList</returns>
-        PaginatedClickhouseEventList EventsList(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0);
+        /// <returns>PostHogPaginatedClickhouseEventList</returns>
+        PostHogPaginatedClickhouseEventList EventsList(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -66,8 +66,8 @@ namespace DotPostHog.Api
         /// <param name="select">(Experimental) JSON-serialized array of HogQL expressions to return (optional)</param>
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedClickhouseEventList</returns>
-        ApiResponse<PaginatedClickhouseEventList> EventsListWithHttpInfo(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedClickhouseEventList</returns>
+        ApiResponse<PostHogPaginatedClickhouseEventList> EventsListWithHttpInfo(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -76,8 +76,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ClickhouseEvent</returns>
-        ClickhouseEvent EventsRetrieve(string id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogClickhouseEvent</returns>
+        PostHogClickhouseEvent EventsRetrieve(string id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -90,8 +90,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ClickhouseEvent</returns>
-        ApiResponse<ClickhouseEvent> EventsRetrieveWithHttpInfo(string id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogClickhouseEvent</returns>
+        ApiResponse<PostHogClickhouseEvent> EventsRetrieveWithHttpInfo(string id, string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -99,8 +99,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ClickhouseEvent</returns>
-        ClickhouseEvent EventsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogClickhouseEvent</returns>
+        PostHogClickhouseEvent EventsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -112,8 +112,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ClickhouseEvent</returns>
-        ApiResponse<ClickhouseEvent> EventsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogClickhouseEvent</returns>
+        ApiResponse<PostHogClickhouseEvent> EventsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -144,8 +144,8 @@ namespace DotPostHog.Api
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedClickhouseEventList</returns>
-        System.Threading.Tasks.Task<PaginatedClickhouseEventList> EventsListAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedClickhouseEventList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedClickhouseEventList> EventsListAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -168,8 +168,8 @@ namespace DotPostHog.Api
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedClickhouseEventList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedClickhouseEventList>> EventsListWithHttpInfoAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedClickhouseEventList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedClickhouseEventList>> EventsListWithHttpInfoAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -182,8 +182,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ClickhouseEvent</returns>
-        System.Threading.Tasks.Task<ClickhouseEvent> EventsRetrieveAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogClickhouseEvent</returns>
+        System.Threading.Tasks.Task<PostHogClickhouseEvent> EventsRetrieveAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -197,8 +197,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ClickhouseEvent)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ClickhouseEvent>> EventsRetrieveWithHttpInfoAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogClickhouseEvent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogClickhouseEvent>> EventsRetrieveWithHttpInfoAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -210,8 +210,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ClickhouseEvent</returns>
-        System.Threading.Tasks.Task<ClickhouseEvent> EventsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogClickhouseEvent</returns>
+        System.Threading.Tasks.Task<PostHogClickhouseEvent> EventsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -224,8 +224,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ClickhouseEvent)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ClickhouseEvent>> EventsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogClickhouseEvent)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogClickhouseEvent>> EventsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -363,10 +363,10 @@ namespace DotPostHog.Api
         /// <param name="select">(Experimental) JSON-serialized array of HogQL expressions to return (optional)</param>
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedClickhouseEventList</returns>
-        public PaginatedClickhouseEventList EventsList(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0)
+        /// <returns>PostHogPaginatedClickhouseEventList</returns>
+        public PostHogPaginatedClickhouseEventList EventsList(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedClickhouseEventList> localVarResponse = EventsListWithHttpInfo(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedClickhouseEventList> localVarResponse = EventsListWithHttpInfo(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
             return localVarResponse.Data;
         }
 
@@ -387,8 +387,8 @@ namespace DotPostHog.Api
         /// <param name="select">(Experimental) JSON-serialized array of HogQL expressions to return (optional)</param>
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedClickhouseEventList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedClickhouseEventList> EventsListWithHttpInfo(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedClickhouseEventList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedClickhouseEventList> EventsListWithHttpInfo(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -470,7 +470,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedClickhouseEventList>("/api/projects/{project_id}/events/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedClickhouseEventList>("/api/projects/{project_id}/events/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventsList", localVarResponse);
@@ -501,10 +501,10 @@ namespace DotPostHog.Api
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedClickhouseEventList</returns>
-        public async System.Threading.Tasks.Task<PaginatedClickhouseEventList> EventsListAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedClickhouseEventList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedClickhouseEventList> EventsListAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedClickhouseEventList> localVarResponse = await EventsListWithHttpInfoAsync(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedClickhouseEventList> localVarResponse = await EventsListWithHttpInfoAsync(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -526,8 +526,8 @@ namespace DotPostHog.Api
         /// <param name="where">(Experimental) JSON-serialized array of HogQL expressions that must pass (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedClickhouseEventList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedClickhouseEventList>> EventsListWithHttpInfoAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<Property> properties = default(List<Property>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedClickhouseEventList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedClickhouseEventList>> EventsListWithHttpInfoAsync(string projectId, DateTime? after = default(DateTime?), DateTime? before = default(DateTime?), int? distinctId = default(int?), string varEvent = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), int? personId = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), List<string> select = default(List<string>), List<string> where = default(List<string>), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -610,7 +610,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedClickhouseEventList>("/api/projects/{project_id}/events/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedClickhouseEventList>("/api/projects/{project_id}/events/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -632,10 +632,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ClickhouseEvent</returns>
-        public ClickhouseEvent EventsRetrieve(string id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogClickhouseEvent</returns>
+        public PostHogClickhouseEvent EventsRetrieve(string id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ClickhouseEvent> localVarResponse = EventsRetrieveWithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> localVarResponse = EventsRetrieveWithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -647,8 +647,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ClickhouseEvent</returns>
-        public DotPostHog.Client.ApiResponse<ClickhouseEvent> EventsRetrieveWithHttpInfo(string id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogClickhouseEvent</returns>
+        public DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> EventsRetrieveWithHttpInfo(string id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -697,7 +697,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ClickhouseEvent>("/api/projects/{project_id}/events/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogClickhouseEvent>("/api/projects/{project_id}/events/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventsRetrieve", localVarResponse);
@@ -719,10 +719,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ClickhouseEvent</returns>
-        public async System.Threading.Tasks.Task<ClickhouseEvent> EventsRetrieveAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogClickhouseEvent</returns>
+        public async System.Threading.Tasks.Task<PostHogClickhouseEvent> EventsRetrieveAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ClickhouseEvent> localVarResponse = await EventsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> localVarResponse = await EventsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -735,8 +735,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ClickhouseEvent)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ClickhouseEvent>> EventsRetrieveWithHttpInfoAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogClickhouseEvent)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogClickhouseEvent>> EventsRetrieveWithHttpInfoAsync(string id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -786,7 +786,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ClickhouseEvent>("/api/projects/{project_id}/events/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogClickhouseEvent>("/api/projects/{project_id}/events/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -807,10 +807,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ClickhouseEvent</returns>
-        public ClickhouseEvent EventsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogClickhouseEvent</returns>
+        public PostHogClickhouseEvent EventsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ClickhouseEvent> localVarResponse = EventsValuesRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> localVarResponse = EventsValuesRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -821,8 +821,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ClickhouseEvent</returns>
-        public DotPostHog.Client.ApiResponse<ClickhouseEvent> EventsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogClickhouseEvent</returns>
+        public DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> EventsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -864,7 +864,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ClickhouseEvent>("/api/projects/{project_id}/events/values/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogClickhouseEvent>("/api/projects/{project_id}/events/values/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventsValuesRetrieve", localVarResponse);
@@ -885,10 +885,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ClickhouseEvent</returns>
-        public async System.Threading.Tasks.Task<ClickhouseEvent> EventsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogClickhouseEvent</returns>
+        public async System.Threading.Tasks.Task<PostHogClickhouseEvent> EventsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ClickhouseEvent> localVarResponse = await EventsValuesRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogClickhouseEvent> localVarResponse = await EventsValuesRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -900,8 +900,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ClickhouseEvent)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ClickhouseEvent>> EventsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogClickhouseEvent)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogClickhouseEvent>> EventsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -944,7 +944,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ClickhouseEvent>("/api/projects/{project_id}/events/values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogClickhouseEvent>("/api/projects/{project_id}/events/values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

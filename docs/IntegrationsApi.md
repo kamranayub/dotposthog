@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost*
 
 <a id="integrationschannelsretrieve"></a>
 # **IntegrationsChannelsRetrieve**
-> Integration IntegrationsChannelsRetrieve (int id, string projectId)
+> PostHogIntegration IntegrationsChannelsRetrieve (int id, string projectId)
 
 
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                Integration result = apiInstance.IntegrationsChannelsRetrieve(id, projectId);
+                PostHogIntegration result = apiInstance.IntegrationsChannelsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,7 +58,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Integration> response = apiInstance.IntegrationsChannelsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogIntegration> response = apiInstance.IntegrationsChannelsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -80,7 +80,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Integration**](Integration.md)
+[**PostHogIntegration**](PostHogIntegration.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 
 <a id="integrationscreate"></a>
 # **IntegrationsCreate**
-> Integration IntegrationsCreate (string projectId, Integration integration)
+> PostHogIntegration IntegrationsCreate (string projectId, PostHogIntegration postHogIntegration)
 
 
 
@@ -123,11 +123,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new IntegrationsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var integration = new Integration(); // Integration | 
+            var postHogIntegration = new PostHogIntegration(); // PostHogIntegration | 
 
             try
             {
-                Integration result = apiInstance.IntegrationsCreate(projectId, integration);
+                PostHogIntegration result = apiInstance.IntegrationsCreate(projectId, postHogIntegration);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -147,7 +147,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Integration> response = apiInstance.IntegrationsCreateWithHttpInfo(projectId, integration);
+    ApiResponse<PostHogIntegration> response = apiInstance.IntegrationsCreateWithHttpInfo(projectId, postHogIntegration);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -165,11 +165,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **integration** | [**Integration**](Integration.md) |  |  |
+| **postHogIntegration** | [**PostHogIntegration**](PostHogIntegration.md) |  |  |
 
 ### Return type
 
-[**Integration**](Integration.md)
+[**PostHogIntegration**](PostHogIntegration.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ No authorization required
 
 <a id="integrationslist"></a>
 # **IntegrationsList**
-> PaginatedIntegrationList IntegrationsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedIntegrationList IntegrationsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -302,7 +302,7 @@ namespace Example
 
             try
             {
-                PaginatedIntegrationList result = apiInstance.IntegrationsList(projectId, limit, offset);
+                PostHogPaginatedIntegrationList result = apiInstance.IntegrationsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -322,7 +322,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedIntegrationList> response = apiInstance.IntegrationsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedIntegrationList> response = apiInstance.IntegrationsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -345,7 +345,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedIntegrationList**](PaginatedIntegrationList.md)
+[**PostHogPaginatedIntegrationList**](PostHogPaginatedIntegrationList.md)
 
 ### Authorization
 
@@ -366,7 +366,7 @@ No authorization required
 
 <a id="integrationsretrieve"></a>
 # **IntegrationsRetrieve**
-> Integration IntegrationsRetrieve (int id, string projectId)
+> PostHogIntegration IntegrationsRetrieve (int id, string projectId)
 
 
 
@@ -392,7 +392,7 @@ namespace Example
 
             try
             {
-                Integration result = apiInstance.IntegrationsRetrieve(id, projectId);
+                PostHogIntegration result = apiInstance.IntegrationsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -412,7 +412,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Integration> response = apiInstance.IntegrationsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogIntegration> response = apiInstance.IntegrationsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -434,7 +434,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Integration**](Integration.md)
+[**PostHogIntegration**](PostHogIntegration.md)
 
 ### Authorization
 

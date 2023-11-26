@@ -65,7 +65,7 @@ namespace DotPostHog.Test.Api
             //int groupTypeIndex = null;
             //string projectId = null;
             //var response = instance.GroupsFindRetrieve(groupKey, groupTypeIndex, projectId);
-            //Assert.IsType<Group>(response);
+            //Assert.IsType<PostHogGroup>(response);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace DotPostHog.Test.Api
             //string search = null;
             //string cursor = null;
             //var response = instance.GroupsList(groupTypeIndex, projectId, search, cursor);
-            //Assert.IsType<PaginatedGroupList>(response);
+            //Assert.IsType<PostHogPaginatedGroupList>(response);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.GroupsPropertyDefinitionsRetrieve(projectId);
-            //Assert.IsType<Group>(response);
+            //Assert.IsType<PostHogGroup>(response);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace DotPostHog.Test.Api
             //string key = null;
             //string projectId = null;
             //var response = instance.GroupsPropertyValuesRetrieve(groupTypeIndex, key, projectId);
-            //Assert.IsType<Group>(response);
+            //Assert.IsType<PostHogGroup>(response);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace DotPostHog.Test.Api
             //string id = null;
             //string projectId = null;
             //var response = instance.GroupsRelatedRetrieve(groupTypeIndex, id, projectId);
-            //Assert.IsType<Group>(response);
+            //Assert.IsType<PostHogGroup>(response);
         }
     }
 }

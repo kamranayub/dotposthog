@@ -63,7 +63,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.FeatureFlagsActivityRetrieve(projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.FeatureFlagsActivityRetrieve2(id, projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -98,9 +98,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsCreate(projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsCreate(projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -112,9 +112,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsCreateStaticCohortForFlagCreate(id, projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsCreateStaticCohortForFlagCreate(id, projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -126,9 +126,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsDashboardCreate(id, projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsDashboardCreate(id, projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -152,9 +152,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsEnrichUsageDashboardCreate(id, projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsEnrichUsageDashboardCreate(id, projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.FeatureFlagsEvaluationReasonsRetrieve(projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.FeatureFlagsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedFeatureFlagList>(response);
+            //Assert.IsType<PostHogPaginatedFeatureFlagList>(response);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.FeatureFlagsLocalEvaluationRetrieve(projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.FeatureFlagsMyFlagsRetrieve(projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -216,9 +216,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedFeatureFlag patchedFeatureFlag = null;
-            //var response = instance.FeatureFlagsPartialUpdate(id, projectId, patchedFeatureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = null;
+            //var response = instance.FeatureFlagsPartialUpdate(id, projectId, postHogPatchedFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -243,7 +243,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.FeatureFlagsRetrieve2(id, projectId);
-            //Assert.IsType<FeatureFlag>(response);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -255,9 +255,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupFeatureFlagId = null;
             //string projectId = null;
-            //FeatureFlagRoleAccess featureFlagRoleAccess = null;
-            //var response = instance.FeatureFlagsRoleAccessCreate(parentLookupFeatureFlagId, projectId, featureFlagRoleAccess);
-            //Assert.IsType<FeatureFlagRoleAccess>(response);
+            //PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess = null;
+            //var response = instance.FeatureFlagsRoleAccessCreate(parentLookupFeatureFlagId, projectId, postHogFeatureFlagRoleAccess);
+            //Assert.IsType<PostHogFeatureFlagRoleAccess>(response);
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.FeatureFlagsRoleAccessList(parentLookupFeatureFlagId, projectId, limit, offset);
-            //Assert.IsType<PaginatedFeatureFlagRoleAccessList>(response);
+            //Assert.IsType<PostHogPaginatedFeatureFlagRoleAccessList>(response);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace DotPostHog.Test.Api
             //string parentLookupFeatureFlagId = null;
             //string projectId = null;
             //var response = instance.FeatureFlagsRoleAccessRetrieve(id, parentLookupFeatureFlagId, projectId);
-            //Assert.IsType<FeatureFlagRoleAccess>(response);
+            //Assert.IsType<PostHogFeatureFlagRoleAccess>(response);
         }
 
         /// <summary>
@@ -311,9 +311,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsUpdate(id, projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsUpdate(id, projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
 
         /// <summary>
@@ -324,9 +324,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //FeatureFlag featureFlag = null;
-            //var response = instance.FeatureFlagsUserBlastRadiusCreate(projectId, featureFlag);
-            //Assert.IsType<FeatureFlag>(response);
+            //PostHogFeatureFlag postHogFeatureFlag = null;
+            //var response = instance.FeatureFlagsUserBlastRadiusCreate(projectId, postHogFeatureFlag);
+            //Assert.IsType<PostHogFeatureFlag>(response);
         }
     }
 }

@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="dashboardtemplatescreate"></a>
 # **DashboardTemplatesCreate**
-> DashboardTemplate DashboardTemplatesCreate (string projectId, DashboardTemplate dashboardTemplate = null)
+> PostHogDashboardTemplate DashboardTemplatesCreate (string projectId, PostHogDashboardTemplate postHogDashboardTemplate = null)
 
 
 
@@ -36,11 +36,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new DashboardTemplatesApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var dashboardTemplate = new DashboardTemplate(); // DashboardTemplate |  (optional) 
+            var postHogDashboardTemplate = new PostHogDashboardTemplate(); // PostHogDashboardTemplate |  (optional) 
 
             try
             {
-                DashboardTemplate result = apiInstance.DashboardTemplatesCreate(projectId, dashboardTemplate);
+                PostHogDashboardTemplate result = apiInstance.DashboardTemplatesCreate(projectId, postHogDashboardTemplate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DashboardTemplate> response = apiInstance.DashboardTemplatesCreateWithHttpInfo(projectId, dashboardTemplate);
+    ApiResponse<PostHogDashboardTemplate> response = apiInstance.DashboardTemplatesCreateWithHttpInfo(projectId, postHogDashboardTemplate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,11 +78,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **dashboardTemplate** | [**DashboardTemplate**](DashboardTemplate.md) |  | [optional]  |
+| **postHogDashboardTemplate** | [**PostHogDashboardTemplate**](PostHogDashboardTemplate.md) |  | [optional]  |
 
 ### Return type
 
-[**DashboardTemplate**](DashboardTemplate.md)
+[**PostHogDashboardTemplate**](PostHogDashboardTemplate.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 <a id="dashboardtemplatesjsonschemaretrieve"></a>
 # **DashboardTemplatesJsonSchemaRetrieve**
-> DashboardTemplate DashboardTemplatesJsonSchemaRetrieve (string projectId)
+> PostHogDashboardTemplate DashboardTemplatesJsonSchemaRetrieve (string projectId)
 
 
 
@@ -215,7 +215,7 @@ namespace Example
 
             try
             {
-                DashboardTemplate result = apiInstance.DashboardTemplatesJsonSchemaRetrieve(projectId);
+                PostHogDashboardTemplate result = apiInstance.DashboardTemplatesJsonSchemaRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DashboardTemplate> response = apiInstance.DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogDashboardTemplate> response = apiInstance.DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -256,7 +256,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DashboardTemplate**](DashboardTemplate.md)
+[**PostHogDashboardTemplate**](PostHogDashboardTemplate.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ No authorization required
 
 <a id="dashboardtemplateslist"></a>
 # **DashboardTemplatesList**
-> PaginatedDashboardTemplateList DashboardTemplatesList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedDashboardTemplateList DashboardTemplatesList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -304,7 +304,7 @@ namespace Example
 
             try
             {
-                PaginatedDashboardTemplateList result = apiInstance.DashboardTemplatesList(projectId, limit, offset);
+                PostHogPaginatedDashboardTemplateList result = apiInstance.DashboardTemplatesList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -324,7 +324,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedDashboardTemplateList> response = apiInstance.DashboardTemplatesListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedDashboardTemplateList> response = apiInstance.DashboardTemplatesListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -347,7 +347,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedDashboardTemplateList**](PaginatedDashboardTemplateList.md)
+[**PostHogPaginatedDashboardTemplateList**](PostHogPaginatedDashboardTemplateList.md)
 
 ### Authorization
 
@@ -368,7 +368,7 @@ No authorization required
 
 <a id="dashboardtemplatespartialupdate"></a>
 # **DashboardTemplatesPartialUpdate**
-> DashboardTemplate DashboardTemplatesPartialUpdate (string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = null)
+> PostHogDashboardTemplate DashboardTemplatesPartialUpdate (string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = null)
 
 
 
@@ -391,11 +391,11 @@ namespace Example
             var apiInstance = new DashboardTemplatesApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedDashboardTemplate = new PatchedDashboardTemplate(); // PatchedDashboardTemplate |  (optional) 
+            var postHogPatchedDashboardTemplate = new PostHogPatchedDashboardTemplate(); // PostHogPatchedDashboardTemplate |  (optional) 
 
             try
             {
-                DashboardTemplate result = apiInstance.DashboardTemplatesPartialUpdate(id, projectId, patchedDashboardTemplate);
+                PostHogDashboardTemplate result = apiInstance.DashboardTemplatesPartialUpdate(id, projectId, postHogPatchedDashboardTemplate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DashboardTemplate> response = apiInstance.DashboardTemplatesPartialUpdateWithHttpInfo(id, projectId, patchedDashboardTemplate);
+    ApiResponse<PostHogDashboardTemplate> response = apiInstance.DashboardTemplatesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedDashboardTemplate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -434,11 +434,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedDashboardTemplate** | [**PatchedDashboardTemplate**](PatchedDashboardTemplate.md) |  | [optional]  |
+| **postHogPatchedDashboardTemplate** | [**PostHogPatchedDashboardTemplate**](PostHogPatchedDashboardTemplate.md) |  | [optional]  |
 
 ### Return type
 
-[**DashboardTemplate**](DashboardTemplate.md)
+[**PostHogDashboardTemplate**](PostHogDashboardTemplate.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ No authorization required
 
 <a id="dashboardtemplatesretrieve"></a>
 # **DashboardTemplatesRetrieve**
-> DashboardTemplate DashboardTemplatesRetrieve (string id, string projectId)
+> PostHogDashboardTemplate DashboardTemplatesRetrieve (string id, string projectId)
 
 
 
@@ -485,7 +485,7 @@ namespace Example
 
             try
             {
-                DashboardTemplate result = apiInstance.DashboardTemplatesRetrieve(id, projectId);
+                PostHogDashboardTemplate result = apiInstance.DashboardTemplatesRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -505,7 +505,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DashboardTemplate> response = apiInstance.DashboardTemplatesRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogDashboardTemplate> response = apiInstance.DashboardTemplatesRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -527,7 +527,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DashboardTemplate**](DashboardTemplate.md)
+[**PostHogDashboardTemplate**](PostHogDashboardTemplate.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ No authorization required
 
 <a id="dashboardtemplatesupdate"></a>
 # **DashboardTemplatesUpdate**
-> DashboardTemplate DashboardTemplatesUpdate (string id, string projectId, DashboardTemplate dashboardTemplate = null)
+> PostHogDashboardTemplate DashboardTemplatesUpdate (string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = null)
 
 
 
@@ -571,11 +571,11 @@ namespace Example
             var apiInstance = new DashboardTemplatesApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var dashboardTemplate = new DashboardTemplate(); // DashboardTemplate |  (optional) 
+            var postHogDashboardTemplate = new PostHogDashboardTemplate(); // PostHogDashboardTemplate |  (optional) 
 
             try
             {
-                DashboardTemplate result = apiInstance.DashboardTemplatesUpdate(id, projectId, dashboardTemplate);
+                PostHogDashboardTemplate result = apiInstance.DashboardTemplatesUpdate(id, projectId, postHogDashboardTemplate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -595,7 +595,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DashboardTemplate> response = apiInstance.DashboardTemplatesUpdateWithHttpInfo(id, projectId, dashboardTemplate);
+    ApiResponse<PostHogDashboardTemplate> response = apiInstance.DashboardTemplatesUpdateWithHttpInfo(id, projectId, postHogDashboardTemplate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -614,11 +614,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **dashboardTemplate** | [**DashboardTemplate**](DashboardTemplate.md) |  | [optional]  |
+| **postHogDashboardTemplate** | [**PostHogDashboardTemplate**](PostHogDashboardTemplate.md) |  | [optional]  |
 
 ### Return type
 
-[**DashboardTemplate**](DashboardTemplate.md)
+[**PostHogDashboardTemplate**](PostHogDashboardTemplate.md)
 
 ### Authorization
 

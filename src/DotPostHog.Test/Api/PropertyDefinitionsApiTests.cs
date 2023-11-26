@@ -86,7 +86,7 @@ namespace DotPostHog.Test.Api
             //string search = null;
             //string type = null;
             //var response = instance.PropertyDefinitionsList(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
-            //Assert.IsType<PaginatedEnterprisePropertyDefinitionList>(response);
+            //Assert.IsType<PostHogPaginatedEnterprisePropertyDefinitionList>(response);
         }
 
         /// <summary>
@@ -98,9 +98,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = null;
-            //var response = instance.PropertyDefinitionsPartialUpdate(id, projectId, patchedEnterprisePropertyDefinition);
-            //Assert.IsType<EnterprisePropertyDefinition>(response);
+            //PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = null;
+            //var response = instance.PropertyDefinitionsPartialUpdate(id, projectId, postHogPatchedEnterprisePropertyDefinition);
+            //Assert.IsType<PostHogEnterprisePropertyDefinition>(response);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace DotPostHog.Test.Api
             //string id = null;
             //string projectId = null;
             //var response = instance.PropertyDefinitionsRetrieve(id, projectId);
-            //Assert.IsType<EnterprisePropertyDefinition>(response);
+            //Assert.IsType<PostHogEnterprisePropertyDefinition>(response);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.PropertyDefinitionsSeenTogetherRetrieve(projectId);
-            //Assert.IsType<EnterprisePropertyDefinition>(response);
+            //Assert.IsType<PostHogEnterprisePropertyDefinition>(response);
         }
 
         /// <summary>
@@ -137,9 +137,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //EnterprisePropertyDefinition enterprisePropertyDefinition = null;
-            //var response = instance.PropertyDefinitionsUpdate(id, projectId, enterprisePropertyDefinition);
-            //Assert.IsType<EnterprisePropertyDefinition>(response);
+            //PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = null;
+            //var response = instance.PropertyDefinitionsUpdate(id, projectId, postHogEnterprisePropertyDefinition);
+            //Assert.IsType<PostHogEnterprisePropertyDefinition>(response);
         }
     }
 }

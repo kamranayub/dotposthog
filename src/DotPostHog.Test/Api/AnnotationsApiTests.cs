@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Annotation annotation = null;
-            //var response = instance.AnnotationsCreate(projectId, annotation);
-            //Assert.IsType<Annotation>(response);
+            //PostHogAnnotation postHogAnnotation = null;
+            //var response = instance.AnnotationsCreate(projectId, postHogAnnotation);
+            //Assert.IsType<PostHogAnnotation>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string search = null;
             //var response = instance.AnnotationsList(projectId, limit, offset, search);
-            //Assert.IsType<PaginatedAnnotationList>(response);
+            //Assert.IsType<PostHogPaginatedAnnotationList>(response);
         }
 
         /// <summary>
@@ -103,9 +103,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedAnnotation patchedAnnotation = null;
-            //var response = instance.AnnotationsPartialUpdate(id, projectId, patchedAnnotation);
-            //Assert.IsType<Annotation>(response);
+            //PostHogPatchedAnnotation postHogPatchedAnnotation = null;
+            //var response = instance.AnnotationsPartialUpdate(id, projectId, postHogPatchedAnnotation);
+            //Assert.IsType<PostHogAnnotation>(response);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.AnnotationsRetrieve(id, projectId);
-            //Assert.IsType<Annotation>(response);
+            //Assert.IsType<PostHogAnnotation>(response);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //Annotation annotation = null;
-            //var response = instance.AnnotationsUpdate(id, projectId, annotation);
-            //Assert.IsType<Annotation>(response);
+            //PostHogAnnotation postHogAnnotation = null;
+            //var response = instance.AnnotationsUpdate(id, projectId, postHogAnnotation);
+            //Assert.IsType<PostHogAnnotation>(response);
         }
     }
 }

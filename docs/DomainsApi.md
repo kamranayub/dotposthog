@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="domainscreate"></a>
 # **DomainsCreate**
-> OrganizationDomain DomainsCreate (string parentLookupOrganizationId, OrganizationDomain organizationDomain)
+> PostHogOrganizationDomain DomainsCreate (string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain)
 
 
 
@@ -36,11 +36,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new DomainsApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationDomain = new OrganizationDomain(); // OrganizationDomain | 
+            var postHogOrganizationDomain = new PostHogOrganizationDomain(); // PostHogOrganizationDomain | 
 
             try
             {
-                OrganizationDomain result = apiInstance.DomainsCreate(parentLookupOrganizationId, organizationDomain);
+                PostHogOrganizationDomain result = apiInstance.DomainsCreate(parentLookupOrganizationId, postHogOrganizationDomain);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationDomain> response = apiInstance.DomainsCreateWithHttpInfo(parentLookupOrganizationId, organizationDomain);
+    ApiResponse<PostHogOrganizationDomain> response = apiInstance.DomainsCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationDomain);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,11 +78,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationDomain** | [**OrganizationDomain**](OrganizationDomain.md) |  |  |
+| **postHogOrganizationDomain** | [**PostHogOrganizationDomain**](PostHogOrganizationDomain.md) |  |  |
 
 ### Return type
 
-[**OrganizationDomain**](OrganizationDomain.md)
+[**PostHogOrganizationDomain**](PostHogOrganizationDomain.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 <a id="domainslist"></a>
 # **DomainsList**
-> PaginatedOrganizationDomainList DomainsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedOrganizationDomainList DomainsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -215,7 +215,7 @@ namespace Example
 
             try
             {
-                PaginatedOrganizationDomainList result = apiInstance.DomainsList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedOrganizationDomainList result = apiInstance.DomainsList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedOrganizationDomainList> response = apiInstance.DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedOrganizationDomainList> response = apiInstance.DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -258,7 +258,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedOrganizationDomainList**](PaginatedOrganizationDomainList.md)
+[**PostHogPaginatedOrganizationDomainList**](PostHogPaginatedOrganizationDomainList.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 <a id="domainspartialupdate"></a>
 # **DomainsPartialUpdate**
-> OrganizationDomain DomainsPartialUpdate (Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = null)
+> PostHogOrganizationDomain DomainsPartialUpdate (Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = null)
 
 
 
@@ -302,11 +302,11 @@ namespace Example
             var apiInstance = new DomainsApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this domain.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedOrganizationDomain = new PatchedOrganizationDomain(); // PatchedOrganizationDomain |  (optional) 
+            var postHogPatchedOrganizationDomain = new PostHogPatchedOrganizationDomain(); // PostHogPatchedOrganizationDomain |  (optional) 
 
             try
             {
-                OrganizationDomain result = apiInstance.DomainsPartialUpdate(id, parentLookupOrganizationId, patchedOrganizationDomain);
+                PostHogOrganizationDomain result = apiInstance.DomainsPartialUpdate(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -326,7 +326,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationDomain> response = apiInstance.DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationDomain);
+    ApiResponse<PostHogOrganizationDomain> response = apiInstance.DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -345,11 +345,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this domain. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedOrganizationDomain** | [**PatchedOrganizationDomain**](PatchedOrganizationDomain.md) |  | [optional]  |
+| **postHogPatchedOrganizationDomain** | [**PostHogPatchedOrganizationDomain**](PostHogPatchedOrganizationDomain.md) |  | [optional]  |
 
 ### Return type
 
-[**OrganizationDomain**](OrganizationDomain.md)
+[**PostHogOrganizationDomain**](PostHogOrganizationDomain.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 
 <a id="domainsretrieve"></a>
 # **DomainsRetrieve**
-> OrganizationDomain DomainsRetrieve (Guid id, string parentLookupOrganizationId)
+> PostHogOrganizationDomain DomainsRetrieve (Guid id, string parentLookupOrganizationId)
 
 
 
@@ -396,7 +396,7 @@ namespace Example
 
             try
             {
-                OrganizationDomain result = apiInstance.DomainsRetrieve(id, parentLookupOrganizationId);
+                PostHogOrganizationDomain result = apiInstance.DomainsRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -416,7 +416,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationDomain> response = apiInstance.DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogOrganizationDomain> response = apiInstance.DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -438,7 +438,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**OrganizationDomain**](OrganizationDomain.md)
+[**PostHogOrganizationDomain**](PostHogOrganizationDomain.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ No authorization required
 
 <a id="domainsupdate"></a>
 # **DomainsUpdate**
-> OrganizationDomain DomainsUpdate (Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain)
+> PostHogOrganizationDomain DomainsUpdate (Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain)
 
 
 
@@ -482,11 +482,11 @@ namespace Example
             var apiInstance = new DomainsApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this domain.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationDomain = new OrganizationDomain(); // OrganizationDomain | 
+            var postHogOrganizationDomain = new PostHogOrganizationDomain(); // PostHogOrganizationDomain | 
 
             try
             {
-                OrganizationDomain result = apiInstance.DomainsUpdate(id, parentLookupOrganizationId, organizationDomain);
+                PostHogOrganizationDomain result = apiInstance.DomainsUpdate(id, parentLookupOrganizationId, postHogOrganizationDomain);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -506,7 +506,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationDomain> response = apiInstance.DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+    ApiResponse<PostHogOrganizationDomain> response = apiInstance.DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -525,11 +525,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this domain. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationDomain** | [**OrganizationDomain**](OrganizationDomain.md) |  |  |
+| **postHogOrganizationDomain** | [**PostHogOrganizationDomain**](PostHogOrganizationDomain.md) |  |  |
 
 ### Return type
 
-[**OrganizationDomain**](OrganizationDomain.md)
+[**PostHogOrganizationDomain**](PostHogOrganizationDomain.md)
 
 ### Authorization
 
@@ -550,7 +550,7 @@ No authorization required
 
 <a id="domainsverifycreate"></a>
 # **DomainsVerifyCreate**
-> OrganizationDomain DomainsVerifyCreate (Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain)
+> PostHogOrganizationDomain DomainsVerifyCreate (Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain)
 
 
 
@@ -573,11 +573,11 @@ namespace Example
             var apiInstance = new DomainsApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this domain.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationDomain = new OrganizationDomain(); // OrganizationDomain | 
+            var postHogOrganizationDomain = new PostHogOrganizationDomain(); // PostHogOrganizationDomain | 
 
             try
             {
-                OrganizationDomain result = apiInstance.DomainsVerifyCreate(id, parentLookupOrganizationId, organizationDomain);
+                PostHogOrganizationDomain result = apiInstance.DomainsVerifyCreate(id, parentLookupOrganizationId, postHogOrganizationDomain);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -597,7 +597,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationDomain> response = apiInstance.DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+    ApiResponse<PostHogOrganizationDomain> response = apiInstance.DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -616,11 +616,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this domain. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationDomain** | [**OrganizationDomain**](OrganizationDomain.md) |  |  |
+| **postHogOrganizationDomain** | [**PostHogOrganizationDomain**](PostHogOrganizationDomain.md) |  |  |
 
 ### Return type
 
-[**OrganizationDomain**](OrganizationDomain.md)
+[**PostHogOrganizationDomain**](PostHogOrganizationDomain.md)
 
 ### Authorization
 

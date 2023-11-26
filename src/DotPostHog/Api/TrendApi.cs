@@ -32,10 +32,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>TrendResults</returns>
-        TrendResults Trends(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0);
+        /// <returns>PostHogTrendResults</returns>
+        PostHogTrendResults Trends(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -46,10 +46,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of TrendResults</returns>
-        ApiResponse<TrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTrendResults</returns>
+        ApiResponse<PostHogTrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -68,11 +68,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TrendResults</returns>
-        System.Threading.Tasks.Task<TrendResults> TrendsAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTrendResults</returns>
+        System.Threading.Tasks.Task<PostHogTrendResults> TrendsAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -83,11 +83,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TrendResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTrendResults)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -214,12 +214,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>TrendResults</returns>
-        public TrendResults Trends(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0)
+        /// <returns>PostHogTrendResults</returns>
+        public PostHogTrendResults Trends(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<TrendResults> localVarResponse = TrendsWithHttpInfo(projectId, format, trend);
+            DotPostHog.Client.ApiResponse<PostHogTrendResults> localVarResponse = TrendsWithHttpInfo(projectId, format, postHogTrend);
             return localVarResponse.Data;
         }
 
@@ -229,10 +229,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of TrendResults</returns>
-        public DotPostHog.Client.ApiResponse<TrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTrendResults</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -269,14 +269,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = trend;
+            localVarRequestOptions.Data = postHogTrend;
 
             localVarRequestOptions.Operation = "TrendApi.Trends";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<TrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogTrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Trends", localVarResponse);
@@ -295,13 +295,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TrendResults</returns>
-        public async System.Threading.Tasks.Task<TrendResults> TrendsAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTrendResults</returns>
+        public async System.Threading.Tasks.Task<PostHogTrendResults> TrendsAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<TrendResults> localVarResponse = await TrendsWithHttpInfoAsync(projectId, format, trend, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTrendResults> localVarResponse = await TrendsWithHttpInfoAsync(projectId, format, postHogTrend, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -311,11 +311,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TrendResults)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<TrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTrendResults)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -353,14 +353,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = trend;
+            localVarRequestOptions.Data = postHogTrend;
 
             localVarRequestOptions.Operation = "TrendApi.Trends";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<TrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogTrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

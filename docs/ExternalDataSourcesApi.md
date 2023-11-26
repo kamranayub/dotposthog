@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a id="externaldatasourcescreate"></a>
 # **ExternalDataSourcesCreate**
-> ExternalDataSourceSerializers ExternalDataSourcesCreate (string projectId, ExternalDataSourceSerializers externalDataSourceSerializers)
+> PostHogExternalDataSourceSerializers ExternalDataSourcesCreate (string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers)
 
 
 
@@ -38,11 +38,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ExternalDataSourcesApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var externalDataSourceSerializers = new ExternalDataSourceSerializers(); // ExternalDataSourceSerializers | 
+            var postHogExternalDataSourceSerializers = new PostHogExternalDataSourceSerializers(); // PostHogExternalDataSourceSerializers | 
 
             try
             {
-                ExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesCreate(projectId, externalDataSourceSerializers);
+                PostHogExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesCreate(projectId, postHogExternalDataSourceSerializers);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesCreateWithHttpInfo(projectId, externalDataSourceSerializers);
+    ApiResponse<PostHogExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesCreateWithHttpInfo(projectId, postHogExternalDataSourceSerializers);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -80,11 +80,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **externalDataSourceSerializers** | [**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md) |  |  |
+| **postHogExternalDataSourceSerializers** | [**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md) |  |  |
 
 ### Return type
 
-[**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md)
+[**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 
 <a id="externaldatasourceslist"></a>
 # **ExternalDataSourcesList**
-> PaginatedExternalDataSourceSerializersList ExternalDataSourcesList (string projectId, int? limit = null, int? offset = null, string search = null)
+> PostHogPaginatedExternalDataSourceSerializersList ExternalDataSourcesList (string projectId, int? limit = null, int? offset = null, string search = null)
 
 
 
@@ -222,7 +222,7 @@ namespace Example
 
             try
             {
-                PaginatedExternalDataSourceSerializersList result = apiInstance.ExternalDataSourcesList(projectId, limit, offset, search);
+                PostHogPaginatedExternalDataSourceSerializersList result = apiInstance.ExternalDataSourcesList(projectId, limit, offset, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -242,7 +242,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedExternalDataSourceSerializersList> response = apiInstance.ExternalDataSourcesListWithHttpInfo(projectId, limit, offset, search);
+    ApiResponse<PostHogPaginatedExternalDataSourceSerializersList> response = apiInstance.ExternalDataSourcesListWithHttpInfo(projectId, limit, offset, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -266,7 +266,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedExternalDataSourceSerializersList**](PaginatedExternalDataSourceSerializersList.md)
+[**PostHogPaginatedExternalDataSourceSerializersList**](PostHogPaginatedExternalDataSourceSerializersList.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ No authorization required
 
 <a id="externaldatasourcespartialupdate"></a>
 # **ExternalDataSourcesPartialUpdate**
-> ExternalDataSourceSerializers ExternalDataSourcesPartialUpdate (Guid id, string projectId, PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = null)
+> PostHogExternalDataSourceSerializers ExternalDataSourcesPartialUpdate (Guid id, string projectId, PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = null)
 
 
 
@@ -312,11 +312,11 @@ namespace Example
             var apiInstance = new ExternalDataSourcesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this external data source.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedExternalDataSourceSerializers = new PatchedExternalDataSourceSerializers(); // PatchedExternalDataSourceSerializers |  (optional) 
+            var postHogPatchedExternalDataSourceSerializers = new PostHogPatchedExternalDataSourceSerializers(); // PostHogPatchedExternalDataSourceSerializers |  (optional) 
 
             try
             {
-                ExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesPartialUpdate(id, projectId, patchedExternalDataSourceSerializers);
+                PostHogExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesPartialUpdate(id, projectId, postHogPatchedExternalDataSourceSerializers);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -336,7 +336,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesPartialUpdateWithHttpInfo(id, projectId, patchedExternalDataSourceSerializers);
+    ApiResponse<PostHogExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedExternalDataSourceSerializers);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -355,11 +355,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this external data source. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedExternalDataSourceSerializers** | [**PatchedExternalDataSourceSerializers**](PatchedExternalDataSourceSerializers.md) |  | [optional]  |
+| **postHogPatchedExternalDataSourceSerializers** | [**PostHogPatchedExternalDataSourceSerializers**](PostHogPatchedExternalDataSourceSerializers.md) |  | [optional]  |
 
 ### Return type
 
-[**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md)
+[**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ No authorization required
 
 <a id="externaldatasourcesreloadcreate"></a>
 # **ExternalDataSourcesReloadCreate**
-> ExternalDataSourceSerializers ExternalDataSourcesReloadCreate (Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers)
+> PostHogExternalDataSourceSerializers ExternalDataSourcesReloadCreate (Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers)
 
 
 
@@ -405,11 +405,11 @@ namespace Example
             var apiInstance = new ExternalDataSourcesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this external data source.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var externalDataSourceSerializers = new ExternalDataSourceSerializers(); // ExternalDataSourceSerializers | 
+            var postHogExternalDataSourceSerializers = new PostHogExternalDataSourceSerializers(); // PostHogExternalDataSourceSerializers | 
 
             try
             {
-                ExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesReloadCreate(id, projectId, externalDataSourceSerializers);
+                PostHogExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesReloadCreate(id, projectId, postHogExternalDataSourceSerializers);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -429,7 +429,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesReloadCreateWithHttpInfo(id, projectId, externalDataSourceSerializers);
+    ApiResponse<PostHogExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesReloadCreateWithHttpInfo(id, projectId, postHogExternalDataSourceSerializers);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -448,11 +448,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this external data source. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **externalDataSourceSerializers** | [**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md) |  |  |
+| **postHogExternalDataSourceSerializers** | [**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md) |  |  |
 
 ### Return type
 
-[**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md)
+[**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md)
 
 ### Authorization
 
@@ -473,7 +473,7 @@ No authorization required
 
 <a id="externaldatasourcesretrieve"></a>
 # **ExternalDataSourcesRetrieve**
-> ExternalDataSourceSerializers ExternalDataSourcesRetrieve (Guid id, string projectId)
+> PostHogExternalDataSourceSerializers ExternalDataSourcesRetrieve (Guid id, string projectId)
 
 
 
@@ -501,7 +501,7 @@ namespace Example
 
             try
             {
-                ExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesRetrieve(id, projectId);
+                PostHogExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -521,7 +521,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -543,7 +543,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md)
+[**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ No authorization required
 
 <a id="externaldatasourcesupdate"></a>
 # **ExternalDataSourcesUpdate**
-> ExternalDataSourceSerializers ExternalDataSourcesUpdate (Guid id, string projectId, ExternalDataSourceSerializers externalDataSourceSerializers)
+> PostHogExternalDataSourceSerializers ExternalDataSourcesUpdate (Guid id, string projectId, PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers)
 
 
 
@@ -589,11 +589,11 @@ namespace Example
             var apiInstance = new ExternalDataSourcesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this external data source.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var externalDataSourceSerializers = new ExternalDataSourceSerializers(); // ExternalDataSourceSerializers | 
+            var postHogExternalDataSourceSerializers = new PostHogExternalDataSourceSerializers(); // PostHogExternalDataSourceSerializers | 
 
             try
             {
-                ExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesUpdate(id, projectId, externalDataSourceSerializers);
+                PostHogExternalDataSourceSerializers result = apiInstance.ExternalDataSourcesUpdate(id, projectId, postHogExternalDataSourceSerializers);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -613,7 +613,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesUpdateWithHttpInfo(id, projectId, externalDataSourceSerializers);
+    ApiResponse<PostHogExternalDataSourceSerializers> response = apiInstance.ExternalDataSourcesUpdateWithHttpInfo(id, projectId, postHogExternalDataSourceSerializers);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -632,11 +632,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this external data source. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **externalDataSourceSerializers** | [**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md) |  |  |
+| **postHogExternalDataSourceSerializers** | [**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md) |  |  |
 
 ### Return type
 
-[**ExternalDataSourceSerializers**](ExternalDataSourceSerializers.md)
+[**PostHogExternalDataSourceSerializers**](PostHogExternalDataSourceSerializers.md)
 
 ### Authorization
 

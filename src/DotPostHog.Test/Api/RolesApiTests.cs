@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
-            //Role role = null;
-            //var response = instance.RolesCreate(parentLookupOrganizationId, role);
-            //Assert.IsType<Role>(response);
+            //PostHogRole postHogRole = null;
+            //var response = instance.RolesCreate(parentLookupOrganizationId, postHogRole);
+            //Assert.IsType<PostHogRole>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.RolesList(parentLookupOrganizationId, limit, offset);
-            //Assert.IsType<PaginatedRoleList>(response);
+            //Assert.IsType<PostHogPaginatedRoleList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string parentLookupOrganizationId = null;
-            //PatchedRole patchedRole = null;
-            //var response = instance.RolesPartialUpdate(id, parentLookupOrganizationId, patchedRole);
-            //Assert.IsType<Role>(response);
+            //PostHogPatchedRole postHogPatchedRole = null;
+            //var response = instance.RolesPartialUpdate(id, parentLookupOrganizationId, postHogPatchedRole);
+            //Assert.IsType<PostHogRole>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string parentLookupOrganizationId = null;
             //var response = instance.RolesRetrieve(id, parentLookupOrganizationId);
-            //Assert.IsType<Role>(response);
+            //Assert.IsType<PostHogRole>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
             //string parentLookupRoleId = null;
-            //RoleMembership roleMembership = null;
-            //var response = instance.RolesRoleMembershipsCreate(parentLookupOrganizationId, parentLookupRoleId, roleMembership);
-            //Assert.IsType<RoleMembership>(response);
+            //PostHogRoleMembership postHogRoleMembership = null;
+            //var response = instance.RolesRoleMembershipsCreate(parentLookupOrganizationId, parentLookupRoleId, postHogRoleMembership);
+            //Assert.IsType<PostHogRoleMembership>(response);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.RolesRoleMembershipsList(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
-            //Assert.IsType<PaginatedRoleMembershipList>(response);
+            //Assert.IsType<PostHogPaginatedRoleMembershipList>(response);
         }
 
         /// <summary>
@@ -171,9 +171,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string parentLookupOrganizationId = null;
-            //Role role = null;
-            //var response = instance.RolesUpdate(id, parentLookupOrganizationId, role);
-            //Assert.IsType<Role>(response);
+            //PostHogRole postHogRole = null;
+            //var response = instance.RolesUpdate(id, parentLookupOrganizationId, postHogRole);
+            //Assert.IsType<PostHogRole>(response);
         }
     }
 }

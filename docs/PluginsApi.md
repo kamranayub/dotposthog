@@ -20,7 +20,7 @@ All URIs are relative to *http://localhost*
 
 <a id="pluginsactivityretrieve"></a>
 # **PluginsActivityRetrieve**
-> Plugin PluginsActivityRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PluginsActivityRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -45,7 +45,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsActivityRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsActivityRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +65,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -86,7 +86,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 <a id="pluginscheckforupdatesretrieve"></a>
 # **PluginsCheckForUpdatesRetrieve**
-> Plugin PluginsCheckForUpdatesRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PluginsCheckForUpdatesRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -133,7 +133,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsCheckForUpdatesRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsCheckForUpdatesRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -153,7 +153,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -175,7 +175,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 
 <a id="pluginscreate"></a>
 # **PluginsCreate**
-> Plugin PluginsCreate (string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PluginsCreate (string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -218,11 +218,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new PluginsApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PluginsCreate(parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PluginsCreate(parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -242,7 +242,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsCreateWithHttpInfo(parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsCreateWithHttpInfo(parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -260,11 +260,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 
 <a id="pluginslist"></a>
 # **PluginsList**
-> PaginatedPluginList PluginsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedPluginList PluginsList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -397,7 +397,7 @@ namespace Example
 
             try
             {
-                PaginatedPluginList result = apiInstance.PluginsList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedPluginList result = apiInstance.PluginsList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -417,7 +417,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedPluginList> response = apiInstance.PluginsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedPluginList> response = apiInstance.PluginsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -440,7 +440,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedPluginList**](PaginatedPluginList.md)
+[**PostHogPaginatedPluginList**](PostHogPaginatedPluginList.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ No authorization required
 
 <a id="pluginspartialupdate"></a>
 # **PluginsPartialUpdate**
-> Plugin PluginsPartialUpdate (int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = null)
+> PostHogPlugin PluginsPartialUpdate (int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = null)
 
 
 
@@ -484,11 +484,11 @@ namespace Example
             var apiInstance = new PluginsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedPlugin = new PatchedPlugin(); // PatchedPlugin |  (optional) 
+            var postHogPatchedPlugin = new PostHogPatchedPlugin(); // PostHogPatchedPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PluginsPartialUpdate(id, parentLookupOrganizationId, patchedPlugin);
+                PostHogPlugin result = apiInstance.PluginsPartialUpdate(id, parentLookupOrganizationId, postHogPatchedPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -508,7 +508,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -527,11 +527,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedPlugin** | [**PatchedPlugin**](PatchedPlugin.md) |  | [optional]  |
+| **postHogPatchedPlugin** | [**PostHogPatchedPlugin**](PostHogPatchedPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ No authorization required
 
 <a id="pluginsrepositoryretrieve"></a>
 # **PluginsRepositoryRetrieve**
-> Plugin PluginsRepositoryRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PluginsRepositoryRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -577,7 +577,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsRepositoryRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsRepositoryRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -597,7 +597,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -618,7 +618,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -639,7 +639,7 @@ No authorization required
 
 <a id="pluginsretrieve"></a>
 # **PluginsRetrieve**
-> Plugin PluginsRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PluginsRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -665,7 +665,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -685,7 +685,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -707,7 +707,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ No authorization required
 
 <a id="pluginssourceretrieve"></a>
 # **PluginsSourceRetrieve**
-> Plugin PluginsSourceRetrieve (int id, string parentLookupOrganizationId)
+> PostHogPlugin PluginsSourceRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -754,7 +754,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsSourceRetrieve(id, parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsSourceRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -774,7 +774,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -796,7 +796,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -817,7 +817,7 @@ No authorization required
 
 <a id="pluginsunusedretrieve"></a>
 # **PluginsUnusedRetrieve**
-> Plugin PluginsUnusedRetrieve (string parentLookupOrganizationId)
+> PostHogPlugin PluginsUnusedRetrieve (string parentLookupOrganizationId)
 
 
 
@@ -842,7 +842,7 @@ namespace Example
 
             try
             {
-                Plugin result = apiInstance.PluginsUnusedRetrieve(parentLookupOrganizationId);
+                PostHogPlugin result = apiInstance.PluginsUnusedRetrieve(parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -862,7 +862,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -883,7 +883,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -904,7 +904,7 @@ No authorization required
 
 <a id="pluginsupdate"></a>
 # **PluginsUpdate**
-> Plugin PluginsUpdate (int id, string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PluginsUpdate (int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -927,11 +927,11 @@ namespace Example
             var apiInstance = new PluginsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PluginsUpdate(id, parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PluginsUpdate(id, parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -951,7 +951,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsUpdateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -970,11 +970,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -995,7 +995,7 @@ No authorization required
 
 <a id="pluginsupdatesourcepartialupdate"></a>
 # **PluginsUpdateSourcePartialUpdate**
-> Plugin PluginsUpdateSourcePartialUpdate (int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = null)
+> PostHogPlugin PluginsUpdateSourcePartialUpdate (int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = null)
 
 
 
@@ -1018,11 +1018,11 @@ namespace Example
             var apiInstance = new PluginsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedPlugin = new PatchedPlugin(); // PatchedPlugin |  (optional) 
+            var postHogPatchedPlugin = new PostHogPatchedPlugin(); // PostHogPatchedPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PluginsUpdateSourcePartialUpdate(id, parentLookupOrganizationId, patchedPlugin);
+                PostHogPlugin result = apiInstance.PluginsUpdateSourcePartialUpdate(id, parentLookupOrganizationId, postHogPatchedPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1042,7 +1042,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1061,11 +1061,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedPlugin** | [**PatchedPlugin**](PatchedPlugin.md) |  | [optional]  |
+| **postHogPatchedPlugin** | [**PostHogPatchedPlugin**](PostHogPatchedPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 
@@ -1086,7 +1086,7 @@ No authorization required
 
 <a id="pluginsupgradecreate"></a>
 # **PluginsUpgradeCreate**
-> Plugin PluginsUpgradeCreate (int id, string parentLookupOrganizationId, Plugin plugin = null)
+> PostHogPlugin PluginsUpgradeCreate (int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = null)
 
 
 
@@ -1109,11 +1109,11 @@ namespace Example
             var apiInstance = new PluginsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var plugin = new Plugin(); // Plugin |  (optional) 
+            var postHogPlugin = new PostHogPlugin(); // PostHogPlugin |  (optional) 
 
             try
             {
-                Plugin result = apiInstance.PluginsUpgradeCreate(id, parentLookupOrganizationId, plugin);
+                PostHogPlugin result = apiInstance.PluginsUpgradeCreate(id, parentLookupOrganizationId, postHogPlugin);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1133,7 +1133,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Plugin> response = apiInstance.PluginsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+    ApiResponse<PostHogPlugin> response = apiInstance.PluginsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1152,11 +1152,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **plugin** | [**Plugin**](Plugin.md) |  | [optional]  |
+| **postHogPlugin** | [**PostHogPlugin**](PostHogPlugin.md) |  | [optional]  |
 
 ### Return type
 
-[**Plugin**](Plugin.md)
+[**PostHogPlugin**](PostHogPlugin.md)
 
 ### Authorization
 

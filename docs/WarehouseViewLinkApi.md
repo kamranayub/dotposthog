@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="warehouseviewlinkcreate"></a>
 # **WarehouseViewLinkCreate**
-> ViewLink WarehouseViewLinkCreate (string projectId, ViewLink viewLink)
+> PostHogViewLink WarehouseViewLinkCreate (string projectId, PostHogViewLink postHogViewLink)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new WarehouseViewLinkApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var viewLink = new ViewLink(); // ViewLink | 
+            var postHogViewLink = new PostHogViewLink(); // PostHogViewLink | 
 
             try
             {
-                ViewLink result = apiInstance.WarehouseViewLinkCreate(projectId, viewLink);
+                PostHogViewLink result = apiInstance.WarehouseViewLinkCreate(projectId, postHogViewLink);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ViewLink> response = apiInstance.WarehouseViewLinkCreateWithHttpInfo(projectId, viewLink);
+    ApiResponse<PostHogViewLink> response = apiInstance.WarehouseViewLinkCreateWithHttpInfo(projectId, postHogViewLink);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **viewLink** | [**ViewLink**](ViewLink.md) |  |  |
+| **postHogViewLink** | [**PostHogViewLink**](PostHogViewLink.md) |  |  |
 
 ### Return type
 
-[**ViewLink**](ViewLink.md)
+[**PostHogViewLink**](PostHogViewLink.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="warehouseviewlinklist"></a>
 # **WarehouseViewLinkList**
-> PaginatedViewLinkList WarehouseViewLinkList (string projectId, int? limit = null, int? offset = null, string search = null)
+> PostHogPaginatedViewLinkList WarehouseViewLinkList (string projectId, int? limit = null, int? offset = null, string search = null)
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                PaginatedViewLinkList result = apiInstance.WarehouseViewLinkList(projectId, limit, offset, search);
+                PostHogPaginatedViewLinkList result = apiInstance.WarehouseViewLinkList(projectId, limit, offset, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -241,7 +241,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedViewLinkList> response = apiInstance.WarehouseViewLinkListWithHttpInfo(projectId, limit, offset, search);
+    ApiResponse<PostHogPaginatedViewLinkList> response = apiInstance.WarehouseViewLinkListWithHttpInfo(projectId, limit, offset, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -265,7 +265,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedViewLinkList**](PaginatedViewLinkList.md)
+[**PostHogPaginatedViewLinkList**](PostHogPaginatedViewLinkList.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 
 <a id="warehouseviewlinkpartialupdate"></a>
 # **WarehouseViewLinkPartialUpdate**
-> ViewLink WarehouseViewLinkPartialUpdate (Guid id, string projectId, PatchedViewLink patchedViewLink = null)
+> PostHogViewLink WarehouseViewLinkPartialUpdate (Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = null)
 
 
 
@@ -311,11 +311,11 @@ namespace Example
             var apiInstance = new WarehouseViewLinkApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse view link.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedViewLink = new PatchedViewLink(); // PatchedViewLink |  (optional) 
+            var postHogPatchedViewLink = new PostHogPatchedViewLink(); // PostHogPatchedViewLink |  (optional) 
 
             try
             {
-                ViewLink result = apiInstance.WarehouseViewLinkPartialUpdate(id, projectId, patchedViewLink);
+                PostHogViewLink result = apiInstance.WarehouseViewLinkPartialUpdate(id, projectId, postHogPatchedViewLink);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -335,7 +335,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ViewLink> response = apiInstance.WarehouseViewLinkPartialUpdateWithHttpInfo(id, projectId, patchedViewLink);
+    ApiResponse<PostHogViewLink> response = apiInstance.WarehouseViewLinkPartialUpdateWithHttpInfo(id, projectId, postHogPatchedViewLink);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -354,11 +354,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse view link. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedViewLink** | [**PatchedViewLink**](PatchedViewLink.md) |  | [optional]  |
+| **postHogPatchedViewLink** | [**PostHogPatchedViewLink**](PostHogPatchedViewLink.md) |  | [optional]  |
 
 ### Return type
 
-[**ViewLink**](ViewLink.md)
+[**PostHogViewLink**](PostHogViewLink.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a id="warehouseviewlinkretrieve"></a>
 # **WarehouseViewLinkRetrieve**
-> ViewLink WarehouseViewLinkRetrieve (Guid id, string projectId)
+> PostHogViewLink WarehouseViewLinkRetrieve (Guid id, string projectId)
 
 
 
@@ -407,7 +407,7 @@ namespace Example
 
             try
             {
-                ViewLink result = apiInstance.WarehouseViewLinkRetrieve(id, projectId);
+                PostHogViewLink result = apiInstance.WarehouseViewLinkRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ViewLink> response = apiInstance.WarehouseViewLinkRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogViewLink> response = apiInstance.WarehouseViewLinkRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -449,7 +449,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ViewLink**](ViewLink.md)
+[**PostHogViewLink**](PostHogViewLink.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ No authorization required
 
 <a id="warehouseviewlinkupdate"></a>
 # **WarehouseViewLinkUpdate**
-> ViewLink WarehouseViewLinkUpdate (Guid id, string projectId, ViewLink viewLink)
+> PostHogViewLink WarehouseViewLinkUpdate (Guid id, string projectId, PostHogViewLink postHogViewLink)
 
 
 
@@ -495,11 +495,11 @@ namespace Example
             var apiInstance = new WarehouseViewLinkApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse view link.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var viewLink = new ViewLink(); // ViewLink | 
+            var postHogViewLink = new PostHogViewLink(); // PostHogViewLink | 
 
             try
             {
-                ViewLink result = apiInstance.WarehouseViewLinkUpdate(id, projectId, viewLink);
+                PostHogViewLink result = apiInstance.WarehouseViewLinkUpdate(id, projectId, postHogViewLink);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -519,7 +519,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ViewLink> response = apiInstance.WarehouseViewLinkUpdateWithHttpInfo(id, projectId, viewLink);
+    ApiResponse<PostHogViewLink> response = apiInstance.WarehouseViewLinkUpdateWithHttpInfo(id, projectId, postHogViewLink);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -538,11 +538,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse view link. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **viewLink** | [**ViewLink**](ViewLink.md) |  |  |
+| **postHogViewLink** | [**PostHogViewLink**](PostHogViewLink.md) |  |  |
 
 ### Return type
 
-[**ViewLink**](ViewLink.md)
+[**PostHogViewLink**](PostHogViewLink.md)
 
 ### Authorization
 

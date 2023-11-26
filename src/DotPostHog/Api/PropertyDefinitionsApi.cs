@@ -65,8 +65,8 @@ namespace DotPostHog.Api
         /// <param name="search">Searches properties by name (optional)</param>
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEnterprisePropertyDefinitionList</returns>
-        PaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        PostHogPaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -88,18 +88,18 @@ namespace DotPostHog.Api
         /// <param name="search">Searches properties by name (optional)</param>
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEnterprisePropertyDefinitionList</returns>
-        ApiResponse<PaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListWithHttpInfo(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListWithHttpInfo(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        EnterprisePropertyDefinition PropertyDefinitionsPartialUpdate(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0);
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        PostHogEnterprisePropertyDefinition PropertyDefinitionsPartialUpdate(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -110,10 +110,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -121,8 +121,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        EnterprisePropertyDefinition PropertyDefinitionsRetrieve(string id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        PostHogEnterprisePropertyDefinition PropertyDefinitionsRetrieve(string id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -134,8 +134,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -145,8 +145,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        EnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        PostHogEnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -157,18 +157,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        EnterprisePropertyDefinition PropertyDefinitionsUpdate(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0);
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        PostHogEnterprisePropertyDefinition PropertyDefinitionsUpdate(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -179,10 +179,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsUpdateWithHttpInfo(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsUpdateWithHttpInfo(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -240,8 +240,8 @@ namespace DotPostHog.Api
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEnterprisePropertyDefinitionList</returns>
-        System.Threading.Tasks.Task<PaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -264,8 +264,8 @@ namespace DotPostHog.Api
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEnterprisePropertyDefinitionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedEnterprisePropertyDefinitionList>> PropertyDefinitionsListWithHttpInfoAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedEnterprisePropertyDefinitionList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList>> PropertyDefinitionsListWithHttpInfoAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -275,11 +275,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateAsync(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateAsync(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -290,11 +290,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -306,8 +306,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -320,8 +320,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -345,8 +345,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -356,11 +356,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsUpdateAsync(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsUpdateAsync(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -371,11 +371,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -671,10 +671,10 @@ namespace DotPostHog.Api
         /// <param name="search">Searches properties by name (optional)</param>
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEnterprisePropertyDefinitionList</returns>
-        public PaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        public PostHogPaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedEnterprisePropertyDefinitionList> localVarResponse = PropertyDefinitionsListWithHttpInfo(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList> localVarResponse = PropertyDefinitionsListWithHttpInfo(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
             return localVarResponse.Data;
         }
 
@@ -695,8 +695,8 @@ namespace DotPostHog.Api
         /// <param name="search">Searches properties by name (optional)</param>
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEnterprisePropertyDefinitionList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListWithHttpInfo(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListWithHttpInfo(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -777,7 +777,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedEnterprisePropertyDefinitionList>("/api/projects/{project_id}/property_definitions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedEnterprisePropertyDefinitionList>("/api/projects/{project_id}/property_definitions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PropertyDefinitionsList", localVarResponse);
@@ -808,10 +808,10 @@ namespace DotPostHog.Api
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEnterprisePropertyDefinitionList</returns>
-        public async System.Threading.Tasks.Task<PaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedEnterprisePropertyDefinitionList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedEnterprisePropertyDefinitionList> PropertyDefinitionsListAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedEnterprisePropertyDefinitionList> localVarResponse = await PropertyDefinitionsListWithHttpInfoAsync(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList> localVarResponse = await PropertyDefinitionsListWithHttpInfoAsync(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -833,8 +833,8 @@ namespace DotPostHog.Api
         /// <param name="type">What property definitions to return (optional, default to event)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEnterprisePropertyDefinitionList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedEnterprisePropertyDefinitionList>> PropertyDefinitionsListWithHttpInfoAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedEnterprisePropertyDefinitionList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList>> PropertyDefinitionsListWithHttpInfoAsync(string projectId, string eventNames = default(string), string excludedProperties = default(string), bool? filterByEventNames = default(bool?), int? groupTypeIndex = default(int?), bool? isFeatureFlag = default(bool?), bool? isNumerical = default(bool?), int? limit = default(int?), int? offset = default(int?), string properties = default(string), string search = default(string), string type = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -916,7 +916,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedEnterprisePropertyDefinitionList>("/api/projects/{project_id}/property_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedEnterprisePropertyDefinitionList>("/api/projects/{project_id}/property_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -936,12 +936,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        public EnterprisePropertyDefinition PropertyDefinitionsPartialUpdate(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0)
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        public PostHogEnterprisePropertyDefinition PropertyDefinitionsPartialUpdate(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsPartialUpdateWithHttpInfo(id, projectId, patchedEnterprisePropertyDefinition);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedEnterprisePropertyDefinition);
             return localVarResponse.Data;
         }
 
@@ -951,10 +951,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -995,14 +995,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEnterprisePropertyDefinition;
+            localVarRequestOptions.Data = postHogPatchedEnterprisePropertyDefinition;
 
             localVarRequestOptions.Operation = "PropertyDefinitionsApi.PropertyDefinitionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PropertyDefinitionsPartialUpdate", localVarResponse);
@@ -1021,13 +1021,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateAsync(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsPartialUpdateAsync(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsPartialUpdateWithHttpInfoAsync(id, projectId, patchedEnterprisePropertyDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedEnterprisePropertyDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1037,11 +1037,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = default(PatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = default(PostHogPatchedEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1083,14 +1083,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEnterprisePropertyDefinition;
+            localVarRequestOptions.Data = postHogPatchedEnterprisePropertyDefinition;
 
             localVarRequestOptions.Operation = "PropertyDefinitionsApi.PropertyDefinitionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1111,10 +1111,10 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        public EnterprisePropertyDefinition PropertyDefinitionsRetrieve(string id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        public PostHogEnterprisePropertyDefinition PropertyDefinitionsRetrieve(string id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1125,8 +1125,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1170,7 +1170,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PropertyDefinitionsRetrieve", localVarResponse);
@@ -1191,10 +1191,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1206,8 +1206,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1252,7 +1252,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1272,10 +1272,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        public EnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        public PostHogEnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -1285,8 +1285,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1323,7 +1323,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/seen_together/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/seen_together/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PropertyDefinitionsSeenTogetherRetrieve", localVarResponse);
@@ -1343,10 +1343,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsSeenTogetherRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1357,8 +1357,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsSeenTogetherRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1396,7 +1396,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/seen_together/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/seen_together/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1416,12 +1416,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterprisePropertyDefinition</returns>
-        public EnterprisePropertyDefinition PropertyDefinitionsUpdate(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0)
+        /// <returns>PostHogEnterprisePropertyDefinition</returns>
+        public PostHogEnterprisePropertyDefinition PropertyDefinitionsUpdate(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsUpdateWithHttpInfo(id, projectId, enterprisePropertyDefinition);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = PropertyDefinitionsUpdateWithHttpInfo(id, projectId, postHogEnterprisePropertyDefinition);
             return localVarResponse.Data;
         }
 
@@ -1431,10 +1431,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterprisePropertyDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> PropertyDefinitionsUpdateWithHttpInfo(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterprisePropertyDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> PropertyDefinitionsUpdateWithHttpInfo(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1475,14 +1475,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = enterprisePropertyDefinition;
+            localVarRequestOptions.Data = postHogEnterprisePropertyDefinition;
 
             localVarRequestOptions.Operation = "PropertyDefinitionsApi.PropertyDefinitionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PropertyDefinitionsUpdate", localVarResponse);
@@ -1501,13 +1501,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterprisePropertyDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterprisePropertyDefinition> PropertyDefinitionsUpdateAsync(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterprisePropertyDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterprisePropertyDefinition> PropertyDefinitionsUpdateAsync(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsUpdateWithHttpInfoAsync(id, projectId, enterprisePropertyDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition> localVarResponse = await PropertyDefinitionsUpdateWithHttpInfoAsync(id, projectId, postHogEnterprisePropertyDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1517,11 +1517,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterprisePropertyDefinition"> (optional)</param>
+        /// <param name="postHogEnterprisePropertyDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterprisePropertyDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterprisePropertyDefinition>> PropertyDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = default(EnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterprisePropertyDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterprisePropertyDefinition>> PropertyDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = default(PostHogEnterprisePropertyDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1563,14 +1563,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = enterprisePropertyDefinition;
+            localVarRequestOptions.Data = postHogEnterprisePropertyDefinition;
 
             localVarRequestOptions.Operation = "PropertyDefinitionsApi.PropertyDefinitionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogEnterprisePropertyDefinition>("/api/projects/{project_id}/property_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

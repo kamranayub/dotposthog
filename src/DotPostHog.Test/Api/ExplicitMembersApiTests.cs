@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //ExplicitTeamMember explicitTeamMember = null;
-            //var response = instance.ExplicitMembersCreate(projectId, explicitTeamMember);
-            //Assert.IsType<ExplicitTeamMember>(response);
+            //PostHogExplicitTeamMember postHogExplicitTeamMember = null;
+            //var response = instance.ExplicitMembersCreate(projectId, postHogExplicitTeamMember);
+            //Assert.IsType<PostHogExplicitTeamMember>(response);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.ExplicitMembersList(projectId);
-            //Assert.IsType<List<ExplicitTeamMember>>(response);
+            //Assert.IsType<List<PostHogExplicitTeamMember>>(response);
         }
 
         /// <summary>
@@ -100,9 +100,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid parentMembershipUserUuid = null;
             //string projectId = null;
-            //PatchedExplicitTeamMember patchedExplicitTeamMember = null;
-            //var response = instance.ExplicitMembersPartialUpdate(parentMembershipUserUuid, projectId, patchedExplicitTeamMember);
-            //Assert.IsType<ExplicitTeamMember>(response);
+            //PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = null;
+            //var response = instance.ExplicitMembersPartialUpdate(parentMembershipUserUuid, projectId, postHogPatchedExplicitTeamMember);
+            //Assert.IsType<PostHogExplicitTeamMember>(response);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace DotPostHog.Test.Api
             //Guid parentMembershipUserUuid = null;
             //string projectId = null;
             //var response = instance.ExplicitMembersRetrieve(parentMembershipUserUuid, projectId);
-            //Assert.IsType<ExplicitTeamMember>(response);
+            //Assert.IsType<PostHogExplicitTeamMember>(response);
         }
 
         /// <summary>
@@ -127,9 +127,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid parentMembershipUserUuid = null;
             //string projectId = null;
-            //ExplicitTeamMember explicitTeamMember = null;
-            //var response = instance.ExplicitMembersUpdate(parentMembershipUserUuid, projectId, explicitTeamMember);
-            //Assert.IsType<ExplicitTeamMember>(response);
+            //PostHogExplicitTeamMember postHogExplicitTeamMember = null;
+            //var response = instance.ExplicitMembersUpdate(parentMembershipUserUuid, projectId, postHogExplicitTeamMember);
+            //Assert.IsType<PostHogExplicitTeamMember>(response);
         }
     }
 }

@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        Annotation AnnotationsCreate(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0);
+        /// <returns>PostHogAnnotation</returns>
+        PostHogAnnotation AnnotationsCreate(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> AnnotationsCreateWithHttpInfo(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        ApiResponse<PostHogAnnotation> AnnotationsCreateWithHttpInfo(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedAnnotationList</returns>
-        PaginatedAnnotationList AnnotationsList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedAnnotationList</returns>
+        PostHogPaginatedAnnotationList AnnotationsList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedAnnotationList</returns>
-        ApiResponse<PaginatedAnnotationList> AnnotationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedAnnotationList</returns>
+        ApiResponse<PostHogPaginatedAnnotationList> AnnotationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        Annotation AnnotationsPartialUpdate(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0);
+        /// <returns>PostHogAnnotation</returns>
+        PostHogAnnotation AnnotationsPartialUpdate(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> AnnotationsPartialUpdateWithHttpInfo(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        ApiResponse<PostHogAnnotation> AnnotationsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -142,8 +142,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        Annotation AnnotationsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogAnnotation</returns>
+        PostHogAnnotation AnnotationsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -155,8 +155,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> AnnotationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        ApiResponse<PostHogAnnotation> AnnotationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -166,10 +166,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        Annotation AnnotationsUpdate(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0);
+        /// <returns>PostHogAnnotation</returns>
+        PostHogAnnotation AnnotationsUpdate(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> AnnotationsUpdateWithHttpInfo(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        ApiResponse<PostHogAnnotation> AnnotationsUpdateWithHttpInfo(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,11 +201,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> AnnotationsCreateAsync(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogAnnotation</returns>
+        System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsCreateAsync(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,11 +215,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> AnnotationsCreateWithHttpInfoAsync(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogAnnotation>> AnnotationsCreateWithHttpInfoAsync(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -260,8 +260,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedAnnotationList</returns>
-        System.Threading.Tasks.Task<PaginatedAnnotationList> AnnotationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedAnnotationList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedAnnotationList> AnnotationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -276,8 +276,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedAnnotationList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedAnnotationList>> AnnotationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedAnnotationList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedAnnotationList>> AnnotationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,11 +287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> AnnotationsPartialUpdateAsync(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogAnnotation</returns>
+        System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsPartialUpdateAsync(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,11 +302,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> AnnotationsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogAnnotation>> AnnotationsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -318,8 +318,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> AnnotationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogAnnotation</returns>
+        System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> AnnotationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogAnnotation>> AnnotationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -343,11 +343,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> AnnotationsUpdateAsync(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogAnnotation</returns>
+        System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsUpdateAsync(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,11 +358,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> AnnotationsUpdateWithHttpInfoAsync(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogAnnotation>> AnnotationsUpdateWithHttpInfoAsync(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -488,12 +488,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        public Annotation AnnotationsCreate(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0)
+        /// <returns>PostHogAnnotation</returns>
+        public PostHogAnnotation AnnotationsCreate(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = AnnotationsCreateWithHttpInfo(projectId, annotation);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = AnnotationsCreateWithHttpInfo(projectId, postHogAnnotation);
             return localVarResponse.Data;
         }
 
@@ -502,10 +502,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        public DotPostHog.Client.ApiResponse<Annotation> AnnotationsCreateWithHttpInfo(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        public DotPostHog.Client.ApiResponse<PostHogAnnotation> AnnotationsCreateWithHttpInfo(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -539,14 +539,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = annotation;
+            localVarRequestOptions.Data = postHogAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Annotation>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogAnnotation>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AnnotationsCreate", localVarResponse);
@@ -564,13 +564,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> AnnotationsCreateAsync(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogAnnotation</returns>
+        public async System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsCreateAsync(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = await AnnotationsCreateWithHttpInfoAsync(projectId, annotation, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = await AnnotationsCreateWithHttpInfoAsync(projectId, postHogAnnotation, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -579,11 +579,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Annotation>> AnnotationsCreateWithHttpInfoAsync(string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAnnotation>> AnnotationsCreateWithHttpInfoAsync(string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -618,14 +618,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = annotation;
+            localVarRequestOptions.Data = postHogAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Annotation>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogAnnotation>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -794,10 +794,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedAnnotationList</returns>
-        public PaginatedAnnotationList AnnotationsList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedAnnotationList</returns>
+        public PostHogPaginatedAnnotationList AnnotationsList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedAnnotationList> localVarResponse = AnnotationsListWithHttpInfo(projectId, limit, offset, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedAnnotationList> localVarResponse = AnnotationsListWithHttpInfo(projectId, limit, offset, search);
             return localVarResponse.Data;
         }
 
@@ -810,8 +810,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedAnnotationList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedAnnotationList> AnnotationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedAnnotationList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedAnnotationList> AnnotationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -860,7 +860,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedAnnotationList>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedAnnotationList>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AnnotationsList", localVarResponse);
@@ -883,10 +883,10 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedAnnotationList</returns>
-        public async System.Threading.Tasks.Task<PaginatedAnnotationList> AnnotationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedAnnotationList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedAnnotationList> AnnotationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedAnnotationList> localVarResponse = await AnnotationsListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedAnnotationList> localVarResponse = await AnnotationsListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -900,8 +900,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedAnnotationList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedAnnotationList>> AnnotationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedAnnotationList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedAnnotationList>> AnnotationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -951,7 +951,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedAnnotationList>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedAnnotationList>("/api/projects/{project_id}/annotations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -971,12 +971,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        public Annotation AnnotationsPartialUpdate(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0)
+        /// <returns>PostHogAnnotation</returns>
+        public PostHogAnnotation AnnotationsPartialUpdate(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = AnnotationsPartialUpdateWithHttpInfo(id, projectId, patchedAnnotation);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = AnnotationsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedAnnotation);
             return localVarResponse.Data;
         }
 
@@ -986,10 +986,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        public DotPostHog.Client.ApiResponse<Annotation> AnnotationsPartialUpdateWithHttpInfo(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        public DotPostHog.Client.ApiResponse<PostHogAnnotation> AnnotationsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1024,14 +1024,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedAnnotation;
+            localVarRequestOptions.Data = postHogPatchedAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AnnotationsPartialUpdate", localVarResponse);
@@ -1050,13 +1050,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> AnnotationsPartialUpdateAsync(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogAnnotation</returns>
+        public async System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsPartialUpdateAsync(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = await AnnotationsPartialUpdateWithHttpInfoAsync(id, projectId, patchedAnnotation, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = await AnnotationsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedAnnotation, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1066,11 +1066,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedAnnotation"> (optional)</param>
+        /// <param name="postHogPatchedAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Annotation>> AnnotationsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedAnnotation patchedAnnotation = default(PatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAnnotation>> AnnotationsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = default(PostHogPatchedAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1106,14 +1106,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedAnnotation;
+            localVarRequestOptions.Data = postHogPatchedAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1134,10 +1134,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        public Annotation AnnotationsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogAnnotation</returns>
+        public PostHogAnnotation AnnotationsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = AnnotationsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = AnnotationsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1148,8 +1148,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        public DotPostHog.Client.ApiResponse<Annotation> AnnotationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        public DotPostHog.Client.ApiResponse<PostHogAnnotation> AnnotationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1187,7 +1187,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AnnotationsRetrieve", localVarResponse);
@@ -1208,10 +1208,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> AnnotationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogAnnotation</returns>
+        public async System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = await AnnotationsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = await AnnotationsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1223,8 +1223,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Annotation>> AnnotationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAnnotation>> AnnotationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1263,7 +1263,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1283,12 +1283,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Annotation</returns>
-        public Annotation AnnotationsUpdate(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0)
+        /// <returns>PostHogAnnotation</returns>
+        public PostHogAnnotation AnnotationsUpdate(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = AnnotationsUpdateWithHttpInfo(id, projectId, annotation);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = AnnotationsUpdateWithHttpInfo(id, projectId, postHogAnnotation);
             return localVarResponse.Data;
         }
 
@@ -1298,10 +1298,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Annotation</returns>
-        public DotPostHog.Client.ApiResponse<Annotation> AnnotationsUpdateWithHttpInfo(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogAnnotation</returns>
+        public DotPostHog.Client.ApiResponse<PostHogAnnotation> AnnotationsUpdateWithHttpInfo(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1336,14 +1336,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = annotation;
+            localVarRequestOptions.Data = postHogAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AnnotationsUpdate", localVarResponse);
@@ -1362,13 +1362,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> AnnotationsUpdateAsync(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogAnnotation</returns>
+        public async System.Threading.Tasks.Task<PostHogAnnotation> AnnotationsUpdateAsync(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Annotation> localVarResponse = await AnnotationsUpdateWithHttpInfoAsync(id, projectId, annotation, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogAnnotation> localVarResponse = await AnnotationsUpdateWithHttpInfoAsync(id, projectId, postHogAnnotation, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1378,11 +1378,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this annotation.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="annotation"> (optional)</param>
+        /// <param name="postHogAnnotation"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Annotation>> AnnotationsUpdateWithHttpInfoAsync(int id, string projectId, Annotation annotation = default(Annotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogAnnotation)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogAnnotation>> AnnotationsUpdateWithHttpInfoAsync(int id, string projectId, PostHogAnnotation postHogAnnotation = default(PostHogAnnotation), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1418,14 +1418,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = annotation;
+            localVarRequestOptions.Data = postHogAnnotation;
 
             localVarRequestOptions.Operation = "AnnotationsApi.AnnotationsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Annotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogAnnotation>("/api/projects/{project_id}/annotations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

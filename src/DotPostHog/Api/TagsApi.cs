@@ -34,8 +34,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTaggedItemList</returns>
-        PaginatedTaggedItemList TagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedTaggedItemList</returns>
+        PostHogPaginatedTaggedItemList TagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -48,8 +48,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTaggedItemList</returns>
-        ApiResponse<PaginatedTaggedItemList> TagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedTaggedItemList</returns>
+        ApiResponse<PostHogPaginatedTaggedItemList> TagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -71,8 +71,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTaggedItemList</returns>
-        System.Threading.Tasks.Task<PaginatedTaggedItemList> TagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedTaggedItemList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedTaggedItemList> TagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -86,8 +86,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTaggedItemList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedTaggedItemList>> TagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedTaggedItemList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedTaggedItemList>> TagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -216,10 +216,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTaggedItemList</returns>
-        public PaginatedTaggedItemList TagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedTaggedItemList</returns>
+        public PostHogPaginatedTaggedItemList TagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedTaggedItemList> localVarResponse = TagsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTaggedItemList> localVarResponse = TagsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -231,8 +231,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTaggedItemList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedTaggedItemList> TagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedTaggedItemList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedTaggedItemList> TagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -277,7 +277,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedTaggedItemList>("/api/projects/{project_id}/tags/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedTaggedItemList>("/api/projects/{project_id}/tags/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TagsList", localVarResponse);
@@ -299,10 +299,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTaggedItemList</returns>
-        public async System.Threading.Tasks.Task<PaginatedTaggedItemList> TagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedTaggedItemList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedTaggedItemList> TagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedTaggedItemList> localVarResponse = await TagsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTaggedItemList> localVarResponse = await TagsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -315,8 +315,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTaggedItemList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedTaggedItemList>> TagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedTaggedItemList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedTaggedItemList>> TagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -362,7 +362,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedTaggedItemList>("/api/projects/{project_id}/tags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedTaggedItemList>("/api/projects/{project_id}/tags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

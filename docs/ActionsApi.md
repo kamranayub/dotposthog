@@ -286,7 +286,7 @@ No authorization required
 
 <a id="actionslist"></a>
 # **ActionsList**
-> PaginatedActionList ActionsList (string projectId, string format = null, int? limit = null, int? offset = null)
+> PostHogPaginatedActionList ActionsList (string projectId, string format = null, int? limit = null, int? offset = null)
 
 
 
@@ -314,7 +314,7 @@ namespace Example
 
             try
             {
-                PaginatedActionList result = apiInstance.ActionsList(projectId, format, limit, offset);
+                PostHogPaginatedActionList result = apiInstance.ActionsList(projectId, format, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -334,7 +334,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedActionList> response = apiInstance.ActionsListWithHttpInfo(projectId, format, limit, offset);
+    ApiResponse<PostHogPaginatedActionList> response = apiInstance.ActionsListWithHttpInfo(projectId, format, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -358,7 +358,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedActionList**](PaginatedActionList.md)
+[**PostHogPaginatedActionList**](PostHogPaginatedActionList.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a id="actionspartialupdate"></a>
 # **ActionsPartialUpdate**
-> PostHogAction ActionsPartialUpdate (int id, string projectId, string format = null, PatchedAction patchedAction = null)
+> PostHogAction ActionsPartialUpdate (int id, string projectId, string format = null, PostHogPatchedAction postHogPatchedAction = null)
 
 
 
@@ -403,11 +403,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this action.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var patchedAction = new PatchedAction(); // PatchedAction |  (optional) 
+            var postHogPatchedAction = new PostHogPatchedAction(); // PostHogPatchedAction |  (optional) 
 
             try
             {
-                PostHogAction result = apiInstance.ActionsPartialUpdate(id, projectId, format, patchedAction);
+                PostHogAction result = apiInstance.ActionsPartialUpdate(id, projectId, format, postHogPatchedAction);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PostHogAction> response = apiInstance.ActionsPartialUpdateWithHttpInfo(id, projectId, format, patchedAction);
+    ApiResponse<PostHogAction> response = apiInstance.ActionsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedAction);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -447,7 +447,7 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this action. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **patchedAction** | [**PatchedAction**](PatchedAction.md) |  | [optional]  |
+| **postHogPatchedAction** | [**PostHogPatchedAction**](PostHogPatchedAction.md) |  | [optional]  |
 
 ### Return type
 

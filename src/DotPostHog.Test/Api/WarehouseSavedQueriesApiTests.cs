@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //DataWarehouseSavedQuery dataWarehouseSavedQuery = null;
-            //var response = instance.WarehouseSavedQueriesCreate(projectId, dataWarehouseSavedQuery);
-            //Assert.IsType<DataWarehouseSavedQuery>(response);
+            //PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery = null;
+            //var response = instance.WarehouseSavedQueriesCreate(projectId, postHogDataWarehouseSavedQuery);
+            //Assert.IsType<PostHogDataWarehouseSavedQuery>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string search = null;
             //var response = instance.WarehouseSavedQueriesList(projectId, limit, offset, search);
-            //Assert.IsType<PaginatedDataWarehouseSavedQueryList>(response);
+            //Assert.IsType<PostHogPaginatedDataWarehouseSavedQueryList>(response);
         }
 
         /// <summary>
@@ -103,9 +103,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = null;
-            //var response = instance.WarehouseSavedQueriesPartialUpdate(id, projectId, patchedDataWarehouseSavedQuery);
-            //Assert.IsType<DataWarehouseSavedQuery>(response);
+            //PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = null;
+            //var response = instance.WarehouseSavedQueriesPartialUpdate(id, projectId, postHogPatchedDataWarehouseSavedQuery);
+            //Assert.IsType<PostHogDataWarehouseSavedQuery>(response);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.WarehouseSavedQueriesRetrieve(id, projectId);
-            //Assert.IsType<DataWarehouseSavedQuery>(response);
+            //Assert.IsType<PostHogDataWarehouseSavedQuery>(response);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //DataWarehouseSavedQuery dataWarehouseSavedQuery = null;
-            //var response = instance.WarehouseSavedQueriesUpdate(id, projectId, dataWarehouseSavedQuery);
-            //Assert.IsType<DataWarehouseSavedQuery>(response);
+            //PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery = null;
+            //var response = instance.WarehouseSavedQueriesUpdate(id, projectId, postHogDataWarehouseSavedQuery);
+            //Assert.IsType<PostHogDataWarehouseSavedQuery>(response);
         }
     }
 }

@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        ViewLink WarehouseViewLinksCreate(string projectId, ViewLink viewLink, int operationIndex = 0);
+        /// <returns>PostHogViewLink</returns>
+        PostHogViewLink WarehouseViewLinksCreate(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        ApiResponse<ViewLink> WarehouseViewLinksCreateWithHttpInfo(string projectId, ViewLink viewLink, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        ApiResponse<PostHogViewLink> WarehouseViewLinksCreateWithHttpInfo(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedViewLinkList</returns>
-        PaginatedViewLinkList WarehouseViewLinksList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedViewLinkList</returns>
+        PostHogPaginatedViewLinkList WarehouseViewLinksList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedViewLinkList</returns>
-        ApiResponse<PaginatedViewLinkList> WarehouseViewLinksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedViewLinkList</returns>
+        ApiResponse<PostHogPaginatedViewLinkList> WarehouseViewLinksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        ViewLink WarehouseViewLinksPartialUpdate(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0);
+        /// <returns>PostHogViewLink</returns>
+        PostHogViewLink WarehouseViewLinksPartialUpdate(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        ApiResponse<ViewLink> WarehouseViewLinksPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        ApiResponse<PostHogViewLink> WarehouseViewLinksPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -142,8 +142,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        ViewLink WarehouseViewLinksRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogViewLink</returns>
+        PostHogViewLink WarehouseViewLinksRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -155,8 +155,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        ApiResponse<ViewLink> WarehouseViewLinksRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        ApiResponse<PostHogViewLink> WarehouseViewLinksRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -166,10 +166,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        ViewLink WarehouseViewLinksUpdate(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0);
+        /// <returns>PostHogViewLink</returns>
+        PostHogViewLink WarehouseViewLinksUpdate(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        ApiResponse<ViewLink> WarehouseViewLinksUpdateWithHttpInfo(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        ApiResponse<PostHogViewLink> WarehouseViewLinksUpdateWithHttpInfo(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,11 +201,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksCreateAsync(string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogViewLink</returns>
+        System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksCreateAsync(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,11 +215,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ViewLink>> WarehouseViewLinksCreateWithHttpInfoAsync(string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogViewLink>> WarehouseViewLinksCreateWithHttpInfoAsync(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -260,8 +260,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedViewLinkList</returns>
-        System.Threading.Tasks.Task<PaginatedViewLinkList> WarehouseViewLinksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedViewLinkList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedViewLinkList> WarehouseViewLinksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -276,8 +276,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedViewLinkList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedViewLinkList>> WarehouseViewLinksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedViewLinkList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedViewLinkList>> WarehouseViewLinksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,11 +287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksPartialUpdateAsync(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogViewLink</returns>
+        System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksPartialUpdateAsync(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,11 +302,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ViewLink>> WarehouseViewLinksPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogViewLink>> WarehouseViewLinksPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -318,8 +318,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogViewLink</returns>
+        System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ViewLink>> WarehouseViewLinksRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogViewLink>> WarehouseViewLinksRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -343,11 +343,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksUpdateAsync(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogViewLink</returns>
+        System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksUpdateAsync(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,11 +358,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ViewLink>> WarehouseViewLinksUpdateWithHttpInfoAsync(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogViewLink>> WarehouseViewLinksUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -488,12 +488,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        public ViewLink WarehouseViewLinksCreate(string projectId, ViewLink viewLink, int operationIndex = 0)
+        /// <returns>PostHogViewLink</returns>
+        public PostHogViewLink WarehouseViewLinksCreate(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = WarehouseViewLinksCreateWithHttpInfo(projectId, viewLink);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = WarehouseViewLinksCreateWithHttpInfo(projectId, postHogViewLink);
             return localVarResponse.Data;
         }
 
@@ -502,10 +502,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        public DotPostHog.Client.ApiResponse<ViewLink> WarehouseViewLinksCreateWithHttpInfo(string projectId, ViewLink viewLink, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        public DotPostHog.Client.ApiResponse<PostHogViewLink> WarehouseViewLinksCreateWithHttpInfo(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -513,10 +513,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
             }
 
-            // verify the required parameter 'viewLink' is set
-            if (viewLink == null)
+            // verify the required parameter 'postHogViewLink' is set
+            if (postHogViewLink == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'viewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogViewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -545,14 +545,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = viewLink;
+            localVarRequestOptions.Data = postHogViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ViewLink>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseViewLinksCreate", localVarResponse);
@@ -570,13 +570,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        public async System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksCreateAsync(string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogViewLink</returns>
+        public async System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksCreateAsync(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = await WarehouseViewLinksCreateWithHttpInfoAsync(projectId, viewLink, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = await WarehouseViewLinksCreateWithHttpInfoAsync(projectId, postHogViewLink, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -585,11 +585,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ViewLink>> WarehouseViewLinksCreateWithHttpInfoAsync(string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogViewLink>> WarehouseViewLinksCreateWithHttpInfoAsync(string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -597,10 +597,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
             }
 
-            // verify the required parameter 'viewLink' is set
-            if (viewLink == null)
+            // verify the required parameter 'postHogViewLink' is set
+            if (postHogViewLink == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'viewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogViewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksCreate");
             }
 
 
@@ -630,14 +630,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = viewLink;
+            localVarRequestOptions.Data = postHogViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ViewLink>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -806,10 +806,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedViewLinkList</returns>
-        public PaginatedViewLinkList WarehouseViewLinksList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedViewLinkList</returns>
+        public PostHogPaginatedViewLinkList WarehouseViewLinksList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedViewLinkList> localVarResponse = WarehouseViewLinksListWithHttpInfo(projectId, limit, offset, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedViewLinkList> localVarResponse = WarehouseViewLinksListWithHttpInfo(projectId, limit, offset, search);
             return localVarResponse.Data;
         }
 
@@ -822,8 +822,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedViewLinkList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedViewLinkList> WarehouseViewLinksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedViewLinkList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedViewLinkList> WarehouseViewLinksListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -872,7 +872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedViewLinkList>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedViewLinkList>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseViewLinksList", localVarResponse);
@@ -895,10 +895,10 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedViewLinkList</returns>
-        public async System.Threading.Tasks.Task<PaginatedViewLinkList> WarehouseViewLinksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedViewLinkList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedViewLinkList> WarehouseViewLinksListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedViewLinkList> localVarResponse = await WarehouseViewLinksListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedViewLinkList> localVarResponse = await WarehouseViewLinksListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -912,8 +912,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedViewLinkList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedViewLinkList>> WarehouseViewLinksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedViewLinkList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedViewLinkList>> WarehouseViewLinksListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -963,7 +963,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedViewLinkList>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedViewLinkList>("/api/projects/{project_id}/warehouse_view_links/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -983,12 +983,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        public ViewLink WarehouseViewLinksPartialUpdate(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0)
+        /// <returns>PostHogViewLink</returns>
+        public PostHogViewLink WarehouseViewLinksPartialUpdate(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = WarehouseViewLinksPartialUpdateWithHttpInfo(id, projectId, patchedViewLink);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = WarehouseViewLinksPartialUpdateWithHttpInfo(id, projectId, postHogPatchedViewLink);
             return localVarResponse.Data;
         }
 
@@ -998,10 +998,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        public DotPostHog.Client.ApiResponse<ViewLink> WarehouseViewLinksPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        public DotPostHog.Client.ApiResponse<PostHogViewLink> WarehouseViewLinksPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1036,14 +1036,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedViewLink;
+            localVarRequestOptions.Data = postHogPatchedViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseViewLinksPartialUpdate", localVarResponse);
@@ -1062,13 +1062,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        public async System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksPartialUpdateAsync(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogViewLink</returns>
+        public async System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksPartialUpdateAsync(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = await WarehouseViewLinksPartialUpdateWithHttpInfoAsync(id, projectId, patchedViewLink, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = await WarehouseViewLinksPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedViewLink, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1078,11 +1078,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedViewLink"> (optional)</param>
+        /// <param name="postHogPatchedViewLink"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ViewLink>> WarehouseViewLinksPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedViewLink patchedViewLink = default(PatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogViewLink>> WarehouseViewLinksPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedViewLink postHogPatchedViewLink = default(PostHogPatchedViewLink), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1118,14 +1118,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedViewLink;
+            localVarRequestOptions.Data = postHogPatchedViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1146,10 +1146,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        public ViewLink WarehouseViewLinksRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogViewLink</returns>
+        public PostHogViewLink WarehouseViewLinksRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = WarehouseViewLinksRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = WarehouseViewLinksRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1160,8 +1160,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        public DotPostHog.Client.ApiResponse<ViewLink> WarehouseViewLinksRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        public DotPostHog.Client.ApiResponse<PostHogViewLink> WarehouseViewLinksRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1199,7 +1199,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseViewLinksRetrieve", localVarResponse);
@@ -1220,10 +1220,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        public async System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogViewLink</returns>
+        public async System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = await WarehouseViewLinksRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = await WarehouseViewLinksRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1235,8 +1235,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ViewLink>> WarehouseViewLinksRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogViewLink>> WarehouseViewLinksRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1275,7 +1275,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1295,12 +1295,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ViewLink</returns>
-        public ViewLink WarehouseViewLinksUpdate(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0)
+        /// <returns>PostHogViewLink</returns>
+        public PostHogViewLink WarehouseViewLinksUpdate(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = WarehouseViewLinksUpdateWithHttpInfo(id, projectId, viewLink);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = WarehouseViewLinksUpdateWithHttpInfo(id, projectId, postHogViewLink);
             return localVarResponse.Data;
         }
 
@@ -1310,10 +1310,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ViewLink</returns>
-        public DotPostHog.Client.ApiResponse<ViewLink> WarehouseViewLinksUpdateWithHttpInfo(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogViewLink</returns>
+        public DotPostHog.Client.ApiResponse<PostHogViewLink> WarehouseViewLinksUpdateWithHttpInfo(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1321,10 +1321,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
             }
 
-            // verify the required parameter 'viewLink' is set
-            if (viewLink == null)
+            // verify the required parameter 'postHogViewLink' is set
+            if (postHogViewLink == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'viewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogViewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1354,14 +1354,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = viewLink;
+            localVarRequestOptions.Data = postHogViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseViewLinksUpdate", localVarResponse);
@@ -1380,13 +1380,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ViewLink</returns>
-        public async System.Threading.Tasks.Task<ViewLink> WarehouseViewLinksUpdateAsync(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogViewLink</returns>
+        public async System.Threading.Tasks.Task<PostHogViewLink> WarehouseViewLinksUpdateAsync(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ViewLink> localVarResponse = await WarehouseViewLinksUpdateWithHttpInfoAsync(id, projectId, viewLink, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogViewLink> localVarResponse = await WarehouseViewLinksUpdateWithHttpInfoAsync(id, projectId, postHogViewLink, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1396,11 +1396,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse view link.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="viewLink"></param>
+        /// <param name="postHogViewLink"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ViewLink)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ViewLink>> WarehouseViewLinksUpdateWithHttpInfoAsync(Guid id, string projectId, ViewLink viewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogViewLink)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogViewLink>> WarehouseViewLinksUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogViewLink postHogViewLink, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1408,10 +1408,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
             }
 
-            // verify the required parameter 'viewLink' is set
-            if (viewLink == null)
+            // verify the required parameter 'postHogViewLink' is set
+            if (postHogViewLink == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'viewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogViewLink' when calling WarehouseViewLinksApi->WarehouseViewLinksUpdate");
             }
 
 
@@ -1442,14 +1442,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = viewLink;
+            localVarRequestOptions.Data = postHogViewLink;
 
             localVarRequestOptions.Operation = "WarehouseViewLinksApi.WarehouseViewLinksUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<ViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogViewLink>("/api/projects/{project_id}/warehouse_view_links/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

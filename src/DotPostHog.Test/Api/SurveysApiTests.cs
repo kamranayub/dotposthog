@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly = null;
-            //var response = instance.SurveysCreate(projectId, surveySerializerCreateUpdateOnly);
-            //Assert.IsType<SurveySerializerCreateUpdateOnly>(response);
+            //PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly = null;
+            //var response = instance.SurveysCreate(projectId, postHogSurveySerializerCreateUpdateOnly);
+            //Assert.IsType<PostHogSurveySerializerCreateUpdateOnly>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.SurveysList(projectId, limit, offset);
-            //Assert.IsType<PaginatedSurveyList>(response);
+            //Assert.IsType<PostHogPaginatedSurveyList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = null;
-            //var response = instance.SurveysPartialUpdate(id, projectId, patchedSurveySerializerCreateUpdateOnly);
-            //Assert.IsType<SurveySerializerCreateUpdateOnly>(response);
+            //PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = null;
+            //var response = instance.SurveysPartialUpdate(id, projectId, postHogPatchedSurveySerializerCreateUpdateOnly);
+            //Assert.IsType<PostHogSurveySerializerCreateUpdateOnly>(response);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.SurveysResponsesCountRetrieve(projectId);
-            //Assert.IsType<Survey>(response);
+            //Assert.IsType<PostHogSurvey>(response);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.SurveysRetrieve(id, projectId);
-            //Assert.IsType<Survey>(response);
+            //Assert.IsType<PostHogSurvey>(response);
         }
 
         /// <summary>
@@ -141,9 +141,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //Survey survey = null;
-            //var response = instance.SurveysUpdate(id, projectId, survey);
-            //Assert.IsType<Survey>(response);
+            //PostHogSurvey postHogSurvey = null;
+            //var response = instance.SurveysUpdate(id, projectId, postHogSurvey);
+            //Assert.IsType<PostHogSurvey>(response);
         }
     }
 }

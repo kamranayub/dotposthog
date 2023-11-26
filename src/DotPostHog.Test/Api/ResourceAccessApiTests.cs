@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
-            //OrganizationResourceAccess organizationResourceAccess = null;
-            //var response = instance.ResourceAccessCreate(parentLookupOrganizationId, organizationResourceAccess);
-            //Assert.IsType<OrganizationResourceAccess>(response);
+            //PostHogOrganizationResourceAccess postHogOrganizationResourceAccess = null;
+            //var response = instance.ResourceAccessCreate(parentLookupOrganizationId, postHogOrganizationResourceAccess);
+            //Assert.IsType<PostHogOrganizationResourceAccess>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.ResourceAccessList(parentLookupOrganizationId, limit, offset);
-            //Assert.IsType<PaginatedOrganizationResourceAccessList>(response);
+            //Assert.IsType<PostHogPaginatedOrganizationResourceAccessList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string parentLookupOrganizationId = null;
-            //PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = null;
-            //var response = instance.ResourceAccessPartialUpdate(id, parentLookupOrganizationId, patchedOrganizationResourceAccess);
-            //Assert.IsType<OrganizationResourceAccess>(response);
+            //PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = null;
+            //var response = instance.ResourceAccessPartialUpdate(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess);
+            //Assert.IsType<PostHogOrganizationResourceAccess>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string parentLookupOrganizationId = null;
             //var response = instance.ResourceAccessRetrieve(id, parentLookupOrganizationId);
-            //Assert.IsType<OrganizationResourceAccess>(response);
+            //Assert.IsType<PostHogOrganizationResourceAccess>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string parentLookupOrganizationId = null;
-            //OrganizationResourceAccess organizationResourceAccess = null;
-            //var response = instance.ResourceAccessUpdate(id, parentLookupOrganizationId, organizationResourceAccess);
-            //Assert.IsType<OrganizationResourceAccess>(response);
+            //PostHogOrganizationResourceAccess postHogOrganizationResourceAccess = null;
+            //var response = instance.ResourceAccessUpdate(id, parentLookupOrganizationId, postHogOrganizationResourceAccess);
+            //Assert.IsType<PostHogOrganizationResourceAccess>(response);
         }
     }
 }

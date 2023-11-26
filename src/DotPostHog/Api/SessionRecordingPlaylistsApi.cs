@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsCreate(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsCreate(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsCreateWithHttpInfo(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsCreateWithHttpInfo(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -83,8 +83,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSessionRecordingPlaylistList</returns>
-        PaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedSessionRecordingPlaylistList</returns>
+        PostHogPaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -99,18 +99,18 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSessionRecordingPlaylistList</returns>
-        ApiResponse<PaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListWithHttpInfo(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedSessionRecordingPlaylistList</returns>
+        ApiResponse<PostHogPaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListWithHttpInfo(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -121,10 +121,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateWithHttpInfo(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateWithHttpInfo(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -132,10 +132,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -147,10 +147,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -182,8 +182,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve(string projectId, string shortId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve(string projectId, string shortId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -195,8 +195,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -204,8 +204,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsRetrieve(string projectId, string shortId, int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRetrieve(string projectId, string shortId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -217,18 +217,18 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        SessionRecordingPlaylist SessionRecordingPlaylistsUpdate(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        PostHogSessionRecordingPlaylist SessionRecordingPlaylistsUpdate(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -239,10 +239,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsUpdateWithHttpInfo(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsUpdateWithHttpInfo(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -260,11 +260,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsCreateAsync(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsCreateAsync(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -274,11 +274,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsCreateWithHttpInfoAsync(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsCreateWithHttpInfoAsync(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -320,8 +320,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSessionRecordingPlaylistList</returns>
-        System.Threading.Tasks.Task<PaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedSessionRecordingPlaylistList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -337,8 +337,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSessionRecordingPlaylistList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedSessionRecordingPlaylistList>> SessionRecordingPlaylistsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedSessionRecordingPlaylistList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedSessionRecordingPlaylistList>> SessionRecordingPlaylistsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -348,11 +348,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateAsync(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateAsync(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -363,11 +363,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -378,11 +378,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateAsync(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateAsync(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -394,11 +394,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -439,8 +439,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -453,8 +453,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -466,8 +466,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -480,8 +480,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -491,11 +491,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsUpdateAsync(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsUpdateAsync(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -506,11 +506,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsUpdateWithHttpInfoAsync(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsUpdateWithHttpInfoAsync(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -636,12 +636,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsCreate(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsCreate(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsCreateWithHttpInfo(projectId, sessionRecordingPlaylist);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsCreateWithHttpInfo(projectId, postHogSessionRecordingPlaylist);
             return localVarResponse.Data;
         }
 
@@ -650,10 +650,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsCreateWithHttpInfo(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsCreateWithHttpInfo(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -687,14 +687,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsCreate", localVarResponse);
@@ -712,13 +712,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsCreateAsync(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsCreateAsync(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsCreateWithHttpInfoAsync(projectId, sessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsCreateWithHttpInfoAsync(projectId, postHogSessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -727,11 +727,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsCreateWithHttpInfoAsync(string projectId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsCreateWithHttpInfoAsync(string projectId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -766,14 +766,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -955,10 +955,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSessionRecordingPlaylistList</returns>
-        public PaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedSessionRecordingPlaylistList</returns>
+        public PostHogPaginatedSessionRecordingPlaylistList SessionRecordingPlaylistsList(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedSessionRecordingPlaylistList> localVarResponse = SessionRecordingPlaylistsListWithHttpInfo(projectId, createdBy, limit, offset, shortId);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingPlaylistList> localVarResponse = SessionRecordingPlaylistsListWithHttpInfo(projectId, createdBy, limit, offset, shortId);
             return localVarResponse.Data;
         }
 
@@ -972,8 +972,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSessionRecordingPlaylistList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListWithHttpInfo(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedSessionRecordingPlaylistList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListWithHttpInfo(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1026,7 +1026,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedSessionRecordingPlaylistList>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedSessionRecordingPlaylistList>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsList", localVarResponse);
@@ -1050,10 +1050,10 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSessionRecordingPlaylistList</returns>
-        public async System.Threading.Tasks.Task<PaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedSessionRecordingPlaylistList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedSessionRecordingPlaylistList> SessionRecordingPlaylistsListAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedSessionRecordingPlaylistList> localVarResponse = await SessionRecordingPlaylistsListWithHttpInfoAsync(projectId, createdBy, limit, offset, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingPlaylistList> localVarResponse = await SessionRecordingPlaylistsListWithHttpInfoAsync(projectId, createdBy, limit, offset, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1068,8 +1068,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSessionRecordingPlaylistList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedSessionRecordingPlaylistList>> SessionRecordingPlaylistsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedSessionRecordingPlaylistList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedSessionRecordingPlaylistList>> SessionRecordingPlaylistsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1123,7 +1123,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedSessionRecordingPlaylistList>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedSessionRecordingPlaylistList>("/api/projects/{project_id}/session_recording_playlists/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1143,12 +1143,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsPartialUpdate(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsPartialUpdateWithHttpInfo(projectId, shortId, patchedSessionRecordingPlaylist);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsPartialUpdateWithHttpInfo(projectId, shortId, postHogPatchedSessionRecordingPlaylist);
             return localVarResponse.Data;
         }
 
@@ -1158,10 +1158,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateWithHttpInfo(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateWithHttpInfo(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1202,14 +1202,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = patchedSessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogPatchedSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsPartialUpdate", localVarResponse);
@@ -1228,13 +1228,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateAsync(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsPartialUpdateAsync(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(projectId, shortId, patchedSessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(projectId, shortId, postHogPatchedSessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1244,11 +1244,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="patchedSessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogPatchedSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(string projectId, string shortId, PatchedSessionRecordingPlaylist patchedSessionRecordingPlaylist = default(PatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsPartialUpdateWithHttpInfoAsync(string projectId, string shortId, PostHogPatchedSessionRecordingPlaylist postHogPatchedSessionRecordingPlaylist = default(PostHogPatchedSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1290,14 +1290,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = patchedSessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogPatchedSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1318,12 +1318,12 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsCreate(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(projectId, sessionRecordingId, shortId, sessionRecordingPlaylist);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(projectId, sessionRecordingId, shortId, postHogSessionRecordingPlaylist);
             return localVarResponse.Data;
         }
 
@@ -1334,10 +1334,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateWithHttpInfo(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1385,14 +1385,14 @@ namespace DotPostHog.Api
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("session_recording_id", DotPostHog.Client.ClientUtils.ParameterToString(sessionRecordingId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsRecordingsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/{session_recording_id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/{session_recording_id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsRecordingsCreate", localVarResponse);
@@ -1412,13 +1412,13 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateAsync(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsCreateAsync(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(projectId, sessionRecordingId, shortId, sessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(projectId, sessionRecordingId, shortId, postHogSessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1429,11 +1429,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="sessionRecordingId"></param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(string projectId, string sessionRecordingId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsCreateWithHttpInfoAsync(string projectId, string sessionRecordingId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1482,14 +1482,14 @@ namespace DotPostHog.Api
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("session_recording_id", DotPostHog.Client.ClientUtils.ParameterToString(sessionRecordingId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsRecordingsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/{session_recording_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/{session_recording_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1686,10 +1686,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve(string projectId, string shortId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRecordingsRetrieve(string projectId, string shortId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(projectId, shortId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(projectId, shortId);
             return localVarResponse.Data;
         }
 
@@ -1700,8 +1700,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1745,7 +1745,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsRecordingsRetrieve", localVarResponse);
@@ -1766,10 +1766,10 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRecordingsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(projectId, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(projectId, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1781,8 +1781,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRecordingsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1827,7 +1827,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/recordings/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1848,10 +1848,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsRetrieve(string projectId, string shortId, int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsRetrieve(string projectId, string shortId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRetrieveWithHttpInfo(projectId, shortId);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsRetrieveWithHttpInfo(projectId, shortId);
             return localVarResponse.Data;
         }
 
@@ -1862,8 +1862,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveWithHttpInfo(string projectId, string shortId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1907,7 +1907,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsRetrieve", localVarResponse);
@@ -1928,10 +1928,10 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsRetrieveAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(projectId, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(projectId, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1943,8 +1943,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsRetrieveWithHttpInfoAsync(string projectId, string shortId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1989,7 +1989,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2009,12 +2009,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SessionRecordingPlaylist</returns>
-        public SessionRecordingPlaylist SessionRecordingPlaylistsUpdate(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>PostHogSessionRecordingPlaylist</returns>
+        public PostHogSessionRecordingPlaylist SessionRecordingPlaylistsUpdate(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsUpdateWithHttpInfo(projectId, shortId, sessionRecordingPlaylist);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = SessionRecordingPlaylistsUpdateWithHttpInfo(projectId, shortId, postHogSessionRecordingPlaylist);
             return localVarResponse.Data;
         }
 
@@ -2024,10 +2024,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SessionRecordingPlaylist</returns>
-        public DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> SessionRecordingPlaylistsUpdateWithHttpInfo(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSessionRecordingPlaylist</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsUpdateWithHttpInfo(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2068,14 +2068,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SessionRecordingPlaylistsUpdate", localVarResponse);
@@ -2094,13 +2094,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SessionRecordingPlaylist</returns>
-        public async System.Threading.Tasks.Task<SessionRecordingPlaylist> SessionRecordingPlaylistsUpdateAsync(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSessionRecordingPlaylist</returns>
+        public async System.Threading.Tasks.Task<PostHogSessionRecordingPlaylist> SessionRecordingPlaylistsUpdateAsync(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsUpdateWithHttpInfoAsync(projectId, shortId, sessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist> localVarResponse = await SessionRecordingPlaylistsUpdateWithHttpInfoAsync(projectId, shortId, postHogSessionRecordingPlaylist, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2110,11 +2110,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="shortId"></param>
-        /// <param name="sessionRecordingPlaylist"> (optional)</param>
+        /// <param name="postHogSessionRecordingPlaylist"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SessionRecordingPlaylist)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SessionRecordingPlaylist>> SessionRecordingPlaylistsUpdateWithHttpInfoAsync(string projectId, string shortId, SessionRecordingPlaylist sessionRecordingPlaylist = default(SessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSessionRecordingPlaylist)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSessionRecordingPlaylist>> SessionRecordingPlaylistsUpdateWithHttpInfoAsync(string projectId, string shortId, PostHogSessionRecordingPlaylist postHogSessionRecordingPlaylist = default(PostHogSessionRecordingPlaylist), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2156,14 +2156,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
             localVarRequestOptions.PathParameters.Add("short_id", DotPostHog.Client.ClientUtils.ParameterToString(shortId)); // path parameter
-            localVarRequestOptions.Data = sessionRecordingPlaylist;
+            localVarRequestOptions.Data = postHogSessionRecordingPlaylist;
 
             localVarRequestOptions.Operation = "SessionRecordingPlaylistsApi.SessionRecordingPlaylistsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<SessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogSessionRecordingPlaylist>("/api/projects/{project_id}/session_recording_playlists/{short_id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

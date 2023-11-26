@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
-            //OrganizationInvite organizationInvite = null;
-            //var response = instance.InvitesBulkCreate(parentLookupOrganizationId, organizationInvite);
-            //Assert.IsType<OrganizationInvite>(response);
+            //PostHogOrganizationInvite postHogOrganizationInvite = null;
+            //var response = instance.InvitesBulkCreate(parentLookupOrganizationId, postHogOrganizationInvite);
+            //Assert.IsType<PostHogOrganizationInvite>(response);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string parentLookupOrganizationId = null;
-            //OrganizationInvite organizationInvite = null;
-            //var response = instance.InvitesCreate(parentLookupOrganizationId, organizationInvite);
-            //Assert.IsType<OrganizationInvite>(response);
+            //PostHogOrganizationInvite postHogOrganizationInvite = null;
+            //var response = instance.InvitesCreate(parentLookupOrganizationId, postHogOrganizationInvite);
+            //Assert.IsType<PostHogOrganizationInvite>(response);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.InvitesList(parentLookupOrganizationId, limit, offset);
-            //Assert.IsType<PaginatedOrganizationInviteList>(response);
+            //Assert.IsType<PostHogPaginatedOrganizationInviteList>(response);
         }
     }
 }

@@ -32,10 +32,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FunnelStepsResults</returns>
-        FunnelStepsResults Funnels(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0);
+        /// <returns>PostHogFunnelStepsResults</returns>
+        PostHogFunnelStepsResults Funnels(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -46,10 +46,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FunnelStepsResults</returns>
-        ApiResponse<FunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFunnelStepsResults</returns>
+        ApiResponse<PostHogFunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -57,8 +57,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -70,8 +70,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -80,8 +80,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -94,18 +94,18 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsCancelCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsCancelCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -116,20 +116,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsCancelCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsCancelCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -140,10 +140,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -177,10 +177,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsFunnelCorrelationCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsFunnelCorrelationCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -191,10 +191,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -202,30 +202,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -237,8 +215,30 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -250,8 +250,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedInsightList</returns>
-        PaginatedInsightList InsightsList(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedInsightList</returns>
+        PostHogPaginatedInsightList InsightsList(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -267,8 +267,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedInsightList</returns>
-        ApiResponse<PaginatedInsightList> InsightsListWithHttpInfo(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedInsightList</returns>
+        ApiResponse<PostHogPaginatedInsightList> InsightsListWithHttpInfo(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -279,8 +279,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsMyLastViewedRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsMyLastViewedRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -292,8 +292,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsMyLastViewedRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsMyLastViewedRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -301,10 +301,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsPartialUpdate(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -316,20 +316,20 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsPathCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsPathCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -340,10 +340,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsPathCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsPathCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -351,30 +351,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -386,20 +364,17 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="fromDashboard"> When loading an insight for a dashboard pass a &#x60;from_dashboard&#x60; query parameter containing the dashboard ID  e.g. &#x60;\&quot;/api/projects/{team_id}/insights/{insight_id}?from_dashboard&#x3D;{dashboard_id}\&quot;&#x60;  Insights can be added to more than one dashboard, this allows the insight to be loaded in the correct context.  Using the correct cache and enriching the response with dashboard specific config (e.g. layouts or colors) (optional)</param>
-        /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsRetrieve(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -407,6 +382,15 @@ namespace DotPostHog.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
@@ -414,65 +398,8 @@ namespace DotPostHog.Api
         /// <param name="fromDashboard"> When loading an insight for a dashboard pass a &#x60;from_dashboard&#x60; query parameter containing the dashboard ID  e.g. &#x60;\&quot;/api/projects/{team_id}/insights/{insight_id}?from_dashboard&#x3D;{dashboard_id}\&quot;&#x60;  Insights can be added to more than one dashboard, this allows the insight to be loaded in the correct context.  Using the correct cache and enriching the response with dashboard specific config (e.g. layouts or colors) (optional)</param>
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsTimingCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsTimingCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsTrendRetrieve(string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsTrendRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this insight.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsUpdate(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsRetrieve(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -484,10 +411,57 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="fromDashboard"> When loading an insight for a dashboard pass a &#x60;from_dashboard&#x60; query parameter containing the dashboard ID  e.g. &#x60;\&quot;/api/projects/{team_id}/insights/{insight_id}?from_dashboard&#x3D;{dashboard_id}\&quot;&#x60;  Insights can be added to more than one dashboard, this allows the insight to be loaded in the correct context.  Using the correct cache and enriching the response with dashboard specific config (e.g. layouts or colors) (optional)</param>
+        /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsUpdateWithHttpInfo(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsTimingCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsTimingCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsTrendRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsTrendRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -495,10 +469,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        Insight InsightsViewedCreate(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsUpdate(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -510,20 +484,46 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        ApiResponse<Insight> InsightsViewedCreateWithHttpInfo(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this insight.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogInsight</returns>
+        PostHogInsight InsightsViewedCreate(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this insight.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        ApiResponse<PostHogInsight> InsightsViewedCreateWithHttpInfo(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>TrendResults</returns>
-        TrendResults Trends(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0);
+        /// <returns>PostHogTrendResults</returns>
+        PostHogTrendResults Trends(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -534,10 +534,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of TrendResults</returns>
-        ApiResponse<TrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTrendResults</returns>
+        ApiResponse<PostHogTrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -556,11 +556,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FunnelStepsResults</returns>
-        System.Threading.Tasks.Task<FunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFunnelStepsResults</returns>
+        System.Threading.Tasks.Task<PostHogFunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -571,11 +571,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FunnelStepsResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFunnelStepsResults)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -587,8 +587,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -601,8 +601,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -615,8 +615,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -630,8 +630,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -641,11 +641,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsCancelCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsCancelCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -656,11 +656,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsCancelCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsCancelCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -670,11 +670,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -685,11 +685,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -728,11 +728,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsFunnelCorrelationCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelCorrelationCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -743,11 +743,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -759,35 +759,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -800,8 +773,35 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -817,8 +817,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedInsightList</returns>
-        System.Threading.Tasks.Task<PaginatedInsightList> InsightsListAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedInsightList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedInsightList> InsightsListAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -835,8 +835,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedInsightList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedInsightList>> InsightsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedInsightList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedInsightList>> InsightsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -848,8 +848,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsMyLastViewedRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsMyLastViewedRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -862,8 +862,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsMyLastViewedRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsMyLastViewedRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -874,11 +874,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -890,11 +890,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -904,11 +904,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsPathCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsPathCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -919,11 +919,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -935,35 +935,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -976,8 +949,35 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -992,8 +992,8 @@ namespace DotPostHog.Api
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsRetrieveAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsRetrieveAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1009,8 +1009,8 @@ namespace DotPostHog.Api
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1020,11 +1020,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsTimingCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsTimingCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1035,11 +1035,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsTimingCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsTimingCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1051,8 +1051,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsTrendRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsTrendRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1065,8 +1065,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsTrendRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsTrendRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1077,42 +1077,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsUpdateAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this insight.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this insight.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        System.Threading.Tasks.Task<Insight> InsightsViewedCreateAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsUpdateAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1124,11 +1093,42 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Insight>> InsightsViewedCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this insight.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogInsight</returns>
+        System.Threading.Tasks.Task<PostHogInsight> InsightsViewedCreateAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this insight.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogInsight>> InsightsViewedCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1138,11 +1138,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TrendResults</returns>
-        System.Threading.Tasks.Task<TrendResults> TrendsAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTrendResults</returns>
+        System.Threading.Tasks.Task<PostHogTrendResults> TrendsAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1153,11 +1153,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TrendResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTrendResults)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1284,12 +1284,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FunnelStepsResults</returns>
-        public FunnelStepsResults Funnels(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0)
+        /// <returns>PostHogFunnelStepsResults</returns>
+        public PostHogFunnelStepsResults Funnels(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FunnelStepsResults> localVarResponse = FunnelsWithHttpInfo(projectId, format, funnel);
+            DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> localVarResponse = FunnelsWithHttpInfo(projectId, format, postHogFunnel);
             return localVarResponse.Data;
         }
 
@@ -1299,10 +1299,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FunnelStepsResults</returns>
-        public DotPostHog.Client.ApiResponse<FunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFunnelStepsResults</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1339,14 +1339,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = funnel;
+            localVarRequestOptions.Data = postHogFunnel;
 
             localVarRequestOptions.Operation = "InsightsApi.Funnels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Funnels", localVarResponse);
@@ -1365,13 +1365,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FunnelStepsResults</returns>
-        public async System.Threading.Tasks.Task<FunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFunnelStepsResults</returns>
+        public async System.Threading.Tasks.Task<PostHogFunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FunnelStepsResults> localVarResponse = await FunnelsWithHttpInfoAsync(projectId, format, funnel, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> localVarResponse = await FunnelsWithHttpInfoAsync(projectId, format, postHogFunnel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1381,11 +1381,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FunnelStepsResults)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFunnelStepsResults)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1423,14 +1423,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = funnel;
+            localVarRequestOptions.Data = postHogFunnel;
 
             localVarRequestOptions.Operation = "InsightsApi.Funnels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1451,10 +1451,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsActivityRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsActivityRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1465,8 +1465,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1508,7 +1508,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsActivityRetrieve", localVarResponse);
@@ -1529,10 +1529,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsActivityRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsActivityRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1544,8 +1544,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1588,7 +1588,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1610,10 +1610,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsActivityRetrieve2WithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsActivityRetrieve2WithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1625,8 +1625,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1669,7 +1669,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/{id}/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/{id}/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsActivityRetrieve2", localVarResponse);
@@ -1691,10 +1691,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsActivityRetrieve2WithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsActivityRetrieve2WithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1707,8 +1707,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1752,7 +1752,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1772,12 +1772,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsCancelCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsCancelCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsCancelCreateWithHttpInfo(projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsCancelCreateWithHttpInfo(projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -1787,10 +1787,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsCancelCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsCancelCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1827,14 +1827,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsCancelCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/cancel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/cancel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsCancelCreate", localVarResponse);
@@ -1853,13 +1853,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsCancelCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsCancelCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsCancelCreateWithHttpInfoAsync(projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsCancelCreateWithHttpInfoAsync(projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1869,11 +1869,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsCancelCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsCancelCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1911,14 +1911,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsCancelCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/cancel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/cancel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1938,12 +1938,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsCreateWithHttpInfo(projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsCreateWithHttpInfo(projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -1953,10 +1953,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1993,14 +1993,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsCreate", localVarResponse);
@@ -2019,13 +2019,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsCreateWithHttpInfoAsync(projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsCreateWithHttpInfoAsync(projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2035,11 +2035,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2077,14 +2077,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2262,12 +2262,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsFunnelCorrelationCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsFunnelCorrelationCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsFunnelCorrelationCreateWithHttpInfo(projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsFunnelCorrelationCreateWithHttpInfo(projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -2277,10 +2277,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2317,14 +2317,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsFunnelCorrelationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsFunnelCorrelationCreate", localVarResponse);
@@ -2343,13 +2343,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsFunnelCorrelationCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelCorrelationCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsFunnelCorrelationCreateWithHttpInfoAsync(projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsFunnelCorrelationCreateWithHttpInfoAsync(projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2359,11 +2359,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2401,14 +2401,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsFunnelCorrelationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2429,10 +2429,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2443,8 +2443,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2486,7 +2486,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsFunnelCorrelationRetrieve", localVarResponse);
@@ -2507,10 +2507,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2522,8 +2522,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2566,7 +2566,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2587,10 +2587,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsFunnelRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsFunnelRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2601,8 +2601,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2644,7 +2644,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsFunnelRetrieve", localVarResponse);
@@ -2665,10 +2665,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsFunnelRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsFunnelRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2680,8 +2680,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2724,7 +2724,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2749,10 +2749,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedInsightList</returns>
-        public PaginatedInsightList InsightsList(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedInsightList</returns>
+        public PostHogPaginatedInsightList InsightsList(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedInsightList> localVarResponse = InsightsListWithHttpInfo(projectId, createdBy, format, limit, offset, shortId);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedInsightList> localVarResponse = InsightsListWithHttpInfo(projectId, createdBy, format, limit, offset, shortId);
             return localVarResponse.Data;
         }
 
@@ -2767,8 +2767,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedInsightList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedInsightList> InsightsListWithHttpInfo(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedInsightList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedInsightList> InsightsListWithHttpInfo(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2826,7 +2826,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedInsightList>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedInsightList>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsList", localVarResponse);
@@ -2851,10 +2851,10 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedInsightList</returns>
-        public async System.Threading.Tasks.Task<PaginatedInsightList> InsightsListAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedInsightList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedInsightList> InsightsListAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedInsightList> localVarResponse = await InsightsListWithHttpInfoAsync(projectId, createdBy, format, limit, offset, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedInsightList> localVarResponse = await InsightsListWithHttpInfoAsync(projectId, createdBy, format, limit, offset, shortId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2870,8 +2870,8 @@ namespace DotPostHog.Api
         /// <param name="shortId"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedInsightList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedInsightList>> InsightsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedInsightList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedInsightList>> InsightsListWithHttpInfoAsync(string projectId, int? createdBy = default(int?), string format = default(string), int? limit = default(int?), int? offset = default(int?), string shortId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2930,7 +2930,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedInsightList>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedInsightList>("/api/projects/{project_id}/insights/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2951,10 +2951,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsMyLastViewedRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsMyLastViewedRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsMyLastViewedRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsMyLastViewedRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2965,8 +2965,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsMyLastViewedRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsMyLastViewedRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3008,7 +3008,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/my_last_viewed/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/my_last_viewed/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsMyLastViewedRetrieve", localVarResponse);
@@ -3029,10 +3029,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsMyLastViewedRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsMyLastViewedRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsMyLastViewedRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsMyLastViewedRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3044,8 +3044,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsMyLastViewedRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsMyLastViewedRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3088,7 +3088,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/my_last_viewed/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/my_last_viewed/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3109,12 +3109,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsPartialUpdate(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsPartialUpdateWithHttpInfo(id, projectId, format, patchedInsight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedInsight);
             return localVarResponse.Data;
         }
 
@@ -3125,10 +3125,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3166,14 +3166,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedInsight;
+            localVarRequestOptions.Data = postHogPatchedInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsPartialUpdate", localVarResponse);
@@ -3193,13 +3193,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsPartialUpdateWithHttpInfoAsync(id, projectId, format, patchedInsight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsPartialUpdateWithHttpInfoAsync(id, projectId, format, postHogPatchedInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3210,11 +3210,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedInsight"> (optional)</param>
+        /// <param name="postHogPatchedInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedInsight patchedInsight = default(PatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedInsight postHogPatchedInsight = default(PostHogPatchedInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3253,14 +3253,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedInsight;
+            localVarRequestOptions.Data = postHogPatchedInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3280,12 +3280,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsPathCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsPathCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsPathCreateWithHttpInfo(projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsPathCreateWithHttpInfo(projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -3295,10 +3295,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsPathCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsPathCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3335,14 +3335,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsPathCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsPathCreate", localVarResponse);
@@ -3361,13 +3361,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsPathCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsPathCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsPathCreateWithHttpInfoAsync(projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsPathCreateWithHttpInfoAsync(projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3377,11 +3377,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3419,14 +3419,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsPathCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3447,10 +3447,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsPathRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsPathRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -3461,8 +3461,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3504,7 +3504,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsPathRetrieve", localVarResponse);
@@ -3525,10 +3525,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsPathRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsPathRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3540,8 +3540,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3584,7 +3584,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3605,10 +3605,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsRetentionRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsRetentionRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -3619,8 +3619,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3662,7 +3662,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/retention/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/retention/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsRetentionRetrieve", localVarResponse);
@@ -3683,10 +3683,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsRetentionRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsRetentionRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3698,8 +3698,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3742,7 +3742,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/retention/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/retention/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3766,10 +3766,10 @@ namespace DotPostHog.Api
         /// <param name="fromDashboard"> When loading an insight for a dashboard pass a &#x60;from_dashboard&#x60; query parameter containing the dashboard ID  e.g. &#x60;\&quot;/api/projects/{team_id}/insights/{insight_id}?from_dashboard&#x3D;{dashboard_id}\&quot;&#x60;  Insights can be added to more than one dashboard, this allows the insight to be loaded in the correct context.  Using the correct cache and enriching the response with dashboard specific config (e.g. layouts or colors) (optional)</param>
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsRetrieve(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsRetrieve(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsRetrieveWithHttpInfo(id, projectId, format, fromDashboard, refresh);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsRetrieveWithHttpInfo(id, projectId, format, fromDashboard, refresh);
             return localVarResponse.Data;
         }
 
@@ -3783,8 +3783,8 @@ namespace DotPostHog.Api
         /// <param name="fromDashboard"> When loading an insight for a dashboard pass a &#x60;from_dashboard&#x60; query parameter containing the dashboard ID  e.g. &#x60;\&quot;/api/projects/{team_id}/insights/{insight_id}?from_dashboard&#x3D;{dashboard_id}\&quot;&#x60;  Insights can be added to more than one dashboard, this allows the insight to be loaded in the correct context.  Using the correct cache and enriching the response with dashboard specific config (e.g. layouts or colors) (optional)</param>
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3835,7 +3835,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsRetrieve", localVarResponse);
@@ -3859,10 +3859,10 @@ namespace DotPostHog.Api
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsRetrieveAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsRetrieveAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsRetrieveWithHttpInfoAsync(id, projectId, format, fromDashboard, refresh, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsRetrieveWithHttpInfoAsync(id, projectId, format, fromDashboard, refresh, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3877,8 +3877,8 @@ namespace DotPostHog.Api
         /// <param name="refresh">                 The client can request that an insight be refreshed by setting the &#x60;refresh&#x3D;true&#x60; parameter.                 The server will then decide if the data should or not be refreshed based on a set of heuristics                 meant to determine the staleness of cached data. The result will contain as &#x60;is_cached&#x60; field                 that indicates whether the insight was actually refreshed or not through the request. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int? fromDashboard = default(int?), bool? refresh = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3930,7 +3930,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3950,12 +3950,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsTimingCreate(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsTimingCreate(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsTimingCreateWithHttpInfo(projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsTimingCreateWithHttpInfo(projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -3965,10 +3965,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsTimingCreateWithHttpInfo(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsTimingCreateWithHttpInfo(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4005,14 +4005,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsTimingCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/timing/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/timing/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsTimingCreate", localVarResponse);
@@ -4031,13 +4031,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsTimingCreateAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsTimingCreateAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsTimingCreateWithHttpInfoAsync(projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsTimingCreateWithHttpInfoAsync(projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4047,11 +4047,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsTimingCreateWithHttpInfoAsync(string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsTimingCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4089,14 +4089,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsTimingCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/timing/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/timing/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4117,10 +4117,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsTrendRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsTrendRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsTrendRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsTrendRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -4131,8 +4131,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsTrendRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsTrendRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4174,7 +4174,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Insight>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogInsight>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsTrendRetrieve", localVarResponse);
@@ -4195,10 +4195,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsTrendRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsTrendRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsTrendRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsTrendRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4210,8 +4210,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsTrendRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsTrendRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4254,7 +4254,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Insight>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogInsight>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4275,12 +4275,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsUpdate(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsUpdate(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsUpdateWithHttpInfo(id, projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsUpdateWithHttpInfo(id, projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -4291,10 +4291,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsUpdateWithHttpInfo(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4332,14 +4332,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsUpdate", localVarResponse);
@@ -4359,13 +4359,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsUpdateAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsUpdateAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsUpdateWithHttpInfoAsync(id, projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsUpdateWithHttpInfoAsync(id, projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4376,11 +4376,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4419,14 +4419,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Insight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogInsight>("/api/projects/{project_id}/insights/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4447,12 +4447,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Insight</returns>
-        public Insight InsightsViewedCreate(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>PostHogInsight</returns>
+        public PostHogInsight InsightsViewedCreate(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = InsightsViewedCreateWithHttpInfo(id, projectId, format, insight);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = InsightsViewedCreateWithHttpInfo(id, projectId, format, postHogInsight);
             return localVarResponse.Data;
         }
 
@@ -4463,10 +4463,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Insight</returns>
-        public DotPostHog.Client.ApiResponse<Insight> InsightsViewedCreateWithHttpInfo(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogInsight</returns>
+        public DotPostHog.Client.ApiResponse<PostHogInsight> InsightsViewedCreateWithHttpInfo(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4504,14 +4504,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsViewedCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Insight>("/api/projects/{project_id}/insights/{id}/viewed/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogInsight>("/api/projects/{project_id}/insights/{id}/viewed/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InsightsViewedCreate", localVarResponse);
@@ -4531,13 +4531,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Insight</returns>
-        public async System.Threading.Tasks.Task<Insight> InsightsViewedCreateAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogInsight</returns>
+        public async System.Threading.Tasks.Task<PostHogInsight> InsightsViewedCreateAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Insight> localVarResponse = await InsightsViewedCreateWithHttpInfoAsync(id, projectId, format, insight, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogInsight> localVarResponse = await InsightsViewedCreateWithHttpInfoAsync(id, projectId, format, postHogInsight, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4548,11 +4548,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this insight.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="insight"> (optional)</param>
+        /// <param name="postHogInsight"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Insight)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Insight>> InsightsViewedCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), Insight insight = default(Insight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogInsight)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogInsight>> InsightsViewedCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogInsight postHogInsight = default(PostHogInsight), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4591,14 +4591,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = insight;
+            localVarRequestOptions.Data = postHogInsight;
 
             localVarRequestOptions.Operation = "InsightsApi.InsightsViewedCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Insight>("/api/projects/{project_id}/insights/{id}/viewed/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogInsight>("/api/projects/{project_id}/insights/{id}/viewed/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4618,12 +4618,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>TrendResults</returns>
-        public TrendResults Trends(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0)
+        /// <returns>PostHogTrendResults</returns>
+        public PostHogTrendResults Trends(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<TrendResults> localVarResponse = TrendsWithHttpInfo(projectId, format, trend);
+            DotPostHog.Client.ApiResponse<PostHogTrendResults> localVarResponse = TrendsWithHttpInfo(projectId, format, postHogTrend);
             return localVarResponse.Data;
         }
 
@@ -4633,10 +4633,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of TrendResults</returns>
-        public DotPostHog.Client.ApiResponse<TrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTrendResults</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTrendResults> TrendsWithHttpInfo(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4673,14 +4673,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = trend;
+            localVarRequestOptions.Data = postHogTrend;
 
             localVarRequestOptions.Operation = "InsightsApi.Trends";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<TrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogTrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Trends", localVarResponse);
@@ -4699,13 +4699,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of TrendResults</returns>
-        public async System.Threading.Tasks.Task<TrendResults> TrendsAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTrendResults</returns>
+        public async System.Threading.Tasks.Task<PostHogTrendResults> TrendsAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<TrendResults> localVarResponse = await TrendsWithHttpInfoAsync(projectId, format, trend, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTrendResults> localVarResponse = await TrendsWithHttpInfoAsync(projectId, format, postHogTrend, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4715,11 +4715,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="trend"> (optional)</param>
+        /// <param name="postHogTrend"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (TrendResults)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<TrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), Trend trend = default(Trend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTrendResults)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTrendResults>> TrendsWithHttpInfoAsync(string projectId, string format = default(string), PostHogTrend postHogTrend = default(PostHogTrend), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4757,14 +4757,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = trend;
+            localVarRequestOptions.Data = postHogTrend;
 
             localVarRequestOptions.Operation = "InsightsApi.Trends";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<TrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogTrendResults>("/api/projects/{project_id}/insights/trend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

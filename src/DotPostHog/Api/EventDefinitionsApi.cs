@@ -56,8 +56,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEnterpriseEventDefinitionList</returns>
-        PaginatedEnterpriseEventDefinitionList EventDefinitionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        PostHogPaginatedEnterpriseEventDefinitionList EventDefinitionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -70,18 +70,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEnterpriseEventDefinitionList</returns>
-        ApiResponse<PaginatedEnterpriseEventDefinitionList> EventDefinitionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList> EventDefinitionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        EnterpriseEventDefinition EventDefinitionsPartialUpdate(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0);
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        PostHogEnterpriseEventDefinition EventDefinitionsPartialUpdate(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,10 +92,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        ApiResponse<EnterpriseEventDefinition> EventDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        EnterpriseEventDefinition EventDefinitionsRetrieve(string id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        PostHogEnterpriseEventDefinition EventDefinitionsRetrieve(string id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -116,18 +116,18 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        ApiResponse<EnterpriseEventDefinition> EventDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        EnterpriseEventDefinition EventDefinitionsUpdate(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0);
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        PostHogEnterpriseEventDefinition EventDefinitionsUpdate(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,10 +138,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        ApiResponse<EnterpriseEventDefinition> EventDefinitionsUpdateWithHttpInfo(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsUpdateWithHttpInfo(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -190,8 +190,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEnterpriseEventDefinitionList</returns>
-        System.Threading.Tasks.Task<PaginatedEnterpriseEventDefinitionList> EventDefinitionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedEnterpriseEventDefinitionList> EventDefinitionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -205,8 +205,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEnterpriseEventDefinitionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedEnterpriseEventDefinitionList>> EventDefinitionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedEnterpriseEventDefinitionList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList>> EventDefinitionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -216,11 +216,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsPartialUpdateAsync(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsPartialUpdateAsync(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -231,11 +231,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterpriseEventDefinition>> EventDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -247,8 +247,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -261,8 +261,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterpriseEventDefinition>> EventDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -272,11 +272,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsUpdateAsync(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsUpdateAsync(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -287,11 +287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnterpriseEventDefinition>> EventDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -578,10 +578,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEnterpriseEventDefinitionList</returns>
-        public PaginatedEnterpriseEventDefinitionList EventDefinitionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        public PostHogPaginatedEnterpriseEventDefinitionList EventDefinitionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedEnterpriseEventDefinitionList> localVarResponse = EventDefinitionsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList> localVarResponse = EventDefinitionsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -593,8 +593,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEnterpriseEventDefinitionList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedEnterpriseEventDefinitionList> EventDefinitionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList> EventDefinitionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -639,7 +639,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedEnterpriseEventDefinitionList>("/api/projects/{project_id}/event_definitions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedEnterpriseEventDefinitionList>("/api/projects/{project_id}/event_definitions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventDefinitionsList", localVarResponse);
@@ -661,10 +661,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEnterpriseEventDefinitionList</returns>
-        public async System.Threading.Tasks.Task<PaginatedEnterpriseEventDefinitionList> EventDefinitionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedEnterpriseEventDefinitionList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedEnterpriseEventDefinitionList> EventDefinitionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedEnterpriseEventDefinitionList> localVarResponse = await EventDefinitionsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList> localVarResponse = await EventDefinitionsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +677,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEnterpriseEventDefinitionList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedEnterpriseEventDefinitionList>> EventDefinitionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedEnterpriseEventDefinitionList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedEnterpriseEventDefinitionList>> EventDefinitionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -724,7 +724,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedEnterpriseEventDefinitionList>("/api/projects/{project_id}/event_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedEnterpriseEventDefinitionList>("/api/projects/{project_id}/event_definitions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -744,12 +744,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        public EnterpriseEventDefinition EventDefinitionsPartialUpdate(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0)
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        public PostHogEnterpriseEventDefinition EventDefinitionsPartialUpdate(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = EventDefinitionsPartialUpdateWithHttpInfo(id, projectId, patchedEnterpriseEventDefinition);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = EventDefinitionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedEnterpriseEventDefinition);
             return localVarResponse.Data;
         }
 
@@ -759,10 +759,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> EventDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -803,14 +803,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEnterpriseEventDefinition;
+            localVarRequestOptions.Data = postHogPatchedEnterpriseEventDefinition;
 
             localVarRequestOptions.Operation = "EventDefinitionsApi.EventDefinitionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventDefinitionsPartialUpdate", localVarResponse);
@@ -829,13 +829,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsPartialUpdateAsync(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsPartialUpdateAsync(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = await EventDefinitionsPartialUpdateWithHttpInfoAsync(id, projectId, patchedEnterpriseEventDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = await EventDefinitionsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedEnterpriseEventDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -845,11 +845,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEnterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogPatchedEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterpriseEventDefinition>> EventDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedEnterpriseEventDefinition patchedEnterpriseEventDefinition = default(PatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedEnterpriseEventDefinition postHogPatchedEnterpriseEventDefinition = default(PostHogPatchedEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -891,14 +891,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEnterpriseEventDefinition;
+            localVarRequestOptions.Data = postHogPatchedEnterpriseEventDefinition;
 
             localVarRequestOptions.Operation = "EventDefinitionsApi.EventDefinitionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -919,10 +919,10 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        public EnterpriseEventDefinition EventDefinitionsRetrieve(string id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        public PostHogEnterpriseEventDefinition EventDefinitionsRetrieve(string id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = EventDefinitionsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = EventDefinitionsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -933,8 +933,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> EventDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -978,7 +978,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventDefinitionsRetrieve", localVarResponse);
@@ -999,10 +999,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = await EventDefinitionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = await EventDefinitionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1014,8 +1014,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterpriseEventDefinition>> EventDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1060,7 +1060,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1080,12 +1080,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EnterpriseEventDefinition</returns>
-        public EnterpriseEventDefinition EventDefinitionsUpdate(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0)
+        /// <returns>PostHogEnterpriseEventDefinition</returns>
+        public PostHogEnterpriseEventDefinition EventDefinitionsUpdate(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = EventDefinitionsUpdateWithHttpInfo(id, projectId, enterpriseEventDefinition);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = EventDefinitionsUpdateWithHttpInfo(id, projectId, postHogEnterpriseEventDefinition);
             return localVarResponse.Data;
         }
 
@@ -1095,10 +1095,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EnterpriseEventDefinition</returns>
-        public DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> EventDefinitionsUpdateWithHttpInfo(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEnterpriseEventDefinition</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> EventDefinitionsUpdateWithHttpInfo(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1139,14 +1139,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = enterpriseEventDefinition;
+            localVarRequestOptions.Data = postHogEnterpriseEventDefinition;
 
             localVarRequestOptions.Operation = "EventDefinitionsApi.EventDefinitionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EventDefinitionsUpdate", localVarResponse);
@@ -1165,13 +1165,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EnterpriseEventDefinition</returns>
-        public async System.Threading.Tasks.Task<EnterpriseEventDefinition> EventDefinitionsUpdateAsync(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEnterpriseEventDefinition</returns>
+        public async System.Threading.Tasks.Task<PostHogEnterpriseEventDefinition> EventDefinitionsUpdateAsync(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EnterpriseEventDefinition> localVarResponse = await EventDefinitionsUpdateWithHttpInfoAsync(id, projectId, enterpriseEventDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition> localVarResponse = await EventDefinitionsUpdateWithHttpInfoAsync(id, projectId, postHogEnterpriseEventDefinition, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1181,11 +1181,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="enterpriseEventDefinition"> (optional)</param>
+        /// <param name="postHogEnterpriseEventDefinition"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EnterpriseEventDefinition)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EnterpriseEventDefinition>> EventDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, EnterpriseEventDefinition enterpriseEventDefinition = default(EnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEnterpriseEventDefinition)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEnterpriseEventDefinition>> EventDefinitionsUpdateWithHttpInfoAsync(string id, string projectId, PostHogEnterpriseEventDefinition postHogEnterpriseEventDefinition = default(PostHogEnterpriseEventDefinition), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1227,14 +1227,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = enterpriseEventDefinition;
+            localVarRequestOptions.Data = postHogEnterpriseEventDefinition;
 
             localVarRequestOptions.Operation = "EventDefinitionsApi.EventDefinitionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogEnterpriseEventDefinition>("/api/projects/{project_id}/event_definitions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

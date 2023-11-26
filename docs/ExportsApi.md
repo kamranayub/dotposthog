@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 <a id="exportscontentretrieve"></a>
 # **ExportsContentRetrieve**
-> ExportedAsset ExportsContentRetrieve (int id, string projectId)
+> PostHogExportedAsset ExportsContentRetrieve (int id, string projectId)
 
 
 
@@ -36,7 +36,7 @@ namespace Example
 
             try
             {
-                ExportedAsset result = apiInstance.ExportsContentRetrieve(id, projectId);
+                PostHogExportedAsset result = apiInstance.ExportsContentRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -56,7 +56,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExportedAsset> response = apiInstance.ExportsContentRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExportedAsset> response = apiInstance.ExportsContentRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,7 +78,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ExportedAsset**](ExportedAsset.md)
+[**PostHogExportedAsset**](PostHogExportedAsset.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ No authorization required
 
 <a id="exportscreate"></a>
 # **ExportsCreate**
-> ExportedAsset ExportsCreate (string projectId, ExportedAsset exportedAsset)
+> PostHogExportedAsset ExportsCreate (string projectId, PostHogExportedAsset postHogExportedAsset)
 
 
 
@@ -121,11 +121,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ExportsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var exportedAsset = new ExportedAsset(); // ExportedAsset | 
+            var postHogExportedAsset = new PostHogExportedAsset(); // PostHogExportedAsset | 
 
             try
             {
-                ExportedAsset result = apiInstance.ExportsCreate(projectId, exportedAsset);
+                PostHogExportedAsset result = apiInstance.ExportsCreate(projectId, postHogExportedAsset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -145,7 +145,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExportedAsset> response = apiInstance.ExportsCreateWithHttpInfo(projectId, exportedAsset);
+    ApiResponse<PostHogExportedAsset> response = apiInstance.ExportsCreateWithHttpInfo(projectId, postHogExportedAsset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -163,11 +163,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **exportedAsset** | [**ExportedAsset**](ExportedAsset.md) |  |  |
+| **postHogExportedAsset** | [**PostHogExportedAsset**](PostHogExportedAsset.md) |  |  |
 
 ### Return type
 
-[**ExportedAsset**](ExportedAsset.md)
+[**PostHogExportedAsset**](PostHogExportedAsset.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 
 <a id="exportsretrieve"></a>
 # **ExportsRetrieve**
-> ExportedAsset ExportsRetrieve (int id, string projectId)
+> PostHogExportedAsset ExportsRetrieve (int id, string projectId)
 
 
 
@@ -214,7 +214,7 @@ namespace Example
 
             try
             {
-                ExportedAsset result = apiInstance.ExportsRetrieve(id, projectId);
+                PostHogExportedAsset result = apiInstance.ExportsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -234,7 +234,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExportedAsset> response = apiInstance.ExportsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogExportedAsset> response = apiInstance.ExportsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -256,7 +256,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ExportedAsset**](ExportedAsset.md)
+[**PostHogExportedAsset**](PostHogExportedAsset.md)
 
 ### Authorization
 

@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
-            //PatchedTeam patchedTeam = null;
-            //var response = instance.ResetTokenPartialUpdate(id, patchedTeam);
-            //Assert.IsType<Team>(response);
+            //PostHogPatchedTeam postHogPatchedTeam = null;
+            //var response = instance.ResetTokenPartialUpdate(id, postHogPatchedTeam);
+            //Assert.IsType<PostHogTeam>(response);
         }
     }
 }

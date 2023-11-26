@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="explicitmemberscreate"></a>
 # **ExplicitMembersCreate**
-> ExplicitTeamMember ExplicitMembersCreate (string projectId, ExplicitTeamMember explicitTeamMember)
+> PostHogExplicitTeamMember ExplicitMembersCreate (string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember)
 
 
 
@@ -35,11 +35,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ExplicitMembersApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var explicitTeamMember = new ExplicitTeamMember(); // ExplicitTeamMember | 
+            var postHogExplicitTeamMember = new PostHogExplicitTeamMember(); // PostHogExplicitTeamMember | 
 
             try
             {
-                ExplicitTeamMember result = apiInstance.ExplicitMembersCreate(projectId, explicitTeamMember);
+                PostHogExplicitTeamMember result = apiInstance.ExplicitMembersCreate(projectId, postHogExplicitTeamMember);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExplicitTeamMember> response = apiInstance.ExplicitMembersCreateWithHttpInfo(projectId, explicitTeamMember);
+    ApiResponse<PostHogExplicitTeamMember> response = apiInstance.ExplicitMembersCreateWithHttpInfo(projectId, postHogExplicitTeamMember);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,11 +77,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **explicitTeamMember** | [**ExplicitTeamMember**](ExplicitTeamMember.md) |  |  |
+| **postHogExplicitTeamMember** | [**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md) |  |  |
 
 ### Return type
 
-[**ExplicitTeamMember**](ExplicitTeamMember.md)
+[**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a id="explicitmemberslist"></a>
 # **ExplicitMembersList**
-> List&lt;ExplicitTeamMember&gt; ExplicitMembersList (string projectId)
+> List&lt;PostHogExplicitTeamMember&gt; ExplicitMembersList (string projectId)
 
 
 
@@ -212,7 +212,7 @@ namespace Example
 
             try
             {
-                List<ExplicitTeamMember> result = apiInstance.ExplicitMembersList(projectId);
+                List<PostHogExplicitTeamMember> result = apiInstance.ExplicitMembersList(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -232,7 +232,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<List<ExplicitTeamMember>> response = apiInstance.ExplicitMembersListWithHttpInfo(projectId);
+    ApiResponse<List<PostHogExplicitTeamMember>> response = apiInstance.ExplicitMembersListWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -253,7 +253,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**List&lt;ExplicitTeamMember&gt;**](ExplicitTeamMember.md)
+[**List&lt;PostHogExplicitTeamMember&gt;**](PostHogExplicitTeamMember.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 <a id="explicitmemberspartialupdate"></a>
 # **ExplicitMembersPartialUpdate**
-> ExplicitTeamMember ExplicitMembersPartialUpdate (Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = null)
+> PostHogExplicitTeamMember ExplicitMembersPartialUpdate (Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = null)
 
 
 
@@ -297,11 +297,11 @@ namespace Example
             var apiInstance = new ExplicitMembersApi(config);
             var parentMembershipUserUuid = "parentMembershipUserUuid_example";  // Guid | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedExplicitTeamMember = new PatchedExplicitTeamMember(); // PatchedExplicitTeamMember |  (optional) 
+            var postHogPatchedExplicitTeamMember = new PostHogPatchedExplicitTeamMember(); // PostHogPatchedExplicitTeamMember |  (optional) 
 
             try
             {
-                ExplicitTeamMember result = apiInstance.ExplicitMembersPartialUpdate(parentMembershipUserUuid, projectId, patchedExplicitTeamMember);
+                PostHogExplicitTeamMember result = apiInstance.ExplicitMembersPartialUpdate(parentMembershipUserUuid, projectId, postHogPatchedExplicitTeamMember);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -321,7 +321,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExplicitTeamMember> response = apiInstance.ExplicitMembersPartialUpdateWithHttpInfo(parentMembershipUserUuid, projectId, patchedExplicitTeamMember);
+    ApiResponse<PostHogExplicitTeamMember> response = apiInstance.ExplicitMembersPartialUpdateWithHttpInfo(parentMembershipUserUuid, projectId, postHogPatchedExplicitTeamMember);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -340,11 +340,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentMembershipUserUuid** | **Guid** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedExplicitTeamMember** | [**PatchedExplicitTeamMember**](PatchedExplicitTeamMember.md) |  | [optional]  |
+| **postHogPatchedExplicitTeamMember** | [**PostHogPatchedExplicitTeamMember**](PostHogPatchedExplicitTeamMember.md) |  | [optional]  |
 
 ### Return type
 
-[**ExplicitTeamMember**](ExplicitTeamMember.md)
+[**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ No authorization required
 
 <a id="explicitmembersretrieve"></a>
 # **ExplicitMembersRetrieve**
-> ExplicitTeamMember ExplicitMembersRetrieve (Guid parentMembershipUserUuid, string projectId)
+> PostHogExplicitTeamMember ExplicitMembersRetrieve (Guid parentMembershipUserUuid, string projectId)
 
 
 
@@ -391,7 +391,7 @@ namespace Example
 
             try
             {
-                ExplicitTeamMember result = apiInstance.ExplicitMembersRetrieve(parentMembershipUserUuid, projectId);
+                PostHogExplicitTeamMember result = apiInstance.ExplicitMembersRetrieve(parentMembershipUserUuid, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -411,7 +411,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExplicitTeamMember> response = apiInstance.ExplicitMembersRetrieveWithHttpInfo(parentMembershipUserUuid, projectId);
+    ApiResponse<PostHogExplicitTeamMember> response = apiInstance.ExplicitMembersRetrieveWithHttpInfo(parentMembershipUserUuid, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -433,7 +433,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ExplicitTeamMember**](ExplicitTeamMember.md)
+[**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ No authorization required
 
 <a id="explicitmembersupdate"></a>
 # **ExplicitMembersUpdate**
-> ExplicitTeamMember ExplicitMembersUpdate (Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember)
+> PostHogExplicitTeamMember ExplicitMembersUpdate (Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember)
 
 
 
@@ -477,11 +477,11 @@ namespace Example
             var apiInstance = new ExplicitMembersApi(config);
             var parentMembershipUserUuid = "parentMembershipUserUuid_example";  // Guid | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var explicitTeamMember = new ExplicitTeamMember(); // ExplicitTeamMember | 
+            var postHogExplicitTeamMember = new PostHogExplicitTeamMember(); // PostHogExplicitTeamMember | 
 
             try
             {
-                ExplicitTeamMember result = apiInstance.ExplicitMembersUpdate(parentMembershipUserUuid, projectId, explicitTeamMember);
+                PostHogExplicitTeamMember result = apiInstance.ExplicitMembersUpdate(parentMembershipUserUuid, projectId, postHogExplicitTeamMember);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -501,7 +501,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExplicitTeamMember> response = apiInstance.ExplicitMembersUpdateWithHttpInfo(parentMembershipUserUuid, projectId, explicitTeamMember);
+    ApiResponse<PostHogExplicitTeamMember> response = apiInstance.ExplicitMembersUpdateWithHttpInfo(parentMembershipUserUuid, projectId, postHogExplicitTeamMember);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -520,11 +520,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentMembershipUserUuid** | **Guid** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **explicitTeamMember** | [**ExplicitTeamMember**](ExplicitTeamMember.md) |  |  |
+| **postHogExplicitTeamMember** | [**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md) |  |  |
 
 ### Return type
 
-[**ExplicitTeamMember**](ExplicitTeamMember.md)
+[**PostHogExplicitTeamMember**](PostHogExplicitTeamMember.md)
 
 ### Authorization
 

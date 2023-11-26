@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsCreate(string projectId, Experiment experiment, int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsCreate(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsCreateWithHttpInfo(string projectId, Experiment experiment, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsCreateWithHttpInfo(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedExperimentList</returns>
-        PaginatedExperimentList ExperimentsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedExperimentList</returns>
+        PostHogPaginatedExperimentList ExperimentsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedExperimentList</returns>
-        ApiResponse<PaginatedExperimentList> ExperimentsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedExperimentList</returns>
+        ApiResponse<PostHogPaginatedExperimentList> ExperimentsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsPartialUpdate(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsPartialUpdate(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,18 +114,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsPartialUpdateWithHttpInfo(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsRequiresFlagImplementationRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsRequiresFlagImplementationRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -136,8 +136,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -145,30 +145,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsResultsRetrieve(int id, string projectId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this experiment.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this experiment.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsResultsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,8 +158,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -189,8 +167,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsSecondaryResultsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -202,18 +180,17 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsSecondaryResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        Experiment ExperimentsUpdate(int id, string projectId, Experiment experiment, int operationIndex = 0);
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsSecondaryResultsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -224,10 +201,33 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        ApiResponse<Experiment> ExperimentsUpdateWithHttpInfo(int id, string projectId, Experiment experiment, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsSecondaryResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this experiment.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogExperiment"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogExperiment</returns>
+        PostHogExperiment ExperimentsUpdate(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this experiment.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogExperiment"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        ApiResponse<PostHogExperiment> ExperimentsUpdateWithHttpInfo(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -245,11 +245,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsCreateAsync(string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsCreateAsync(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -259,11 +259,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsCreateWithHttpInfoAsync(string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsCreateWithHttpInfoAsync(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -303,8 +303,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedExperimentList</returns>
-        System.Threading.Tasks.Task<PaginatedExperimentList> ExperimentsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedExperimentList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedExperimentList> ExperimentsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -318,8 +318,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedExperimentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedExperimentList>> ExperimentsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedExperimentList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedExperimentList>> ExperimentsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -329,11 +329,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsPartialUpdateAsync(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsPartialUpdateAsync(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -344,11 +344,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -359,8 +359,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsRequiresFlagImplementationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsRequiresFlagImplementationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -372,8 +372,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -385,35 +385,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this experiment.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this experiment.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -426,8 +399,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -439,8 +412,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsSecondaryResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -453,8 +426,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -464,11 +437,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        System.Threading.Tasks.Task<Experiment> ExperimentsUpdateAsync(int id, string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsSecondaryResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -479,11 +451,39 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Experiment>> ExperimentsUpdateWithHttpInfoAsync(int id, string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this experiment.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogExperiment"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogExperiment</returns>
+        System.Threading.Tasks.Task<PostHogExperiment> ExperimentsUpdateAsync(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this experiment.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogExperiment"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExperiment>> ExperimentsUpdateWithHttpInfoAsync(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -609,12 +609,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsCreate(string projectId, Experiment experiment, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsCreate(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsCreateWithHttpInfo(projectId, experiment);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsCreateWithHttpInfo(projectId, postHogExperiment);
             return localVarResponse.Data;
         }
 
@@ -623,10 +623,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsCreateWithHttpInfo(string projectId, Experiment experiment, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsCreateWithHttpInfo(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -634,10 +634,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExperimentsApi->ExperimentsCreate");
             }
 
-            // verify the required parameter 'experiment' is set
-            if (experiment == null)
+            // verify the required parameter 'postHogExperiment' is set
+            if (postHogExperiment == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'experiment' when calling ExperimentsApi->ExperimentsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExperiment' when calling ExperimentsApi->ExperimentsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -666,14 +666,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = experiment;
+            localVarRequestOptions.Data = postHogExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Experiment>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogExperiment>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsCreate", localVarResponse);
@@ -691,13 +691,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsCreateAsync(string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsCreateAsync(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsCreateWithHttpInfoAsync(projectId, experiment, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsCreateWithHttpInfoAsync(projectId, postHogExperiment, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -706,11 +706,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsCreateWithHttpInfoAsync(string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsCreateWithHttpInfoAsync(string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -718,10 +718,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExperimentsApi->ExperimentsCreate");
             }
 
-            // verify the required parameter 'experiment' is set
-            if (experiment == null)
+            // verify the required parameter 'postHogExperiment' is set
+            if (postHogExperiment == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'experiment' when calling ExperimentsApi->ExperimentsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExperiment' when calling ExperimentsApi->ExperimentsCreate");
             }
 
 
@@ -751,14 +751,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = experiment;
+            localVarRequestOptions.Data = postHogExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Experiment>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -926,10 +926,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedExperimentList</returns>
-        public PaginatedExperimentList ExperimentsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedExperimentList</returns>
+        public PostHogPaginatedExperimentList ExperimentsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedExperimentList> localVarResponse = ExperimentsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedExperimentList> localVarResponse = ExperimentsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -941,8 +941,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedExperimentList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedExperimentList> ExperimentsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedExperimentList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedExperimentList> ExperimentsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -987,7 +987,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedExperimentList>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedExperimentList>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsList", localVarResponse);
@@ -1009,10 +1009,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedExperimentList</returns>
-        public async System.Threading.Tasks.Task<PaginatedExperimentList> ExperimentsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedExperimentList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedExperimentList> ExperimentsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedExperimentList> localVarResponse = await ExperimentsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedExperimentList> localVarResponse = await ExperimentsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1025,8 +1025,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedExperimentList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedExperimentList>> ExperimentsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedExperimentList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedExperimentList>> ExperimentsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1072,7 +1072,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedExperimentList>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedExperimentList>("/api/projects/{project_id}/experiments/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1092,12 +1092,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsPartialUpdate(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsPartialUpdate(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsPartialUpdateWithHttpInfo(id, projectId, patchedExperiment);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedExperiment);
             return localVarResponse.Data;
         }
 
@@ -1107,10 +1107,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsPartialUpdateWithHttpInfo(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1145,14 +1145,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExperiment;
+            localVarRequestOptions.Data = postHogPatchedExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsPartialUpdate", localVarResponse);
@@ -1171,13 +1171,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsPartialUpdateAsync(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsPartialUpdateAsync(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsPartialUpdateWithHttpInfoAsync(id, projectId, patchedExperiment, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedExperiment, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1187,11 +1187,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExperiment"> (optional)</param>
+        /// <param name="postHogPatchedExperiment"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedExperiment patchedExperiment = default(PatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedExperiment postHogPatchedExperiment = default(PostHogPatchedExperiment), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1227,14 +1227,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExperiment;
+            localVarRequestOptions.Data = postHogPatchedExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1254,10 +1254,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsRequiresFlagImplementationRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsRequiresFlagImplementationRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -1267,8 +1267,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1305,7 +1305,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Experiment>("/api/projects/{project_id}/experiments/requires_flag_implementation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExperiment>("/api/projects/{project_id}/experiments/requires_flag_implementation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsRequiresFlagImplementationRetrieve", localVarResponse);
@@ -1325,10 +1325,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsRequiresFlagImplementationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsRequiresFlagImplementationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1339,8 +1339,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsRequiresFlagImplementationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1378,7 +1378,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Experiment>("/api/projects/{project_id}/experiments/requires_flag_implementation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/requires_flag_implementation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1399,10 +1399,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsResultsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsResultsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsResultsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsResultsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1413,8 +1413,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1452,7 +1452,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Experiment>("/api/projects/{project_id}/experiments/{id}/results/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/results/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsResultsRetrieve", localVarResponse);
@@ -1473,10 +1473,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsResultsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsResultsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1488,8 +1488,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1528,7 +1528,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Experiment>("/api/projects/{project_id}/experiments/{id}/results/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/results/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1549,10 +1549,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1563,8 +1563,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1602,7 +1602,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsRetrieve", localVarResponse);
@@ -1623,10 +1623,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1638,8 +1638,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1678,7 +1678,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1699,10 +1699,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsSecondaryResultsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsSecondaryResultsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsSecondaryResultsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsSecondaryResultsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1713,8 +1713,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsSecondaryResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsSecondaryResultsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1752,7 +1752,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Experiment>("/api/projects/{project_id}/experiments/{id}/secondary_results/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/secondary_results/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsSecondaryResultsRetrieve", localVarResponse);
@@ -1773,10 +1773,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsSecondaryResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsSecondaryResultsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1788,8 +1788,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsSecondaryResultsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1828,7 +1828,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Experiment>("/api/projects/{project_id}/experiments/{id}/secondary_results/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/secondary_results/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1848,12 +1848,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Experiment</returns>
-        public Experiment ExperimentsUpdate(int id, string projectId, Experiment experiment, int operationIndex = 0)
+        /// <returns>PostHogExperiment</returns>
+        public PostHogExperiment ExperimentsUpdate(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = ExperimentsUpdateWithHttpInfo(id, projectId, experiment);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = ExperimentsUpdateWithHttpInfo(id, projectId, postHogExperiment);
             return localVarResponse.Data;
         }
 
@@ -1863,10 +1863,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Experiment</returns>
-        public DotPostHog.Client.ApiResponse<Experiment> ExperimentsUpdateWithHttpInfo(int id, string projectId, Experiment experiment, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExperiment</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExperiment> ExperimentsUpdateWithHttpInfo(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1874,10 +1874,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExperimentsApi->ExperimentsUpdate");
             }
 
-            // verify the required parameter 'experiment' is set
-            if (experiment == null)
+            // verify the required parameter 'postHogExperiment' is set
+            if (postHogExperiment == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'experiment' when calling ExperimentsApi->ExperimentsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExperiment' when calling ExperimentsApi->ExperimentsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1907,14 +1907,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = experiment;
+            localVarRequestOptions.Data = postHogExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExperimentsUpdate", localVarResponse);
@@ -1933,13 +1933,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Experiment</returns>
-        public async System.Threading.Tasks.Task<Experiment> ExperimentsUpdateAsync(int id, string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExperiment</returns>
+        public async System.Threading.Tasks.Task<PostHogExperiment> ExperimentsUpdateAsync(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Experiment> localVarResponse = await ExperimentsUpdateWithHttpInfoAsync(id, projectId, experiment, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExperiment> localVarResponse = await ExperimentsUpdateWithHttpInfoAsync(id, projectId, postHogExperiment, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1949,11 +1949,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this experiment.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="experiment"></param>
+        /// <param name="postHogExperiment"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Experiment)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Experiment>> ExperimentsUpdateWithHttpInfoAsync(int id, string projectId, Experiment experiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExperiment)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExperiment>> ExperimentsUpdateWithHttpInfoAsync(int id, string projectId, PostHogExperiment postHogExperiment, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1961,10 +1961,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExperimentsApi->ExperimentsUpdate");
             }
 
-            // verify the required parameter 'experiment' is set
-            if (experiment == null)
+            // verify the required parameter 'postHogExperiment' is set
+            if (postHogExperiment == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'experiment' when calling ExperimentsApi->ExperimentsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExperiment' when calling ExperimentsApi->ExperimentsUpdate");
             }
 
 
@@ -1995,14 +1995,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = experiment;
+            localVarRequestOptions.Data = postHogExperiment;
 
             localVarRequestOptions.Operation = "ExperimentsApi.ExperimentsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Experiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogExperiment>("/api/projects/{project_id}/experiments/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

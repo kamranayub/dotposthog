@@ -98,7 +98,7 @@ No authorization required
 
 <a id="propertydefinitionslist"></a>
 # **PropertyDefinitionsList**
-> PaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList (string projectId, string eventNames = null, string excludedProperties = null, bool? filterByEventNames = null, int? groupTypeIndex = null, bool? isFeatureFlag = null, bool? isNumerical = null, int? limit = null, int? offset = null, string properties = null, string search = null, string type = null)
+> PostHogPaginatedEnterprisePropertyDefinitionList PropertyDefinitionsList (string projectId, string eventNames = null, string excludedProperties = null, bool? filterByEventNames = null, int? groupTypeIndex = null, bool? isFeatureFlag = null, bool? isNumerical = null, int? limit = null, int? offset = null, string properties = null, string search = null, string type = null)
 
 
 
@@ -134,7 +134,7 @@ namespace Example
 
             try
             {
-                PaginatedEnterprisePropertyDefinitionList result = apiInstance.PropertyDefinitionsList(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
+                PostHogPaginatedEnterprisePropertyDefinitionList result = apiInstance.PropertyDefinitionsList(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -154,7 +154,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedEnterprisePropertyDefinitionList> response = apiInstance.PropertyDefinitionsListWithHttpInfo(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
+    ApiResponse<PostHogPaginatedEnterprisePropertyDefinitionList> response = apiInstance.PropertyDefinitionsListWithHttpInfo(projectId, eventNames, excludedProperties, filterByEventNames, groupTypeIndex, isFeatureFlag, isNumerical, limit, offset, properties, search, type);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,7 +186,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedEnterprisePropertyDefinitionList**](PaginatedEnterprisePropertyDefinitionList.md)
+[**PostHogPaginatedEnterprisePropertyDefinitionList**](PostHogPaginatedEnterprisePropertyDefinitionList.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
 
 <a id="propertydefinitionspartialupdate"></a>
 # **PropertyDefinitionsPartialUpdate**
-> EnterprisePropertyDefinition PropertyDefinitionsPartialUpdate (string id, string projectId, PatchedEnterprisePropertyDefinition patchedEnterprisePropertyDefinition = null)
+> PostHogEnterprisePropertyDefinition PropertyDefinitionsPartialUpdate (string id, string projectId, PostHogPatchedEnterprisePropertyDefinition postHogPatchedEnterprisePropertyDefinition = null)
 
 
 
@@ -230,11 +230,11 @@ namespace Example
             var apiInstance = new PropertyDefinitionsApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedEnterprisePropertyDefinition = new PatchedEnterprisePropertyDefinition(); // PatchedEnterprisePropertyDefinition |  (optional) 
+            var postHogPatchedEnterprisePropertyDefinition = new PostHogPatchedEnterprisePropertyDefinition(); // PostHogPatchedEnterprisePropertyDefinition |  (optional) 
 
             try
             {
-                EnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsPartialUpdate(id, projectId, patchedEnterprisePropertyDefinition);
+                PostHogEnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsPartialUpdate(id, projectId, postHogPatchedEnterprisePropertyDefinition);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -254,7 +254,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsPartialUpdateWithHttpInfo(id, projectId, patchedEnterprisePropertyDefinition);
+    ApiResponse<PostHogEnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedEnterprisePropertyDefinition);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -273,11 +273,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedEnterprisePropertyDefinition** | [**PatchedEnterprisePropertyDefinition**](PatchedEnterprisePropertyDefinition.md) |  | [optional]  |
+| **postHogPatchedEnterprisePropertyDefinition** | [**PostHogPatchedEnterprisePropertyDefinition**](PostHogPatchedEnterprisePropertyDefinition.md) |  | [optional]  |
 
 ### Return type
 
-[**EnterprisePropertyDefinition**](EnterprisePropertyDefinition.md)
+[**PostHogEnterprisePropertyDefinition**](PostHogEnterprisePropertyDefinition.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 
 <a id="propertydefinitionsretrieve"></a>
 # **PropertyDefinitionsRetrieve**
-> EnterprisePropertyDefinition PropertyDefinitionsRetrieve (string id, string projectId)
+> PostHogEnterprisePropertyDefinition PropertyDefinitionsRetrieve (string id, string projectId)
 
 
 
@@ -324,7 +324,7 @@ namespace Example
 
             try
             {
-                EnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsRetrieve(id, projectId);
+                PostHogEnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -344,7 +344,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogEnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -366,7 +366,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EnterprisePropertyDefinition**](EnterprisePropertyDefinition.md)
+[**PostHogEnterprisePropertyDefinition**](PostHogEnterprisePropertyDefinition.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ No authorization required
 
 <a id="propertydefinitionsseentogetherretrieve"></a>
 # **PropertyDefinitionsSeenTogetherRetrieve**
-> EnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve (string projectId)
+> PostHogEnterprisePropertyDefinition PropertyDefinitionsSeenTogetherRetrieve (string projectId)
 
 
 
@@ -414,7 +414,7 @@ namespace Example
 
             try
             {
-                EnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsSeenTogetherRetrieve(projectId);
+                PostHogEnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsSeenTogetherRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -434,7 +434,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogEnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsSeenTogetherRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -455,7 +455,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EnterprisePropertyDefinition**](EnterprisePropertyDefinition.md)
+[**PostHogEnterprisePropertyDefinition**](PostHogEnterprisePropertyDefinition.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ No authorization required
 
 <a id="propertydefinitionsupdate"></a>
 # **PropertyDefinitionsUpdate**
-> EnterprisePropertyDefinition PropertyDefinitionsUpdate (string id, string projectId, EnterprisePropertyDefinition enterprisePropertyDefinition = null)
+> PostHogEnterprisePropertyDefinition PropertyDefinitionsUpdate (string id, string projectId, PostHogEnterprisePropertyDefinition postHogEnterprisePropertyDefinition = null)
 
 
 
@@ -499,11 +499,11 @@ namespace Example
             var apiInstance = new PropertyDefinitionsApi(config);
             var id = "id_example";  // string | 
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var enterprisePropertyDefinition = new EnterprisePropertyDefinition(); // EnterprisePropertyDefinition |  (optional) 
+            var postHogEnterprisePropertyDefinition = new PostHogEnterprisePropertyDefinition(); // PostHogEnterprisePropertyDefinition |  (optional) 
 
             try
             {
-                EnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsUpdate(id, projectId, enterprisePropertyDefinition);
+                PostHogEnterprisePropertyDefinition result = apiInstance.PropertyDefinitionsUpdate(id, projectId, postHogEnterprisePropertyDefinition);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -523,7 +523,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsUpdateWithHttpInfo(id, projectId, enterprisePropertyDefinition);
+    ApiResponse<PostHogEnterprisePropertyDefinition> response = apiInstance.PropertyDefinitionsUpdateWithHttpInfo(id, projectId, postHogEnterprisePropertyDefinition);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -542,11 +542,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **string** |  |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **enterprisePropertyDefinition** | [**EnterprisePropertyDefinition**](EnterprisePropertyDefinition.md) |  | [optional]  |
+| **postHogEnterprisePropertyDefinition** | [**PostHogEnterprisePropertyDefinition**](PostHogEnterprisePropertyDefinition.md) |  | [optional]  |
 
 ### Return type
 
-[**EnterprisePropertyDefinition**](EnterprisePropertyDefinition.md)
+[**PostHogEnterprisePropertyDefinition**](PostHogEnterprisePropertyDefinition.md)
 
 ### Authorization
 

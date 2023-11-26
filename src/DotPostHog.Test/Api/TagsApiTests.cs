@@ -65,7 +65,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.TagsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedTaggedItemList>(response);
+            //Assert.IsType<PostHogPaginatedTaggedItemList>(response);
         }
     }
 }

@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //ExternalDataSourceSerializers externalDataSourceSerializers = null;
-            //var response = instance.ExternalDataSourcesCreate(projectId, externalDataSourceSerializers);
-            //Assert.IsType<ExternalDataSourceSerializers>(response);
+            //PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers = null;
+            //var response = instance.ExternalDataSourcesCreate(projectId, postHogExternalDataSourceSerializers);
+            //Assert.IsType<PostHogExternalDataSourceSerializers>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string search = null;
             //var response = instance.ExternalDataSourcesList(projectId, limit, offset, search);
-            //Assert.IsType<PaginatedExternalDataSourceSerializersList>(response);
+            //Assert.IsType<PostHogPaginatedExternalDataSourceSerializersList>(response);
         }
 
         /// <summary>
@@ -103,9 +103,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedExternalDataSourceSerializers patchedExternalDataSourceSerializers = null;
-            //var response = instance.ExternalDataSourcesPartialUpdate(id, projectId, patchedExternalDataSourceSerializers);
-            //Assert.IsType<ExternalDataSourceSerializers>(response);
+            //PostHogPatchedExternalDataSourceSerializers postHogPatchedExternalDataSourceSerializers = null;
+            //var response = instance.ExternalDataSourcesPartialUpdate(id, projectId, postHogPatchedExternalDataSourceSerializers);
+            //Assert.IsType<PostHogExternalDataSourceSerializers>(response);
         }
 
         /// <summary>
@@ -117,9 +117,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //ExternalDataSourceSerializers externalDataSourceSerializers = null;
-            //var response = instance.ExternalDataSourcesReloadCreate(id, projectId, externalDataSourceSerializers);
-            //Assert.IsType<ExternalDataSourceSerializers>(response);
+            //PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers = null;
+            //var response = instance.ExternalDataSourcesReloadCreate(id, projectId, postHogExternalDataSourceSerializers);
+            //Assert.IsType<PostHogExternalDataSourceSerializers>(response);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.ExternalDataSourcesRetrieve(id, projectId);
-            //Assert.IsType<ExternalDataSourceSerializers>(response);
+            //Assert.IsType<PostHogExternalDataSourceSerializers>(response);
         }
 
         /// <summary>
@@ -144,9 +144,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //ExternalDataSourceSerializers externalDataSourceSerializers = null;
-            //var response = instance.ExternalDataSourcesUpdate(id, projectId, externalDataSourceSerializers);
-            //Assert.IsType<ExternalDataSourceSerializers>(response);
+            //PostHogExternalDataSourceSerializers postHogExternalDataSourceSerializers = null;
+            //var response = instance.ExternalDataSourcesUpdate(id, projectId, postHogExternalDataSourceSerializers);
+            //Assert.IsType<PostHogExternalDataSourceSerializers>(response);
         }
     }
 }

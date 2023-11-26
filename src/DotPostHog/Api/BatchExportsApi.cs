@@ -35,10 +35,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsBackfillCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsBackfillCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -49,19 +49,19 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsBackfillCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsBackfillCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsCreate(string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsCreate(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -71,10 +71,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsCreateWithHttpInfo(string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsCreateWithHttpInfo(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -105,8 +105,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportList</returns>
-        PaginatedBatchExportList BatchExportsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedBatchExportList</returns>
+        PostHogPaginatedBatchExportList BatchExportsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -119,8 +119,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportList</returns>
-        ApiResponse<PaginatedBatchExportList> BatchExportsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportList</returns>
+        ApiResponse<PostHogPaginatedBatchExportList> BatchExportsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -130,8 +130,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportLogEntryList</returns>
-        PaginatedBatchExportLogEntryList BatchExportsLogsList(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedBatchExportLogEntryList</returns>
+        PostHogPaginatedBatchExportLogEntryList BatchExportsLogsList(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -145,18 +145,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportLogEntryList</returns>
-        ApiResponse<PaginatedBatchExportLogEntryList> BatchExportsLogsListWithHttpInfo(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportLogEntryList</returns>
+        ApiResponse<PostHogPaginatedBatchExportLogEntryList> BatchExportsLogsListWithHttpInfo(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsPartialUpdate(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsPartialUpdate(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -167,10 +167,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsPauseCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsPauseCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -194,10 +194,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsPauseCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsPauseCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -205,8 +205,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -218,8 +218,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -231,8 +231,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportRunList</returns>
-        PaginatedBatchExportRunList BatchExportsRunsList(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedBatchExportRunList</returns>
+        PostHogPaginatedBatchExportRunList BatchExportsRunsList(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -245,8 +245,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportRunList</returns>
-        ApiResponse<PaginatedBatchExportRunList> BatchExportsRunsListWithHttpInfo(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportRunList</returns>
+        ApiResponse<PostHogPaginatedBatchExportRunList> BatchExportsRunsListWithHttpInfo(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -257,8 +257,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportLogEntryList</returns>
-        PaginatedBatchExportLogEntryList BatchExportsRunsLogsList(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedBatchExportLogEntryList</returns>
+        PostHogPaginatedBatchExportLogEntryList BatchExportsRunsLogsList(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -273,8 +273,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportLogEntryList</returns>
-        ApiResponse<PaginatedBatchExportLogEntryList> BatchExportsRunsLogsListWithHttpInfo(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportLogEntryList</returns>
+        ApiResponse<PostHogPaginatedBatchExportLogEntryList> BatchExportsRunsLogsListWithHttpInfo(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -283,8 +283,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupBatchExportId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExportRun</returns>
-        BatchExportRun BatchExportsRunsRetrieve(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0);
+        /// <returns>PostHogBatchExportRun</returns>
+        PostHogBatchExportRun BatchExportsRunsRetrieve(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -297,8 +297,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupBatchExportId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExportRun</returns>
-        ApiResponse<BatchExportRun> BatchExportsRunsRetrieveWithHttpInfo(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExportRun</returns>
+        ApiResponse<PostHogBatchExportRun> BatchExportsRunsRetrieveWithHttpInfo(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -308,10 +308,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsUnpauseCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsUnpauseCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -322,20 +322,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsUnpauseCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsUnpauseCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        BatchExport BatchExportsUpdate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>PostHogBatchExport</returns>
+        PostHogBatchExport BatchExportsUpdate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -346,10 +346,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        ApiResponse<BatchExport> BatchExportsUpdateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        ApiResponse<PostHogBatchExport> BatchExportsUpdateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -368,11 +368,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsBackfillCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsBackfillCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -383,11 +383,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsBackfillCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsBackfillCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -396,11 +396,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsCreateAsync(string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsCreateAsync(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -410,11 +410,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsCreateWithHttpInfoAsync(string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsCreateWithHttpInfoAsync(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -454,8 +454,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportList</returns>
-        System.Threading.Tasks.Task<PaginatedBatchExportList> BatchExportsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedBatchExportList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedBatchExportList> BatchExportsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -469,8 +469,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedBatchExportList>> BatchExportsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedBatchExportList>> BatchExportsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -484,8 +484,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportLogEntryList</returns>
-        System.Threading.Tasks.Task<PaginatedBatchExportLogEntryList> BatchExportsLogsListAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedBatchExportLogEntryList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedBatchExportLogEntryList> BatchExportsLogsListAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -500,8 +500,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportLogEntryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedBatchExportLogEntryList>> BatchExportsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportLogEntryList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedBatchExportLogEntryList>> BatchExportsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -511,11 +511,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsPartialUpdateAsync(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsPartialUpdateAsync(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -526,11 +526,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -540,11 +540,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsPauseCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsPauseCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -555,11 +555,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsPauseCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsPauseCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -571,8 +571,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -585,8 +585,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -599,8 +599,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportRunList</returns>
-        System.Threading.Tasks.Task<PaginatedBatchExportRunList> BatchExportsRunsListAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedBatchExportRunList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedBatchExportRunList> BatchExportsRunsListAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -614,8 +614,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportRunList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedBatchExportRunList>> BatchExportsRunsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportRunList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedBatchExportRunList>> BatchExportsRunsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -630,8 +630,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportLogEntryList</returns>
-        System.Threading.Tasks.Task<PaginatedBatchExportLogEntryList> BatchExportsRunsLogsListAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedBatchExportLogEntryList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedBatchExportLogEntryList> BatchExportsRunsLogsListAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -647,8 +647,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportLogEntryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedBatchExportLogEntryList>> BatchExportsRunsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportLogEntryList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedBatchExportLogEntryList>> BatchExportsRunsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -661,8 +661,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExportRun</returns>
-        System.Threading.Tasks.Task<BatchExportRun> BatchExportsRunsRetrieveAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExportRun</returns>
+        System.Threading.Tasks.Task<PostHogBatchExportRun> BatchExportsRunsRetrieveAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -676,8 +676,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExportRun)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExportRun>> BatchExportsRunsRetrieveWithHttpInfoAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExportRun)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExportRun>> BatchExportsRunsRetrieveWithHttpInfoAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -687,11 +687,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsUnpauseCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsUnpauseCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -702,11 +702,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsUnpauseCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsUnpauseCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -716,11 +716,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        System.Threading.Tasks.Task<BatchExport> BatchExportsUpdateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogBatchExport</returns>
+        System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsUpdateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -731,11 +731,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BatchExport>> BatchExportsUpdateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogBatchExport>> BatchExportsUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -862,12 +862,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsBackfillCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsBackfillCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsBackfillCreateWithHttpInfo(id, projectId, batchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsBackfillCreateWithHttpInfo(id, projectId, postHogBatchExport);
             return localVarResponse.Data;
         }
 
@@ -877,10 +877,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsBackfillCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsBackfillCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -888,10 +888,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsBackfillCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsBackfillCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsBackfillCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -921,14 +921,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsBackfillCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/backfill/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/backfill/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsBackfillCreate", localVarResponse);
@@ -947,13 +947,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsBackfillCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsBackfillCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsBackfillCreateWithHttpInfoAsync(id, projectId, batchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsBackfillCreateWithHttpInfoAsync(id, projectId, postHogBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -963,11 +963,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsBackfillCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsBackfillCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -975,10 +975,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsBackfillCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsBackfillCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsBackfillCreate");
             }
 
 
@@ -1009,14 +1009,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsBackfillCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/backfill/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/backfill/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1035,12 +1035,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsCreate(string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsCreate(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsCreateWithHttpInfo(projectId, batchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsCreateWithHttpInfo(projectId, postHogBatchExport);
             return localVarResponse.Data;
         }
 
@@ -1049,10 +1049,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsCreateWithHttpInfo(string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsCreateWithHttpInfo(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1060,10 +1060,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1092,14 +1092,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<BatchExport>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsCreate", localVarResponse);
@@ -1117,13 +1117,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsCreateAsync(string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsCreateAsync(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsCreateWithHttpInfoAsync(projectId, batchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsCreateWithHttpInfoAsync(projectId, postHogBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1132,11 +1132,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsCreateWithHttpInfoAsync(string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsCreateWithHttpInfoAsync(string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1144,10 +1144,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsCreate");
             }
 
 
@@ -1177,14 +1177,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<BatchExport>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1352,10 +1352,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportList</returns>
-        public PaginatedBatchExportList BatchExportsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedBatchExportList</returns>
+        public PostHogPaginatedBatchExportList BatchExportsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportList> localVarResponse = BatchExportsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportList> localVarResponse = BatchExportsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1367,8 +1367,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedBatchExportList> BatchExportsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportList> BatchExportsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1413,7 +1413,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedBatchExportList>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedBatchExportList>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsList", localVarResponse);
@@ -1435,10 +1435,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportList</returns>
-        public async System.Threading.Tasks.Task<PaginatedBatchExportList> BatchExportsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedBatchExportList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedBatchExportList> BatchExportsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportList> localVarResponse = await BatchExportsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportList> localVarResponse = await BatchExportsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1451,8 +1451,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedBatchExportList>> BatchExportsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportList>> BatchExportsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1498,7 +1498,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedBatchExportList>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedBatchExportList>("/api/projects/{project_id}/batch_exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1521,10 +1521,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportLogEntryList</returns>
-        public PaginatedBatchExportLogEntryList BatchExportsLogsList(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedBatchExportLogEntryList</returns>
+        public PostHogPaginatedBatchExportLogEntryList BatchExportsLogsList(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> localVarResponse = BatchExportsLogsListWithHttpInfo(parentLookupBatchExportId, projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> localVarResponse = BatchExportsLogsListWithHttpInfo(parentLookupBatchExportId, projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1537,8 +1537,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportLogEntryList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> BatchExportsLogsListWithHttpInfo(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportLogEntryList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> BatchExportsLogsListWithHttpInfo(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -1590,7 +1590,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/logs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/logs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsLogsList", localVarResponse);
@@ -1613,10 +1613,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportLogEntryList</returns>
-        public async System.Threading.Tasks.Task<PaginatedBatchExportLogEntryList> BatchExportsLogsListAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedBatchExportLogEntryList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedBatchExportLogEntryList> BatchExportsLogsListAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> localVarResponse = await BatchExportsLogsListWithHttpInfoAsync(parentLookupBatchExportId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> localVarResponse = await BatchExportsLogsListWithHttpInfoAsync(parentLookupBatchExportId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1630,8 +1630,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportLogEntryList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList>> BatchExportsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportLogEntryList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList>> BatchExportsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -1684,7 +1684,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1704,12 +1704,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsPartialUpdate(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsPartialUpdate(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsPartialUpdateWithHttpInfo(id, projectId, patchedBatchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedBatchExport);
             return localVarResponse.Data;
         }
 
@@ -1719,10 +1719,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1757,14 +1757,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedBatchExport;
+            localVarRequestOptions.Data = postHogPatchedBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsPartialUpdate", localVarResponse);
@@ -1783,13 +1783,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsPartialUpdateAsync(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsPartialUpdateAsync(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsPartialUpdateWithHttpInfoAsync(id, projectId, patchedBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1799,11 +1799,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedBatchExport"> (optional)</param>
+        /// <param name="postHogPatchedBatchExport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedBatchExport patchedBatchExport = default(PatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedBatchExport postHogPatchedBatchExport = default(PostHogPatchedBatchExport), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1839,14 +1839,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedBatchExport;
+            localVarRequestOptions.Data = postHogPatchedBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1866,12 +1866,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsPauseCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsPauseCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsPauseCreateWithHttpInfo(id, projectId, batchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsPauseCreateWithHttpInfo(id, projectId, postHogBatchExport);
             return localVarResponse.Data;
         }
 
@@ -1881,10 +1881,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsPauseCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsPauseCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1892,10 +1892,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsPauseCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsPauseCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsPauseCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1925,14 +1925,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsPauseCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/pause/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/pause/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsPauseCreate", localVarResponse);
@@ -1951,13 +1951,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsPauseCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsPauseCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsPauseCreateWithHttpInfoAsync(id, projectId, batchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsPauseCreateWithHttpInfoAsync(id, projectId, postHogBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1967,11 +1967,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsPauseCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsPauseCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1979,10 +1979,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsPauseCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsPauseCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsPauseCreate");
             }
 
 
@@ -2013,14 +2013,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsPauseCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/pause/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/pause/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2041,10 +2041,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -2055,8 +2055,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2094,7 +2094,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsRetrieve", localVarResponse);
@@ -2115,10 +2115,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2130,8 +2130,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2170,7 +2170,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2192,10 +2192,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportRunList</returns>
-        public PaginatedBatchExportRunList BatchExportsRunsList(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedBatchExportRunList</returns>
+        public PostHogPaginatedBatchExportRunList BatchExportsRunsList(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportRunList> localVarResponse = BatchExportsRunsListWithHttpInfo(parentLookupBatchExportId, projectId, cursor);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportRunList> localVarResponse = BatchExportsRunsListWithHttpInfo(parentLookupBatchExportId, projectId, cursor);
             return localVarResponse.Data;
         }
 
@@ -2207,8 +2207,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportRunList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedBatchExportRunList> BatchExportsRunsListWithHttpInfo(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportRunList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportRunList> BatchExportsRunsListWithHttpInfo(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2256,7 +2256,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedBatchExportRunList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedBatchExportRunList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsRunsList", localVarResponse);
@@ -2278,10 +2278,10 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportRunList</returns>
-        public async System.Threading.Tasks.Task<PaginatedBatchExportRunList> BatchExportsRunsListAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedBatchExportRunList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedBatchExportRunList> BatchExportsRunsListAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportRunList> localVarResponse = await BatchExportsRunsListWithHttpInfoAsync(parentLookupBatchExportId, projectId, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportRunList> localVarResponse = await BatchExportsRunsListWithHttpInfoAsync(parentLookupBatchExportId, projectId, cursor, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2294,8 +2294,8 @@ namespace DotPostHog.Api
         /// <param name="cursor">The pagination cursor value. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportRunList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedBatchExportRunList>> BatchExportsRunsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportRunList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportRunList>> BatchExportsRunsListWithHttpInfoAsync(string parentLookupBatchExportId, string projectId, string cursor = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2344,7 +2344,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedBatchExportRunList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedBatchExportRunList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2368,10 +2368,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedBatchExportLogEntryList</returns>
-        public PaginatedBatchExportLogEntryList BatchExportsRunsLogsList(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedBatchExportLogEntryList</returns>
+        public PostHogPaginatedBatchExportLogEntryList BatchExportsRunsLogsList(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> localVarResponse = BatchExportsRunsLogsListWithHttpInfo(parentLookupBatchExportId, parentLookupRunId, projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> localVarResponse = BatchExportsRunsLogsListWithHttpInfo(parentLookupBatchExportId, parentLookupRunId, projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -2385,8 +2385,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedBatchExportLogEntryList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> BatchExportsRunsLogsListWithHttpInfo(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedBatchExportLogEntryList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> BatchExportsRunsLogsListWithHttpInfo(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2445,7 +2445,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{parent_lookup_run_id}/logs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{parent_lookup_run_id}/logs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsRunsLogsList", localVarResponse);
@@ -2469,10 +2469,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedBatchExportLogEntryList</returns>
-        public async System.Threading.Tasks.Task<PaginatedBatchExportLogEntryList> BatchExportsRunsLogsListAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedBatchExportLogEntryList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedBatchExportLogEntryList> BatchExportsRunsLogsListAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList> localVarResponse = await BatchExportsRunsLogsListWithHttpInfoAsync(parentLookupBatchExportId, parentLookupRunId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList> localVarResponse = await BatchExportsRunsLogsListWithHttpInfoAsync(parentLookupBatchExportId, parentLookupRunId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2487,8 +2487,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedBatchExportLogEntryList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedBatchExportLogEntryList>> BatchExportsRunsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedBatchExportLogEntryList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedBatchExportLogEntryList>> BatchExportsRunsLogsListWithHttpInfoAsync(string parentLookupBatchExportId, string parentLookupRunId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2548,7 +2548,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{parent_lookup_run_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedBatchExportLogEntryList>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{parent_lookup_run_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2570,10 +2570,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupBatchExportId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExportRun</returns>
-        public BatchExportRun BatchExportsRunsRetrieve(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0)
+        /// <returns>PostHogBatchExportRun</returns>
+        public PostHogBatchExportRun BatchExportsRunsRetrieve(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExportRun> localVarResponse = BatchExportsRunsRetrieveWithHttpInfo(id, parentLookupBatchExportId, projectId);
+            DotPostHog.Client.ApiResponse<PostHogBatchExportRun> localVarResponse = BatchExportsRunsRetrieveWithHttpInfo(id, parentLookupBatchExportId, projectId);
             return localVarResponse.Data;
         }
 
@@ -2585,8 +2585,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupBatchExportId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExportRun</returns>
-        public DotPostHog.Client.ApiResponse<BatchExportRun> BatchExportsRunsRetrieveWithHttpInfo(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExportRun</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExportRun> BatchExportsRunsRetrieveWithHttpInfo(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2631,7 +2631,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<BatchExportRun>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogBatchExportRun>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsRunsRetrieve", localVarResponse);
@@ -2653,10 +2653,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExportRun</returns>
-        public async System.Threading.Tasks.Task<BatchExportRun> BatchExportsRunsRetrieveAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExportRun</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExportRun> BatchExportsRunsRetrieveAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExportRun> localVarResponse = await BatchExportsRunsRetrieveWithHttpInfoAsync(id, parentLookupBatchExportId, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExportRun> localVarResponse = await BatchExportsRunsRetrieveWithHttpInfoAsync(id, parentLookupBatchExportId, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2669,8 +2669,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExportRun)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExportRun>> BatchExportsRunsRetrieveWithHttpInfoAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExportRun)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExportRun>> BatchExportsRunsRetrieveWithHttpInfoAsync(Guid id, string parentLookupBatchExportId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupBatchExportId' is set
             if (parentLookupBatchExportId == null)
@@ -2716,7 +2716,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<BatchExportRun>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogBatchExportRun>("/api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2736,12 +2736,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsUnpauseCreate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsUnpauseCreate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsUnpauseCreateWithHttpInfo(id, projectId, batchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsUnpauseCreateWithHttpInfo(id, projectId, postHogBatchExport);
             return localVarResponse.Data;
         }
 
@@ -2751,10 +2751,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsUnpauseCreateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsUnpauseCreateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2762,10 +2762,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsUnpauseCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsUnpauseCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsUnpauseCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -2795,14 +2795,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsUnpauseCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/unpause/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/unpause/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsUnpauseCreate", localVarResponse);
@@ -2821,13 +2821,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsUnpauseCreateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsUnpauseCreateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsUnpauseCreateWithHttpInfoAsync(id, projectId, batchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsUnpauseCreateWithHttpInfoAsync(id, projectId, postHogBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2837,11 +2837,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsUnpauseCreateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsUnpauseCreateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2849,10 +2849,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsUnpauseCreate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsUnpauseCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsUnpauseCreate");
             }
 
 
@@ -2883,14 +2883,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsUnpauseCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/unpause/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/unpause/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2910,12 +2910,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BatchExport</returns>
-        public BatchExport BatchExportsUpdate(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>PostHogBatchExport</returns>
+        public PostHogBatchExport BatchExportsUpdate(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = BatchExportsUpdateWithHttpInfo(id, projectId, batchExport);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = BatchExportsUpdateWithHttpInfo(id, projectId, postHogBatchExport);
             return localVarResponse.Data;
         }
 
@@ -2925,10 +2925,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BatchExport</returns>
-        public DotPostHog.Client.ApiResponse<BatchExport> BatchExportsUpdateWithHttpInfo(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogBatchExport</returns>
+        public DotPostHog.Client.ApiResponse<PostHogBatchExport> BatchExportsUpdateWithHttpInfo(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2936,10 +2936,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsUpdate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -2969,14 +2969,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BatchExportsUpdate", localVarResponse);
@@ -2995,13 +2995,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BatchExport</returns>
-        public async System.Threading.Tasks.Task<BatchExport> BatchExportsUpdateAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogBatchExport</returns>
+        public async System.Threading.Tasks.Task<PostHogBatchExport> BatchExportsUpdateAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<BatchExport> localVarResponse = await BatchExportsUpdateWithHttpInfoAsync(id, projectId, batchExport, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogBatchExport> localVarResponse = await BatchExportsUpdateWithHttpInfoAsync(id, projectId, postHogBatchExport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3011,11 +3011,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this batch export.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="batchExport"></param>
+        /// <param name="postHogBatchExport"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BatchExport)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<BatchExport>> BatchExportsUpdateWithHttpInfoAsync(Guid id, string projectId, BatchExport batchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogBatchExport)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogBatchExport>> BatchExportsUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogBatchExport postHogBatchExport, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3023,10 +3023,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling BatchExportsApi->BatchExportsUpdate");
             }
 
-            // verify the required parameter 'batchExport' is set
-            if (batchExport == null)
+            // verify the required parameter 'postHogBatchExport' is set
+            if (postHogBatchExport == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'batchExport' when calling BatchExportsApi->BatchExportsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogBatchExport' when calling BatchExportsApi->BatchExportsUpdate");
             }
 
 
@@ -3057,14 +3057,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = batchExport;
+            localVarRequestOptions.Data = postHogBatchExport;
 
             localVarRequestOptions.Operation = "BatchExportsApi.BatchExportsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<BatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogBatchExport>("/api/projects/{project_id}/batch_exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

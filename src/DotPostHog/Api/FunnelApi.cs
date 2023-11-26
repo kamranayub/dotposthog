@@ -32,10 +32,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FunnelStepsResults</returns>
-        FunnelStepsResults Funnels(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0);
+        /// <returns>PostHogFunnelStepsResults</returns>
+        PostHogFunnelStepsResults Funnels(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -46,10 +46,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FunnelStepsResults</returns>
-        ApiResponse<FunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFunnelStepsResults</returns>
+        ApiResponse<PostHogFunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -68,11 +68,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FunnelStepsResults</returns>
-        System.Threading.Tasks.Task<FunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFunnelStepsResults</returns>
+        System.Threading.Tasks.Task<PostHogFunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -83,11 +83,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FunnelStepsResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFunnelStepsResults)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -214,12 +214,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FunnelStepsResults</returns>
-        public FunnelStepsResults Funnels(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0)
+        /// <returns>PostHogFunnelStepsResults</returns>
+        public PostHogFunnelStepsResults Funnels(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FunnelStepsResults> localVarResponse = FunnelsWithHttpInfo(projectId, format, funnel);
+            DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> localVarResponse = FunnelsWithHttpInfo(projectId, format, postHogFunnel);
             return localVarResponse.Data;
         }
 
@@ -229,10 +229,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FunnelStepsResults</returns>
-        public DotPostHog.Client.ApiResponse<FunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFunnelStepsResults</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> FunnelsWithHttpInfo(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -269,14 +269,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = funnel;
+            localVarRequestOptions.Data = postHogFunnel;
 
             localVarRequestOptions.Operation = "FunnelApi.Funnels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Funnels", localVarResponse);
@@ -295,13 +295,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FunnelStepsResults</returns>
-        public async System.Threading.Tasks.Task<FunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFunnelStepsResults</returns>
+        public async System.Threading.Tasks.Task<PostHogFunnelStepsResults> FunnelsAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FunnelStepsResults> localVarResponse = await FunnelsWithHttpInfoAsync(projectId, format, funnel, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults> localVarResponse = await FunnelsWithHttpInfoAsync(projectId, format, postHogFunnel, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -311,11 +311,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="funnel"> (optional)</param>
+        /// <param name="postHogFunnel"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FunnelStepsResults)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), Funnel funnel = default(Funnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFunnelStepsResults)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFunnelStepsResults>> FunnelsWithHttpInfoAsync(string projectId, string format = default(string), PostHogFunnel postHogFunnel = default(PostHogFunnel), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -353,14 +353,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = funnel;
+            localVarRequestOptions.Data = postHogFunnel;
 
             localVarRequestOptions.Operation = "FunnelApi.Funnels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFunnelStepsResults>("/api/projects/{project_id}/insights/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

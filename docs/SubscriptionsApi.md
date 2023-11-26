@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="subscriptionscreate"></a>
 # **SubscriptionsCreate**
-> Subscription SubscriptionsCreate (string projectId, Subscription subscription)
+> PostHogSubscription SubscriptionsCreate (string projectId, PostHogSubscription postHogSubscription)
 
 
 
@@ -35,11 +35,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new SubscriptionsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var subscription = new Subscription(); // Subscription | 
+            var postHogSubscription = new PostHogSubscription(); // PostHogSubscription | 
 
             try
             {
-                Subscription result = apiInstance.SubscriptionsCreate(projectId, subscription);
+                PostHogSubscription result = apiInstance.SubscriptionsCreate(projectId, postHogSubscription);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Subscription> response = apiInstance.SubscriptionsCreateWithHttpInfo(projectId, subscription);
+    ApiResponse<PostHogSubscription> response = apiInstance.SubscriptionsCreateWithHttpInfo(projectId, postHogSubscription);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,11 +77,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **subscription** | [**Subscription**](Subscription.md) |  |  |
+| **postHogSubscription** | [**PostHogSubscription**](PostHogSubscription.md) |  |  |
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**PostHogSubscription**](PostHogSubscription.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ No authorization required
 
 <a id="subscriptionslist"></a>
 # **SubscriptionsList**
-> PaginatedSubscriptionList SubscriptionsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedSubscriptionList SubscriptionsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -216,7 +216,7 @@ namespace Example
 
             try
             {
-                PaginatedSubscriptionList result = apiInstance.SubscriptionsList(projectId, limit, offset);
+                PostHogPaginatedSubscriptionList result = apiInstance.SubscriptionsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -236,7 +236,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedSubscriptionList> response = apiInstance.SubscriptionsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedSubscriptionList> response = apiInstance.SubscriptionsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -259,7 +259,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedSubscriptionList**](PaginatedSubscriptionList.md)
+[**PostHogPaginatedSubscriptionList**](PostHogPaginatedSubscriptionList.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ No authorization required
 
 <a id="subscriptionspartialupdate"></a>
 # **SubscriptionsPartialUpdate**
-> Subscription SubscriptionsPartialUpdate (int id, string projectId, PatchedSubscription patchedSubscription = null)
+> PostHogSubscription SubscriptionsPartialUpdate (int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = null)
 
 
 
@@ -303,11 +303,11 @@ namespace Example
             var apiInstance = new SubscriptionsApi(config);
             var id = 56;  // int | A unique integer value identifying this subscription.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedSubscription = new PatchedSubscription(); // PatchedSubscription |  (optional) 
+            var postHogPatchedSubscription = new PostHogPatchedSubscription(); // PostHogPatchedSubscription |  (optional) 
 
             try
             {
-                Subscription result = apiInstance.SubscriptionsPartialUpdate(id, projectId, patchedSubscription);
+                PostHogSubscription result = apiInstance.SubscriptionsPartialUpdate(id, projectId, postHogPatchedSubscription);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -327,7 +327,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Subscription> response = apiInstance.SubscriptionsPartialUpdateWithHttpInfo(id, projectId, patchedSubscription);
+    ApiResponse<PostHogSubscription> response = apiInstance.SubscriptionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedSubscription);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -346,11 +346,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this subscription. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedSubscription** | [**PatchedSubscription**](PatchedSubscription.md) |  | [optional]  |
+| **postHogPatchedSubscription** | [**PostHogPatchedSubscription**](PostHogPatchedSubscription.md) |  | [optional]  |
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**PostHogSubscription**](PostHogSubscription.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 
 <a id="subscriptionsretrieve"></a>
 # **SubscriptionsRetrieve**
-> Subscription SubscriptionsRetrieve (int id, string projectId)
+> PostHogSubscription SubscriptionsRetrieve (int id, string projectId)
 
 
 
@@ -397,7 +397,7 @@ namespace Example
 
             try
             {
-                Subscription result = apiInstance.SubscriptionsRetrieve(id, projectId);
+                PostHogSubscription result = apiInstance.SubscriptionsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -417,7 +417,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Subscription> response = apiInstance.SubscriptionsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogSubscription> response = apiInstance.SubscriptionsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -439,7 +439,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**PostHogSubscription**](PostHogSubscription.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ No authorization required
 
 <a id="subscriptionsupdate"></a>
 # **SubscriptionsUpdate**
-> Subscription SubscriptionsUpdate (int id, string projectId, Subscription subscription)
+> PostHogSubscription SubscriptionsUpdate (int id, string projectId, PostHogSubscription postHogSubscription)
 
 
 
@@ -483,11 +483,11 @@ namespace Example
             var apiInstance = new SubscriptionsApi(config);
             var id = 56;  // int | A unique integer value identifying this subscription.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var subscription = new Subscription(); // Subscription | 
+            var postHogSubscription = new PostHogSubscription(); // PostHogSubscription | 
 
             try
             {
-                Subscription result = apiInstance.SubscriptionsUpdate(id, projectId, subscription);
+                PostHogSubscription result = apiInstance.SubscriptionsUpdate(id, projectId, postHogSubscription);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -507,7 +507,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Subscription> response = apiInstance.SubscriptionsUpdateWithHttpInfo(id, projectId, subscription);
+    ApiResponse<PostHogSubscription> response = apiInstance.SubscriptionsUpdateWithHttpInfo(id, projectId, postHogSubscription);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -526,11 +526,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this subscription. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **subscription** | [**Subscription**](Subscription.md) |  |  |
+| **postHogSubscription** | [**PostHogSubscription**](PostHogSubscription.md) |  |  |
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**PostHogSubscription**](PostHogSubscription.md)
 
 ### Authorization
 

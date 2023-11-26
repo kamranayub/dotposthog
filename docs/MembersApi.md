@@ -96,7 +96,7 @@ No authorization required
 
 <a id="memberslist"></a>
 # **MembersList**
-> PaginatedOrganizationMemberList MembersList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedOrganizationMemberList MembersList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -123,7 +123,7 @@ namespace Example
 
             try
             {
-                PaginatedOrganizationMemberList result = apiInstance.MembersList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedOrganizationMemberList result = apiInstance.MembersList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -143,7 +143,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedOrganizationMemberList> response = apiInstance.MembersListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedOrganizationMemberList> response = apiInstance.MembersListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -166,7 +166,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedOrganizationMemberList**](PaginatedOrganizationMemberList.md)
+[**PostHogPaginatedOrganizationMemberList**](PostHogPaginatedOrganizationMemberList.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a id="memberspartialupdate"></a>
 # **MembersPartialUpdate**
-> OrganizationMember MembersPartialUpdate (string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = null)
+> PostHogOrganizationMember MembersPartialUpdate (string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = null)
 
 
 
@@ -210,11 +210,11 @@ namespace Example
             var apiInstance = new MembersApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
             var userUuid = "userUuid_example";  // Guid | 
-            var patchedOrganizationMember = new PatchedOrganizationMember(); // PatchedOrganizationMember |  (optional) 
+            var postHogPatchedOrganizationMember = new PostHogPatchedOrganizationMember(); // PostHogPatchedOrganizationMember |  (optional) 
 
             try
             {
-                OrganizationMember result = apiInstance.MembersPartialUpdate(parentLookupOrganizationId, userUuid, patchedOrganizationMember);
+                PostHogOrganizationMember result = apiInstance.MembersPartialUpdate(parentLookupOrganizationId, userUuid, postHogPatchedOrganizationMember);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -234,7 +234,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationMember> response = apiInstance.MembersPartialUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, patchedOrganizationMember);
+    ApiResponse<PostHogOrganizationMember> response = apiInstance.MembersPartialUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, postHogPatchedOrganizationMember);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -253,11 +253,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
 | **userUuid** | **Guid** |  |  |
-| **patchedOrganizationMember** | [**PatchedOrganizationMember**](PatchedOrganizationMember.md) |  | [optional]  |
+| **postHogPatchedOrganizationMember** | [**PostHogPatchedOrganizationMember**](PostHogPatchedOrganizationMember.md) |  | [optional]  |
 
 ### Return type
 
-[**OrganizationMember**](OrganizationMember.md)
+[**PostHogOrganizationMember**](PostHogOrganizationMember.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 
 <a id="membersupdate"></a>
 # **MembersUpdate**
-> OrganizationMember MembersUpdate (string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = null)
+> PostHogOrganizationMember MembersUpdate (string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = null)
 
 
 
@@ -301,11 +301,11 @@ namespace Example
             var apiInstance = new MembersApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
             var userUuid = "userUuid_example";  // Guid | 
-            var organizationMember = new OrganizationMember(); // OrganizationMember |  (optional) 
+            var postHogOrganizationMember = new PostHogOrganizationMember(); // PostHogOrganizationMember |  (optional) 
 
             try
             {
-                OrganizationMember result = apiInstance.MembersUpdate(parentLookupOrganizationId, userUuid, organizationMember);
+                PostHogOrganizationMember result = apiInstance.MembersUpdate(parentLookupOrganizationId, userUuid, postHogOrganizationMember);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -325,7 +325,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationMember> response = apiInstance.MembersUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, organizationMember);
+    ApiResponse<PostHogOrganizationMember> response = apiInstance.MembersUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, postHogOrganizationMember);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -344,11 +344,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
 | **userUuid** | **Guid** |  |  |
-| **organizationMember** | [**OrganizationMember**](OrganizationMember.md) |  | [optional]  |
+| **postHogOrganizationMember** | [**PostHogOrganizationMember**](PostHogOrganizationMember.md) |  | [optional]  |
 
 ### Return type
 
-[**OrganizationMember**](OrganizationMember.md)
+[**PostHogOrganizationMember**](PostHogOrganizationMember.md)
 
 ### Authorization
 

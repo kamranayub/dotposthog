@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 <a id="invitesbulkcreate"></a>
 # **InvitesBulkCreate**
-> OrganizationInvite InvitesBulkCreate (string parentLookupOrganizationId, OrganizationInvite organizationInvite)
+> PostHogOrganizationInvite InvitesBulkCreate (string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite)
 
 
 
@@ -33,11 +33,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new InvitesApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationInvite = new OrganizationInvite(); // OrganizationInvite | 
+            var postHogOrganizationInvite = new PostHogOrganizationInvite(); // PostHogOrganizationInvite | 
 
             try
             {
-                OrganizationInvite result = apiInstance.InvitesBulkCreate(parentLookupOrganizationId, organizationInvite);
+                PostHogOrganizationInvite result = apiInstance.InvitesBulkCreate(parentLookupOrganizationId, postHogOrganizationInvite);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -57,7 +57,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationInvite> response = apiInstance.InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+    ApiResponse<PostHogOrganizationInvite> response = apiInstance.InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -75,11 +75,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationInvite** | [**OrganizationInvite**](OrganizationInvite.md) |  |  |
+| **postHogOrganizationInvite** | [**PostHogOrganizationInvite**](PostHogOrganizationInvite.md) |  |  |
 
 ### Return type
 
-[**OrganizationInvite**](OrganizationInvite.md)
+[**PostHogOrganizationInvite**](PostHogOrganizationInvite.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 
 <a id="invitescreate"></a>
 # **InvitesCreate**
-> OrganizationInvite InvitesCreate (string parentLookupOrganizationId, OrganizationInvite organizationInvite)
+> PostHogOrganizationInvite InvitesCreate (string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite)
 
 
 
@@ -122,11 +122,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new InvitesApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationInvite = new OrganizationInvite(); // OrganizationInvite | 
+            var postHogOrganizationInvite = new PostHogOrganizationInvite(); // PostHogOrganizationInvite | 
 
             try
             {
-                OrganizationInvite result = apiInstance.InvitesCreate(parentLookupOrganizationId, organizationInvite);
+                PostHogOrganizationInvite result = apiInstance.InvitesCreate(parentLookupOrganizationId, postHogOrganizationInvite);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -146,7 +146,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationInvite> response = apiInstance.InvitesCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+    ApiResponse<PostHogOrganizationInvite> response = apiInstance.InvitesCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -164,11 +164,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationInvite** | [**OrganizationInvite**](OrganizationInvite.md) |  |  |
+| **postHogOrganizationInvite** | [**PostHogOrganizationInvite**](PostHogOrganizationInvite.md) |  |  |
 
 ### Return type
 
-[**OrganizationInvite**](OrganizationInvite.md)
+[**PostHogOrganizationInvite**](PostHogOrganizationInvite.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 <a id="inviteslist"></a>
 # **InvitesList**
-> PaginatedOrganizationInviteList InvitesList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedOrganizationInviteList InvitesList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -301,7 +301,7 @@ namespace Example
 
             try
             {
-                PaginatedOrganizationInviteList result = apiInstance.InvitesList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedOrganizationInviteList result = apiInstance.InvitesList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -321,7 +321,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedOrganizationInviteList> response = apiInstance.InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedOrganizationInviteList> response = apiInstance.InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -344,7 +344,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedOrganizationInviteList**](PaginatedOrganizationInviteList.md)
+[**PostHogPaginatedOrganizationInviteList**](PostHogPaginatedOrganizationInviteList.md)
 
 ### Authorization
 

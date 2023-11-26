@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="resourceaccesscreate"></a>
 # **ResourceAccessCreate**
-> OrganizationResourceAccess ResourceAccessCreate (string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess)
+> PostHogOrganizationResourceAccess ResourceAccessCreate (string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess)
 
 
 
@@ -35,11 +35,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ResourceAccessApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationResourceAccess = new OrganizationResourceAccess(); // OrganizationResourceAccess | 
+            var postHogOrganizationResourceAccess = new PostHogOrganizationResourceAccess(); // PostHogOrganizationResourceAccess | 
 
             try
             {
-                OrganizationResourceAccess result = apiInstance.ResourceAccessCreate(parentLookupOrganizationId, organizationResourceAccess);
+                PostHogOrganizationResourceAccess result = apiInstance.ResourceAccessCreate(parentLookupOrganizationId, postHogOrganizationResourceAccess);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationResourceAccess> response = apiInstance.ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, organizationResourceAccess);
+    ApiResponse<PostHogOrganizationResourceAccess> response = apiInstance.ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationResourceAccess);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,11 +77,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationResourceAccess** | [**OrganizationResourceAccess**](OrganizationResourceAccess.md) |  |  |
+| **postHogOrganizationResourceAccess** | [**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md) |  |  |
 
 ### Return type
 
-[**OrganizationResourceAccess**](OrganizationResourceAccess.md)
+[**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a id="resourceaccesslist"></a>
 # **ResourceAccessList**
-> PaginatedOrganizationResourceAccessList ResourceAccessList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedOrganizationResourceAccessList ResourceAccessList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -214,7 +214,7 @@ namespace Example
 
             try
             {
-                PaginatedOrganizationResourceAccessList result = apiInstance.ResourceAccessList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedOrganizationResourceAccessList result = apiInstance.ResourceAccessList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -234,7 +234,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedOrganizationResourceAccessList> response = apiInstance.ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedOrganizationResourceAccessList> response = apiInstance.ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -257,7 +257,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedOrganizationResourceAccessList**](PaginatedOrganizationResourceAccessList.md)
+[**PostHogPaginatedOrganizationResourceAccessList**](PostHogPaginatedOrganizationResourceAccessList.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 
 <a id="resourceaccesspartialupdate"></a>
 # **ResourceAccessPartialUpdate**
-> OrganizationResourceAccess ResourceAccessPartialUpdate (int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = null)
+> PostHogOrganizationResourceAccess ResourceAccessPartialUpdate (int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = null)
 
 
 
@@ -301,11 +301,11 @@ namespace Example
             var apiInstance = new ResourceAccessApi(config);
             var id = 56;  // int | A unique integer value identifying this organization resource access.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedOrganizationResourceAccess = new PatchedOrganizationResourceAccess(); // PatchedOrganizationResourceAccess |  (optional) 
+            var postHogPatchedOrganizationResourceAccess = new PostHogPatchedOrganizationResourceAccess(); // PostHogPatchedOrganizationResourceAccess |  (optional) 
 
             try
             {
-                OrganizationResourceAccess result = apiInstance.ResourceAccessPartialUpdate(id, parentLookupOrganizationId, patchedOrganizationResourceAccess);
+                PostHogOrganizationResourceAccess result = apiInstance.ResourceAccessPartialUpdate(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -325,7 +325,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationResourceAccess> response = apiInstance.ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationResourceAccess);
+    ApiResponse<PostHogOrganizationResourceAccess> response = apiInstance.ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -344,11 +344,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this organization resource access. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedOrganizationResourceAccess** | [**PatchedOrganizationResourceAccess**](PatchedOrganizationResourceAccess.md) |  | [optional]  |
+| **postHogPatchedOrganizationResourceAccess** | [**PostHogPatchedOrganizationResourceAccess**](PostHogPatchedOrganizationResourceAccess.md) |  | [optional]  |
 
 ### Return type
 
-[**OrganizationResourceAccess**](OrganizationResourceAccess.md)
+[**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 
 <a id="resourceaccessretrieve"></a>
 # **ResourceAccessRetrieve**
-> OrganizationResourceAccess ResourceAccessRetrieve (int id, string parentLookupOrganizationId)
+> PostHogOrganizationResourceAccess ResourceAccessRetrieve (int id, string parentLookupOrganizationId)
 
 
 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                OrganizationResourceAccess result = apiInstance.ResourceAccessRetrieve(id, parentLookupOrganizationId);
+                PostHogOrganizationResourceAccess result = apiInstance.ResourceAccessRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationResourceAccess> response = apiInstance.ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogOrganizationResourceAccess> response = apiInstance.ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -437,7 +437,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**OrganizationResourceAccess**](OrganizationResourceAccess.md)
+[**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 
 <a id="resourceaccessupdate"></a>
 # **ResourceAccessUpdate**
-> OrganizationResourceAccess ResourceAccessUpdate (int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess)
+> PostHogOrganizationResourceAccess ResourceAccessUpdate (int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess)
 
 
 
@@ -481,11 +481,11 @@ namespace Example
             var apiInstance = new ResourceAccessApi(config);
             var id = 56;  // int | A unique integer value identifying this organization resource access.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var organizationResourceAccess = new OrganizationResourceAccess(); // OrganizationResourceAccess | 
+            var postHogOrganizationResourceAccess = new PostHogOrganizationResourceAccess(); // PostHogOrganizationResourceAccess | 
 
             try
             {
-                OrganizationResourceAccess result = apiInstance.ResourceAccessUpdate(id, parentLookupOrganizationId, organizationResourceAccess);
+                PostHogOrganizationResourceAccess result = apiInstance.ResourceAccessUpdate(id, parentLookupOrganizationId, postHogOrganizationResourceAccess);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -505,7 +505,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<OrganizationResourceAccess> response = apiInstance.ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationResourceAccess);
+    ApiResponse<PostHogOrganizationResourceAccess> response = apiInstance.ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationResourceAccess);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -524,11 +524,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this organization resource access. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **organizationResourceAccess** | [**OrganizationResourceAccess**](OrganizationResourceAccess.md) |  |  |
+| **postHogOrganizationResourceAccess** | [**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md) |  |  |
 
 ### Return type
 
-[**OrganizationResourceAccess**](OrganizationResourceAccess.md)
+[**PostHogOrganizationResourceAccess**](PostHogOrganizationResourceAccess.md)
 
 ### Authorization
 

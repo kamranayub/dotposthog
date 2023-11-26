@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="warehousesavedqueriescreate"></a>
 # **WarehouseSavedQueriesCreate**
-> DataWarehouseSavedQuery WarehouseSavedQueriesCreate (string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery)
+> PostHogDataWarehouseSavedQuery WarehouseSavedQueriesCreate (string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new WarehouseSavedQueriesApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var dataWarehouseSavedQuery = new DataWarehouseSavedQuery(); // DataWarehouseSavedQuery | 
+            var postHogDataWarehouseSavedQuery = new PostHogDataWarehouseSavedQuery(); // PostHogDataWarehouseSavedQuery | 
 
             try
             {
-                DataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesCreate(projectId, dataWarehouseSavedQuery);
+                PostHogDataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesCreate(projectId, postHogDataWarehouseSavedQuery);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesCreateWithHttpInfo(projectId, dataWarehouseSavedQuery);
+    ApiResponse<PostHogDataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesCreateWithHttpInfo(projectId, postHogDataWarehouseSavedQuery);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **dataWarehouseSavedQuery** | [**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md) |  |  |
+| **postHogDataWarehouseSavedQuery** | [**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md) |  |  |
 
 ### Return type
 
-[**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md)
+[**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="warehousesavedquerieslist"></a>
 # **WarehouseSavedQueriesList**
-> PaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList (string projectId, int? limit = null, int? offset = null, string search = null)
+> PostHogPaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList (string projectId, int? limit = null, int? offset = null, string search = null)
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                PaginatedDataWarehouseSavedQueryList result = apiInstance.WarehouseSavedQueriesList(projectId, limit, offset, search);
+                PostHogPaginatedDataWarehouseSavedQueryList result = apiInstance.WarehouseSavedQueriesList(projectId, limit, offset, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -241,7 +241,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedDataWarehouseSavedQueryList> response = apiInstance.WarehouseSavedQueriesListWithHttpInfo(projectId, limit, offset, search);
+    ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList> response = apiInstance.WarehouseSavedQueriesListWithHttpInfo(projectId, limit, offset, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -265,7 +265,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedDataWarehouseSavedQueryList**](PaginatedDataWarehouseSavedQueryList.md)
+[**PostHogPaginatedDataWarehouseSavedQueryList**](PostHogPaginatedDataWarehouseSavedQueryList.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 
 <a id="warehousesavedqueriespartialupdate"></a>
 # **WarehouseSavedQueriesPartialUpdate**
-> DataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate (Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = null)
+> PostHogDataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate (Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = null)
 
 
 
@@ -311,11 +311,11 @@ namespace Example
             var apiInstance = new WarehouseSavedQueriesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse saved query.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedDataWarehouseSavedQuery = new PatchedDataWarehouseSavedQuery(); // PatchedDataWarehouseSavedQuery |  (optional) 
+            var postHogPatchedDataWarehouseSavedQuery = new PostHogPatchedDataWarehouseSavedQuery(); // PostHogPatchedDataWarehouseSavedQuery |  (optional) 
 
             try
             {
-                DataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesPartialUpdate(id, projectId, patchedDataWarehouseSavedQuery);
+                PostHogDataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesPartialUpdate(id, projectId, postHogPatchedDataWarehouseSavedQuery);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -335,7 +335,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesPartialUpdateWithHttpInfo(id, projectId, patchedDataWarehouseSavedQuery);
+    ApiResponse<PostHogDataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedDataWarehouseSavedQuery);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -354,11 +354,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse saved query. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedDataWarehouseSavedQuery** | [**PatchedDataWarehouseSavedQuery**](PatchedDataWarehouseSavedQuery.md) |  | [optional]  |
+| **postHogPatchedDataWarehouseSavedQuery** | [**PostHogPatchedDataWarehouseSavedQuery**](PostHogPatchedDataWarehouseSavedQuery.md) |  | [optional]  |
 
 ### Return type
 
-[**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md)
+[**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a id="warehousesavedqueriesretrieve"></a>
 # **WarehouseSavedQueriesRetrieve**
-> DataWarehouseSavedQuery WarehouseSavedQueriesRetrieve (Guid id, string projectId)
+> PostHogDataWarehouseSavedQuery WarehouseSavedQueriesRetrieve (Guid id, string projectId)
 
 
 
@@ -407,7 +407,7 @@ namespace Example
 
             try
             {
-                DataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesRetrieve(id, projectId);
+                PostHogDataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogDataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -449,7 +449,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md)
+[**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ No authorization required
 
 <a id="warehousesavedqueriesupdate"></a>
 # **WarehouseSavedQueriesUpdate**
-> DataWarehouseSavedQuery WarehouseSavedQueriesUpdate (Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery)
+> PostHogDataWarehouseSavedQuery WarehouseSavedQueriesUpdate (Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery)
 
 
 
@@ -495,11 +495,11 @@ namespace Example
             var apiInstance = new WarehouseSavedQueriesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse saved query.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var dataWarehouseSavedQuery = new DataWarehouseSavedQuery(); // DataWarehouseSavedQuery | 
+            var postHogDataWarehouseSavedQuery = new PostHogDataWarehouseSavedQuery(); // PostHogDataWarehouseSavedQuery | 
 
             try
             {
-                DataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesUpdate(id, projectId, dataWarehouseSavedQuery);
+                PostHogDataWarehouseSavedQuery result = apiInstance.WarehouseSavedQueriesUpdate(id, projectId, postHogDataWarehouseSavedQuery);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -519,7 +519,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<DataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesUpdateWithHttpInfo(id, projectId, dataWarehouseSavedQuery);
+    ApiResponse<PostHogDataWarehouseSavedQuery> response = apiInstance.WarehouseSavedQueriesUpdateWithHttpInfo(id, projectId, postHogDataWarehouseSavedQuery);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -538,11 +538,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse saved query. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **dataWarehouseSavedQuery** | [**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md) |  |  |
+| **postHogDataWarehouseSavedQuery** | [**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md) |  |  |
 
 ### Return type
 
-[**DataWarehouseSavedQuery**](DataWarehouseSavedQuery.md)
+[**PostHogDataWarehouseSavedQuery**](PostHogDataWarehouseSavedQuery.md)
 
 ### Authorization
 

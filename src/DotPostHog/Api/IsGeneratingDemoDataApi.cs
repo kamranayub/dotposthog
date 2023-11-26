@@ -35,8 +35,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        Team IsGeneratingDemoDataRetrieve(int id, int operationIndex = 0);
+        /// <returns>PostHogTeam</returns>
+        PostHogTeam IsGeneratingDemoDataRetrieve(int id, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,8 +47,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        ApiResponse<Team> IsGeneratingDemoDataRetrieveWithHttpInfo(int id, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        ApiResponse<PostHogTeam> IsGeneratingDemoDataRetrieveWithHttpInfo(int id, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -68,8 +68,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        System.Threading.Tasks.Task<Team> IsGeneratingDemoDataRetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTeam</returns>
+        System.Threading.Tasks.Task<PostHogTeam> IsGeneratingDemoDataRetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -81,8 +81,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Team>> IsGeneratingDemoDataRetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTeam>> IsGeneratingDemoDataRetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -209,10 +209,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        public Team IsGeneratingDemoDataRetrieve(int id, int operationIndex = 0)
+        /// <returns>PostHogTeam</returns>
+        public PostHogTeam IsGeneratingDemoDataRetrieve(int id, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = IsGeneratingDemoDataRetrieveWithHttpInfo(id);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = IsGeneratingDemoDataRetrieveWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
@@ -222,8 +222,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        public DotPostHog.Client.ApiResponse<Team> IsGeneratingDemoDataRetrieveWithHttpInfo(int id, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTeam> IsGeneratingDemoDataRetrieveWithHttpInfo(int id, int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -254,7 +254,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Team>("/api/projects/{id}/is_generating_demo_data/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogTeam>("/api/projects/{id}/is_generating_demo_data/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IsGeneratingDemoDataRetrieve", localVarResponse);
@@ -274,10 +274,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        public async System.Threading.Tasks.Task<Team> IsGeneratingDemoDataRetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTeam</returns>
+        public async System.Threading.Tasks.Task<PostHogTeam> IsGeneratingDemoDataRetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = await IsGeneratingDemoDataRetrieveWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = await IsGeneratingDemoDataRetrieveWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -288,8 +288,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Team>> IsGeneratingDemoDataRetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTeam>> IsGeneratingDemoDataRetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -321,7 +321,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Team>("/api/projects/{id}/is_generating_demo_data/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogTeam>("/api/projects/{id}/is_generating_demo_data/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

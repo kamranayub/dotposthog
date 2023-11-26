@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost*
 
 <a id="groupsfindretrieve"></a>
 # **GroupsFindRetrieve**
-> Group GroupsFindRetrieve (string groupKey, int groupTypeIndex, string projectId)
+> PostHogGroup GroupsFindRetrieve (string groupKey, int groupTypeIndex, string projectId)
 
 
 
@@ -39,7 +39,7 @@ namespace Example
 
             try
             {
-                Group result = apiInstance.GroupsFindRetrieve(groupKey, groupTypeIndex, projectId);
+                PostHogGroup result = apiInstance.GroupsFindRetrieve(groupKey, groupTypeIndex, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Group> response = apiInstance.GroupsFindRetrieveWithHttpInfo(groupKey, groupTypeIndex, projectId);
+    ApiResponse<PostHogGroup> response = apiInstance.GroupsFindRetrieveWithHttpInfo(groupKey, groupTypeIndex, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -82,7 +82,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Group**](Group.md)
+[**PostHogGroup**](PostHogGroup.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
 
 <a id="groupslist"></a>
 # **GroupsList**
-> PaginatedGroupList GroupsList (int groupTypeIndex, string projectId, string search, string cursor = null)
+> PostHogPaginatedGroupList GroupsList (int groupTypeIndex, string projectId, string search, string cursor = null)
 
 
 
@@ -133,7 +133,7 @@ namespace Example
 
             try
             {
-                PaginatedGroupList result = apiInstance.GroupsList(groupTypeIndex, projectId, search, cursor);
+                PostHogPaginatedGroupList result = apiInstance.GroupsList(groupTypeIndex, projectId, search, cursor);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -153,7 +153,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedGroupList> response = apiInstance.GroupsListWithHttpInfo(groupTypeIndex, projectId, search, cursor);
+    ApiResponse<PostHogPaginatedGroupList> response = apiInstance.GroupsListWithHttpInfo(groupTypeIndex, projectId, search, cursor);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -177,7 +177,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedGroupList**](PaginatedGroupList.md)
+[**PostHogPaginatedGroupList**](PostHogPaginatedGroupList.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
 
 <a id="groupspropertydefinitionsretrieve"></a>
 # **GroupsPropertyDefinitionsRetrieve**
-> Group GroupsPropertyDefinitionsRetrieve (string projectId)
+> PostHogGroup GroupsPropertyDefinitionsRetrieve (string projectId)
 
 
 
@@ -223,7 +223,7 @@ namespace Example
 
             try
             {
-                Group result = apiInstance.GroupsPropertyDefinitionsRetrieve(projectId);
+                PostHogGroup result = apiInstance.GroupsPropertyDefinitionsRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -243,7 +243,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Group> response = apiInstance.GroupsPropertyDefinitionsRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogGroup> response = apiInstance.GroupsPropertyDefinitionsRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -264,7 +264,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Group**](Group.md)
+[**PostHogGroup**](PostHogGroup.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
 
 <a id="groupspropertyvaluesretrieve"></a>
 # **GroupsPropertyValuesRetrieve**
-> Group GroupsPropertyValuesRetrieve (int groupTypeIndex, string key, string projectId)
+> PostHogGroup GroupsPropertyValuesRetrieve (int groupTypeIndex, string key, string projectId)
 
 
 
@@ -312,7 +312,7 @@ namespace Example
 
             try
             {
-                Group result = apiInstance.GroupsPropertyValuesRetrieve(groupTypeIndex, key, projectId);
+                PostHogGroup result = apiInstance.GroupsPropertyValuesRetrieve(groupTypeIndex, key, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -332,7 +332,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Group> response = apiInstance.GroupsPropertyValuesRetrieveWithHttpInfo(groupTypeIndex, key, projectId);
+    ApiResponse<PostHogGroup> response = apiInstance.GroupsPropertyValuesRetrieveWithHttpInfo(groupTypeIndex, key, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -355,7 +355,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Group**](Group.md)
+[**PostHogGroup**](PostHogGroup.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ No authorization required
 
 <a id="groupsrelatedretrieve"></a>
 # **GroupsRelatedRetrieve**
-> Group GroupsRelatedRetrieve (int groupTypeIndex, string id, string projectId)
+> PostHogGroup GroupsRelatedRetrieve (int groupTypeIndex, string id, string projectId)
 
 
 
@@ -403,7 +403,7 @@ namespace Example
 
             try
             {
-                Group result = apiInstance.GroupsRelatedRetrieve(groupTypeIndex, id, projectId);
+                PostHogGroup result = apiInstance.GroupsRelatedRetrieve(groupTypeIndex, id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -423,7 +423,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Group> response = apiInstance.GroupsRelatedRetrieveWithHttpInfo(groupTypeIndex, id, projectId);
+    ApiResponse<PostHogGroup> response = apiInstance.GroupsRelatedRetrieveWithHttpInfo(groupTypeIndex, id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -446,7 +446,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Group**](Group.md)
+[**PostHogGroup**](PostHogGroup.md)
 
 ### Authorization
 

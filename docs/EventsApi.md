@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 <a id="eventslist"></a>
 # **EventsList**
-> PaginatedClickhouseEventList EventsList (string projectId, DateTime? after = null, DateTime? before = null, int? distinctId = null, string varEvent = null, string format = null, int? limit = null, int? offset = null, int? personId = null, List<Property> properties = null, List<string> select = null, List<string> where = null)
+> PostHogPaginatedClickhouseEventList EventsList (string projectId, DateTime? after = null, DateTime? before = null, int? distinctId = null, string varEvent = null, string format = null, int? limit = null, int? offset = null, int? personId = null, List<PostHogProperty> properties = null, List<string> select = null, List<string> where = null)
 
 
 
@@ -40,13 +40,13 @@ namespace Example
             var limit = 56;  // int? | The maximum number of results to return (optional) 
             var offset = 56;  // int? | The initial index from which to return the results. (optional) 
             var personId = 56;  // int? | Filter list by person id. (optional) 
-            var properties = new List<Property>(); // List<Property> | Filter events by event property, person property, cohort, groups and more. (optional) 
+            var properties = new List<PostHogProperty>(); // List<PostHogProperty> | Filter events by event property, person property, cohort, groups and more. (optional) 
             var select = new List<string>(); // List<string> | (Experimental) JSON-serialized array of HogQL expressions to return (optional) 
             var where = new List<string>(); // List<string> | (Experimental) JSON-serialized array of HogQL expressions that must pass (optional) 
 
             try
             {
-                PaginatedClickhouseEventList result = apiInstance.EventsList(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
+                PostHogPaginatedClickhouseEventList result = apiInstance.EventsList(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -66,7 +66,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedClickhouseEventList> response = apiInstance.EventsListWithHttpInfo(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
+    ApiResponse<PostHogPaginatedClickhouseEventList> response = apiInstance.EventsListWithHttpInfo(projectId, after, before, distinctId, varEvent, format, limit, offset, personId, properties, select, where);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -92,13 +92,13 @@ catch (ApiException e)
 | **limit** | **int?** | The maximum number of results to return | [optional]  |
 | **offset** | **int?** | The initial index from which to return the results. | [optional]  |
 | **personId** | **int?** | Filter list by person id. | [optional]  |
-| **properties** | [**List&lt;Property&gt;**](Property.md) | Filter events by event property, person property, cohort, groups and more. | [optional]  |
+| **properties** | [**List&lt;PostHogProperty&gt;**](PostHogProperty.md) | Filter events by event property, person property, cohort, groups and more. | [optional]  |
 | **select** | [**List&lt;string&gt;**](string.md) | (Experimental) JSON-serialized array of HogQL expressions to return | [optional]  |
 | **where** | [**List&lt;string&gt;**](string.md) | (Experimental) JSON-serialized array of HogQL expressions that must pass | [optional]  |
 
 ### Return type
 
-[**PaginatedClickhouseEventList**](PaginatedClickhouseEventList.md)
+[**PostHogPaginatedClickhouseEventList**](PostHogPaginatedClickhouseEventList.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a id="eventsretrieve"></a>
 # **EventsRetrieve**
-> ClickhouseEvent EventsRetrieve (string id, string projectId, string format = null)
+> PostHogClickhouseEvent EventsRetrieve (string id, string projectId, string format = null)
 
 
 
@@ -146,7 +146,7 @@ namespace Example
 
             try
             {
-                ClickhouseEvent result = apiInstance.EventsRetrieve(id, projectId, format);
+                PostHogClickhouseEvent result = apiInstance.EventsRetrieve(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -166,7 +166,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ClickhouseEvent> response = apiInstance.EventsRetrieveWithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogClickhouseEvent> response = apiInstance.EventsRetrieveWithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -189,7 +189,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ClickhouseEvent**](ClickhouseEvent.md)
+[**PostHogClickhouseEvent**](PostHogClickhouseEvent.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ No authorization required
 
 <a id="eventsvaluesretrieve"></a>
 # **EventsValuesRetrieve**
-> ClickhouseEvent EventsValuesRetrieve (string projectId, string format = null)
+> PostHogClickhouseEvent EventsValuesRetrieve (string projectId, string format = null)
 
 
 
@@ -236,7 +236,7 @@ namespace Example
 
             try
             {
-                ClickhouseEvent result = apiInstance.EventsValuesRetrieve(projectId, format);
+                PostHogClickhouseEvent result = apiInstance.EventsValuesRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -256,7 +256,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ClickhouseEvent> response = apiInstance.EventsValuesRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogClickhouseEvent> response = apiInstance.EventsValuesRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -278,7 +278,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**ClickhouseEvent**](ClickhouseEvent.md)
+[**PostHogClickhouseEvent**](PostHogClickhouseEvent.md)
 
 ### Authorization
 

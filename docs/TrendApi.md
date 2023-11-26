@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="trends"></a>
 # **Trends**
-> TrendResults Trends (string projectId, string format = null, Trend trend = null)
+> PostHogTrendResults Trends (string projectId, string format = null, PostHogTrend postHogTrend = null)
 
 
 
@@ -31,11 +31,11 @@ namespace Example
             var apiInstance = new TrendApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var trend = new Trend(); // Trend |  (optional) 
+            var postHogTrend = new PostHogTrend(); // PostHogTrend |  (optional) 
 
             try
             {
-                TrendResults result = apiInstance.Trends(projectId, format, trend);
+                PostHogTrendResults result = apiInstance.Trends(projectId, format, postHogTrend);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<TrendResults> response = apiInstance.TrendsWithHttpInfo(projectId, format, trend);
+    ApiResponse<PostHogTrendResults> response = apiInstance.TrendsWithHttpInfo(projectId, format, postHogTrend);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -74,11 +74,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **trend** | [**Trend**](Trend.md) |  | [optional]  |
+| **postHogTrend** | [**PostHogTrend**](PostHogTrend.md) |  | [optional]  |
 
 ### Return type
 
-[**TrendResults**](TrendResults.md)
+[**PostHogTrendResults**](PostHogTrendResults.md)
 
 ### Authorization
 

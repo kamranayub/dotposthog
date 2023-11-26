@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        DashboardTemplate DashboardTemplatesCreate(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0);
+        /// <returns>PostHogDashboardTemplate</returns>
+        PostHogDashboardTemplate DashboardTemplatesCreate(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        ApiResponse<DashboardTemplate> DashboardTemplatesCreateWithHttpInfo(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        ApiResponse<PostHogDashboardTemplate> DashboardTemplatesCreateWithHttpInfo(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -79,8 +79,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        DashboardTemplate DashboardTemplatesJsonSchemaRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogDashboardTemplate</returns>
+        PostHogDashboardTemplate DashboardTemplatesJsonSchemaRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -91,8 +91,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        ApiResponse<DashboardTemplate> DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        ApiResponse<PostHogDashboardTemplate> DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -101,8 +101,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedDashboardTemplateList</returns>
-        PaginatedDashboardTemplateList DashboardTemplatesList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedDashboardTemplateList</returns>
+        PostHogPaginatedDashboardTemplateList DashboardTemplatesList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -115,18 +115,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedDashboardTemplateList</returns>
-        ApiResponse<PaginatedDashboardTemplateList> DashboardTemplatesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedDashboardTemplateList</returns>
+        ApiResponse<PostHogPaginatedDashboardTemplateList> DashboardTemplatesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        DashboardTemplate DashboardTemplatesPartialUpdate(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0);
+        /// <returns>PostHogDashboardTemplate</returns>
+        PostHogDashboardTemplate DashboardTemplatesPartialUpdate(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -137,10 +137,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        ApiResponse<DashboardTemplate> DashboardTemplatesPartialUpdateWithHttpInfo(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        ApiResponse<PostHogDashboardTemplate> DashboardTemplatesPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -148,8 +148,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        DashboardTemplate DashboardTemplatesRetrieve(string id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogDashboardTemplate</returns>
+        PostHogDashboardTemplate DashboardTemplatesRetrieve(string id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -161,18 +161,18 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        ApiResponse<DashboardTemplate> DashboardTemplatesRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        ApiResponse<PostHogDashboardTemplate> DashboardTemplatesRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        DashboardTemplate DashboardTemplatesUpdate(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0);
+        /// <returns>PostHogDashboardTemplate</returns>
+        PostHogDashboardTemplate DashboardTemplatesUpdate(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -183,10 +183,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        ApiResponse<DashboardTemplate> DashboardTemplatesUpdateWithHttpInfo(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        ApiResponse<PostHogDashboardTemplate> DashboardTemplatesUpdateWithHttpInfo(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -204,11 +204,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesCreateAsync(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesCreateAsync(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -218,11 +218,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardTemplate>> DashboardTemplatesCreateWithHttpInfoAsync(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesCreateWithHttpInfoAsync(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -260,8 +260,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesJsonSchemaRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesJsonSchemaRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -273,8 +273,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardTemplate>> DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,8 +287,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedDashboardTemplateList</returns>
-        System.Threading.Tasks.Task<PaginatedDashboardTemplateList> DashboardTemplatesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedDashboardTemplateList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedDashboardTemplateList> DashboardTemplatesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,8 +302,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedDashboardTemplateList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedDashboardTemplateList>> DashboardTemplatesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedDashboardTemplateList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedDashboardTemplateList>> DashboardTemplatesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -313,11 +313,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesPartialUpdateAsync(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesPartialUpdateAsync(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -328,11 +328,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardTemplate>> DashboardTemplatesPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -344,8 +344,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,8 +358,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardTemplate>> DashboardTemplatesRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -369,11 +369,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesUpdateAsync(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesUpdateAsync(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -384,11 +384,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DashboardTemplate>> DashboardTemplatesUpdateWithHttpInfoAsync(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesUpdateWithHttpInfoAsync(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -514,12 +514,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        public DashboardTemplate DashboardTemplatesCreate(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0)
+        /// <returns>PostHogDashboardTemplate</returns>
+        public PostHogDashboardTemplate DashboardTemplatesCreate(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = DashboardTemplatesCreateWithHttpInfo(projectId, dashboardTemplate);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = DashboardTemplatesCreateWithHttpInfo(projectId, postHogDashboardTemplate);
             return localVarResponse.Data;
         }
 
@@ -528,10 +528,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        public DotPostHog.Client.ApiResponse<DashboardTemplate> DashboardTemplatesCreateWithHttpInfo(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> DashboardTemplatesCreateWithHttpInfo(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -565,14 +565,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dashboardTemplate;
+            localVarRequestOptions.Data = postHogDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesCreate", localVarResponse);
@@ -590,13 +590,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        public async System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesCreateAsync(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        public async System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesCreateAsync(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = await DashboardTemplatesCreateWithHttpInfoAsync(projectId, dashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = await DashboardTemplatesCreateWithHttpInfoAsync(projectId, postHogDashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -605,11 +605,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DashboardTemplate>> DashboardTemplatesCreateWithHttpInfoAsync(string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesCreateWithHttpInfoAsync(string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -644,14 +644,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dashboardTemplate;
+            localVarRequestOptions.Data = postHogDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -829,10 +829,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        public DashboardTemplate DashboardTemplatesJsonSchemaRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogDashboardTemplate</returns>
+        public PostHogDashboardTemplate DashboardTemplatesJsonSchemaRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -842,8 +842,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        public DotPostHog.Client.ApiResponse<DashboardTemplate> DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> DashboardTemplatesJsonSchemaRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -880,7 +880,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/json_schema/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/json_schema/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesJsonSchemaRetrieve", localVarResponse);
@@ -900,10 +900,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        public async System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesJsonSchemaRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        public async System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesJsonSchemaRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = await DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = await DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -914,8 +914,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DashboardTemplate>> DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesJsonSchemaRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -953,7 +953,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/json_schema/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/json_schema/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -975,10 +975,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedDashboardTemplateList</returns>
-        public PaginatedDashboardTemplateList DashboardTemplatesList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedDashboardTemplateList</returns>
+        public PostHogPaginatedDashboardTemplateList DashboardTemplatesList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedDashboardTemplateList> localVarResponse = DashboardTemplatesListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedDashboardTemplateList> localVarResponse = DashboardTemplatesListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -990,8 +990,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedDashboardTemplateList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedDashboardTemplateList> DashboardTemplatesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedDashboardTemplateList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedDashboardTemplateList> DashboardTemplatesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1036,7 +1036,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedDashboardTemplateList>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedDashboardTemplateList>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesList", localVarResponse);
@@ -1058,10 +1058,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedDashboardTemplateList</returns>
-        public async System.Threading.Tasks.Task<PaginatedDashboardTemplateList> DashboardTemplatesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedDashboardTemplateList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedDashboardTemplateList> DashboardTemplatesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedDashboardTemplateList> localVarResponse = await DashboardTemplatesListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedDashboardTemplateList> localVarResponse = await DashboardTemplatesListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1074,8 +1074,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedDashboardTemplateList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedDashboardTemplateList>> DashboardTemplatesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedDashboardTemplateList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedDashboardTemplateList>> DashboardTemplatesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1121,7 +1121,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedDashboardTemplateList>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedDashboardTemplateList>("/api/projects/{project_id}/dashboard_templates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1141,12 +1141,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        public DashboardTemplate DashboardTemplatesPartialUpdate(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0)
+        /// <returns>PostHogDashboardTemplate</returns>
+        public PostHogDashboardTemplate DashboardTemplatesPartialUpdate(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = DashboardTemplatesPartialUpdateWithHttpInfo(id, projectId, patchedDashboardTemplate);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = DashboardTemplatesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedDashboardTemplate);
             return localVarResponse.Data;
         }
 
@@ -1156,10 +1156,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        public DotPostHog.Client.ApiResponse<DashboardTemplate> DashboardTemplatesPartialUpdateWithHttpInfo(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> DashboardTemplatesPartialUpdateWithHttpInfo(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1200,14 +1200,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedDashboardTemplate;
+            localVarRequestOptions.Data = postHogPatchedDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesPartialUpdate", localVarResponse);
@@ -1226,13 +1226,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        public async System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesPartialUpdateAsync(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        public async System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesPartialUpdateAsync(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = await DashboardTemplatesPartialUpdateWithHttpInfoAsync(id, projectId, patchedDashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = await DashboardTemplatesPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedDashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1242,11 +1242,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDashboardTemplate"> (optional)</param>
+        /// <param name="postHogPatchedDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DashboardTemplate>> DashboardTemplatesPartialUpdateWithHttpInfoAsync(string id, string projectId, PatchedDashboardTemplate patchedDashboardTemplate = default(PatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesPartialUpdateWithHttpInfoAsync(string id, string projectId, PostHogPatchedDashboardTemplate postHogPatchedDashboardTemplate = default(PostHogPatchedDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1288,14 +1288,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedDashboardTemplate;
+            localVarRequestOptions.Data = postHogPatchedDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1316,10 +1316,10 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        public DashboardTemplate DashboardTemplatesRetrieve(string id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogDashboardTemplate</returns>
+        public PostHogDashboardTemplate DashboardTemplatesRetrieve(string id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = DashboardTemplatesRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = DashboardTemplatesRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1330,8 +1330,8 @@ namespace DotPostHog.Api
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        public DotPostHog.Client.ApiResponse<DashboardTemplate> DashboardTemplatesRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> DashboardTemplatesRetrieveWithHttpInfo(string id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1375,7 +1375,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesRetrieve", localVarResponse);
@@ -1396,10 +1396,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        public async System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        public async System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesRetrieveAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = await DashboardTemplatesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = await DashboardTemplatesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1411,8 +1411,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DashboardTemplate>> DashboardTemplatesRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesRetrieveWithHttpInfoAsync(string id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1457,7 +1457,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1477,12 +1477,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DashboardTemplate</returns>
-        public DashboardTemplate DashboardTemplatesUpdate(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0)
+        /// <returns>PostHogDashboardTemplate</returns>
+        public PostHogDashboardTemplate DashboardTemplatesUpdate(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = DashboardTemplatesUpdateWithHttpInfo(id, projectId, dashboardTemplate);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = DashboardTemplatesUpdateWithHttpInfo(id, projectId, postHogDashboardTemplate);
             return localVarResponse.Data;
         }
 
@@ -1492,10 +1492,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DashboardTemplate</returns>
-        public DotPostHog.Client.ApiResponse<DashboardTemplate> DashboardTemplatesUpdateWithHttpInfo(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDashboardTemplate</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> DashboardTemplatesUpdateWithHttpInfo(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1536,14 +1536,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dashboardTemplate;
+            localVarRequestOptions.Data = postHogDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DashboardTemplatesUpdate", localVarResponse);
@@ -1562,13 +1562,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DashboardTemplate</returns>
-        public async System.Threading.Tasks.Task<DashboardTemplate> DashboardTemplatesUpdateAsync(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDashboardTemplate</returns>
+        public async System.Threading.Tasks.Task<PostHogDashboardTemplate> DashboardTemplatesUpdateAsync(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DashboardTemplate> localVarResponse = await DashboardTemplatesUpdateWithHttpInfoAsync(id, projectId, dashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDashboardTemplate> localVarResponse = await DashboardTemplatesUpdateWithHttpInfoAsync(id, projectId, postHogDashboardTemplate, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1578,11 +1578,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dashboardTemplate"> (optional)</param>
+        /// <param name="postHogDashboardTemplate"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DashboardTemplate)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DashboardTemplate>> DashboardTemplatesUpdateWithHttpInfoAsync(string id, string projectId, DashboardTemplate dashboardTemplate = default(DashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDashboardTemplate)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDashboardTemplate>> DashboardTemplatesUpdateWithHttpInfoAsync(string id, string projectId, PostHogDashboardTemplate postHogDashboardTemplate = default(PostHogDashboardTemplate), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1624,14 +1624,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dashboardTemplate;
+            localVarRequestOptions.Data = postHogDashboardTemplate;
 
             localVarRequestOptions.Operation = "DashboardTemplatesApi.DashboardTemplatesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<DashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogDashboardTemplate>("/api/projects/{project_id}/dashboard_templates/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

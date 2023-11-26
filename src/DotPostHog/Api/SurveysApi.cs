@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SurveySerializerCreateUpdateOnly</returns>
-        SurveySerializerCreateUpdateOnly SurveysCreate(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0);
+        /// <returns>PostHogSurveySerializerCreateUpdateOnly</returns>
+        PostHogSurveySerializerCreateUpdateOnly SurveysCreate(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SurveySerializerCreateUpdateOnly</returns>
-        ApiResponse<SurveySerializerCreateUpdateOnly> SurveysCreateWithHttpInfo(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSurveySerializerCreateUpdateOnly</returns>
+        ApiResponse<PostHogSurveySerializerCreateUpdateOnly> SurveysCreateWithHttpInfo(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSurveyList</returns>
-        PaginatedSurveyList SurveysList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedSurveyList</returns>
+        PostHogPaginatedSurveyList SurveysList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSurveyList</returns>
-        ApiResponse<PaginatedSurveyList> SurveysListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedSurveyList</returns>
+        ApiResponse<PostHogPaginatedSurveyList> SurveysListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SurveySerializerCreateUpdateOnly</returns>
-        SurveySerializerCreateUpdateOnly SurveysPartialUpdate(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0);
+        /// <returns>PostHogSurveySerializerCreateUpdateOnly</returns>
+        PostHogSurveySerializerCreateUpdateOnly SurveysPartialUpdate(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,18 +114,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SurveySerializerCreateUpdateOnly</returns>
-        ApiResponse<SurveySerializerCreateUpdateOnly> SurveysPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSurveySerializerCreateUpdateOnly</returns>
+        ApiResponse<PostHogSurveySerializerCreateUpdateOnly> SurveysPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        Survey SurveysResponsesCountRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogSurvey</returns>
+        PostHogSurvey SurveysResponsesCountRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -136,8 +136,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        ApiResponse<Survey> SurveysResponsesCountRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        ApiResponse<PostHogSurvey> SurveysResponsesCountRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -145,8 +145,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        Survey SurveysRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogSurvey</returns>
+        PostHogSurvey SurveysRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -158,18 +158,18 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        ApiResponse<Survey> SurveysRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        ApiResponse<PostHogSurvey> SurveysRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        Survey SurveysUpdate(Guid id, string projectId, Survey survey, int operationIndex = 0);
+        /// <returns>PostHogSurvey</returns>
+        PostHogSurvey SurveysUpdate(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        ApiResponse<Survey> SurveysUpdateWithHttpInfo(Guid id, string projectId, Survey survey, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        ApiResponse<PostHogSurvey> SurveysUpdateWithHttpInfo(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,11 +201,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SurveySerializerCreateUpdateOnly</returns>
-        System.Threading.Tasks.Task<SurveySerializerCreateUpdateOnly> SurveysCreateAsync(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSurveySerializerCreateUpdateOnly</returns>
+        System.Threading.Tasks.Task<PostHogSurveySerializerCreateUpdateOnly> SurveysCreateAsync(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,11 +215,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SurveySerializerCreateUpdateOnly)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveySerializerCreateUpdateOnly>> SurveysCreateWithHttpInfoAsync(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSurveySerializerCreateUpdateOnly)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSurveySerializerCreateUpdateOnly>> SurveysCreateWithHttpInfoAsync(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -259,8 +259,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSurveyList</returns>
-        System.Threading.Tasks.Task<PaginatedSurveyList> SurveysListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedSurveyList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedSurveyList> SurveysListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -274,8 +274,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSurveyList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedSurveyList>> SurveysListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedSurveyList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedSurveyList>> SurveysListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -285,11 +285,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SurveySerializerCreateUpdateOnly</returns>
-        System.Threading.Tasks.Task<SurveySerializerCreateUpdateOnly> SurveysPartialUpdateAsync(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSurveySerializerCreateUpdateOnly</returns>
+        System.Threading.Tasks.Task<PostHogSurveySerializerCreateUpdateOnly> SurveysPartialUpdateAsync(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -300,11 +300,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SurveySerializerCreateUpdateOnly)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SurveySerializerCreateUpdateOnly>> SurveysPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSurveySerializerCreateUpdateOnly)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSurveySerializerCreateUpdateOnly>> SurveysPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -315,8 +315,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        System.Threading.Tasks.Task<Survey> SurveysResponsesCountRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSurvey</returns>
+        System.Threading.Tasks.Task<PostHogSurvey> SurveysResponsesCountRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -328,8 +328,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Survey>> SurveysResponsesCountRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSurvey>> SurveysResponsesCountRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -341,8 +341,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        System.Threading.Tasks.Task<Survey> SurveysRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSurvey</returns>
+        System.Threading.Tasks.Task<PostHogSurvey> SurveysRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -355,8 +355,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Survey>> SurveysRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSurvey>> SurveysRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -366,11 +366,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        System.Threading.Tasks.Task<Survey> SurveysUpdateAsync(Guid id, string projectId, Survey survey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSurvey</returns>
+        System.Threading.Tasks.Task<PostHogSurvey> SurveysUpdateAsync(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -381,11 +381,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Survey>> SurveysUpdateWithHttpInfoAsync(Guid id, string projectId, Survey survey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSurvey>> SurveysUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -511,12 +511,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SurveySerializerCreateUpdateOnly</returns>
-        public SurveySerializerCreateUpdateOnly SurveysCreate(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0)
+        /// <returns>PostHogSurveySerializerCreateUpdateOnly</returns>
+        public PostHogSurveySerializerCreateUpdateOnly SurveysCreate(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> localVarResponse = SurveysCreateWithHttpInfo(projectId, surveySerializerCreateUpdateOnly);
+            DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> localVarResponse = SurveysCreateWithHttpInfo(projectId, postHogSurveySerializerCreateUpdateOnly);
             return localVarResponse.Data;
         }
 
@@ -525,10 +525,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SurveySerializerCreateUpdateOnly</returns>
-        public DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> SurveysCreateWithHttpInfo(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSurveySerializerCreateUpdateOnly</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> SurveysCreateWithHttpInfo(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -536,10 +536,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SurveysApi->SurveysCreate");
             }
 
-            // verify the required parameter 'surveySerializerCreateUpdateOnly' is set
-            if (surveySerializerCreateUpdateOnly == null)
+            // verify the required parameter 'postHogSurveySerializerCreateUpdateOnly' is set
+            if (postHogSurveySerializerCreateUpdateOnly == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'surveySerializerCreateUpdateOnly' when calling SurveysApi->SurveysCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSurveySerializerCreateUpdateOnly' when calling SurveysApi->SurveysCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -568,14 +568,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = surveySerializerCreateUpdateOnly;
+            localVarRequestOptions.Data = postHogSurveySerializerCreateUpdateOnly;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<SurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogSurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysCreate", localVarResponse);
@@ -593,13 +593,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SurveySerializerCreateUpdateOnly</returns>
-        public async System.Threading.Tasks.Task<SurveySerializerCreateUpdateOnly> SurveysCreateAsync(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSurveySerializerCreateUpdateOnly</returns>
+        public async System.Threading.Tasks.Task<PostHogSurveySerializerCreateUpdateOnly> SurveysCreateAsync(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> localVarResponse = await SurveysCreateWithHttpInfoAsync(projectId, surveySerializerCreateUpdateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> localVarResponse = await SurveysCreateWithHttpInfoAsync(projectId, postHogSurveySerializerCreateUpdateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -608,11 +608,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="surveySerializerCreateUpdateOnly"></param>
+        /// <param name="postHogSurveySerializerCreateUpdateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SurveySerializerCreateUpdateOnly)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly>> SurveysCreateWithHttpInfoAsync(string projectId, SurveySerializerCreateUpdateOnly surveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSurveySerializerCreateUpdateOnly)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly>> SurveysCreateWithHttpInfoAsync(string projectId, PostHogSurveySerializerCreateUpdateOnly postHogSurveySerializerCreateUpdateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -620,10 +620,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SurveysApi->SurveysCreate");
             }
 
-            // verify the required parameter 'surveySerializerCreateUpdateOnly' is set
-            if (surveySerializerCreateUpdateOnly == null)
+            // verify the required parameter 'postHogSurveySerializerCreateUpdateOnly' is set
+            if (postHogSurveySerializerCreateUpdateOnly == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'surveySerializerCreateUpdateOnly' when calling SurveysApi->SurveysCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSurveySerializerCreateUpdateOnly' when calling SurveysApi->SurveysCreate");
             }
 
 
@@ -653,14 +653,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = surveySerializerCreateUpdateOnly;
+            localVarRequestOptions.Data = postHogSurveySerializerCreateUpdateOnly;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<SurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogSurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -828,10 +828,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSurveyList</returns>
-        public PaginatedSurveyList SurveysList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedSurveyList</returns>
+        public PostHogPaginatedSurveyList SurveysList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedSurveyList> localVarResponse = SurveysListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSurveyList> localVarResponse = SurveysListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -843,8 +843,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSurveyList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedSurveyList> SurveysListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedSurveyList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedSurveyList> SurveysListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -889,7 +889,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedSurveyList>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedSurveyList>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysList", localVarResponse);
@@ -911,10 +911,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSurveyList</returns>
-        public async System.Threading.Tasks.Task<PaginatedSurveyList> SurveysListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedSurveyList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedSurveyList> SurveysListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedSurveyList> localVarResponse = await SurveysListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSurveyList> localVarResponse = await SurveysListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -927,8 +927,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSurveyList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedSurveyList>> SurveysListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedSurveyList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedSurveyList>> SurveysListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -974,7 +974,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedSurveyList>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedSurveyList>("/api/projects/{project_id}/surveys/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -994,12 +994,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SurveySerializerCreateUpdateOnly</returns>
-        public SurveySerializerCreateUpdateOnly SurveysPartialUpdate(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0)
+        /// <returns>PostHogSurveySerializerCreateUpdateOnly</returns>
+        public PostHogSurveySerializerCreateUpdateOnly SurveysPartialUpdate(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> localVarResponse = SurveysPartialUpdateWithHttpInfo(id, projectId, patchedSurveySerializerCreateUpdateOnly);
+            DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> localVarResponse = SurveysPartialUpdateWithHttpInfo(id, projectId, postHogPatchedSurveySerializerCreateUpdateOnly);
             return localVarResponse.Data;
         }
 
@@ -1009,10 +1009,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SurveySerializerCreateUpdateOnly</returns>
-        public DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> SurveysPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSurveySerializerCreateUpdateOnly</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> SurveysPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1047,14 +1047,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedSurveySerializerCreateUpdateOnly;
+            localVarRequestOptions.Data = postHogPatchedSurveySerializerCreateUpdateOnly;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<SurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogSurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysPartialUpdate", localVarResponse);
@@ -1073,13 +1073,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SurveySerializerCreateUpdateOnly</returns>
-        public async System.Threading.Tasks.Task<SurveySerializerCreateUpdateOnly> SurveysPartialUpdateAsync(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSurveySerializerCreateUpdateOnly</returns>
+        public async System.Threading.Tasks.Task<PostHogSurveySerializerCreateUpdateOnly> SurveysPartialUpdateAsync(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly> localVarResponse = await SurveysPartialUpdateWithHttpInfoAsync(id, projectId, patchedSurveySerializerCreateUpdateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly> localVarResponse = await SurveysPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedSurveySerializerCreateUpdateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1089,11 +1089,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSurveySerializerCreateUpdateOnly"> (optional)</param>
+        /// <param name="postHogPatchedSurveySerializerCreateUpdateOnly"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SurveySerializerCreateUpdateOnly)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<SurveySerializerCreateUpdateOnly>> SurveysPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedSurveySerializerCreateUpdateOnly patchedSurveySerializerCreateUpdateOnly = default(PatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSurveySerializerCreateUpdateOnly)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSurveySerializerCreateUpdateOnly>> SurveysPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedSurveySerializerCreateUpdateOnly postHogPatchedSurveySerializerCreateUpdateOnly = default(PostHogPatchedSurveySerializerCreateUpdateOnly), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1129,14 +1129,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedSurveySerializerCreateUpdateOnly;
+            localVarRequestOptions.Data = postHogPatchedSurveySerializerCreateUpdateOnly;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<SurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogSurveySerializerCreateUpdateOnly>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1156,10 +1156,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        public Survey SurveysResponsesCountRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogSurvey</returns>
+        public PostHogSurvey SurveysResponsesCountRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = SurveysResponsesCountRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = SurveysResponsesCountRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -1169,8 +1169,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        public DotPostHog.Client.ApiResponse<Survey> SurveysResponsesCountRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSurvey> SurveysResponsesCountRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1207,7 +1207,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Survey>("/api/projects/{project_id}/surveys/responses_count/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSurvey>("/api/projects/{project_id}/surveys/responses_count/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysResponsesCountRetrieve", localVarResponse);
@@ -1227,10 +1227,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        public async System.Threading.Tasks.Task<Survey> SurveysResponsesCountRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSurvey</returns>
+        public async System.Threading.Tasks.Task<PostHogSurvey> SurveysResponsesCountRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = await SurveysResponsesCountRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = await SurveysResponsesCountRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1241,8 +1241,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Survey>> SurveysResponsesCountRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSurvey>> SurveysResponsesCountRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1280,7 +1280,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Survey>("/api/projects/{project_id}/surveys/responses_count/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSurvey>("/api/projects/{project_id}/surveys/responses_count/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1301,10 +1301,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        public Survey SurveysRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogSurvey</returns>
+        public PostHogSurvey SurveysRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = SurveysRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = SurveysRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1315,8 +1315,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        public DotPostHog.Client.ApiResponse<Survey> SurveysRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSurvey> SurveysRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1354,7 +1354,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Survey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSurvey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysRetrieve", localVarResponse);
@@ -1375,10 +1375,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        public async System.Threading.Tasks.Task<Survey> SurveysRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSurvey</returns>
+        public async System.Threading.Tasks.Task<PostHogSurvey> SurveysRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = await SurveysRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = await SurveysRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1390,8 +1390,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Survey>> SurveysRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSurvey>> SurveysRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1430,7 +1430,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Survey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSurvey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1450,12 +1450,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Survey</returns>
-        public Survey SurveysUpdate(Guid id, string projectId, Survey survey, int operationIndex = 0)
+        /// <returns>PostHogSurvey</returns>
+        public PostHogSurvey SurveysUpdate(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = SurveysUpdateWithHttpInfo(id, projectId, survey);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = SurveysUpdateWithHttpInfo(id, projectId, postHogSurvey);
             return localVarResponse.Data;
         }
 
@@ -1465,10 +1465,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Survey</returns>
-        public DotPostHog.Client.ApiResponse<Survey> SurveysUpdateWithHttpInfo(Guid id, string projectId, Survey survey, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSurvey</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSurvey> SurveysUpdateWithHttpInfo(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1476,10 +1476,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SurveysApi->SurveysUpdate");
             }
 
-            // verify the required parameter 'survey' is set
-            if (survey == null)
+            // verify the required parameter 'postHogSurvey' is set
+            if (postHogSurvey == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'survey' when calling SurveysApi->SurveysUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSurvey' when calling SurveysApi->SurveysUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1509,14 +1509,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = survey;
+            localVarRequestOptions.Data = postHogSurvey;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Survey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogSurvey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SurveysUpdate", localVarResponse);
@@ -1535,13 +1535,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Survey</returns>
-        public async System.Threading.Tasks.Task<Survey> SurveysUpdateAsync(Guid id, string projectId, Survey survey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSurvey</returns>
+        public async System.Threading.Tasks.Task<PostHogSurvey> SurveysUpdateAsync(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Survey> localVarResponse = await SurveysUpdateWithHttpInfoAsync(id, projectId, survey, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSurvey> localVarResponse = await SurveysUpdateWithHttpInfoAsync(id, projectId, postHogSurvey, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1551,11 +1551,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this survey.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="survey"></param>
+        /// <param name="postHogSurvey"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Survey>> SurveysUpdateWithHttpInfoAsync(Guid id, string projectId, Survey survey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSurvey)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSurvey>> SurveysUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogSurvey postHogSurvey, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1563,10 +1563,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SurveysApi->SurveysUpdate");
             }
 
-            // verify the required parameter 'survey' is set
-            if (survey == null)
+            // verify the required parameter 'postHogSurvey' is set
+            if (postHogSurvey == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'survey' when calling SurveysApi->SurveysUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSurvey' when calling SurveysApi->SurveysUpdate");
             }
 
 
@@ -1597,14 +1597,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = survey;
+            localVarRequestOptions.Data = postHogSurvey;
 
             localVarRequestOptions.Operation = "SurveysApi.SurveysUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Survey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogSurvey>("/api/projects/{project_id}/surveys/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

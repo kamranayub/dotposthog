@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Cohort cohort = null;
-            //var response = instance.CohortsCreate(projectId, cohort);
-            //Assert.IsType<Cohort>(response);
+            //PostHogCohort postHogCohort = null;
+            //var response = instance.CohortsCreate(projectId, postHogCohort);
+            //Assert.IsType<PostHogCohort>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.CohortsDuplicateAsStaticCohortRetrieve(id, projectId);
-            //Assert.IsType<Cohort>(response);
+            //Assert.IsType<PostHogCohort>(response);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.CohortsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedCohortList>(response);
+            //Assert.IsType<PostHogPaginatedCohortList>(response);
         }
 
         /// <summary>
@@ -115,9 +115,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedCohort patchedCohort = null;
-            //var response = instance.CohortsPartialUpdate(id, projectId, patchedCohort);
-            //Assert.IsType<Cohort>(response);
+            //PostHogPatchedCohort postHogPatchedCohort = null;
+            //var response = instance.CohortsPartialUpdate(id, projectId, postHogPatchedCohort);
+            //Assert.IsType<PostHogCohort>(response);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.CohortsPersonsRetrieve(id, projectId, format);
-            //Assert.IsType<Cohort>(response);
+            //Assert.IsType<PostHogCohort>(response);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.CohortsRetrieve(id, projectId);
-            //Assert.IsType<Cohort>(response);
+            //Assert.IsType<PostHogCohort>(response);
         }
 
         /// <summary>
@@ -156,9 +156,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //Cohort cohort = null;
-            //var response = instance.CohortsUpdate(id, projectId, cohort);
-            //Assert.IsType<Cohort>(response);
+            //PostHogCohort postHogCohort = null;
+            //var response = instance.CohortsUpdate(id, projectId, postHogCohort);
+            //Assert.IsType<PostHogCohort>(response);
         }
     }
 }

@@ -28,7 +28,7 @@ All URIs are relative to *http://localhost*
 
 <a id="funnels"></a>
 # **Funnels**
-> FunnelStepsResults Funnels (string projectId, string format = null, Funnel funnel = null)
+> PostHogFunnelStepsResults Funnels (string projectId, string format = null, PostHogFunnel postHogFunnel = null)
 
 
 
@@ -51,11 +51,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var funnel = new Funnel(); // Funnel |  (optional) 
+            var postHogFunnel = new PostHogFunnel(); // PostHogFunnel |  (optional) 
 
             try
             {
-                FunnelStepsResults result = apiInstance.Funnels(projectId, format, funnel);
+                PostHogFunnelStepsResults result = apiInstance.Funnels(projectId, format, postHogFunnel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -75,7 +75,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<FunnelStepsResults> response = apiInstance.FunnelsWithHttpInfo(projectId, format, funnel);
+    ApiResponse<PostHogFunnelStepsResults> response = apiInstance.FunnelsWithHttpInfo(projectId, format, postHogFunnel);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -94,11 +94,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **funnel** | [**Funnel**](Funnel.md) |  | [optional]  |
+| **postHogFunnel** | [**PostHogFunnel**](PostHogFunnel.md) |  | [optional]  |
 
 ### Return type
 
-[**FunnelStepsResults**](FunnelStepsResults.md)
+[**PostHogFunnelStepsResults**](PostHogFunnelStepsResults.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a id="insightsactivityretrieve"></a>
 # **InsightsActivityRetrieve**
-> Insight InsightsActivityRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsActivityRetrieve (string projectId, string format = null)
 
 
 
@@ -145,7 +145,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsActivityRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsActivityRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -165,7 +165,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsActivityRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsActivityRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -187,7 +187,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
 
 <a id="insightsactivityretrieve2"></a>
 # **InsightsActivityRetrieve2**
-> Insight InsightsActivityRetrieve2 (int id, string projectId, string format = null)
+> PostHogInsight InsightsActivityRetrieve2 (int id, string projectId, string format = null)
 
 
 
@@ -235,7 +235,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsActivityRetrieve2(id, projectId, format);
+                PostHogInsight result = apiInstance.InsightsActivityRetrieve2(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsActivityRetrieve2WithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsActivityRetrieve2WithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -278,7 +278,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ No authorization required
 
 <a id="insightscancelcreate"></a>
 # **InsightsCancelCreate**
-> Insight InsightsCancelCreate (string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsCancelCreate (string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -322,11 +322,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsCancelCreate(projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsCancelCreate(projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -346,7 +346,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsCancelCreateWithHttpInfo(projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsCancelCreateWithHttpInfo(projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -365,11 +365,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ No authorization required
 
 <a id="insightscreate"></a>
 # **InsightsCreate**
-> Insight InsightsCreate (string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsCreate (string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -413,11 +413,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsCreate(projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsCreate(projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -437,7 +437,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsCreateWithHttpInfo(projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsCreateWithHttpInfo(projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -456,11 +456,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ No authorization required
 
 <a id="insightsfunnelcorrelationcreate"></a>
 # **InsightsFunnelCorrelationCreate**
-> Insight InsightsFunnelCorrelationCreate (string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsFunnelCorrelationCreate (string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -593,11 +593,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsFunnelCorrelationCreate(projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsFunnelCorrelationCreate(projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -617,7 +617,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsFunnelCorrelationCreateWithHttpInfo(projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsFunnelCorrelationCreateWithHttpInfo(projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -636,11 +636,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ No authorization required
 
 <a id="insightsfunnelcorrelationretrieve"></a>
 # **InsightsFunnelCorrelationRetrieve**
-> Insight InsightsFunnelCorrelationRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsFunnelCorrelationRetrieve (string projectId, string format = null)
 
 
 
@@ -687,7 +687,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsFunnelCorrelationRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsFunnelCorrelationRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -707,7 +707,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -729,7 +729,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -750,7 +750,7 @@ No authorization required
 
 <a id="insightsfunnelretrieve"></a>
 # **InsightsFunnelRetrieve**
-> Insight InsightsFunnelRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsFunnelRetrieve (string projectId, string format = null)
 
 
 
@@ -776,7 +776,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsFunnelRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsFunnelRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -796,7 +796,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsFunnelRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsFunnelRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -818,7 +818,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -839,7 +839,7 @@ No authorization required
 
 <a id="insightslist"></a>
 # **InsightsList**
-> PaginatedInsightList InsightsList (string projectId, int? createdBy = null, string format = null, int? limit = null, int? offset = null, string shortId = null)
+> PostHogPaginatedInsightList InsightsList (string projectId, int? createdBy = null, string format = null, int? limit = null, int? offset = null, string shortId = null)
 
 
 
@@ -869,7 +869,7 @@ namespace Example
 
             try
             {
-                PaginatedInsightList result = apiInstance.InsightsList(projectId, createdBy, format, limit, offset, shortId);
+                PostHogPaginatedInsightList result = apiInstance.InsightsList(projectId, createdBy, format, limit, offset, shortId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -889,7 +889,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedInsightList> response = apiInstance.InsightsListWithHttpInfo(projectId, createdBy, format, limit, offset, shortId);
+    ApiResponse<PostHogPaginatedInsightList> response = apiInstance.InsightsListWithHttpInfo(projectId, createdBy, format, limit, offset, shortId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -915,7 +915,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedInsightList**](PaginatedInsightList.md)
+[**PostHogPaginatedInsightList**](PostHogPaginatedInsightList.md)
 
 ### Authorization
 
@@ -936,7 +936,7 @@ No authorization required
 
 <a id="insightsmylastviewedretrieve"></a>
 # **InsightsMyLastViewedRetrieve**
-> Insight InsightsMyLastViewedRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsMyLastViewedRetrieve (string projectId, string format = null)
 
 
 
@@ -964,7 +964,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsMyLastViewedRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsMyLastViewedRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -984,7 +984,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsMyLastViewedRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsMyLastViewedRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1006,7 +1006,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1027,7 +1027,7 @@ No authorization required
 
 <a id="insightspartialupdate"></a>
 # **InsightsPartialUpdate**
-> Insight InsightsPartialUpdate (int id, string projectId, string format = null, PatchedInsight patchedInsight = null)
+> PostHogInsight InsightsPartialUpdate (int id, string projectId, string format = null, PostHogPatchedInsight postHogPatchedInsight = null)
 
 
 
@@ -1051,11 +1051,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this insight.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var patchedInsight = new PatchedInsight(); // PatchedInsight |  (optional) 
+            var postHogPatchedInsight = new PostHogPatchedInsight(); // PostHogPatchedInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsPartialUpdate(id, projectId, format, patchedInsight);
+                PostHogInsight result = apiInstance.InsightsPartialUpdate(id, projectId, format, postHogPatchedInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1075,7 +1075,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsPartialUpdateWithHttpInfo(id, projectId, format, patchedInsight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1095,11 +1095,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this insight. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **patchedInsight** | [**PatchedInsight**](PatchedInsight.md) |  | [optional]  |
+| **postHogPatchedInsight** | [**PostHogPatchedInsight**](PostHogPatchedInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1120,7 +1120,7 @@ No authorization required
 
 <a id="insightspathcreate"></a>
 # **InsightsPathCreate**
-> Insight InsightsPathCreate (string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsPathCreate (string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -1143,11 +1143,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsPathCreate(projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsPathCreate(projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1167,7 +1167,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsPathCreateWithHttpInfo(projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsPathCreateWithHttpInfo(projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1186,11 +1186,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1211,7 +1211,7 @@ No authorization required
 
 <a id="insightspathretrieve"></a>
 # **InsightsPathRetrieve**
-> Insight InsightsPathRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsPathRetrieve (string projectId, string format = null)
 
 
 
@@ -1237,7 +1237,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsPathRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsPathRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1257,7 +1257,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsPathRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsPathRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1279,7 +1279,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1300,7 +1300,7 @@ No authorization required
 
 <a id="insightsretentionretrieve"></a>
 # **InsightsRetentionRetrieve**
-> Insight InsightsRetentionRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsRetentionRetrieve (string projectId, string format = null)
 
 
 
@@ -1326,7 +1326,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsRetentionRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsRetentionRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1346,7 +1346,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsRetentionRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsRetentionRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1368,7 +1368,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1389,7 +1389,7 @@ No authorization required
 
 <a id="insightsretrieve"></a>
 # **InsightsRetrieve**
-> Insight InsightsRetrieve (int id, string projectId, string format = null, int? fromDashboard = null, bool? refresh = null)
+> PostHogInsight InsightsRetrieve (int id, string projectId, string format = null, int? fromDashboard = null, bool? refresh = null)
 
 
 
@@ -1418,7 +1418,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsRetrieve(id, projectId, format, fromDashboard, refresh);
+                PostHogInsight result = apiInstance.InsightsRetrieve(id, projectId, format, fromDashboard, refresh);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1438,7 +1438,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsRetrieveWithHttpInfo(id, projectId, format, fromDashboard, refresh);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsRetrieveWithHttpInfo(id, projectId, format, fromDashboard, refresh);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1463,7 +1463,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1484,7 +1484,7 @@ No authorization required
 
 <a id="insightstimingcreate"></a>
 # **InsightsTimingCreate**
-> Insight InsightsTimingCreate (string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsTimingCreate (string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -1507,11 +1507,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsTimingCreate(projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsTimingCreate(projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1531,7 +1531,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsTimingCreateWithHttpInfo(projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsTimingCreateWithHttpInfo(projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1550,11 +1550,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1575,7 +1575,7 @@ No authorization required
 
 <a id="insightstrendretrieve"></a>
 # **InsightsTrendRetrieve**
-> Insight InsightsTrendRetrieve (string projectId, string format = null)
+> PostHogInsight InsightsTrendRetrieve (string projectId, string format = null)
 
 
 
@@ -1601,7 +1601,7 @@ namespace Example
 
             try
             {
-                Insight result = apiInstance.InsightsTrendRetrieve(projectId, format);
+                PostHogInsight result = apiInstance.InsightsTrendRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1621,7 +1621,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsTrendRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsTrendRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1643,7 +1643,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1664,7 +1664,7 @@ No authorization required
 
 <a id="insightsupdate"></a>
 # **InsightsUpdate**
-> Insight InsightsUpdate (int id, string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsUpdate (int id, string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -1688,11 +1688,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this insight.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsUpdate(id, projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsUpdate(id, projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1712,7 +1712,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsUpdateWithHttpInfo(id, projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsUpdateWithHttpInfo(id, projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1732,11 +1732,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this insight. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1757,7 +1757,7 @@ No authorization required
 
 <a id="insightsviewedcreate"></a>
 # **InsightsViewedCreate**
-> Insight InsightsViewedCreate (int id, string projectId, string format = null, Insight insight = null)
+> PostHogInsight InsightsViewedCreate (int id, string projectId, string format = null, PostHogInsight postHogInsight = null)
 
 
 
@@ -1781,11 +1781,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this insight.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var insight = new Insight(); // Insight |  (optional) 
+            var postHogInsight = new PostHogInsight(); // PostHogInsight |  (optional) 
 
             try
             {
-                Insight result = apiInstance.InsightsViewedCreate(id, projectId, format, insight);
+                PostHogInsight result = apiInstance.InsightsViewedCreate(id, projectId, format, postHogInsight);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1805,7 +1805,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Insight> response = apiInstance.InsightsViewedCreateWithHttpInfo(id, projectId, format, insight);
+    ApiResponse<PostHogInsight> response = apiInstance.InsightsViewedCreateWithHttpInfo(id, projectId, format, postHogInsight);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1825,11 +1825,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this insight. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **insight** | [**Insight**](Insight.md) |  | [optional]  |
+| **postHogInsight** | [**PostHogInsight**](PostHogInsight.md) |  | [optional]  |
 
 ### Return type
 
-[**Insight**](Insight.md)
+[**PostHogInsight**](PostHogInsight.md)
 
 ### Authorization
 
@@ -1850,7 +1850,7 @@ No authorization required
 
 <a id="trends"></a>
 # **Trends**
-> TrendResults Trends (string projectId, string format = null, Trend trend = null)
+> PostHogTrendResults Trends (string projectId, string format = null, PostHogTrend postHogTrend = null)
 
 
 
@@ -1873,11 +1873,11 @@ namespace Example
             var apiInstance = new InsightsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var trend = new Trend(); // Trend |  (optional) 
+            var postHogTrend = new PostHogTrend(); // PostHogTrend |  (optional) 
 
             try
             {
-                TrendResults result = apiInstance.Trends(projectId, format, trend);
+                PostHogTrendResults result = apiInstance.Trends(projectId, format, postHogTrend);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1897,7 +1897,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<TrendResults> response = apiInstance.TrendsWithHttpInfo(projectId, format, trend);
+    ApiResponse<PostHogTrendResults> response = apiInstance.TrendsWithHttpInfo(projectId, format, postHogTrend);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1916,11 +1916,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **trend** | [**Trend**](Trend.md) |  | [optional]  |
+| **postHogTrend** | [**PostHogTrend**](PostHogTrend.md) |  | [optional]  |
 
 ### Return type
 
-[**TrendResults**](TrendResults.md)
+[**PostHogTrendResults**](PostHogTrendResults.md)
 
 ### Authorization
 

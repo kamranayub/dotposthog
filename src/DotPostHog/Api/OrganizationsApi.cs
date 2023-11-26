@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsCreate(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsCreate(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationDomainList</returns>
-        PaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationDomainList</returns>
+        PostHogPaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationDomainList</returns>
-        ApiResponse<PaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationDomainList</returns>
+        ApiResponse<PostHogPaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -125,8 +125,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,18 +138,18 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -160,20 +160,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -184,10 +184,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -241,10 +241,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        OrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>PostHogOrganizationInvite</returns>
+        PostHogOrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -254,19 +254,19 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        ApiResponse<OrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        ApiResponse<PostHogOrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        OrganizationInvite InvitesCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>PostHogOrganizationInvite</returns>
+        PostHogOrganizationInvite InvitesCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -276,10 +276,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        ApiResponse<OrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        ApiResponse<PostHogOrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -310,8 +310,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationInviteList</returns>
-        PaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationInviteList</returns>
+        PostHogPaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -324,8 +324,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationInviteList</returns>
-        ApiResponse<PaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationInviteList</returns>
+        ApiResponse<PostHogPaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -356,8 +356,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationMemberList</returns>
-        PaginatedOrganizationMemberList MembersList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationMemberList</returns>
+        PostHogPaginatedOrganizationMemberList MembersList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -370,18 +370,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationMemberList</returns>
-        ApiResponse<PaginatedOrganizationMemberList> MembersListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationMemberList</returns>
+        ApiResponse<PostHogPaginatedOrganizationMemberList> MembersListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationMember</returns>
-        OrganizationMember MembersPartialUpdate(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0);
+        /// <returns>PostHogOrganizationMember</returns>
+        PostHogOrganizationMember MembersPartialUpdate(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -392,20 +392,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationMember</returns>
-        ApiResponse<OrganizationMember> MembersPartialUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationMember</returns>
+        ApiResponse<PostHogOrganizationMember> MembersPartialUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationMember</returns>
-        OrganizationMember MembersUpdate(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0);
+        /// <returns>PostHogOrganizationMember</returns>
+        PostHogOrganizationMember MembersUpdate(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -416,18 +416,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationMember</returns>
-        ApiResponse<OrganizationMember> MembersUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationMember</returns>
+        ApiResponse<PostHogOrganizationMember> MembersUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -438,8 +438,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -447,8 +447,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -460,17 +460,17 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsCreate(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsCreate(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -480,10 +480,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsCreateWithHttpInfo(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -514,8 +514,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginList</returns>
-        PaginatedPluginList PipelineTransformationsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPluginList</returns>
+        PostHogPaginatedPluginList PipelineTransformationsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -528,18 +528,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginList</returns>
-        ApiResponse<PaginatedPluginList> PipelineTransformationsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPluginList</returns>
+        ApiResponse<PostHogPaginatedPluginList> PipelineTransformationsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsPartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -550,18 +550,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -572,8 +572,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -581,30 +581,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -616,120 +594,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsUpdate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PipelineTransformationsUpgradeCreate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PipelineTransformationsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -737,8 +603,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -750,17 +616,16 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsCreate(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -770,10 +635,145 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsCreateWithHttpInfo(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsUpdate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PipelineTransformationsUpgradeCreate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PipelineTransformationsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsCreate(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -804,8 +804,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginList</returns>
-        PaginatedPluginList PluginsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPluginList</returns>
+        PostHogPaginatedPluginList PluginsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -818,18 +818,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginList</returns>
-        ApiResponse<PaginatedPluginList> PluginsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPluginList</returns>
+        ApiResponse<PostHogPaginatedPluginList> PluginsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsPartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -840,18 +840,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -862,8 +862,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -871,30 +871,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -906,38 +884,17 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsUpdate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -948,20 +905,39 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsUpdate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -972,20 +948,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        Plugin PluginsUpgradeCreate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -996,19 +972,43 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        ApiResponse<Plugin> PluginsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPlugin</returns>
+        PostHogPlugin PluginsUpgradeCreate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        ApiResponse<PostHogPlugin> PluginsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1018,10 +1018,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -1052,8 +1052,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationResourceAccessList</returns>
-        PaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationResourceAccessList</returns>
+        PostHogPaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1066,18 +1066,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationResourceAccessList</returns>
-        ApiResponse<PaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationResourceAccessList</returns>
+        ApiResponse<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1088,10 +1088,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -1099,8 +1099,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1112,18 +1112,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1134,19 +1134,19 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        Role RolesCreate(string parentLookupOrganizationId, Role role, int operationIndex = 0);
+        /// <returns>PostHogRole</returns>
+        PostHogRole RolesCreate(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1156,10 +1156,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        ApiResponse<Role> RolesCreateWithHttpInfo(string parentLookupOrganizationId, Role role, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogRole</returns>
+        ApiResponse<PostHogRole> RolesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -1190,8 +1190,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedRoleList</returns>
-        PaginatedRoleList RolesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedRoleList</returns>
+        PostHogPaginatedRoleList RolesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1204,18 +1204,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedRoleList</returns>
-        ApiResponse<PaginatedRoleList> RolesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedRoleList</returns>
+        ApiResponse<PostHogPaginatedRoleList> RolesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        Role RolesPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0);
+        /// <returns>PostHogRole</returns>
+        PostHogRole RolesPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1226,10 +1226,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        ApiResponse<Role> RolesPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogRole</returns>
+        ApiResponse<PostHogRole> RolesPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -1237,8 +1237,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        Role RolesRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogRole</returns>
+        PostHogRole RolesRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1250,18 +1250,18 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        ApiResponse<Role> RolesRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogRole</returns>
+        ApiResponse<PostHogRole> RolesRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>RoleMembership</returns>
-        RoleMembership RolesRoleMembershipsCreate(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0);
+        /// <returns>PostHogRoleMembership</returns>
+        PostHogRoleMembership RolesRoleMembershipsCreate(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1272,10 +1272,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of RoleMembership</returns>
-        ApiResponse<RoleMembership> RolesRoleMembershipsCreateWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogRoleMembership</returns>
+        ApiResponse<PostHogRoleMembership> RolesRoleMembershipsCreateWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -1309,8 +1309,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedRoleMembershipList</returns>
-        PaginatedRoleMembershipList RolesRoleMembershipsList(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedRoleMembershipList</returns>
+        PostHogPaginatedRoleMembershipList RolesRoleMembershipsList(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1324,18 +1324,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedRoleMembershipList</returns>
-        ApiResponse<PaginatedRoleMembershipList> RolesRoleMembershipsListWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedRoleMembershipList</returns>
+        ApiResponse<PostHogPaginatedRoleMembershipList> RolesRoleMembershipsListWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        Role RolesUpdate(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0);
+        /// <returns>PostHogRole</returns>
+        PostHogRole RolesUpdate(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -1346,10 +1346,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        ApiResponse<Role> RolesUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogRole</returns>
+        ApiResponse<PostHogRole> RolesUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -1367,11 +1367,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1381,11 +1381,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1425,8 +1425,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationDomainList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationDomainList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1440,8 +1440,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationDomainList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationDomainList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1451,11 +1451,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1466,11 +1466,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1482,8 +1482,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1496,8 +1496,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1507,11 +1507,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1522,11 +1522,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1536,11 +1536,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1551,11 +1551,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1616,11 +1616,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        System.Threading.Tasks.Task<OrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1630,11 +1630,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1643,11 +1643,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        System.Threading.Tasks.Task<OrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1657,11 +1657,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1701,8 +1701,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationInviteList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationInviteList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1716,8 +1716,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationInviteList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationInviteList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1757,8 +1757,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationMemberList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationMemberList> MembersListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationMemberList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationMemberList> MembersListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1772,8 +1772,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationMemberList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationMemberList>> MembersListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationMemberList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationMemberList>> MembersListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1783,11 +1783,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationMember</returns>
-        System.Threading.Tasks.Task<OrganizationMember> MembersPartialUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationMember</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationMember> MembersPartialUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1798,11 +1798,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationMember>> MembersPartialUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationMember>> MembersPartialUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1812,11 +1812,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationMember</returns>
-        System.Threading.Tasks.Task<OrganizationMember> MembersUpdateAsync(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationMember</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationMember> MembersUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1827,11 +1827,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationMember>> MembersUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationMember>> MembersUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1842,8 +1842,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1855,8 +1855,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1868,8 +1868,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1882,8 +1882,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1892,11 +1892,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsCreateAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsCreateAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1906,11 +1906,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsCreateWithHttpInfoAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1950,8 +1950,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginList</returns>
-        System.Threading.Tasks.Task<PaginatedPluginList> PipelineTransformationsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPluginList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPluginList> PipelineTransformationsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1965,8 +1965,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPluginList>> PipelineTransformationsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPluginList>> PipelineTransformationsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1976,11 +1976,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1991,11 +1991,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2006,8 +2006,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2019,8 +2019,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2032,35 +2032,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2073,145 +2046,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpdateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpgradeCreateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PipelineTransformationsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2223,8 +2059,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2237,8 +2073,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2247,11 +2083,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsCreateAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2261,11 +2096,176 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsCreateWithHttpInfoAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpdateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpgradeCreateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PipelineTransformationsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsCreateAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="postHogPlugin"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2305,8 +2305,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginList</returns>
-        System.Threading.Tasks.Task<PaginatedPluginList> PluginsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPluginList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPluginList> PluginsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2320,8 +2320,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPluginList>> PluginsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPluginList>> PluginsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2331,11 +2331,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2346,11 +2346,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2361,8 +2361,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2374,8 +2374,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2387,35 +2387,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin.</param>
-        /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2428,8 +2401,35 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin.</param>
+        /// <param name="parentLookupOrganizationId"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2440,8 +2440,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2453,8 +2453,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2464,11 +2464,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsUpdateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsUpdateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2479,11 +2479,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2493,11 +2493,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2508,11 +2508,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2522,11 +2522,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        System.Threading.Tasks.Task<Plugin> PluginsUpgradeCreateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPlugin</returns>
+        System.Threading.Tasks.Task<PostHogPlugin> PluginsUpgradeCreateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2537,11 +2537,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Plugin>> PluginsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPlugin>> PluginsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2550,11 +2550,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2564,11 +2564,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2608,8 +2608,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationResourceAccessList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationResourceAccessList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2623,8 +2623,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationResourceAccessList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationResourceAccessList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2634,11 +2634,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2649,11 +2649,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2665,8 +2665,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2679,8 +2679,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2690,11 +2690,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2705,11 +2705,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2718,11 +2718,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        System.Threading.Tasks.Task<Role> RolesCreateAsync(string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogRole</returns>
+        System.Threading.Tasks.Task<PostHogRole> RolesCreateAsync(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2732,11 +2732,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Role>> RolesCreateWithHttpInfoAsync(string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogRole>> RolesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2776,8 +2776,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedRoleList</returns>
-        System.Threading.Tasks.Task<PaginatedRoleList> RolesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedRoleList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedRoleList> RolesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2791,8 +2791,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedRoleList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedRoleList>> RolesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedRoleList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedRoleList>> RolesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2802,11 +2802,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        System.Threading.Tasks.Task<Role> RolesPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogRole</returns>
+        System.Threading.Tasks.Task<PostHogRole> RolesPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2817,11 +2817,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Role>> RolesPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogRole>> RolesPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2833,8 +2833,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        System.Threading.Tasks.Task<Role> RolesRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogRole</returns>
+        System.Threading.Tasks.Task<PostHogRole> RolesRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2847,8 +2847,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Role>> RolesRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogRole>> RolesRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2858,11 +2858,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of RoleMembership</returns>
-        System.Threading.Tasks.Task<RoleMembership> RolesRoleMembershipsCreateAsync(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogRoleMembership</returns>
+        System.Threading.Tasks.Task<PostHogRoleMembership> RolesRoleMembershipsCreateAsync(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2873,11 +2873,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (RoleMembership)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoleMembership>> RolesRoleMembershipsCreateWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogRoleMembership)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogRoleMembership>> RolesRoleMembershipsCreateWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2920,8 +2920,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedRoleMembershipList</returns>
-        System.Threading.Tasks.Task<PaginatedRoleMembershipList> RolesRoleMembershipsListAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedRoleMembershipList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedRoleMembershipList> RolesRoleMembershipsListAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2936,8 +2936,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedRoleMembershipList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedRoleMembershipList>> RolesRoleMembershipsListWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedRoleMembershipList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedRoleMembershipList>> RolesRoleMembershipsListWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2947,11 +2947,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        System.Threading.Tasks.Task<Role> RolesUpdateAsync(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogRole</returns>
+        System.Threading.Tasks.Task<PostHogRole> RolesUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2962,11 +2962,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Role>> RolesUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogRole>> RolesUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -3092,12 +3092,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsCreate(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsCreate(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsCreateWithHttpInfo(parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -3106,10 +3106,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3117,10 +3117,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -3149,14 +3149,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsCreate", localVarResponse);
@@ -3174,13 +3174,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3189,11 +3189,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3201,10 +3201,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsCreate");
             }
 
 
@@ -3234,14 +3234,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3409,10 +3409,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationDomainList</returns>
-        public PaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationDomainList</returns>
+        public PostHogPaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> localVarResponse = DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> localVarResponse = DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -3424,8 +3424,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationDomainList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationDomainList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3470,7 +3470,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsList", localVarResponse);
@@ -3492,10 +3492,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationDomainList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationDomainList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> localVarResponse = await DomainsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> localVarResponse = await DomainsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3508,8 +3508,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationDomainList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationDomainList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3555,7 +3555,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3575,12 +3575,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -3590,10 +3590,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3628,14 +3628,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationDomain;
+            localVarRequestOptions.Data = postHogPatchedOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsPartialUpdate", localVarResponse);
@@ -3654,13 +3654,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3670,11 +3670,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3710,14 +3710,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationDomain;
+            localVarRequestOptions.Data = postHogPatchedOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3738,10 +3738,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -3752,8 +3752,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3791,7 +3791,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsRetrieve", localVarResponse);
@@ -3812,10 +3812,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3827,8 +3827,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3867,7 +3867,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3887,12 +3887,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -3902,10 +3902,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -3913,10 +3913,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsUpdate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -3946,14 +3946,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsUpdate", localVarResponse);
@@ -3972,13 +3972,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3988,11 +3988,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4000,10 +4000,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsUpdate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsUpdate");
             }
 
 
@@ -4034,14 +4034,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4061,12 +4061,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -4076,10 +4076,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4087,10 +4087,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsVerifyCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsVerifyCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsVerifyCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -4120,14 +4120,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsVerifyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsVerifyCreate", localVarResponse);
@@ -4146,13 +4146,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsVerifyCreateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsVerifyCreateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4162,11 +4162,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4174,10 +4174,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->DomainsVerifyCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling OrganizationsApi->DomainsVerifyCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling OrganizationsApi->DomainsVerifyCreate");
             }
 
 
@@ -4208,14 +4208,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "OrganizationsApi.DomainsVerifyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4532,12 +4532,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        public OrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>PostHogOrganizationInvite</returns>
+        public PostHogOrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
             return localVarResponse.Data;
         }
 
@@ -4546,10 +4546,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4557,10 +4557,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->InvitesBulkCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling OrganizationsApi->InvitesBulkCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling OrganizationsApi->InvitesBulkCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -4589,14 +4589,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "OrganizationsApi.InvitesBulkCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesBulkCreate", localVarResponse);
@@ -4614,13 +4614,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        public async System.Threading.Tasks.Task<OrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = await InvitesBulkCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = await InvitesBulkCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4629,11 +4629,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4641,10 +4641,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->InvitesBulkCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling OrganizationsApi->InvitesBulkCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling OrganizationsApi->InvitesBulkCreate");
             }
 
 
@@ -4674,14 +4674,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "OrganizationsApi.InvitesBulkCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4700,12 +4700,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        public OrganizationInvite InvitesCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>PostHogOrganizationInvite</returns>
+        public PostHogOrganizationInvite InvitesCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = InvitesCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = InvitesCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
             return localVarResponse.Data;
         }
 
@@ -4714,10 +4714,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4725,10 +4725,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->InvitesCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling OrganizationsApi->InvitesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling OrganizationsApi->InvitesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -4757,14 +4757,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "OrganizationsApi.InvitesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesCreate", localVarResponse);
@@ -4782,13 +4782,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        public async System.Threading.Tasks.Task<OrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = await InvitesCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = await InvitesCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4797,11 +4797,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -4809,10 +4809,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->InvitesCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling OrganizationsApi->InvitesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling OrganizationsApi->InvitesCreate");
             }
 
 
@@ -4842,14 +4842,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "OrganizationsApi.InvitesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5017,10 +5017,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationInviteList</returns>
-        public PaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationInviteList</returns>
+        public PostHogPaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> localVarResponse = InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> localVarResponse = InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -5032,8 +5032,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationInviteList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationInviteList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5078,7 +5078,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesList", localVarResponse);
@@ -5100,10 +5100,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationInviteList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationInviteList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> localVarResponse = await InvitesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> localVarResponse = await InvitesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5116,8 +5116,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationInviteList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationInviteList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5163,7 +5163,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5331,10 +5331,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationMemberList</returns>
-        public PaginatedOrganizationMemberList MembersList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationMemberList</returns>
+        public PostHogPaginatedOrganizationMemberList MembersList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationMemberList> localVarResponse = MembersListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationMemberList> localVarResponse = MembersListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -5346,8 +5346,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationMemberList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationMemberList> MembersListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationMemberList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationMemberList> MembersListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5392,7 +5392,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationMemberList>("/api/organizations/{parent_lookup_organization_id}/members/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationMemberList>("/api/organizations/{parent_lookup_organization_id}/members/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MembersList", localVarResponse);
@@ -5414,10 +5414,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationMemberList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationMemberList> MembersListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationMemberList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationMemberList> MembersListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationMemberList> localVarResponse = await MembersListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationMemberList> localVarResponse = await MembersListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5430,8 +5430,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationMemberList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationMemberList>> MembersListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationMemberList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationMemberList>> MembersListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5477,7 +5477,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationMemberList>("/api/organizations/{parent_lookup_organization_id}/members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationMemberList>("/api/organizations/{parent_lookup_organization_id}/members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5497,12 +5497,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationMember</returns>
-        public OrganizationMember MembersPartialUpdate(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0)
+        /// <returns>PostHogOrganizationMember</returns>
+        public PostHogOrganizationMember MembersPartialUpdate(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationMember> localVarResponse = MembersPartialUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, patchedOrganizationMember);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationMember> localVarResponse = MembersPartialUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, postHogPatchedOrganizationMember);
             return localVarResponse.Data;
         }
 
@@ -5512,10 +5512,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationMember</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationMember> MembersPartialUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationMember> MembersPartialUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5550,14 +5550,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(userUuid)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationMember;
+            localVarRequestOptions.Data = postHogPatchedOrganizationMember;
 
             localVarRequestOptions.Operation = "OrganizationsApi.MembersPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<OrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogOrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MembersPartialUpdate", localVarResponse);
@@ -5576,13 +5576,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationMember</returns>
-        public async System.Threading.Tasks.Task<OrganizationMember> MembersPartialUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationMember</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationMember> MembersPartialUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationMember> localVarResponse = await MembersPartialUpdateWithHttpInfoAsync(parentLookupOrganizationId, userUuid, patchedOrganizationMember, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationMember> localVarResponse = await MembersPartialUpdateWithHttpInfoAsync(parentLookupOrganizationId, userUuid, postHogPatchedOrganizationMember, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5592,11 +5592,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="patchedOrganizationMember"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationMember>> MembersPartialUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PatchedOrganizationMember patchedOrganizationMember = default(PatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationMember>> MembersPartialUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PostHogPatchedOrganizationMember postHogPatchedOrganizationMember = default(PostHogPatchedOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5632,14 +5632,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(userUuid)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationMember;
+            localVarRequestOptions.Data = postHogPatchedOrganizationMember;
 
             localVarRequestOptions.Operation = "OrganizationsApi.MembersPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<OrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogOrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5659,12 +5659,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationMember</returns>
-        public OrganizationMember MembersUpdate(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0)
+        /// <returns>PostHogOrganizationMember</returns>
+        public PostHogOrganizationMember MembersUpdate(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationMember> localVarResponse = MembersUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, organizationMember);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationMember> localVarResponse = MembersUpdateWithHttpInfo(parentLookupOrganizationId, userUuid, postHogOrganizationMember);
             return localVarResponse.Data;
         }
 
@@ -5674,10 +5674,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationMember</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationMember> MembersUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationMember> MembersUpdateWithHttpInfo(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5712,14 +5712,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(userUuid)); // path parameter
-            localVarRequestOptions.Data = organizationMember;
+            localVarRequestOptions.Data = postHogOrganizationMember;
 
             localVarRequestOptions.Operation = "OrganizationsApi.MembersUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<OrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogOrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("MembersUpdate", localVarResponse);
@@ -5738,13 +5738,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationMember</returns>
-        public async System.Threading.Tasks.Task<OrganizationMember> MembersUpdateAsync(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationMember</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationMember> MembersUpdateAsync(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationMember> localVarResponse = await MembersUpdateWithHttpInfoAsync(parentLookupOrganizationId, userUuid, organizationMember, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationMember> localVarResponse = await MembersUpdateWithHttpInfoAsync(parentLookupOrganizationId, userUuid, postHogOrganizationMember, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5754,11 +5754,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="userUuid"></param>
-        /// <param name="organizationMember"> (optional)</param>
+        /// <param name="postHogOrganizationMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationMember>> MembersUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, OrganizationMember organizationMember = default(OrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationMember>> MembersUpdateWithHttpInfoAsync(string parentLookupOrganizationId, Guid userUuid, PostHogOrganizationMember postHogOrganizationMember = default(PostHogOrganizationMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5794,14 +5794,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(userUuid)); // path parameter
-            localVarRequestOptions.Data = organizationMember;
+            localVarRequestOptions.Data = postHogOrganizationMember;
 
             localVarRequestOptions.Operation = "OrganizationsApi.MembersUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<OrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogOrganizationMember>("/api/organizations/{parent_lookup_organization_id}/members/{user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5821,10 +5821,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -5834,8 +5834,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5872,7 +5872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsActivityRetrieve", localVarResponse);
@@ -5892,10 +5892,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsActivityRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsActivityRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5906,8 +5906,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -5945,7 +5945,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5966,10 +5966,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -5980,8 +5980,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6019,7 +6019,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/check_for_updates/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/check_for_updates/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsCheckForUpdatesRetrieve", localVarResponse);
@@ -6040,10 +6040,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6055,8 +6055,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6095,7 +6095,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/check_for_updates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/check_for_updates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6114,12 +6114,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsCreate(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsCreate(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsCreateWithHttpInfo(parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsCreateWithHttpInfo(parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -6128,10 +6128,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsCreateWithHttpInfo(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6165,14 +6165,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsCreate", localVarResponse);
@@ -6190,13 +6190,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsCreateAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsCreateAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsCreateWithHttpInfoAsync(parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6205,11 +6205,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsCreateWithHttpInfoAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6244,14 +6244,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6419,10 +6419,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginList</returns>
-        public PaginatedPluginList PipelineTransformationsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPluginList</returns>
+        public PostHogPaginatedPluginList PipelineTransformationsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginList> localVarResponse = PipelineTransformationsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> localVarResponse = PipelineTransformationsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -6434,8 +6434,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPluginList> PipelineTransformationsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPluginList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> PipelineTransformationsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6480,7 +6480,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsList", localVarResponse);
@@ -6502,10 +6502,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPluginList> PipelineTransformationsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPluginList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPluginList> PipelineTransformationsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginList> localVarResponse = await PipelineTransformationsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> localVarResponse = await PipelineTransformationsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6518,8 +6518,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPluginList>> PipelineTransformationsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList>> PipelineTransformationsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6565,7 +6565,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6585,12 +6585,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsPartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
             return localVarResponse.Data;
         }
 
@@ -6600,10 +6600,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6638,14 +6638,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsPartialUpdate", localVarResponse);
@@ -6664,13 +6664,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6680,11 +6680,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6720,14 +6720,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6747,10 +6747,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -6760,8 +6760,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6798,7 +6798,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/repository/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/repository/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsRepositoryRetrieve", localVarResponse);
@@ -6818,10 +6818,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6832,8 +6832,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6871,7 +6871,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/repository/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/repository/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6892,10 +6892,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -6906,8 +6906,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -6945,7 +6945,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsRetrieve", localVarResponse);
@@ -6966,10 +6966,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6981,8 +6981,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7021,7 +7021,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7042,10 +7042,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -7056,8 +7056,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7095,7 +7095,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/source/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/source/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsSourceRetrieve", localVarResponse);
@@ -7116,10 +7116,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsSourceRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsSourceRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7131,8 +7131,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7171,7 +7171,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7191,10 +7191,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -7204,8 +7204,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7242,7 +7242,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/unused/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/unused/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsUnusedRetrieve", localVarResponse);
@@ -7262,10 +7262,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7276,8 +7276,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7315,7 +7315,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/unused/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/unused/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7335,12 +7335,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsUpdate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsUpdate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsUpdateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -7350,10 +7350,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7388,14 +7388,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsUpdate", localVarResponse);
@@ -7414,13 +7414,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpdateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpdateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7430,11 +7430,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7470,14 +7470,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7497,12 +7497,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
             return localVarResponse.Data;
         }
 
@@ -7512,10 +7512,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7550,14 +7550,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpdateSourcePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/update_source/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/update_source/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsUpdateSourcePartialUpdate", localVarResponse);
@@ -7576,13 +7576,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7592,11 +7592,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7632,14 +7632,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpdateSourcePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/update_source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/update_source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7659,12 +7659,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PipelineTransformationsUpgradeCreate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PipelineTransformationsUpgradeCreate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PipelineTransformationsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PipelineTransformationsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -7674,10 +7674,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PipelineTransformationsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PipelineTransformationsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7712,14 +7712,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpgradeCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/upgrade/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/upgrade/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsUpgradeCreate", localVarResponse);
@@ -7738,13 +7738,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PipelineTransformationsUpgradeCreateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PipelineTransformationsUpgradeCreateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PipelineTransformationsUpgradeCreateWithHttpInfoAsync(id, parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PipelineTransformationsUpgradeCreateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7754,11 +7754,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PipelineTransformationsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PipelineTransformationsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7794,14 +7794,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PipelineTransformationsUpgradeCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/upgrade/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/pipeline_transformations/{id}/upgrade/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7821,10 +7821,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsActivityRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsActivityRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -7834,8 +7834,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsActivityRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7872,7 +7872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsActivityRetrieve", localVarResponse);
@@ -7892,10 +7892,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsActivityRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsActivityRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsActivityRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7906,8 +7906,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsActivityRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -7945,7 +7945,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -7966,10 +7966,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsCheckForUpdatesRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsCheckForUpdatesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -7980,8 +7980,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsCheckForUpdatesRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8019,7 +8019,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/check_for_updates/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/check_for_updates/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsCheckForUpdatesRetrieve", localVarResponse);
@@ -8040,10 +8040,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsCheckForUpdatesRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8055,8 +8055,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsCheckForUpdatesRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8095,7 +8095,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/check_for_updates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/check_for_updates/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8114,12 +8114,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsCreate(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsCreate(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsCreateWithHttpInfo(parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsCreateWithHttpInfo(parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -8128,10 +8128,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsCreateWithHttpInfo(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8165,14 +8165,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsCreate", localVarResponse);
@@ -8190,13 +8190,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsCreateAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsCreateAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsCreateWithHttpInfoAsync(parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8205,11 +8205,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsCreateWithHttpInfoAsync(string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8244,14 +8244,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8419,10 +8419,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginList</returns>
-        public PaginatedPluginList PluginsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPluginList</returns>
+        public PostHogPaginatedPluginList PluginsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginList> localVarResponse = PluginsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> localVarResponse = PluginsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -8434,8 +8434,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPluginList> PluginsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPluginList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> PluginsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8480,7 +8480,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsList", localVarResponse);
@@ -8502,10 +8502,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPluginList> PluginsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPluginList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPluginList> PluginsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginList> localVarResponse = await PluginsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList> localVarResponse = await PluginsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8518,8 +8518,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPluginList>> PluginsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPluginList>> PluginsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8565,7 +8565,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPluginList>("/api/organizations/{parent_lookup_organization_id}/plugins/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8585,12 +8585,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsPartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
             return localVarResponse.Data;
         }
 
@@ -8600,10 +8600,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8638,14 +8638,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsPartialUpdate", localVarResponse);
@@ -8664,13 +8664,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8680,11 +8680,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8720,14 +8720,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8747,10 +8747,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsRepositoryRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsRepositoryRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -8760,8 +8760,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsRepositoryRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8798,7 +8798,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/repository/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/repository/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsRepositoryRetrieve", localVarResponse);
@@ -8818,10 +8818,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsRepositoryRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsRepositoryRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsRepositoryRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8832,8 +8832,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsRepositoryRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8871,7 +8871,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/repository/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/repository/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8892,10 +8892,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -8906,8 +8906,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -8945,7 +8945,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsRetrieve", localVarResponse);
@@ -8966,10 +8966,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -8981,8 +8981,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9021,7 +9021,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9042,10 +9042,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsSourceRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsSourceRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -9056,8 +9056,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsSourceRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9095,7 +9095,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/source/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/source/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsSourceRetrieve", localVarResponse);
@@ -9116,10 +9116,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsSourceRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsSourceRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsSourceRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9131,8 +9131,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsSourceRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9171,7 +9171,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9191,10 +9191,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsUnusedRetrieve(string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsUnusedRetrieveWithHttpInfo(parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -9204,8 +9204,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsUnusedRetrieveWithHttpInfo(string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9242,7 +9242,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/unused/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/unused/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsUnusedRetrieve", localVarResponse);
@@ -9262,10 +9262,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsUnusedRetrieveAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsUnusedRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsUnusedRetrieveWithHttpInfoAsync(parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9276,8 +9276,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsUnusedRetrieveWithHttpInfoAsync(string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9315,7 +9315,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/unused/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/unused/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9335,12 +9335,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsUpdate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsUpdate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsUpdateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -9350,10 +9350,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9388,14 +9388,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsUpdate", localVarResponse);
@@ -9414,13 +9414,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsUpdateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsUpdateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9430,11 +9430,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9470,14 +9470,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9497,12 +9497,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsUpdateSourcePartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedPlugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsUpdateSourcePartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedPlugin);
             return localVarResponse.Data;
         }
 
@@ -9512,10 +9512,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsUpdateSourcePartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9550,14 +9550,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpdateSourcePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/update_source/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/update_source/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsUpdateSourcePartialUpdate", localVarResponse);
@@ -9576,13 +9576,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsUpdateSourcePartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9592,11 +9592,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedPlugin"> (optional)</param>
+        /// <param name="postHogPatchedPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedPlugin patchedPlugin = default(PatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsUpdateSourcePartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedPlugin postHogPatchedPlugin = default(PostHogPatchedPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9632,14 +9632,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedPlugin;
+            localVarRequestOptions.Data = postHogPatchedPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpdateSourcePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/update_source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/update_source/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9659,12 +9659,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Plugin</returns>
-        public Plugin PluginsUpgradeCreate(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>PostHogPlugin</returns>
+        public PostHogPlugin PluginsUpgradeCreate(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = PluginsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, plugin);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = PluginsUpgradeCreateWithHttpInfo(id, parentLookupOrganizationId, postHogPlugin);
             return localVarResponse.Data;
         }
 
@@ -9674,10 +9674,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Plugin</returns>
-        public DotPostHog.Client.ApiResponse<Plugin> PluginsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPlugin</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPlugin> PluginsUpgradeCreateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9712,14 +9712,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpgradeCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/upgrade/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/upgrade/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginsUpgradeCreate", localVarResponse);
@@ -9738,13 +9738,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Plugin</returns>
-        public async System.Threading.Tasks.Task<Plugin> PluginsUpgradeCreateAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPlugin</returns>
+        public async System.Threading.Tasks.Task<PostHogPlugin> PluginsUpgradeCreateAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Plugin> localVarResponse = await PluginsUpgradeCreateWithHttpInfoAsync(id, parentLookupOrganizationId, plugin, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPlugin> localVarResponse = await PluginsUpgradeCreateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPlugin, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9754,11 +9754,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="plugin"> (optional)</param>
+        /// <param name="postHogPlugin"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Plugin)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Plugin>> PluginsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, Plugin plugin = default(Plugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPlugin)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPlugin>> PluginsUpgradeCreateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPlugin postHogPlugin = default(PostHogPlugin), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9794,14 +9794,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = plugin;
+            localVarRequestOptions.Data = postHogPlugin;
 
             localVarRequestOptions.Operation = "OrganizationsApi.PluginsUpgradeCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Plugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/upgrade/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPlugin>("/api/organizations/{parent_lookup_organization_id}/plugins/{id}/upgrade/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -9820,12 +9820,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, organizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -9834,10 +9834,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9845,10 +9845,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->ResourceAccessCreate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling OrganizationsApi->ResourceAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling OrganizationsApi->ResourceAccessCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -9877,14 +9877,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessCreate", localVarResponse);
@@ -9902,13 +9902,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -9917,11 +9917,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -9929,10 +9929,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->ResourceAccessCreate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling OrganizationsApi->ResourceAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling OrganizationsApi->ResourceAccessCreate");
             }
 
 
@@ -9962,14 +9962,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10137,10 +10137,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationResourceAccessList</returns>
-        public PaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationResourceAccessList</returns>
+        public PostHogPaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> localVarResponse = ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> localVarResponse = ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -10152,8 +10152,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationResourceAccessList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationResourceAccessList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10198,7 +10198,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessList", localVarResponse);
@@ -10220,10 +10220,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationResourceAccessList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationResourceAccessList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> localVarResponse = await ResourceAccessListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> localVarResponse = await ResourceAccessListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10236,8 +10236,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationResourceAccessList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationResourceAccessList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10283,7 +10283,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10303,12 +10303,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -10318,10 +10318,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10356,14 +10356,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationResourceAccess;
+            localVarRequestOptions.Data = postHogPatchedOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessPartialUpdate", localVarResponse);
@@ -10382,13 +10382,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10398,11 +10398,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10438,14 +10438,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationResourceAccess;
+            localVarRequestOptions.Data = postHogPatchedOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10466,10 +10466,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -10480,8 +10480,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10519,7 +10519,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessRetrieve", localVarResponse);
@@ -10540,10 +10540,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10555,8 +10555,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10595,7 +10595,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10615,12 +10615,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -10630,10 +10630,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10641,10 +10641,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->ResourceAccessUpdate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling OrganizationsApi->ResourceAccessUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling OrganizationsApi->ResourceAccessUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -10674,14 +10674,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessUpdate", localVarResponse);
@@ -10700,13 +10700,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10716,11 +10716,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10728,10 +10728,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->ResourceAccessUpdate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling OrganizationsApi->ResourceAccessUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling OrganizationsApi->ResourceAccessUpdate");
             }
 
 
@@ -10762,14 +10762,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "OrganizationsApi.ResourceAccessUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10788,12 +10788,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        public Role RolesCreate(string parentLookupOrganizationId, Role role, int operationIndex = 0)
+        /// <returns>PostHogRole</returns>
+        public PostHogRole RolesCreate(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = RolesCreateWithHttpInfo(parentLookupOrganizationId, role);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = RolesCreateWithHttpInfo(parentLookupOrganizationId, postHogRole);
             return localVarResponse.Data;
         }
 
@@ -10802,10 +10802,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        public DotPostHog.Client.ApiResponse<Role> RolesCreateWithHttpInfo(string parentLookupOrganizationId, Role role, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogRole</returns>
+        public DotPostHog.Client.ApiResponse<PostHogRole> RolesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10813,10 +10813,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->RolesCreate");
             }
 
-            // verify the required parameter 'role' is set
-            if (role == null)
+            // verify the required parameter 'postHogRole' is set
+            if (postHogRole == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'role' when calling OrganizationsApi->RolesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRole' when calling OrganizationsApi->RolesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -10845,14 +10845,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = role;
+            localVarRequestOptions.Data = postHogRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Role>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesCreate", localVarResponse);
@@ -10870,13 +10870,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        public async System.Threading.Tasks.Task<Role> RolesCreateAsync(string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogRole</returns>
+        public async System.Threading.Tasks.Task<PostHogRole> RolesCreateAsync(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = await RolesCreateWithHttpInfoAsync(parentLookupOrganizationId, role, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = await RolesCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogRole, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -10885,11 +10885,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Role>> RolesCreateWithHttpInfoAsync(string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogRole>> RolesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -10897,10 +10897,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->RolesCreate");
             }
 
-            // verify the required parameter 'role' is set
-            if (role == null)
+            // verify the required parameter 'postHogRole' is set
+            if (postHogRole == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'role' when calling OrganizationsApi->RolesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRole' when calling OrganizationsApi->RolesCreate");
             }
 
 
@@ -10930,14 +10930,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = role;
+            localVarRequestOptions.Data = postHogRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Role>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11105,10 +11105,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedRoleList</returns>
-        public PaginatedRoleList RolesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedRoleList</returns>
+        public PostHogPaginatedRoleList RolesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedRoleList> localVarResponse = RolesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedRoleList> localVarResponse = RolesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -11120,8 +11120,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedRoleList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedRoleList> RolesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedRoleList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedRoleList> RolesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11166,7 +11166,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedRoleList>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedRoleList>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesList", localVarResponse);
@@ -11188,10 +11188,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedRoleList</returns>
-        public async System.Threading.Tasks.Task<PaginatedRoleList> RolesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedRoleList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedRoleList> RolesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedRoleList> localVarResponse = await RolesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedRoleList> localVarResponse = await RolesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11204,8 +11204,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedRoleList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedRoleList>> RolesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedRoleList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedRoleList>> RolesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11251,7 +11251,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedRoleList>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedRoleList>("/api/organizations/{parent_lookup_organization_id}/roles/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11271,12 +11271,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        public Role RolesPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0)
+        /// <returns>PostHogRole</returns>
+        public PostHogRole RolesPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = RolesPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedRole);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = RolesPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedRole);
             return localVarResponse.Data;
         }
 
@@ -11286,10 +11286,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        public DotPostHog.Client.ApiResponse<Role> RolesPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogRole</returns>
+        public DotPostHog.Client.ApiResponse<PostHogRole> RolesPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11324,14 +11324,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedRole;
+            localVarRequestOptions.Data = postHogPatchedRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesPartialUpdate", localVarResponse);
@@ -11350,13 +11350,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        public async System.Threading.Tasks.Task<Role> RolesPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogRole</returns>
+        public async System.Threading.Tasks.Task<PostHogRole> RolesPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = await RolesPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedRole, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = await RolesPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedRole, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11366,11 +11366,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedRole"> (optional)</param>
+        /// <param name="postHogPatchedRole"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Role>> RolesPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = default(PatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogRole>> RolesPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = default(PostHogPatchedRole), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11406,14 +11406,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedRole;
+            localVarRequestOptions.Data = postHogPatchedRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11434,10 +11434,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        public Role RolesRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogRole</returns>
+        public PostHogRole RolesRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = RolesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = RolesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -11448,8 +11448,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        public DotPostHog.Client.ApiResponse<Role> RolesRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogRole</returns>
+        public DotPostHog.Client.ApiResponse<PostHogRole> RolesRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11487,7 +11487,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesRetrieve", localVarResponse);
@@ -11508,10 +11508,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        public async System.Threading.Tasks.Task<Role> RolesRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogRole</returns>
+        public async System.Threading.Tasks.Task<PostHogRole> RolesRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = await RolesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = await RolesRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11523,8 +11523,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Role>> RolesRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogRole>> RolesRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11563,7 +11563,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11583,12 +11583,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>RoleMembership</returns>
-        public RoleMembership RolesRoleMembershipsCreate(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0)
+        /// <returns>PostHogRoleMembership</returns>
+        public PostHogRoleMembership RolesRoleMembershipsCreate(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<RoleMembership> localVarResponse = RolesRoleMembershipsCreateWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, roleMembership);
+            DotPostHog.Client.ApiResponse<PostHogRoleMembership> localVarResponse = RolesRoleMembershipsCreateWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, postHogRoleMembership);
             return localVarResponse.Data;
         }
 
@@ -11598,10 +11598,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of RoleMembership</returns>
-        public DotPostHog.Client.ApiResponse<RoleMembership> RolesRoleMembershipsCreateWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogRoleMembership</returns>
+        public DotPostHog.Client.ApiResponse<PostHogRoleMembership> RolesRoleMembershipsCreateWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11615,10 +11615,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupRoleId' when calling OrganizationsApi->RolesRoleMembershipsCreate");
             }
 
-            // verify the required parameter 'roleMembership' is set
-            if (roleMembership == null)
+            // verify the required parameter 'postHogRoleMembership' is set
+            if (postHogRoleMembership == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'roleMembership' when calling OrganizationsApi->RolesRoleMembershipsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRoleMembership' when calling OrganizationsApi->RolesRoleMembershipsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -11648,14 +11648,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_role_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupRoleId)); // path parameter
-            localVarRequestOptions.Data = roleMembership;
+            localVarRequestOptions.Data = postHogRoleMembership;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesRoleMembershipsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<RoleMembership>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogRoleMembership>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesRoleMembershipsCreate", localVarResponse);
@@ -11674,13 +11674,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of RoleMembership</returns>
-        public async System.Threading.Tasks.Task<RoleMembership> RolesRoleMembershipsCreateAsync(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogRoleMembership</returns>
+        public async System.Threading.Tasks.Task<PostHogRoleMembership> RolesRoleMembershipsCreateAsync(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<RoleMembership> localVarResponse = await RolesRoleMembershipsCreateWithHttpInfoAsync(parentLookupOrganizationId, parentLookupRoleId, roleMembership, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogRoleMembership> localVarResponse = await RolesRoleMembershipsCreateWithHttpInfoAsync(parentLookupOrganizationId, parentLookupRoleId, postHogRoleMembership, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11690,11 +11690,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="parentLookupRoleId"></param>
-        /// <param name="roleMembership"></param>
+        /// <param name="postHogRoleMembership"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (RoleMembership)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<RoleMembership>> RolesRoleMembershipsCreateWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogRoleMembership)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogRoleMembership>> RolesRoleMembershipsCreateWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -11708,10 +11708,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupRoleId' when calling OrganizationsApi->RolesRoleMembershipsCreate");
             }
 
-            // verify the required parameter 'roleMembership' is set
-            if (roleMembership == null)
+            // verify the required parameter 'postHogRoleMembership' is set
+            if (postHogRoleMembership == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'roleMembership' when calling OrganizationsApi->RolesRoleMembershipsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRoleMembership' when calling OrganizationsApi->RolesRoleMembershipsCreate");
             }
 
 
@@ -11742,14 +11742,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_role_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupRoleId)); // path parameter
-            localVarRequestOptions.Data = roleMembership;
+            localVarRequestOptions.Data = postHogRoleMembership;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesRoleMembershipsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<RoleMembership>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogRoleMembership>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11936,10 +11936,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedRoleMembershipList</returns>
-        public PaginatedRoleMembershipList RolesRoleMembershipsList(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedRoleMembershipList</returns>
+        public PostHogPaginatedRoleMembershipList RolesRoleMembershipsList(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedRoleMembershipList> localVarResponse = RolesRoleMembershipsListWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedRoleMembershipList> localVarResponse = RolesRoleMembershipsListWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -11952,8 +11952,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedRoleMembershipList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedRoleMembershipList> RolesRoleMembershipsListWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedRoleMembershipList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedRoleMembershipList> RolesRoleMembershipsListWithHttpInfo(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -12005,7 +12005,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedRoleMembershipList>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedRoleMembershipList>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesRoleMembershipsList", localVarResponse);
@@ -12028,10 +12028,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedRoleMembershipList</returns>
-        public async System.Threading.Tasks.Task<PaginatedRoleMembershipList> RolesRoleMembershipsListAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedRoleMembershipList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedRoleMembershipList> RolesRoleMembershipsListAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedRoleMembershipList> localVarResponse = await RolesRoleMembershipsListWithHttpInfoAsync(parentLookupOrganizationId, parentLookupRoleId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedRoleMembershipList> localVarResponse = await RolesRoleMembershipsListWithHttpInfoAsync(parentLookupOrganizationId, parentLookupRoleId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -12045,8 +12045,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedRoleMembershipList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedRoleMembershipList>> RolesRoleMembershipsListWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedRoleMembershipList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedRoleMembershipList>> RolesRoleMembershipsListWithHttpInfoAsync(string parentLookupOrganizationId, string parentLookupRoleId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -12099,7 +12099,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedRoleMembershipList>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedRoleMembershipList>("/api/organizations/{parent_lookup_organization_id}/roles/{parent_lookup_role_id}/role_memberships/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -12119,12 +12119,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Role</returns>
-        public Role RolesUpdate(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0)
+        /// <returns>PostHogRole</returns>
+        public PostHogRole RolesUpdate(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = RolesUpdateWithHttpInfo(id, parentLookupOrganizationId, role);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = RolesUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogRole);
             return localVarResponse.Data;
         }
 
@@ -12134,10 +12134,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Role</returns>
-        public DotPostHog.Client.ApiResponse<Role> RolesUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogRole</returns>
+        public DotPostHog.Client.ApiResponse<PostHogRole> RolesUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -12145,10 +12145,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->RolesUpdate");
             }
 
-            // verify the required parameter 'role' is set
-            if (role == null)
+            // verify the required parameter 'postHogRole' is set
+            if (postHogRole == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'role' when calling OrganizationsApi->RolesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRole' when calling OrganizationsApi->RolesUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -12178,14 +12178,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = role;
+            localVarRequestOptions.Data = postHogRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RolesUpdate", localVarResponse);
@@ -12204,13 +12204,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Role</returns>
-        public async System.Threading.Tasks.Task<Role> RolesUpdateAsync(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogRole</returns>
+        public async System.Threading.Tasks.Task<PostHogRole> RolesUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Role> localVarResponse = await RolesUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, role, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogRole> localVarResponse = await RolesUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogRole, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -12220,11 +12220,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this role.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="role"></param>
+        /// <param name="postHogRole"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Role)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Role>> RolesUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, Role role, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogRole)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogRole>> RolesUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogRole postHogRole, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -12232,10 +12232,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling OrganizationsApi->RolesUpdate");
             }
 
-            // verify the required parameter 'role' is set
-            if (role == null)
+            // verify the required parameter 'postHogRole' is set
+            if (postHogRole == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'role' when calling OrganizationsApi->RolesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogRole' when calling OrganizationsApi->RolesUpdate");
             }
 
 
@@ -12266,14 +12266,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = role;
+            localVarRequestOptions.Data = postHogRole;
 
             localVarRequestOptions.Operation = "OrganizationsApi.RolesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Role>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogRole>("/api/organizations/{parent_lookup_organization_id}/roles/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

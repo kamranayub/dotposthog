@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        Subscription SubscriptionsCreate(string projectId, Subscription subscription, int operationIndex = 0);
+        /// <returns>PostHogSubscription</returns>
+        PostHogSubscription SubscriptionsCreate(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> SubscriptionsCreateWithHttpInfo(string projectId, Subscription subscription, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        ApiResponse<PostHogSubscription> SubscriptionsCreateWithHttpInfo(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -81,8 +81,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSubscriptionList</returns>
-        PaginatedSubscriptionList SubscriptionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedSubscriptionList</returns>
+        PostHogPaginatedSubscriptionList SubscriptionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -95,18 +95,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSubscriptionList</returns>
-        ApiResponse<PaginatedSubscriptionList> SubscriptionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedSubscriptionList</returns>
+        ApiResponse<PostHogPaginatedSubscriptionList> SubscriptionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        Subscription SubscriptionsPartialUpdate(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0);
+        /// <returns>PostHogSubscription</returns>
+        PostHogSubscription SubscriptionsPartialUpdate(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -117,10 +117,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> SubscriptionsPartialUpdateWithHttpInfo(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        ApiResponse<PostHogSubscription> SubscriptionsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -128,8 +128,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        Subscription SubscriptionsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogSubscription</returns>
+        PostHogSubscription SubscriptionsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -141,18 +141,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> SubscriptionsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        ApiResponse<PostHogSubscription> SubscriptionsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        Subscription SubscriptionsUpdate(int id, string projectId, Subscription subscription, int operationIndex = 0);
+        /// <returns>PostHogSubscription</returns>
+        PostHogSubscription SubscriptionsUpdate(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -163,10 +163,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> SubscriptionsUpdateWithHttpInfo(int id, string projectId, Subscription subscription, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        ApiResponse<PostHogSubscription> SubscriptionsUpdateWithHttpInfo(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -184,11 +184,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        System.Threading.Tasks.Task<Subscription> SubscriptionsCreateAsync(string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSubscription</returns>
+        System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsCreateAsync(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -198,11 +198,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> SubscriptionsCreateWithHttpInfoAsync(string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSubscription>> SubscriptionsCreateWithHttpInfoAsync(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -242,8 +242,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSubscriptionList</returns>
-        System.Threading.Tasks.Task<PaginatedSubscriptionList> SubscriptionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedSubscriptionList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedSubscriptionList> SubscriptionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -257,8 +257,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSubscriptionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedSubscriptionList>> SubscriptionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedSubscriptionList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedSubscriptionList>> SubscriptionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -268,11 +268,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        System.Threading.Tasks.Task<Subscription> SubscriptionsPartialUpdateAsync(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSubscription</returns>
+        System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsPartialUpdateAsync(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -283,11 +283,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> SubscriptionsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSubscription>> SubscriptionsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -299,8 +299,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        System.Threading.Tasks.Task<Subscription> SubscriptionsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSubscription</returns>
+        System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -313,8 +313,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> SubscriptionsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSubscription>> SubscriptionsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -324,11 +324,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        System.Threading.Tasks.Task<Subscription> SubscriptionsUpdateAsync(int id, string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogSubscription</returns>
+        System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsUpdateAsync(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -339,11 +339,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> SubscriptionsUpdateWithHttpInfoAsync(int id, string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogSubscription>> SubscriptionsUpdateWithHttpInfoAsync(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -469,12 +469,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        public Subscription SubscriptionsCreate(string projectId, Subscription subscription, int operationIndex = 0)
+        /// <returns>PostHogSubscription</returns>
+        public PostHogSubscription SubscriptionsCreate(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = SubscriptionsCreateWithHttpInfo(projectId, subscription);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = SubscriptionsCreateWithHttpInfo(projectId, postHogSubscription);
             return localVarResponse.Data;
         }
 
@@ -483,10 +483,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        public DotPostHog.Client.ApiResponse<Subscription> SubscriptionsCreateWithHttpInfo(string projectId, Subscription subscription, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSubscription> SubscriptionsCreateWithHttpInfo(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -494,10 +494,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SubscriptionsApi->SubscriptionsCreate");
             }
 
-            // verify the required parameter 'subscription' is set
-            if (subscription == null)
+            // verify the required parameter 'postHogSubscription' is set
+            if (postHogSubscription == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'subscription' when calling SubscriptionsApi->SubscriptionsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSubscription' when calling SubscriptionsApi->SubscriptionsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -526,14 +526,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = subscription;
+            localVarRequestOptions.Data = postHogSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Subscription>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogSubscription>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubscriptionsCreate", localVarResponse);
@@ -551,13 +551,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        public async System.Threading.Tasks.Task<Subscription> SubscriptionsCreateAsync(string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSubscription</returns>
+        public async System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsCreateAsync(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = await SubscriptionsCreateWithHttpInfoAsync(projectId, subscription, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = await SubscriptionsCreateWithHttpInfoAsync(projectId, postHogSubscription, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -566,11 +566,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Subscription>> SubscriptionsCreateWithHttpInfoAsync(string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSubscription>> SubscriptionsCreateWithHttpInfoAsync(string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -578,10 +578,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SubscriptionsApi->SubscriptionsCreate");
             }
 
-            // verify the required parameter 'subscription' is set
-            if (subscription == null)
+            // verify the required parameter 'postHogSubscription' is set
+            if (postHogSubscription == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'subscription' when calling SubscriptionsApi->SubscriptionsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSubscription' when calling SubscriptionsApi->SubscriptionsCreate");
             }
 
 
@@ -611,14 +611,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = subscription;
+            localVarRequestOptions.Data = postHogSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Subscription>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogSubscription>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -786,10 +786,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedSubscriptionList</returns>
-        public PaginatedSubscriptionList SubscriptionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedSubscriptionList</returns>
+        public PostHogPaginatedSubscriptionList SubscriptionsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedSubscriptionList> localVarResponse = SubscriptionsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSubscriptionList> localVarResponse = SubscriptionsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -801,8 +801,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedSubscriptionList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedSubscriptionList> SubscriptionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedSubscriptionList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedSubscriptionList> SubscriptionsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -847,7 +847,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedSubscriptionList>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedSubscriptionList>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubscriptionsList", localVarResponse);
@@ -869,10 +869,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedSubscriptionList</returns>
-        public async System.Threading.Tasks.Task<PaginatedSubscriptionList> SubscriptionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedSubscriptionList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedSubscriptionList> SubscriptionsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedSubscriptionList> localVarResponse = await SubscriptionsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedSubscriptionList> localVarResponse = await SubscriptionsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -885,8 +885,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedSubscriptionList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedSubscriptionList>> SubscriptionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedSubscriptionList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedSubscriptionList>> SubscriptionsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -932,7 +932,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedSubscriptionList>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedSubscriptionList>("/api/projects/{project_id}/subscriptions/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -952,12 +952,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        public Subscription SubscriptionsPartialUpdate(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0)
+        /// <returns>PostHogSubscription</returns>
+        public PostHogSubscription SubscriptionsPartialUpdate(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = SubscriptionsPartialUpdateWithHttpInfo(id, projectId, patchedSubscription);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = SubscriptionsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedSubscription);
             return localVarResponse.Data;
         }
 
@@ -967,10 +967,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        public DotPostHog.Client.ApiResponse<Subscription> SubscriptionsPartialUpdateWithHttpInfo(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSubscription> SubscriptionsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1005,14 +1005,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedSubscription;
+            localVarRequestOptions.Data = postHogPatchedSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubscriptionsPartialUpdate", localVarResponse);
@@ -1031,13 +1031,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        public async System.Threading.Tasks.Task<Subscription> SubscriptionsPartialUpdateAsync(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSubscription</returns>
+        public async System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsPartialUpdateAsync(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = await SubscriptionsPartialUpdateWithHttpInfoAsync(id, projectId, patchedSubscription, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = await SubscriptionsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedSubscription, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1047,11 +1047,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedSubscription"> (optional)</param>
+        /// <param name="postHogPatchedSubscription"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Subscription>> SubscriptionsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedSubscription patchedSubscription = default(PatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSubscription>> SubscriptionsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedSubscription postHogPatchedSubscription = default(PostHogPatchedSubscription), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1087,14 +1087,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedSubscription;
+            localVarRequestOptions.Data = postHogPatchedSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1115,10 +1115,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        public Subscription SubscriptionsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogSubscription</returns>
+        public PostHogSubscription SubscriptionsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = SubscriptionsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = SubscriptionsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1129,8 +1129,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        public DotPostHog.Client.ApiResponse<Subscription> SubscriptionsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSubscription> SubscriptionsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1168,7 +1168,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubscriptionsRetrieve", localVarResponse);
@@ -1189,10 +1189,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        public async System.Threading.Tasks.Task<Subscription> SubscriptionsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSubscription</returns>
+        public async System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = await SubscriptionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = await SubscriptionsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1204,8 +1204,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Subscription>> SubscriptionsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSubscription>> SubscriptionsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1244,7 +1244,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1264,12 +1264,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Subscription</returns>
-        public Subscription SubscriptionsUpdate(int id, string projectId, Subscription subscription, int operationIndex = 0)
+        /// <returns>PostHogSubscription</returns>
+        public PostHogSubscription SubscriptionsUpdate(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = SubscriptionsUpdateWithHttpInfo(id, projectId, subscription);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = SubscriptionsUpdateWithHttpInfo(id, projectId, postHogSubscription);
             return localVarResponse.Data;
         }
 
@@ -1279,10 +1279,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Subscription</returns>
-        public DotPostHog.Client.ApiResponse<Subscription> SubscriptionsUpdateWithHttpInfo(int id, string projectId, Subscription subscription, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogSubscription</returns>
+        public DotPostHog.Client.ApiResponse<PostHogSubscription> SubscriptionsUpdateWithHttpInfo(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1290,10 +1290,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SubscriptionsApi->SubscriptionsUpdate");
             }
 
-            // verify the required parameter 'subscription' is set
-            if (subscription == null)
+            // verify the required parameter 'postHogSubscription' is set
+            if (postHogSubscription == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'subscription' when calling SubscriptionsApi->SubscriptionsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSubscription' when calling SubscriptionsApi->SubscriptionsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1323,14 +1323,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = subscription;
+            localVarRequestOptions.Data = postHogSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubscriptionsUpdate", localVarResponse);
@@ -1349,13 +1349,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Subscription</returns>
-        public async System.Threading.Tasks.Task<Subscription> SubscriptionsUpdateAsync(int id, string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogSubscription</returns>
+        public async System.Threading.Tasks.Task<PostHogSubscription> SubscriptionsUpdateAsync(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Subscription> localVarResponse = await SubscriptionsUpdateWithHttpInfoAsync(id, projectId, subscription, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogSubscription> localVarResponse = await SubscriptionsUpdateWithHttpInfoAsync(id, projectId, postHogSubscription, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1365,11 +1365,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this subscription.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="subscription"></param>
+        /// <param name="postHogSubscription"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Subscription)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Subscription>> SubscriptionsUpdateWithHttpInfoAsync(int id, string projectId, Subscription subscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogSubscription)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogSubscription>> SubscriptionsUpdateWithHttpInfoAsync(int id, string projectId, PostHogSubscription postHogSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1377,10 +1377,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling SubscriptionsApi->SubscriptionsUpdate");
             }
 
-            // verify the required parameter 'subscription' is set
-            if (subscription == null)
+            // verify the required parameter 'postHogSubscription' is set
+            if (postHogSubscription == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'subscription' when calling SubscriptionsApi->SubscriptionsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogSubscription' when calling SubscriptionsApi->SubscriptionsUpdate");
             }
 
 
@@ -1411,14 +1411,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = subscription;
+            localVarRequestOptions.Data = postHogSubscription;
 
             localVarRequestOptions.Operation = "SubscriptionsApi.SubscriptionsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Subscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogSubscription>("/api/projects/{project_id}/subscriptions/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

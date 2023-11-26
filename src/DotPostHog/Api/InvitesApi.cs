@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        OrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>PostHogOrganizationInvite</returns>
+        PostHogOrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,19 +44,19 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        ApiResponse<OrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        ApiResponse<PostHogOrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        OrganizationInvite InvitesCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>PostHogOrganizationInvite</returns>
+        PostHogOrganizationInvite InvitesCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -66,10 +66,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        ApiResponse<OrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        ApiResponse<PostHogOrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +100,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationInviteList</returns>
-        PaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationInviteList</returns>
+        PostHogPaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,8 +114,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationInviteList</returns>
-        ApiResponse<PaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationInviteList</returns>
+        ApiResponse<PostHogPaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -133,11 +133,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        System.Threading.Tasks.Task<OrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -147,11 +147,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -160,11 +160,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        System.Threading.Tasks.Task<OrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -174,11 +174,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -218,8 +218,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationInviteList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationInviteList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -233,8 +233,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationInviteList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationInviteList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -360,12 +360,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        public OrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>PostHogOrganizationInvite</returns>
+        public PostHogOrganizationInvite InvitesBulkCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = InvitesBulkCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
             return localVarResponse.Data;
         }
 
@@ -374,10 +374,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> InvitesBulkCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -385,10 +385,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling InvitesApi->InvitesBulkCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling InvitesApi->InvitesBulkCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling InvitesApi->InvitesBulkCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -417,14 +417,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "InvitesApi.InvitesBulkCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesBulkCreate", localVarResponse);
@@ -442,13 +442,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        public async System.Threading.Tasks.Task<OrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesBulkCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = await InvitesBulkCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = await InvitesBulkCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -457,11 +457,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationInvite>> InvitesBulkCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -469,10 +469,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling InvitesApi->InvitesBulkCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling InvitesApi->InvitesBulkCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling InvitesApi->InvitesBulkCreate");
             }
 
 
@@ -502,14 +502,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "InvitesApi.InvitesBulkCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/bulk/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -528,12 +528,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationInvite</returns>
-        public OrganizationInvite InvitesCreate(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>PostHogOrganizationInvite</returns>
+        public PostHogOrganizationInvite InvitesCreate(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = InvitesCreateWithHttpInfo(parentLookupOrganizationId, organizationInvite);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = InvitesCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationInvite);
             return localVarResponse.Data;
         }
 
@@ -542,10 +542,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationInvite</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationInvite</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> InvitesCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -553,10 +553,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling InvitesApi->InvitesCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling InvitesApi->InvitesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling InvitesApi->InvitesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -585,14 +585,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "InvitesApi.InvitesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesCreate", localVarResponse);
@@ -610,13 +610,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationInvite</returns>
-        public async System.Threading.Tasks.Task<OrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationInvite</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationInvite> InvitesCreateAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationInvite> localVarResponse = await InvitesCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationInvite> localVarResponse = await InvitesCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationInvite, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -625,11 +625,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationInvite"></param>
+        /// <param name="postHogOrganizationInvite"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationInvite)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationInvite organizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationInvite)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationInvite>> InvitesCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationInvite postHogOrganizationInvite, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -637,10 +637,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling InvitesApi->InvitesCreate");
             }
 
-            // verify the required parameter 'organizationInvite' is set
-            if (organizationInvite == null)
+            // verify the required parameter 'postHogOrganizationInvite' is set
+            if (postHogOrganizationInvite == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationInvite' when calling InvitesApi->InvitesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationInvite' when calling InvitesApi->InvitesCreate");
             }
 
 
@@ -670,14 +670,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationInvite;
+            localVarRequestOptions.Data = postHogOrganizationInvite;
 
             localVarRequestOptions.Operation = "InvitesApi.InvitesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationInvite>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -845,10 +845,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationInviteList</returns>
-        public PaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationInviteList</returns>
+        public PostHogPaginatedOrganizationInviteList InvitesList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> localVarResponse = InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> localVarResponse = InvitesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -860,8 +860,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationInviteList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationInviteList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> InvitesListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -906,7 +906,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvitesList", localVarResponse);
@@ -928,10 +928,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationInviteList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationInviteList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationInviteList> InvitesListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList> localVarResponse = await InvitesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList> localVarResponse = await InvitesListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -944,8 +944,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationInviteList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationInviteList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationInviteList>> InvitesListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -991,7 +991,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationInviteList>("/api/organizations/{parent_lookup_organization_id}/invites/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

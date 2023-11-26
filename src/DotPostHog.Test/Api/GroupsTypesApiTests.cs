@@ -63,7 +63,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.GroupsTypesList(projectId);
-            //Assert.IsType<List<GroupType>>(response);
+            //Assert.IsType<List<PostHogGroupType>>(response);
         }
 
         /// <summary>
@@ -74,9 +74,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //PatchedGroupType patchedGroupType = null;
-            //var response = instance.GroupsTypesUpdateMetadataPartialUpdate(projectId, patchedGroupType);
-            //Assert.IsType<GroupType>(response);
+            //PostHogPatchedGroupType postHogPatchedGroupType = null;
+            //var response = instance.GroupsTypesUpdateMetadataPartialUpdate(projectId, postHogPatchedGroupType);
+            //Assert.IsType<PostHogGroupType>(response);
         }
     }
 }

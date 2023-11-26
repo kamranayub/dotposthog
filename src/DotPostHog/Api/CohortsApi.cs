@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsCreate(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsCreate(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsCreateWithHttpInfo(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsCreateWithHttpInfo(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -80,8 +80,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsDuplicateAsStaticCohortRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsDuplicateAsStaticCohortRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -93,8 +93,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedCohortList</returns>
-        PaginatedCohortList CohortsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedCohortList</returns>
+        PostHogPaginatedCohortList CohortsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -117,18 +117,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedCohortList</returns>
-        ApiResponse<PaginatedCohortList> CohortsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedCohortList</returns>
+        ApiResponse<PostHogPaginatedCohortList> CohortsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsPartialUpdate(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsPartialUpdate(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -139,10 +139,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsPartialUpdateWithHttpInfo(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -151,8 +151,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsPersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsPersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -165,8 +165,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsPersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsPersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -187,18 +187,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        Cohort CohortsUpdate(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0);
+        /// <returns>PostHogCohort</returns>
+        PostHogCohort CohortsUpdate(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -209,10 +209,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        ApiResponse<Cohort> CohortsUpdateWithHttpInfo(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        ApiResponse<PostHogCohort> CohortsUpdateWithHttpInfo(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -230,11 +230,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsCreateAsync(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsCreateAsync(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -244,11 +244,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsCreateWithHttpInfoAsync(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsCreateWithHttpInfoAsync(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,8 +287,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsDuplicateAsStaticCohortRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsDuplicateAsStaticCohortRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -301,8 +301,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -315,8 +315,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedCohortList</returns>
-        System.Threading.Tasks.Task<PaginatedCohortList> CohortsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedCohortList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedCohortList> CohortsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -330,8 +330,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedCohortList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedCohortList>> CohortsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedCohortList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedCohortList>> CohortsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -341,11 +341,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsPartialUpdateAsync(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsPartialUpdateAsync(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -356,11 +356,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -373,8 +373,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsPersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsPersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -388,8 +388,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsPersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsPersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -401,8 +401,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -415,8 +415,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -426,11 +426,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        System.Threading.Tasks.Task<Cohort> CohortsUpdateAsync(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogCohort</returns>
+        System.Threading.Tasks.Task<PostHogCohort> CohortsUpdateAsync(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -441,11 +441,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Cohort>> CohortsUpdateWithHttpInfoAsync(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogCohort>> CohortsUpdateWithHttpInfoAsync(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -571,12 +571,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsCreate(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsCreate(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsCreateWithHttpInfo(projectId, cohort);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsCreateWithHttpInfo(projectId, postHogCohort);
             return localVarResponse.Data;
         }
 
@@ -585,10 +585,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsCreateWithHttpInfo(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsCreateWithHttpInfo(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -622,14 +622,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = cohort;
+            localVarRequestOptions.Data = postHogCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Cohort>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogCohort>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsCreate", localVarResponse);
@@ -647,13 +647,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsCreateAsync(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsCreateAsync(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsCreateWithHttpInfoAsync(projectId, cohort, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsCreateWithHttpInfoAsync(projectId, postHogCohort, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -662,11 +662,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsCreateWithHttpInfoAsync(string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsCreateWithHttpInfoAsync(string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -701,14 +701,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = cohort;
+            localVarRequestOptions.Data = postHogCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Cohort>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -875,10 +875,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsDuplicateAsStaticCohortRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsDuplicateAsStaticCohortRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -889,8 +889,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -928,7 +928,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Cohort>("/api/projects/{project_id}/cohorts/{id}/duplicate_as_static_cohort/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/duplicate_as_static_cohort/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsDuplicateAsStaticCohortRetrieve", localVarResponse);
@@ -949,10 +949,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsDuplicateAsStaticCohortRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsDuplicateAsStaticCohortRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -964,8 +964,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsDuplicateAsStaticCohortRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1004,7 +1004,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Cohort>("/api/projects/{project_id}/cohorts/{id}/duplicate_as_static_cohort/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/duplicate_as_static_cohort/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1026,10 +1026,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedCohortList</returns>
-        public PaginatedCohortList CohortsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedCohortList</returns>
+        public PostHogPaginatedCohortList CohortsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedCohortList> localVarResponse = CohortsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedCohortList> localVarResponse = CohortsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1041,8 +1041,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedCohortList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedCohortList> CohortsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedCohortList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedCohortList> CohortsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1087,7 +1087,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedCohortList>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedCohortList>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsList", localVarResponse);
@@ -1109,10 +1109,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedCohortList</returns>
-        public async System.Threading.Tasks.Task<PaginatedCohortList> CohortsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedCohortList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedCohortList> CohortsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedCohortList> localVarResponse = await CohortsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedCohortList> localVarResponse = await CohortsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1125,8 +1125,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedCohortList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedCohortList>> CohortsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedCohortList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedCohortList>> CohortsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1172,7 +1172,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedCohortList>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedCohortList>("/api/projects/{project_id}/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1192,12 +1192,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsPartialUpdate(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsPartialUpdate(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsPartialUpdateWithHttpInfo(id, projectId, patchedCohort);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedCohort);
             return localVarResponse.Data;
         }
 
@@ -1207,10 +1207,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsPartialUpdateWithHttpInfo(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1245,14 +1245,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedCohort;
+            localVarRequestOptions.Data = postHogPatchedCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsPartialUpdate", localVarResponse);
@@ -1271,13 +1271,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsPartialUpdateAsync(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsPartialUpdateAsync(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsPartialUpdateWithHttpInfoAsync(id, projectId, patchedCohort, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedCohort, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1287,11 +1287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedCohort"> (optional)</param>
+        /// <param name="postHogPatchedCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedCohort patchedCohort = default(PatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = default(PostHogPatchedCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1327,14 +1327,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedCohort;
+            localVarRequestOptions.Data = postHogPatchedCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1356,10 +1356,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsPersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsPersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsPersonsRetrieveWithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsPersonsRetrieveWithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1371,8 +1371,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsPersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsPersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1415,7 +1415,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Cohort>("/api/projects/{project_id}/cohorts/{id}/persons/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/persons/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsPersonsRetrieve", localVarResponse);
@@ -1437,10 +1437,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsPersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsPersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsPersonsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsPersonsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1453,8 +1453,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsPersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsPersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1498,7 +1498,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Cohort>("/api/projects/{project_id}/cohorts/{id}/persons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/persons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1519,10 +1519,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1533,8 +1533,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1572,7 +1572,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsRetrieve", localVarResponse);
@@ -1593,10 +1593,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1608,8 +1608,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1648,7 +1648,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1668,12 +1668,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Cohort</returns>
-        public Cohort CohortsUpdate(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0)
+        /// <returns>PostHogCohort</returns>
+        public PostHogCohort CohortsUpdate(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = CohortsUpdateWithHttpInfo(id, projectId, cohort);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = CohortsUpdateWithHttpInfo(id, projectId, postHogCohort);
             return localVarResponse.Data;
         }
 
@@ -1683,10 +1683,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Cohort</returns>
-        public DotPostHog.Client.ApiResponse<Cohort> CohortsUpdateWithHttpInfo(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogCohort</returns>
+        public DotPostHog.Client.ApiResponse<PostHogCohort> CohortsUpdateWithHttpInfo(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1721,14 +1721,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = cohort;
+            localVarRequestOptions.Data = postHogCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CohortsUpdate", localVarResponse);
@@ -1747,13 +1747,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Cohort</returns>
-        public async System.Threading.Tasks.Task<Cohort> CohortsUpdateAsync(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogCohort</returns>
+        public async System.Threading.Tasks.Task<PostHogCohort> CohortsUpdateAsync(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Cohort> localVarResponse = await CohortsUpdateWithHttpInfoAsync(id, projectId, cohort, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogCohort> localVarResponse = await CohortsUpdateWithHttpInfoAsync(id, projectId, postHogCohort, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1763,11 +1763,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this cohort.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="cohort"> (optional)</param>
+        /// <param name="postHogCohort"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Cohort)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Cohort>> CohortsUpdateWithHttpInfoAsync(int id, string projectId, Cohort cohort = default(Cohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogCohort)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogCohort>> CohortsUpdateWithHttpInfoAsync(int id, string projectId, PostHogCohort postHogCohort = default(PostHogCohort), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1803,14 +1803,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = cohort;
+            localVarRequestOptions.Data = postHogCohort;
 
             localVarRequestOptions.Operation = "CohortsApi.CohortsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Cohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogCohort>("/api/projects/{project_id}/cohorts/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

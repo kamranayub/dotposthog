@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="annotationscreate"></a>
 # **AnnotationsCreate**
-> Annotation AnnotationsCreate (string projectId, Annotation annotation = null)
+> PostHogAnnotation AnnotationsCreate (string projectId, PostHogAnnotation postHogAnnotation = null)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new AnnotationsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var annotation = new Annotation(); // Annotation |  (optional) 
+            var postHogAnnotation = new PostHogAnnotation(); // PostHogAnnotation |  (optional) 
 
             try
             {
-                Annotation result = apiInstance.AnnotationsCreate(projectId, annotation);
+                PostHogAnnotation result = apiInstance.AnnotationsCreate(projectId, postHogAnnotation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Annotation> response = apiInstance.AnnotationsCreateWithHttpInfo(projectId, annotation);
+    ApiResponse<PostHogAnnotation> response = apiInstance.AnnotationsCreateWithHttpInfo(projectId, postHogAnnotation);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **annotation** | [**Annotation**](Annotation.md) |  | [optional]  |
+| **postHogAnnotation** | [**PostHogAnnotation**](PostHogAnnotation.md) |  | [optional]  |
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**PostHogAnnotation**](PostHogAnnotation.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="annotationslist"></a>
 # **AnnotationsList**
-> PaginatedAnnotationList AnnotationsList (string projectId, int? limit = null, int? offset = null, string search = null)
+> PostHogPaginatedAnnotationList AnnotationsList (string projectId, int? limit = null, int? offset = null, string search = null)
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                PaginatedAnnotationList result = apiInstance.AnnotationsList(projectId, limit, offset, search);
+                PostHogPaginatedAnnotationList result = apiInstance.AnnotationsList(projectId, limit, offset, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -241,7 +241,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedAnnotationList> response = apiInstance.AnnotationsListWithHttpInfo(projectId, limit, offset, search);
+    ApiResponse<PostHogPaginatedAnnotationList> response = apiInstance.AnnotationsListWithHttpInfo(projectId, limit, offset, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -265,7 +265,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedAnnotationList**](PaginatedAnnotationList.md)
+[**PostHogPaginatedAnnotationList**](PostHogPaginatedAnnotationList.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 
 <a id="annotationspartialupdate"></a>
 # **AnnotationsPartialUpdate**
-> Annotation AnnotationsPartialUpdate (int id, string projectId, PatchedAnnotation patchedAnnotation = null)
+> PostHogAnnotation AnnotationsPartialUpdate (int id, string projectId, PostHogPatchedAnnotation postHogPatchedAnnotation = null)
 
 
 
@@ -311,11 +311,11 @@ namespace Example
             var apiInstance = new AnnotationsApi(config);
             var id = 56;  // int | A unique integer value identifying this annotation.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedAnnotation = new PatchedAnnotation(); // PatchedAnnotation |  (optional) 
+            var postHogPatchedAnnotation = new PostHogPatchedAnnotation(); // PostHogPatchedAnnotation |  (optional) 
 
             try
             {
-                Annotation result = apiInstance.AnnotationsPartialUpdate(id, projectId, patchedAnnotation);
+                PostHogAnnotation result = apiInstance.AnnotationsPartialUpdate(id, projectId, postHogPatchedAnnotation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -335,7 +335,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Annotation> response = apiInstance.AnnotationsPartialUpdateWithHttpInfo(id, projectId, patchedAnnotation);
+    ApiResponse<PostHogAnnotation> response = apiInstance.AnnotationsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedAnnotation);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -354,11 +354,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this annotation. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedAnnotation** | [**PatchedAnnotation**](PatchedAnnotation.md) |  | [optional]  |
+| **postHogPatchedAnnotation** | [**PostHogPatchedAnnotation**](PostHogPatchedAnnotation.md) |  | [optional]  |
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**PostHogAnnotation**](PostHogAnnotation.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a id="annotationsretrieve"></a>
 # **AnnotationsRetrieve**
-> Annotation AnnotationsRetrieve (int id, string projectId)
+> PostHogAnnotation AnnotationsRetrieve (int id, string projectId)
 
 
 
@@ -407,7 +407,7 @@ namespace Example
 
             try
             {
-                Annotation result = apiInstance.AnnotationsRetrieve(id, projectId);
+                PostHogAnnotation result = apiInstance.AnnotationsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Annotation> response = apiInstance.AnnotationsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogAnnotation> response = apiInstance.AnnotationsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -449,7 +449,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**PostHogAnnotation**](PostHogAnnotation.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ No authorization required
 
 <a id="annotationsupdate"></a>
 # **AnnotationsUpdate**
-> Annotation AnnotationsUpdate (int id, string projectId, Annotation annotation = null)
+> PostHogAnnotation AnnotationsUpdate (int id, string projectId, PostHogAnnotation postHogAnnotation = null)
 
 
 
@@ -495,11 +495,11 @@ namespace Example
             var apiInstance = new AnnotationsApi(config);
             var id = 56;  // int | A unique integer value identifying this annotation.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var annotation = new Annotation(); // Annotation |  (optional) 
+            var postHogAnnotation = new PostHogAnnotation(); // PostHogAnnotation |  (optional) 
 
             try
             {
-                Annotation result = apiInstance.AnnotationsUpdate(id, projectId, annotation);
+                PostHogAnnotation result = apiInstance.AnnotationsUpdate(id, projectId, postHogAnnotation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -519,7 +519,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Annotation> response = apiInstance.AnnotationsUpdateWithHttpInfo(id, projectId, annotation);
+    ApiResponse<PostHogAnnotation> response = apiInstance.AnnotationsUpdateWithHttpInfo(id, projectId, postHogAnnotation);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -538,11 +538,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this annotation. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **annotation** | [**Annotation**](Annotation.md) |  | [optional]  |
+| **postHogAnnotation** | [**PostHogAnnotation**](PostHogAnnotation.md) |  | [optional]  |
 
 ### Return type
 
-[**Annotation**](Annotation.md)
+[**PostHogAnnotation**](PostHogAnnotation.md)
 
 ### Authorization
 

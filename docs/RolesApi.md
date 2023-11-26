@@ -16,7 +16,7 @@ All URIs are relative to *http://localhost*
 
 <a id="rolescreate"></a>
 # **RolesCreate**
-> Role RolesCreate (string parentLookupOrganizationId, Role role)
+> PostHogRole RolesCreate (string parentLookupOrganizationId, PostHogRole postHogRole)
 
 
 
@@ -38,11 +38,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new RolesApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var role = new Role(); // Role | 
+            var postHogRole = new PostHogRole(); // PostHogRole | 
 
             try
             {
-                Role result = apiInstance.RolesCreate(parentLookupOrganizationId, role);
+                PostHogRole result = apiInstance.RolesCreate(parentLookupOrganizationId, postHogRole);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Role> response = apiInstance.RolesCreateWithHttpInfo(parentLookupOrganizationId, role);
+    ApiResponse<PostHogRole> response = apiInstance.RolesCreateWithHttpInfo(parentLookupOrganizationId, postHogRole);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -80,11 +80,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
-| **role** | [**Role**](Role.md) |  |  |
+| **postHogRole** | [**PostHogRole**](PostHogRole.md) |  |  |
 
 ### Return type
 
-[**Role**](Role.md)
+[**PostHogRole**](PostHogRole.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 <a id="roleslist"></a>
 # **RolesList**
-> PaginatedRoleList RolesList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
+> PostHogPaginatedRoleList RolesList (string parentLookupOrganizationId, int? limit = null, int? offset = null)
 
 
 
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                PaginatedRoleList result = apiInstance.RolesList(parentLookupOrganizationId, limit, offset);
+                PostHogPaginatedRoleList result = apiInstance.RolesList(parentLookupOrganizationId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -237,7 +237,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedRoleList> response = apiInstance.RolesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+    ApiResponse<PostHogPaginatedRoleList> response = apiInstance.RolesListWithHttpInfo(parentLookupOrganizationId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -260,7 +260,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedRoleList**](PaginatedRoleList.md)
+[**PostHogPaginatedRoleList**](PostHogPaginatedRoleList.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ No authorization required
 
 <a id="rolespartialupdate"></a>
 # **RolesPartialUpdate**
-> Role RolesPartialUpdate (Guid id, string parentLookupOrganizationId, PatchedRole patchedRole = null)
+> PostHogRole RolesPartialUpdate (Guid id, string parentLookupOrganizationId, PostHogPatchedRole postHogPatchedRole = null)
 
 
 
@@ -304,11 +304,11 @@ namespace Example
             var apiInstance = new RolesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this role.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var patchedRole = new PatchedRole(); // PatchedRole |  (optional) 
+            var postHogPatchedRole = new PostHogPatchedRole(); // PostHogPatchedRole |  (optional) 
 
             try
             {
-                Role result = apiInstance.RolesPartialUpdate(id, parentLookupOrganizationId, patchedRole);
+                PostHogRole result = apiInstance.RolesPartialUpdate(id, parentLookupOrganizationId, postHogPatchedRole);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -328,7 +328,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Role> response = apiInstance.RolesPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedRole);
+    ApiResponse<PostHogRole> response = apiInstance.RolesPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedRole);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -347,11 +347,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this role. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **patchedRole** | [**PatchedRole**](PatchedRole.md) |  | [optional]  |
+| **postHogPatchedRole** | [**PostHogPatchedRole**](PostHogPatchedRole.md) |  | [optional]  |
 
 ### Return type
 
-[**Role**](Role.md)
+[**PostHogRole**](PostHogRole.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ No authorization required
 
 <a id="rolesretrieve"></a>
 # **RolesRetrieve**
-> Role RolesRetrieve (Guid id, string parentLookupOrganizationId)
+> PostHogRole RolesRetrieve (Guid id, string parentLookupOrganizationId)
 
 
 
@@ -398,7 +398,7 @@ namespace Example
 
             try
             {
-                Role result = apiInstance.RolesRetrieve(id, parentLookupOrganizationId);
+                PostHogRole result = apiInstance.RolesRetrieve(id, parentLookupOrganizationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -418,7 +418,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Role> response = apiInstance.RolesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+    ApiResponse<PostHogRole> response = apiInstance.RolesRetrieveWithHttpInfo(id, parentLookupOrganizationId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -440,7 +440,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Role**](Role.md)
+[**PostHogRole**](PostHogRole.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ No authorization required
 
 <a id="rolesrolemembershipscreate"></a>
 # **RolesRoleMembershipsCreate**
-> RoleMembership RolesRoleMembershipsCreate (string parentLookupOrganizationId, string parentLookupRoleId, RoleMembership roleMembership)
+> PostHogRoleMembership RolesRoleMembershipsCreate (string parentLookupOrganizationId, string parentLookupRoleId, PostHogRoleMembership postHogRoleMembership)
 
 
 
@@ -484,11 +484,11 @@ namespace Example
             var apiInstance = new RolesApi(config);
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
             var parentLookupRoleId = "parentLookupRoleId_example";  // string | 
-            var roleMembership = new RoleMembership(); // RoleMembership | 
+            var postHogRoleMembership = new PostHogRoleMembership(); // PostHogRoleMembership | 
 
             try
             {
-                RoleMembership result = apiInstance.RolesRoleMembershipsCreate(parentLookupOrganizationId, parentLookupRoleId, roleMembership);
+                PostHogRoleMembership result = apiInstance.RolesRoleMembershipsCreate(parentLookupOrganizationId, parentLookupRoleId, postHogRoleMembership);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -508,7 +508,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<RoleMembership> response = apiInstance.RolesRoleMembershipsCreateWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, roleMembership);
+    ApiResponse<PostHogRoleMembership> response = apiInstance.RolesRoleMembershipsCreateWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, postHogRoleMembership);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -527,11 +527,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **parentLookupOrganizationId** | **string** |  |  |
 | **parentLookupRoleId** | **string** |  |  |
-| **roleMembership** | [**RoleMembership**](RoleMembership.md) |  |  |
+| **postHogRoleMembership** | [**PostHogRoleMembership**](PostHogRoleMembership.md) |  |  |
 
 ### Return type
 
-[**RoleMembership**](RoleMembership.md)
+[**PostHogRoleMembership**](PostHogRoleMembership.md)
 
 ### Authorization
 
@@ -639,7 +639,7 @@ No authorization required
 
 <a id="rolesrolemembershipslist"></a>
 # **RolesRoleMembershipsList**
-> PaginatedRoleMembershipList RolesRoleMembershipsList (string parentLookupOrganizationId, string parentLookupRoleId, int? limit = null, int? offset = null)
+> PostHogPaginatedRoleMembershipList RolesRoleMembershipsList (string parentLookupOrganizationId, string parentLookupRoleId, int? limit = null, int? offset = null)
 
 
 
@@ -667,7 +667,7 @@ namespace Example
 
             try
             {
-                PaginatedRoleMembershipList result = apiInstance.RolesRoleMembershipsList(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
+                PostHogPaginatedRoleMembershipList result = apiInstance.RolesRoleMembershipsList(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -687,7 +687,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedRoleMembershipList> response = apiInstance.RolesRoleMembershipsListWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
+    ApiResponse<PostHogPaginatedRoleMembershipList> response = apiInstance.RolesRoleMembershipsListWithHttpInfo(parentLookupOrganizationId, parentLookupRoleId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -711,7 +711,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedRoleMembershipList**](PaginatedRoleMembershipList.md)
+[**PostHogPaginatedRoleMembershipList**](PostHogPaginatedRoleMembershipList.md)
 
 ### Authorization
 
@@ -732,7 +732,7 @@ No authorization required
 
 <a id="rolesupdate"></a>
 # **RolesUpdate**
-> Role RolesUpdate (Guid id, string parentLookupOrganizationId, Role role)
+> PostHogRole RolesUpdate (Guid id, string parentLookupOrganizationId, PostHogRole postHogRole)
 
 
 
@@ -755,11 +755,11 @@ namespace Example
             var apiInstance = new RolesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this role.
             var parentLookupOrganizationId = "parentLookupOrganizationId_example";  // string | 
-            var role = new Role(); // Role | 
+            var postHogRole = new PostHogRole(); // PostHogRole | 
 
             try
             {
-                Role result = apiInstance.RolesUpdate(id, parentLookupOrganizationId, role);
+                PostHogRole result = apiInstance.RolesUpdate(id, parentLookupOrganizationId, postHogRole);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -779,7 +779,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Role> response = apiInstance.RolesUpdateWithHttpInfo(id, parentLookupOrganizationId, role);
+    ApiResponse<PostHogRole> response = apiInstance.RolesUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogRole);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -798,11 +798,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this role. |  |
 | **parentLookupOrganizationId** | **string** |  |  |
-| **role** | [**Role**](Role.md) |  |  |
+| **postHogRole** | [**PostHogRole**](PostHogRole.md) |  |  |
 
 ### Return type
 
-[**Role**](Role.md)
+[**PostHogRole**](PostHogRole.md)
 
 ### Authorization
 

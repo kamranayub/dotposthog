@@ -47,7 +47,7 @@ namespace DotPostHog.Model
         /// <param name="steps">steps.</param>
         /// <param name="deleted">deleted.</param>
         /// <param name="lastCalculatedAt">lastCalculatedAt.</param>
-        public PostHogAction(string name = default(string), string description = default(string), List<Object> tags = default(List<Object>), bool postToSlack = default(bool), string slackMessageFormat = default(string), List<ActionStep> steps = default(List<ActionStep>), bool deleted = default(bool), DateTime lastCalculatedAt = default(DateTime))
+        public PostHogAction(string name = default(string), string description = default(string), List<Object> tags = default(List<Object>), bool postToSlack = default(bool), string slackMessageFormat = default(string), List<PostHogActionStep> steps = default(List<PostHogActionStep>), bool deleted = default(bool), DateTime lastCalculatedAt = default(DateTime))
         {
             this.Name = name;
             this.Description = description;
@@ -107,7 +107,7 @@ namespace DotPostHog.Model
         /// Gets or Sets Steps
         /// </summary>
         [DataMember(Name = "steps", EmitDefaultValue = false)]
-        public List<ActionStep> Steps { get; set; }
+        public List<PostHogActionStep> Steps { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
@@ -127,7 +127,7 @@ namespace DotPostHog.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name = "created_by", IsRequired = true, EmitDefaultValue = true)]
-        public UserBasic CreatedBy { get; private set; }
+        public PostHogUserBasic CreatedBy { get; private set; }
 
         /// <summary>
         /// Returns false as CreatedBy should not be serialized given that it's read-only.

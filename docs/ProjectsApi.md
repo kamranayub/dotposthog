@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="create"></a>
 # **Create**
-> Team Create (Team team = null)
+> PostHogTeam Create (PostHogTeam postHogTeam = null)
 
 
 
@@ -36,11 +36,11 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
             var apiInstance = new ProjectsApi(config);
-            var team = new Team(); // Team |  (optional) 
+            var postHogTeam = new PostHogTeam(); // PostHogTeam |  (optional) 
 
             try
             {
-                Team result = apiInstance.Create(team);
+                PostHogTeam result = apiInstance.Create(postHogTeam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.CreateWithHttpInfo(team);
+    ApiResponse<PostHogTeam> response = apiInstance.CreateWithHttpInfo(postHogTeam);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,11 +77,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **team** | [**Team**](Team.md) |  | [optional]  |
+| **postHogTeam** | [**PostHogTeam**](PostHogTeam.md) |  | [optional]  |
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a id="list"></a>
 # **List**
-> PaginatedTeamBasicList List (int? limit = null, int? offset = null)
+> PostHogPaginatedTeamBasicList List (int? limit = null, int? offset = null)
 
 
 
@@ -215,7 +215,7 @@ namespace Example
 
             try
             {
-                PaginatedTeamBasicList result = apiInstance.List(limit, offset);
+                PostHogPaginatedTeamBasicList result = apiInstance.List(limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -235,7 +235,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedTeamBasicList> response = apiInstance.ListWithHttpInfo(limit, offset);
+    ApiResponse<PostHogPaginatedTeamBasicList> response = apiInstance.ListWithHttpInfo(limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -257,7 +257,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedTeamBasicList**](PaginatedTeamBasicList.md)
+[**PostHogPaginatedTeamBasicList**](PostHogPaginatedTeamBasicList.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 
 <a id="partialupdate"></a>
 # **PartialUpdate**
-> Team PartialUpdate (int id, PatchedTeam patchedTeam = null)
+> PostHogTeam PartialUpdate (int id, PostHogPatchedTeam postHogPatchedTeam = null)
 
 
 
@@ -302,11 +302,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ProjectsApi(config);
             var id = 56;  // int | A unique integer value identifying this team.
-            var patchedTeam = new PatchedTeam(); // PatchedTeam |  (optional) 
+            var postHogPatchedTeam = new PostHogPatchedTeam(); // PostHogPatchedTeam |  (optional) 
 
             try
             {
-                Team result = apiInstance.PartialUpdate(id, patchedTeam);
+                PostHogTeam result = apiInstance.PartialUpdate(id, postHogPatchedTeam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -326,7 +326,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.PartialUpdateWithHttpInfo(id, patchedTeam);
+    ApiResponse<PostHogTeam> response = apiInstance.PartialUpdateWithHttpInfo(id, postHogPatchedTeam);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -344,11 +344,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this team. |  |
-| **patchedTeam** | [**PatchedTeam**](PatchedTeam.md) |  | [optional]  |
+| **postHogPatchedTeam** | [**PostHogPatchedTeam**](PostHogPatchedTeam.md) |  | [optional]  |
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 
 <a id="retrieve"></a>
 # **Retrieve**
-> Team Retrieve (int id)
+> PostHogTeam Retrieve (int id)
 
 
 
@@ -396,7 +396,7 @@ namespace Example
 
             try
             {
-                Team result = apiInstance.Retrieve(id);
+                PostHogTeam result = apiInstance.Retrieve(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -416,7 +416,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.RetrieveWithHttpInfo(id);
+    ApiResponse<PostHogTeam> response = apiInstance.RetrieveWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -437,7 +437,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 
 <a id="update"></a>
 # **Update**
-> Team Update (int id, Team team = null)
+> PostHogTeam Update (int id, PostHogTeam postHogTeam = null)
 
 
 
@@ -482,11 +482,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ProjectsApi(config);
             var id = 56;  // int | A unique integer value identifying this team.
-            var team = new Team(); // Team |  (optional) 
+            var postHogTeam = new PostHogTeam(); // PostHogTeam |  (optional) 
 
             try
             {
-                Team result = apiInstance.Update(id, team);
+                PostHogTeam result = apiInstance.Update(id, postHogTeam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -506,7 +506,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.UpdateWithHttpInfo(id, team);
+    ApiResponse<PostHogTeam> response = apiInstance.UpdateWithHttpInfo(id, postHogTeam);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -524,11 +524,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this team. |  |
-| **team** | [**Team**](Team.md) |  | [optional]  |
+| **postHogTeam** | [**PostHogTeam**](PostHogTeam.md) |  | [optional]  |
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 

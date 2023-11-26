@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsCreate(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsCreate(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationDomainList</returns>
-        PaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationDomainList</returns>
+        PostHogPaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationDomainList</returns>
-        ApiResponse<PaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationDomainList</returns>
+        ApiResponse<PostHogPaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -125,8 +125,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,18 +138,18 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -160,20 +160,20 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        OrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>PostHogOrganizationDomain</returns>
+        PostHogOrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -184,10 +184,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        ApiResponse<OrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        ApiResponse<PostHogOrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -205,11 +205,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -219,11 +219,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -263,8 +263,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationDomainList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationDomainList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -278,8 +278,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationDomainList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationDomainList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -289,11 +289,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -304,11 +304,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -320,8 +320,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -334,8 +334,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -345,11 +345,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -360,11 +360,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -374,11 +374,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        System.Threading.Tasks.Task<OrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -389,11 +389,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -519,12 +519,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsCreate(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsCreate(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsCreateWithHttpInfo(parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -533,10 +533,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -544,10 +544,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -576,14 +576,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsCreate", localVarResponse);
@@ -601,13 +601,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsCreateAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -616,11 +616,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -628,10 +628,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsCreate");
             }
 
 
@@ -661,14 +661,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -836,10 +836,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationDomainList</returns>
-        public PaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationDomainList</returns>
+        public PostHogPaginatedOrganizationDomainList DomainsList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> localVarResponse = DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> localVarResponse = DomainsListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -851,8 +851,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationDomainList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationDomainList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> DomainsListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -897,7 +897,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsList", localVarResponse);
@@ -919,10 +919,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationDomainList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationDomainList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationDomainList> DomainsListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList> localVarResponse = await DomainsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList> localVarResponse = await DomainsListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -935,8 +935,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationDomainList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationDomainList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationDomainList>> DomainsListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -982,7 +982,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationDomainList>("/api/organizations/{parent_lookup_organization_id}/domains/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1002,12 +1002,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsPartialUpdate(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -1017,10 +1017,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsPartialUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1055,14 +1055,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationDomain;
+            localVarRequestOptions.Data = postHogPatchedOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsPartialUpdate", localVarResponse);
@@ -1081,13 +1081,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsPartialUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1097,11 +1097,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationDomain"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationDomain"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PatchedOrganizationDomain patchedOrganizationDomain = default(PatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsPartialUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogPatchedOrganizationDomain postHogPatchedOrganizationDomain = default(PostHogPatchedOrganizationDomain), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1137,14 +1137,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationDomain;
+            localVarRequestOptions.Data = postHogPatchedOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1165,10 +1165,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsRetrieve(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -1179,8 +1179,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsRetrieveWithHttpInfo(Guid id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1218,7 +1218,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsRetrieve", localVarResponse);
@@ -1239,10 +1239,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsRetrieveAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1254,8 +1254,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsRetrieveWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1294,7 +1294,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1314,12 +1314,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsUpdate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -1329,10 +1329,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsUpdateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1340,10 +1340,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsUpdate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1373,14 +1373,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsUpdate", localVarResponse);
@@ -1399,13 +1399,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsUpdateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1415,11 +1415,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsUpdateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1427,10 +1427,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsUpdate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsUpdate");
             }
 
 
@@ -1461,14 +1461,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1488,12 +1488,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationDomain</returns>
-        public OrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>PostHogOrganizationDomain</returns>
+        public PostHogOrganizationDomain DomainsVerifyCreate(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, organizationDomain);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = DomainsVerifyCreateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationDomain);
             return localVarResponse.Data;
         }
 
@@ -1503,10 +1503,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationDomain</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationDomain</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> DomainsVerifyCreateWithHttpInfo(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1514,10 +1514,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsVerifyCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsVerifyCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsVerifyCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1547,14 +1547,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsVerifyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainsVerifyCreate", localVarResponse);
@@ -1573,13 +1573,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationDomain</returns>
-        public async System.Threading.Tasks.Task<OrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationDomain</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationDomain> DomainsVerifyCreateAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationDomain> localVarResponse = await DomainsVerifyCreateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationDomain> localVarResponse = await DomainsVerifyCreateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationDomain, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1589,11 +1589,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this domain.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationDomain"></param>
+        /// <param name="postHogOrganizationDomain"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationDomain)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, OrganizationDomain organizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationDomain)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationDomain>> DomainsVerifyCreateWithHttpInfoAsync(Guid id, string parentLookupOrganizationId, PostHogOrganizationDomain postHogOrganizationDomain, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1601,10 +1601,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling DomainsApi->DomainsVerifyCreate");
             }
 
-            // verify the required parameter 'organizationDomain' is set
-            if (organizationDomain == null)
+            // verify the required parameter 'postHogOrganizationDomain' is set
+            if (postHogOrganizationDomain == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationDomain' when calling DomainsApi->DomainsVerifyCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationDomain' when calling DomainsApi->DomainsVerifyCreate");
             }
 
 
@@ -1635,14 +1635,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationDomain;
+            localVarRequestOptions.Data = postHogOrganizationDomain;
 
             localVarRequestOptions.Operation = "DomainsApi.DomainsVerifyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationDomain>("/api/organizations/{parent_lookup_organization_id}/domains/{id}/verify/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

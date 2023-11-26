@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        ExplicitTeamMember ExplicitMembersCreate(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0);
+        /// <returns>PostHogExplicitTeamMember</returns>
+        PostHogExplicitTeamMember ExplicitMembersCreate(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        ApiResponse<ExplicitTeamMember> ExplicitMembersCreateWithHttpInfo(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        ApiResponse<PostHogExplicitTeamMember> ExplicitMembersCreateWithHttpInfo(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -76,8 +76,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;ExplicitTeamMember&gt;</returns>
-        List<ExplicitTeamMember> ExplicitMembersList(string projectId, int operationIndex = 0);
+        /// <returns>List&lt;PostHogExplicitTeamMember&gt;</returns>
+        List<PostHogExplicitTeamMember> ExplicitMembersList(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -88,18 +88,18 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;ExplicitTeamMember&gt;</returns>
-        ApiResponse<List<ExplicitTeamMember>> ExplicitMembersListWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of List&lt;PostHogExplicitTeamMember&gt;</returns>
+        ApiResponse<List<PostHogExplicitTeamMember>> ExplicitMembersListWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        ExplicitTeamMember ExplicitMembersPartialUpdate(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0);
+        /// <returns>PostHogExplicitTeamMember</returns>
+        PostHogExplicitTeamMember ExplicitMembersPartialUpdate(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -110,10 +110,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        ApiResponse<ExplicitTeamMember> ExplicitMembersPartialUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        ApiResponse<PostHogExplicitTeamMember> ExplicitMembersPartialUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -121,8 +121,8 @@ namespace DotPostHog.Api
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        ExplicitTeamMember ExplicitMembersRetrieve(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExplicitTeamMember</returns>
+        PostHogExplicitTeamMember ExplicitMembersRetrieve(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -134,18 +134,18 @@ namespace DotPostHog.Api
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        ApiResponse<ExplicitTeamMember> ExplicitMembersRetrieveWithHttpInfo(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        ApiResponse<PostHogExplicitTeamMember> ExplicitMembersRetrieveWithHttpInfo(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        ExplicitTeamMember ExplicitMembersUpdate(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0);
+        /// <returns>PostHogExplicitTeamMember</returns>
+        PostHogExplicitTeamMember ExplicitMembersUpdate(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -156,10 +156,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        ApiResponse<ExplicitTeamMember> ExplicitMembersUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        ApiResponse<PostHogExplicitTeamMember> ExplicitMembersUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -177,11 +177,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersCreateAsync(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersCreateAsync(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -191,11 +191,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExplicitTeamMember>> ExplicitMembersCreateWithHttpInfoAsync(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersCreateWithHttpInfoAsync(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -233,8 +233,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ExplicitTeamMember&gt;</returns>
-        System.Threading.Tasks.Task<List<ExplicitTeamMember>> ExplicitMembersListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of List&lt;PostHogExplicitTeamMember&gt;</returns>
+        System.Threading.Tasks.Task<List<PostHogExplicitTeamMember>> ExplicitMembersListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -246,8 +246,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ExplicitTeamMember&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ExplicitTeamMember>>> ExplicitMembersListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (List&lt;PostHogExplicitTeamMember&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PostHogExplicitTeamMember>>> ExplicitMembersListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -257,11 +257,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersPartialUpdateAsync(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersPartialUpdateAsync(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -272,11 +272,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExplicitTeamMember>> ExplicitMembersPartialUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersPartialUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -288,8 +288,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersRetrieveAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersRetrieveAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,8 +302,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExplicitTeamMember>> ExplicitMembersRetrieveWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersRetrieveWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -313,11 +313,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersUpdateAsync(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersUpdateAsync(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -328,11 +328,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExplicitTeamMember>> ExplicitMembersUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -458,12 +458,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        public ExplicitTeamMember ExplicitMembersCreate(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0)
+        /// <returns>PostHogExplicitTeamMember</returns>
+        public PostHogExplicitTeamMember ExplicitMembersCreate(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = ExplicitMembersCreateWithHttpInfo(projectId, explicitTeamMember);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = ExplicitMembersCreateWithHttpInfo(projectId, postHogExplicitTeamMember);
             return localVarResponse.Data;
         }
 
@@ -472,10 +472,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        public DotPostHog.Client.ApiResponse<ExplicitTeamMember> ExplicitMembersCreateWithHttpInfo(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> ExplicitMembersCreateWithHttpInfo(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -483,10 +483,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExplicitMembersApi->ExplicitMembersCreate");
             }
 
-            // verify the required parameter 'explicitTeamMember' is set
-            if (explicitTeamMember == null)
+            // verify the required parameter 'postHogExplicitTeamMember' is set
+            if (postHogExplicitTeamMember == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'explicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExplicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -515,14 +515,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = explicitTeamMember;
+            localVarRequestOptions.Data = postHogExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExplicitMembersCreate", localVarResponse);
@@ -540,13 +540,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        public async System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersCreateAsync(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        public async System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersCreateAsync(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = await ExplicitMembersCreateWithHttpInfoAsync(projectId, explicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = await ExplicitMembersCreateWithHttpInfoAsync(projectId, postHogExplicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -555,11 +555,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExplicitTeamMember>> ExplicitMembersCreateWithHttpInfoAsync(string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersCreateWithHttpInfoAsync(string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -567,10 +567,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExplicitMembersApi->ExplicitMembersCreate");
             }
 
-            // verify the required parameter 'explicitTeamMember' is set
-            if (explicitTeamMember == null)
+            // verify the required parameter 'postHogExplicitTeamMember' is set
+            if (postHogExplicitTeamMember == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'explicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExplicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersCreate");
             }
 
 
@@ -600,14 +600,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = explicitTeamMember;
+            localVarRequestOptions.Data = postHogExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -773,10 +773,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>List&lt;ExplicitTeamMember&gt;</returns>
-        public List<ExplicitTeamMember> ExplicitMembersList(string projectId, int operationIndex = 0)
+        /// <returns>List&lt;PostHogExplicitTeamMember&gt;</returns>
+        public List<PostHogExplicitTeamMember> ExplicitMembersList(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<List<ExplicitTeamMember>> localVarResponse = ExplicitMembersListWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<List<PostHogExplicitTeamMember>> localVarResponse = ExplicitMembersListWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -786,8 +786,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of List&lt;ExplicitTeamMember&gt;</returns>
-        public DotPostHog.Client.ApiResponse<List<ExplicitTeamMember>> ExplicitMembersListWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of List&lt;PostHogExplicitTeamMember&gt;</returns>
+        public DotPostHog.Client.ApiResponse<List<PostHogExplicitTeamMember>> ExplicitMembersListWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -824,7 +824,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<ExplicitTeamMember>>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<PostHogExplicitTeamMember>>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExplicitMembersList", localVarResponse);
@@ -844,10 +844,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ExplicitTeamMember&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ExplicitTeamMember>> ExplicitMembersListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of List&lt;PostHogExplicitTeamMember&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PostHogExplicitTeamMember>> ExplicitMembersListAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<List<ExplicitTeamMember>> localVarResponse = await ExplicitMembersListWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<List<PostHogExplicitTeamMember>> localVarResponse = await ExplicitMembersListWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -858,8 +858,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ExplicitTeamMember&gt;)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<List<ExplicitTeamMember>>> ExplicitMembersListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (List&lt;PostHogExplicitTeamMember&gt;)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<List<PostHogExplicitTeamMember>>> ExplicitMembersListWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -897,7 +897,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<ExplicitTeamMember>>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<PostHogExplicitTeamMember>>("/api/projects/{project_id}/explicit_members/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -917,12 +917,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        public ExplicitTeamMember ExplicitMembersPartialUpdate(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0)
+        /// <returns>PostHogExplicitTeamMember</returns>
+        public PostHogExplicitTeamMember ExplicitMembersPartialUpdate(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = ExplicitMembersPartialUpdateWithHttpInfo(parentMembershipUserUuid, projectId, patchedExplicitTeamMember);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = ExplicitMembersPartialUpdateWithHttpInfo(parentMembershipUserUuid, projectId, postHogPatchedExplicitTeamMember);
             return localVarResponse.Data;
         }
 
@@ -932,10 +932,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        public DotPostHog.Client.ApiResponse<ExplicitTeamMember> ExplicitMembersPartialUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> ExplicitMembersPartialUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -970,14 +970,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_membership__user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(parentMembershipUserUuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExplicitTeamMember;
+            localVarRequestOptions.Data = postHogPatchedExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExplicitMembersPartialUpdate", localVarResponse);
@@ -996,13 +996,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        public async System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersPartialUpdateAsync(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        public async System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersPartialUpdateAsync(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = await ExplicitMembersPartialUpdateWithHttpInfoAsync(parentMembershipUserUuid, projectId, patchedExplicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = await ExplicitMembersPartialUpdateWithHttpInfoAsync(parentMembershipUserUuid, projectId, postHogPatchedExplicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1012,11 +1012,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedExplicitTeamMember"> (optional)</param>
+        /// <param name="postHogPatchedExplicitTeamMember"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExplicitTeamMember>> ExplicitMembersPartialUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PatchedExplicitTeamMember patchedExplicitTeamMember = default(PatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersPartialUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PostHogPatchedExplicitTeamMember postHogPatchedExplicitTeamMember = default(PostHogPatchedExplicitTeamMember), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1052,14 +1052,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_membership__user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(parentMembershipUserUuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedExplicitTeamMember;
+            localVarRequestOptions.Data = postHogPatchedExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1080,10 +1080,10 @@ namespace DotPostHog.Api
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        public ExplicitTeamMember ExplicitMembersRetrieve(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExplicitTeamMember</returns>
+        public PostHogExplicitTeamMember ExplicitMembersRetrieve(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = ExplicitMembersRetrieveWithHttpInfo(parentMembershipUserUuid, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = ExplicitMembersRetrieveWithHttpInfo(parentMembershipUserUuid, projectId);
             return localVarResponse.Data;
         }
 
@@ -1094,8 +1094,8 @@ namespace DotPostHog.Api
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        public DotPostHog.Client.ApiResponse<ExplicitTeamMember> ExplicitMembersRetrieveWithHttpInfo(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> ExplicitMembersRetrieveWithHttpInfo(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1133,7 +1133,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExplicitMembersRetrieve", localVarResponse);
@@ -1154,10 +1154,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        public async System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersRetrieveAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        public async System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersRetrieveAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = await ExplicitMembersRetrieveWithHttpInfoAsync(parentMembershipUserUuid, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = await ExplicitMembersRetrieveWithHttpInfoAsync(parentMembershipUserUuid, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1169,8 +1169,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExplicitTeamMember>> ExplicitMembersRetrieveWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersRetrieveWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1209,7 +1209,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1229,12 +1229,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExplicitTeamMember</returns>
-        public ExplicitTeamMember ExplicitMembersUpdate(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0)
+        /// <returns>PostHogExplicitTeamMember</returns>
+        public PostHogExplicitTeamMember ExplicitMembersUpdate(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = ExplicitMembersUpdateWithHttpInfo(parentMembershipUserUuid, projectId, explicitTeamMember);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = ExplicitMembersUpdateWithHttpInfo(parentMembershipUserUuid, projectId, postHogExplicitTeamMember);
             return localVarResponse.Data;
         }
 
@@ -1244,10 +1244,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExplicitTeamMember</returns>
-        public DotPostHog.Client.ApiResponse<ExplicitTeamMember> ExplicitMembersUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExplicitTeamMember</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> ExplicitMembersUpdateWithHttpInfo(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1255,10 +1255,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExplicitMembersApi->ExplicitMembersUpdate");
             }
 
-            // verify the required parameter 'explicitTeamMember' is set
-            if (explicitTeamMember == null)
+            // verify the required parameter 'postHogExplicitTeamMember' is set
+            if (postHogExplicitTeamMember == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'explicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExplicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1288,14 +1288,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_membership__user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(parentMembershipUserUuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = explicitTeamMember;
+            localVarRequestOptions.Data = postHogExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExplicitMembersUpdate", localVarResponse);
@@ -1314,13 +1314,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExplicitTeamMember</returns>
-        public async System.Threading.Tasks.Task<ExplicitTeamMember> ExplicitMembersUpdateAsync(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExplicitTeamMember</returns>
+        public async System.Threading.Tasks.Task<PostHogExplicitTeamMember> ExplicitMembersUpdateAsync(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExplicitTeamMember> localVarResponse = await ExplicitMembersUpdateWithHttpInfoAsync(parentMembershipUserUuid, projectId, explicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember> localVarResponse = await ExplicitMembersUpdateWithHttpInfoAsync(parentMembershipUserUuid, projectId, postHogExplicitTeamMember, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1330,11 +1330,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentMembershipUserUuid"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="explicitTeamMember"></param>
+        /// <param name="postHogExplicitTeamMember"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExplicitTeamMember)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExplicitTeamMember>> ExplicitMembersUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, ExplicitTeamMember explicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExplicitTeamMember)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExplicitTeamMember>> ExplicitMembersUpdateWithHttpInfoAsync(Guid parentMembershipUserUuid, string projectId, PostHogExplicitTeamMember postHogExplicitTeamMember, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1342,10 +1342,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExplicitMembersApi->ExplicitMembersUpdate");
             }
 
-            // verify the required parameter 'explicitTeamMember' is set
-            if (explicitTeamMember == null)
+            // verify the required parameter 'postHogExplicitTeamMember' is set
+            if (postHogExplicitTeamMember == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'explicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExplicitTeamMember' when calling ExplicitMembersApi->ExplicitMembersUpdate");
             }
 
 
@@ -1376,14 +1376,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_membership__user__uuid", DotPostHog.Client.ClientUtils.ParameterToString(parentMembershipUserUuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = explicitTeamMember;
+            localVarRequestOptions.Data = postHogExplicitTeamMember;
 
             localVarRequestOptions.Operation = "ExplicitMembersApi.ExplicitMembersUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<ExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogExplicitTeamMember>("/api/projects/{project_id}/explicit_members/{parent_membership__user__uuid}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

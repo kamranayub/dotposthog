@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeatureSerializerCreateOnly</returns>
-        EarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0);
+        /// <returns>PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        PostHogEarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeatureSerializerCreateOnly</returns>
-        ApiResponse<EarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateWithHttpInfo(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateWithHttpInfo(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEarlyAccessFeatureList</returns>
-        PaginatedEarlyAccessFeatureList EarlyAccessFeatureList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedEarlyAccessFeatureList</returns>
+        PostHogPaginatedEarlyAccessFeatureList EarlyAccessFeatureList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEarlyAccessFeatureList</returns>
-        ApiResponse<PaginatedEarlyAccessFeatureList> EarlyAccessFeatureListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedEarlyAccessFeatureList</returns>
+        ApiResponse<PostHogPaginatedEarlyAccessFeatureList> EarlyAccessFeatureListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        EarlyAccessFeature EarlyAccessFeaturePartialUpdate(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0);
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        PostHogEarlyAccessFeature EarlyAccessFeaturePartialUpdate(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        ApiResponse<EarlyAccessFeature> EarlyAccessFeaturePartialUpdateWithHttpInfo(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeaturePartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -125,8 +125,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        EarlyAccessFeature EarlyAccessFeatureRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        PostHogEarlyAccessFeature EarlyAccessFeatureRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,18 +138,18 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        ApiResponse<EarlyAccessFeature> EarlyAccessFeatureRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeatureRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        EarlyAccessFeature EarlyAccessFeatureUpdate(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0);
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        PostHogEarlyAccessFeature EarlyAccessFeatureUpdate(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -160,10 +160,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        ApiResponse<EarlyAccessFeature> EarlyAccessFeatureUpdateWithHttpInfo(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeatureUpdateWithHttpInfo(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -181,11 +181,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeatureSerializerCreateOnly</returns>
-        System.Threading.Tasks.Task<EarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateAsync(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        System.Threading.Tasks.Task<PostHogEarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateAsync(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -195,11 +195,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeatureSerializerCreateOnly)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EarlyAccessFeatureSerializerCreateOnly>> EarlyAccessFeatureCreateWithHttpInfoAsync(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeatureSerializerCreateOnly)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly>> EarlyAccessFeatureCreateWithHttpInfoAsync(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -239,8 +239,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEarlyAccessFeatureList</returns>
-        System.Threading.Tasks.Task<PaginatedEarlyAccessFeatureList> EarlyAccessFeatureListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedEarlyAccessFeatureList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedEarlyAccessFeatureList> EarlyAccessFeatureListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -254,8 +254,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEarlyAccessFeatureList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedEarlyAccessFeatureList>> EarlyAccessFeatureListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedEarlyAccessFeatureList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedEarlyAccessFeatureList>> EarlyAccessFeatureListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -265,11 +265,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeaturePartialUpdateAsync(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeaturePartialUpdateAsync(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -280,11 +280,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EarlyAccessFeature>> EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -296,8 +296,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeatureRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeatureRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -310,8 +310,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EarlyAccessFeature>> EarlyAccessFeatureRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeatureRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -321,11 +321,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeatureUpdateAsync(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeatureUpdateAsync(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -336,11 +336,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EarlyAccessFeature>> EarlyAccessFeatureUpdateWithHttpInfoAsync(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeatureUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -466,12 +466,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeatureSerializerCreateOnly</returns>
-        public EarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0)
+        /// <returns>PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        public PostHogEarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeatureSerializerCreateOnly> localVarResponse = EarlyAccessFeatureCreateWithHttpInfo(projectId, earlyAccessFeatureSerializerCreateOnly);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly> localVarResponse = EarlyAccessFeatureCreateWithHttpInfo(projectId, postHogEarlyAccessFeatureSerializerCreateOnly);
             return localVarResponse.Data;
         }
 
@@ -480,10 +480,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeatureSerializerCreateOnly</returns>
-        public DotPostHog.Client.ApiResponse<EarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateWithHttpInfo(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateWithHttpInfo(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -491,10 +491,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
             }
 
-            // verify the required parameter 'earlyAccessFeatureSerializerCreateOnly' is set
-            if (earlyAccessFeatureSerializerCreateOnly == null)
+            // verify the required parameter 'postHogEarlyAccessFeatureSerializerCreateOnly' is set
+            if (postHogEarlyAccessFeatureSerializerCreateOnly == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'earlyAccessFeatureSerializerCreateOnly' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogEarlyAccessFeatureSerializerCreateOnly' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -523,14 +523,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = earlyAccessFeatureSerializerCreateOnly;
+            localVarRequestOptions.Data = postHogEarlyAccessFeatureSerializerCreateOnly;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeatureCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<EarlyAccessFeatureSerializerCreateOnly>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogEarlyAccessFeatureSerializerCreateOnly>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EarlyAccessFeatureCreate", localVarResponse);
@@ -548,13 +548,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeatureSerializerCreateOnly</returns>
-        public async System.Threading.Tasks.Task<EarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateAsync(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEarlyAccessFeatureSerializerCreateOnly</returns>
+        public async System.Threading.Tasks.Task<PostHogEarlyAccessFeatureSerializerCreateOnly> EarlyAccessFeatureCreateAsync(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeatureSerializerCreateOnly> localVarResponse = await EarlyAccessFeatureCreateWithHttpInfoAsync(projectId, earlyAccessFeatureSerializerCreateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly> localVarResponse = await EarlyAccessFeatureCreateWithHttpInfoAsync(projectId, postHogEarlyAccessFeatureSerializerCreateOnly, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -563,11 +563,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeatureSerializerCreateOnly"></param>
+        /// <param name="postHogEarlyAccessFeatureSerializerCreateOnly"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeatureSerializerCreateOnly)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EarlyAccessFeatureSerializerCreateOnly>> EarlyAccessFeatureCreateWithHttpInfoAsync(string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeatureSerializerCreateOnly)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly>> EarlyAccessFeatureCreateWithHttpInfoAsync(string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -575,10 +575,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
             }
 
-            // verify the required parameter 'earlyAccessFeatureSerializerCreateOnly' is set
-            if (earlyAccessFeatureSerializerCreateOnly == null)
+            // verify the required parameter 'postHogEarlyAccessFeatureSerializerCreateOnly' is set
+            if (postHogEarlyAccessFeatureSerializerCreateOnly == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'earlyAccessFeatureSerializerCreateOnly' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogEarlyAccessFeatureSerializerCreateOnly' when calling EarlyAccessFeatureApi->EarlyAccessFeatureCreate");
             }
 
 
@@ -608,14 +608,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = earlyAccessFeatureSerializerCreateOnly;
+            localVarRequestOptions.Data = postHogEarlyAccessFeatureSerializerCreateOnly;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeatureCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EarlyAccessFeatureSerializerCreateOnly>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogEarlyAccessFeatureSerializerCreateOnly>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -783,10 +783,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedEarlyAccessFeatureList</returns>
-        public PaginatedEarlyAccessFeatureList EarlyAccessFeatureList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedEarlyAccessFeatureList</returns>
+        public PostHogPaginatedEarlyAccessFeatureList EarlyAccessFeatureList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedEarlyAccessFeatureList> localVarResponse = EarlyAccessFeatureListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEarlyAccessFeatureList> localVarResponse = EarlyAccessFeatureListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -798,8 +798,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedEarlyAccessFeatureList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedEarlyAccessFeatureList> EarlyAccessFeatureListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedEarlyAccessFeatureList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedEarlyAccessFeatureList> EarlyAccessFeatureListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -844,7 +844,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedEarlyAccessFeatureList>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedEarlyAccessFeatureList>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EarlyAccessFeatureList", localVarResponse);
@@ -866,10 +866,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedEarlyAccessFeatureList</returns>
-        public async System.Threading.Tasks.Task<PaginatedEarlyAccessFeatureList> EarlyAccessFeatureListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedEarlyAccessFeatureList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedEarlyAccessFeatureList> EarlyAccessFeatureListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedEarlyAccessFeatureList> localVarResponse = await EarlyAccessFeatureListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedEarlyAccessFeatureList> localVarResponse = await EarlyAccessFeatureListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -882,8 +882,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedEarlyAccessFeatureList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedEarlyAccessFeatureList>> EarlyAccessFeatureListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedEarlyAccessFeatureList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedEarlyAccessFeatureList>> EarlyAccessFeatureListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -929,7 +929,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedEarlyAccessFeatureList>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedEarlyAccessFeatureList>("/api/projects/{project_id}/early_access_feature/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -949,12 +949,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        public EarlyAccessFeature EarlyAccessFeaturePartialUpdate(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0)
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        public PostHogEarlyAccessFeature EarlyAccessFeaturePartialUpdate(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = EarlyAccessFeaturePartialUpdateWithHttpInfo(id, projectId, patchedEarlyAccessFeature);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = EarlyAccessFeaturePartialUpdateWithHttpInfo(id, projectId, postHogPatchedEarlyAccessFeature);
             return localVarResponse.Data;
         }
 
@@ -964,10 +964,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        public DotPostHog.Client.ApiResponse<EarlyAccessFeature> EarlyAccessFeaturePartialUpdateWithHttpInfo(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeaturePartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1002,14 +1002,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEarlyAccessFeature;
+            localVarRequestOptions.Data = postHogPatchedEarlyAccessFeature;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeaturePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EarlyAccessFeaturePartialUpdate", localVarResponse);
@@ -1028,13 +1028,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        public async System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeaturePartialUpdateAsync(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        public async System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeaturePartialUpdateAsync(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = await EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(id, projectId, patchedEarlyAccessFeature, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = await EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedEarlyAccessFeature, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1044,11 +1044,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedEarlyAccessFeature"> (optional)</param>
+        /// <param name="postHogPatchedEarlyAccessFeature"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EarlyAccessFeature>> EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = default(PatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeaturePartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = default(PostHogPatchedEarlyAccessFeature), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1084,14 +1084,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedEarlyAccessFeature;
+            localVarRequestOptions.Data = postHogPatchedEarlyAccessFeature;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeaturePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1112,10 +1112,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        public EarlyAccessFeature EarlyAccessFeatureRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        public PostHogEarlyAccessFeature EarlyAccessFeatureRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = EarlyAccessFeatureRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = EarlyAccessFeatureRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1126,8 +1126,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        public DotPostHog.Client.ApiResponse<EarlyAccessFeature> EarlyAccessFeatureRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeatureRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1165,7 +1165,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EarlyAccessFeatureRetrieve", localVarResponse);
@@ -1186,10 +1186,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        public async System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeatureRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        public async System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeatureRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = await EarlyAccessFeatureRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = await EarlyAccessFeatureRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1201,8 +1201,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EarlyAccessFeature>> EarlyAccessFeatureRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeatureRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1241,7 +1241,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1261,12 +1261,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EarlyAccessFeature</returns>
-        public EarlyAccessFeature EarlyAccessFeatureUpdate(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0)
+        /// <returns>PostHogEarlyAccessFeature</returns>
+        public PostHogEarlyAccessFeature EarlyAccessFeatureUpdate(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = EarlyAccessFeatureUpdateWithHttpInfo(id, projectId, earlyAccessFeature);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = EarlyAccessFeatureUpdateWithHttpInfo(id, projectId, postHogEarlyAccessFeature);
             return localVarResponse.Data;
         }
 
@@ -1276,10 +1276,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EarlyAccessFeature</returns>
-        public DotPostHog.Client.ApiResponse<EarlyAccessFeature> EarlyAccessFeatureUpdateWithHttpInfo(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogEarlyAccessFeature</returns>
+        public DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> EarlyAccessFeatureUpdateWithHttpInfo(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1287,10 +1287,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
             }
 
-            // verify the required parameter 'earlyAccessFeature' is set
-            if (earlyAccessFeature == null)
+            // verify the required parameter 'postHogEarlyAccessFeature' is set
+            if (postHogEarlyAccessFeature == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'earlyAccessFeature' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogEarlyAccessFeature' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1320,14 +1320,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = earlyAccessFeature;
+            localVarRequestOptions.Data = postHogEarlyAccessFeature;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeatureUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EarlyAccessFeatureUpdate", localVarResponse);
@@ -1346,13 +1346,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EarlyAccessFeature</returns>
-        public async System.Threading.Tasks.Task<EarlyAccessFeature> EarlyAccessFeatureUpdateAsync(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogEarlyAccessFeature</returns>
+        public async System.Threading.Tasks.Task<PostHogEarlyAccessFeature> EarlyAccessFeatureUpdateAsync(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<EarlyAccessFeature> localVarResponse = await EarlyAccessFeatureUpdateWithHttpInfoAsync(id, projectId, earlyAccessFeature, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature> localVarResponse = await EarlyAccessFeatureUpdateWithHttpInfoAsync(id, projectId, postHogEarlyAccessFeature, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1362,11 +1362,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this early access feature.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="earlyAccessFeature"></param>
+        /// <param name="postHogEarlyAccessFeature"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EarlyAccessFeature)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<EarlyAccessFeature>> EarlyAccessFeatureUpdateWithHttpInfoAsync(Guid id, string projectId, EarlyAccessFeature earlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogEarlyAccessFeature)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogEarlyAccessFeature>> EarlyAccessFeatureUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1374,10 +1374,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
             }
 
-            // verify the required parameter 'earlyAccessFeature' is set
-            if (earlyAccessFeature == null)
+            // verify the required parameter 'postHogEarlyAccessFeature' is set
+            if (postHogEarlyAccessFeature == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'earlyAccessFeature' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogEarlyAccessFeature' when calling EarlyAccessFeatureApi->EarlyAccessFeatureUpdate");
             }
 
 
@@ -1408,14 +1408,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = earlyAccessFeature;
+            localVarRequestOptions.Data = postHogEarlyAccessFeature;
 
             localVarRequestOptions.Operation = "EarlyAccessFeatureApi.EarlyAccessFeatureUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogEarlyAccessFeature>("/api/projects/{project_id}/early_access_feature/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

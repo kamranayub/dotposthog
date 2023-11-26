@@ -30,7 +30,7 @@ All URIs are relative to *http://localhost*
 
 <a id="personsactivityretrieve"></a>
 # **PersonsActivityRetrieve**
-> Person PersonsActivityRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsActivityRetrieve (string projectId, string format = null)
 
 
 
@@ -58,7 +58,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsActivityRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsActivityRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -78,7 +78,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsActivityRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsActivityRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -100,7 +100,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 
 <a id="personsactivityretrieve2"></a>
 # **PersonsActivityRetrieve2**
-> Person PersonsActivityRetrieve2 (int id, string projectId, string format = null)
+> PostHogPerson PersonsActivityRetrieve2 (int id, string projectId, string format = null)
 
 
 
@@ -150,7 +150,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsActivityRetrieve2(id, projectId, format);
+                PostHogPerson result = apiInstance.PersonsActivityRetrieve2(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -170,7 +170,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsActivityRetrieve2WithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsActivityRetrieve2WithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -193,7 +193,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ No authorization required
 
 <a id="personscohortsretrieve"></a>
 # **PersonsCohortsRetrieve**
-> Person PersonsCohortsRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsCohortsRetrieve (string projectId, string format = null)
 
 
 
@@ -242,7 +242,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsCohortsRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsCohortsRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -262,7 +262,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsCohortsRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsCohortsRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -284,7 +284,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ No authorization required
 
 <a id="personsdeletepropertycreate"></a>
 # **PersonsDeletePropertyCreate**
-> Person PersonsDeletePropertyCreate (string unset, int id, string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsDeletePropertyCreate (string unset, int id, string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -332,11 +332,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this person.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsDeletePropertyCreate(unset, id, projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsDeletePropertyCreate(unset, id, projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -356,7 +356,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsDeletePropertyCreateWithHttpInfo(unset, id, projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsDeletePropertyCreateWithHttpInfo(unset, id, projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -377,11 +377,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this person. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ No authorization required
 
 <a id="personsfunnelcorrelationcreate"></a>
 # **PersonsFunnelCorrelationCreate**
-> Person PersonsFunnelCorrelationCreate (string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsFunnelCorrelationCreate (string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -518,11 +518,11 @@ namespace Example
             var apiInstance = new PersonsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsFunnelCorrelationCreate(projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsFunnelCorrelationCreate(projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -542,7 +542,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsFunnelCorrelationCreateWithHttpInfo(projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsFunnelCorrelationCreateWithHttpInfo(projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -561,11 +561,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -586,7 +586,7 @@ No authorization required
 
 <a id="personsfunnelcorrelationretrieve"></a>
 # **PersonsFunnelCorrelationRetrieve**
-> Person PersonsFunnelCorrelationRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsFunnelCorrelationRetrieve (string projectId, string format = null)
 
 
 
@@ -614,7 +614,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsFunnelCorrelationRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsFunnelCorrelationRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -634,7 +634,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -656,7 +656,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -677,7 +677,7 @@ No authorization required
 
 <a id="personsfunnelcreate"></a>
 # **PersonsFunnelCreate**
-> Person PersonsFunnelCreate (string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsFunnelCreate (string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -702,11 +702,11 @@ namespace Example
             var apiInstance = new PersonsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsFunnelCreate(projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsFunnelCreate(projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -726,7 +726,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsFunnelCreateWithHttpInfo(projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsFunnelCreateWithHttpInfo(projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -745,11 +745,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -770,7 +770,7 @@ No authorization required
 
 <a id="personsfunnelretrieve"></a>
 # **PersonsFunnelRetrieve**
-> Person PersonsFunnelRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsFunnelRetrieve (string projectId, string format = null)
 
 
 
@@ -798,7 +798,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsFunnelRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsFunnelRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -818,7 +818,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsFunnelRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsFunnelRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -840,7 +840,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -861,7 +861,7 @@ No authorization required
 
 <a id="personslifecycleretrieve"></a>
 # **PersonsLifecycleRetrieve**
-> Person PersonsLifecycleRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsLifecycleRetrieve (string projectId, string format = null)
 
 
 
@@ -889,7 +889,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsLifecycleRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsLifecycleRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -909,7 +909,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsLifecycleRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsLifecycleRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -931,7 +931,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -952,7 +952,7 @@ No authorization required
 
 <a id="personslist"></a>
 # **PersonsList**
-> PaginatedPersonList PersonsList (string projectId, string distinctId = null, string email = null, string format = null, int? limit = null, int? offset = null, List<Property> properties = null, string search = null)
+> PostHogPaginatedPersonList PersonsList (string projectId, string distinctId = null, string email = null, string format = null, int? limit = null, int? offset = null, List<PostHogProperty> properties = null, string search = null)
 
 
 
@@ -981,12 +981,12 @@ namespace Example
             var format = "csv";  // string |  (optional) 
             var limit = 56;  // int? | Number of results to return per page. (optional) 
             var offset = 56;  // int? | The initial index from which to return the results. (optional) 
-            var properties = new List<Property>(); // List<Property> | Filter Persons by person properties. (optional) 
+            var properties = new List<PostHogProperty>(); // List<PostHogProperty> | Filter Persons by person properties. (optional) 
             var search = "search_example";  // string | Search persons, either by email (full text search) or distinct_id (exact match). (optional) 
 
             try
             {
-                PaginatedPersonList result = apiInstance.PersonsList(projectId, distinctId, email, format, limit, offset, properties, search);
+                PostHogPaginatedPersonList result = apiInstance.PersonsList(projectId, distinctId, email, format, limit, offset, properties, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1006,7 +1006,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedPersonList> response = apiInstance.PersonsListWithHttpInfo(projectId, distinctId, email, format, limit, offset, properties, search);
+    ApiResponse<PostHogPaginatedPersonList> response = apiInstance.PersonsListWithHttpInfo(projectId, distinctId, email, format, limit, offset, properties, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1029,12 +1029,12 @@ catch (ApiException e)
 | **format** | **string** |  | [optional]  |
 | **limit** | **int?** | Number of results to return per page. | [optional]  |
 | **offset** | **int?** | The initial index from which to return the results. | [optional]  |
-| **properties** | [**List&lt;Property&gt;**](Property.md) | Filter Persons by person properties. | [optional]  |
+| **properties** | [**List&lt;PostHogProperty&gt;**](PostHogProperty.md) | Filter Persons by person properties. | [optional]  |
 | **search** | **string** | Search persons, either by email (full text search) or distinct_id (exact match). | [optional]  |
 
 ### Return type
 
-[**PaginatedPersonList**](PaginatedPersonList.md)
+[**PostHogPaginatedPersonList**](PostHogPaginatedPersonList.md)
 
 ### Authorization
 
@@ -1055,7 +1055,7 @@ No authorization required
 
 <a id="personspartialupdate"></a>
 # **PersonsPartialUpdate**
-> Person PersonsPartialUpdate (int id, string projectId, string format = null, PatchedPerson patchedPerson = null)
+> PostHogPerson PersonsPartialUpdate (int id, string projectId, string format = null, PostHogPatchedPerson postHogPatchedPerson = null)
 
 
 
@@ -1081,11 +1081,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this person.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var patchedPerson = new PatchedPerson(); // PatchedPerson |  (optional) 
+            var postHogPatchedPerson = new PostHogPatchedPerson(); // PostHogPatchedPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsPartialUpdate(id, projectId, format, patchedPerson);
+                PostHogPerson result = apiInstance.PersonsPartialUpdate(id, projectId, format, postHogPatchedPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1105,7 +1105,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsPartialUpdateWithHttpInfo(id, projectId, format, patchedPerson);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1125,11 +1125,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this person. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **patchedPerson** | [**PatchedPerson**](PatchedPerson.md) |  | [optional]  |
+| **postHogPatchedPerson** | [**PostHogPatchedPerson**](PostHogPatchedPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1150,7 +1150,7 @@ No authorization required
 
 <a id="personspathcreate"></a>
 # **PersonsPathCreate**
-> Person PersonsPathCreate (string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsPathCreate (string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -1175,11 +1175,11 @@ namespace Example
             var apiInstance = new PersonsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsPathCreate(projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsPathCreate(projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1199,7 +1199,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsPathCreateWithHttpInfo(projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsPathCreateWithHttpInfo(projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1218,11 +1218,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1243,7 +1243,7 @@ No authorization required
 
 <a id="personspathretrieve"></a>
 # **PersonsPathRetrieve**
-> Person PersonsPathRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsPathRetrieve (string projectId, string format = null)
 
 
 
@@ -1271,7 +1271,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsPathRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsPathRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1291,7 +1291,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsPathRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsPathRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1313,7 +1313,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1334,7 +1334,7 @@ No authorization required
 
 <a id="personspropertiestimelineretrieve"></a>
 # **PersonsPropertiesTimelineRetrieve**
-> Person PersonsPropertiesTimelineRetrieve (int id, string projectId, string format = null)
+> PostHogPerson PersonsPropertiesTimelineRetrieve (int id, string projectId, string format = null)
 
 
 
@@ -1363,7 +1363,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsPropertiesTimelineRetrieve(id, projectId, format);
+                PostHogPerson result = apiInstance.PersonsPropertiesTimelineRetrieve(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1383,7 +1383,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsPropertiesTimelineRetrieveWithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsPropertiesTimelineRetrieveWithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1406,7 +1406,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1427,7 +1427,7 @@ No authorization required
 
 <a id="personsretentionretrieve"></a>
 # **PersonsRetentionRetrieve**
-> Person PersonsRetentionRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsRetentionRetrieve (string projectId, string format = null)
 
 
 
@@ -1455,7 +1455,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsRetentionRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsRetentionRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1475,7 +1475,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsRetentionRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsRetentionRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1497,7 +1497,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1518,7 +1518,7 @@ No authorization required
 
 <a id="personsretrieve"></a>
 # **PersonsRetrieve**
-> Person PersonsRetrieve (int id, string projectId, string format = null)
+> PostHogPerson PersonsRetrieve (int id, string projectId, string format = null)
 
 
 
@@ -1547,7 +1547,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsRetrieve(id, projectId, format);
+                PostHogPerson result = apiInstance.PersonsRetrieve(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1567,7 +1567,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsRetrieveWithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsRetrieveWithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1590,7 +1590,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1611,7 +1611,7 @@ No authorization required
 
 <a id="personssplitcreate"></a>
 # **PersonsSplitCreate**
-> Person PersonsSplitCreate (int id, string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsSplitCreate (int id, string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -1637,11 +1637,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this person.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsSplitCreate(id, projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsSplitCreate(id, projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1661,7 +1661,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsSplitCreateWithHttpInfo(id, projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsSplitCreateWithHttpInfo(id, projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1681,11 +1681,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this person. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1706,7 +1706,7 @@ No authorization required
 
 <a id="personsstickinessretrieve"></a>
 # **PersonsStickinessRetrieve**
-> Person PersonsStickinessRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsStickinessRetrieve (string projectId, string format = null)
 
 
 
@@ -1734,7 +1734,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsStickinessRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsStickinessRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1754,7 +1754,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsStickinessRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsStickinessRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1776,7 +1776,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1797,7 +1797,7 @@ No authorization required
 
 <a id="personstrendsretrieve"></a>
 # **PersonsTrendsRetrieve**
-> Person PersonsTrendsRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsTrendsRetrieve (string projectId, string format = null)
 
 
 
@@ -1825,7 +1825,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsTrendsRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsTrendsRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1845,7 +1845,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsTrendsRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsTrendsRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1867,7 +1867,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1888,7 +1888,7 @@ No authorization required
 
 <a id="personsupdate"></a>
 # **PersonsUpdate**
-> Person PersonsUpdate (int id, string projectId, string format = null, Person person = null)
+> PostHogPerson PersonsUpdate (int id, string projectId, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -1914,11 +1914,11 @@ namespace Example
             var id = 56;  // int | A unique integer value identifying this person.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsUpdate(id, projectId, format, person);
+                PostHogPerson result = apiInstance.PersonsUpdate(id, projectId, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1938,7 +1938,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsUpdateWithHttpInfo(id, projectId, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsUpdateWithHttpInfo(id, projectId, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1958,11 +1958,11 @@ catch (ApiException e)
 | **id** | **int** | A unique integer value identifying this person. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -1983,7 +1983,7 @@ No authorization required
 
 <a id="personsupdatepropertycreate"></a>
 # **PersonsUpdatePropertyCreate**
-> Person PersonsUpdatePropertyCreate (int id, string key, string projectId, Object value, string format = null, Person person = null)
+> PostHogPerson PersonsUpdatePropertyCreate (int id, string key, string projectId, Object value, string format = null, PostHogPerson postHogPerson = null)
 
 
 
@@ -2011,11 +2011,11 @@ namespace Example
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
             var value = new Object(); // Object | Specify the property value
             var format = "csv";  // string |  (optional) 
-            var person = new Person(); // Person |  (optional) 
+            var postHogPerson = new PostHogPerson(); // PostHogPerson |  (optional) 
 
             try
             {
-                Person result = apiInstance.PersonsUpdatePropertyCreate(id, key, projectId, value, format, person);
+                PostHogPerson result = apiInstance.PersonsUpdatePropertyCreate(id, key, projectId, value, format, postHogPerson);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2035,7 +2035,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsUpdatePropertyCreateWithHttpInfo(id, key, projectId, value, format, person);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsUpdatePropertyCreateWithHttpInfo(id, key, projectId, value, format, postHogPerson);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2057,11 +2057,11 @@ catch (ApiException e)
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
 | **value** | [**Object**](Object.md) | Specify the property value |  |
 | **format** | **string** |  | [optional]  |
-| **person** | [**Person**](Person.md) |  | [optional]  |
+| **postHogPerson** | [**PostHogPerson**](PostHogPerson.md) |  | [optional]  |
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 
@@ -2082,7 +2082,7 @@ No authorization required
 
 <a id="personsvaluesretrieve"></a>
 # **PersonsValuesRetrieve**
-> Person PersonsValuesRetrieve (string projectId, string format = null)
+> PostHogPerson PersonsValuesRetrieve (string projectId, string format = null)
 
 
 
@@ -2110,7 +2110,7 @@ namespace Example
 
             try
             {
-                Person result = apiInstance.PersonsValuesRetrieve(projectId, format);
+                PostHogPerson result = apiInstance.PersonsValuesRetrieve(projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2130,7 +2130,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.PersonsValuesRetrieveWithHttpInfo(projectId, format);
+    ApiResponse<PostHogPerson> response = apiInstance.PersonsValuesRetrieveWithHttpInfo(projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2152,7 +2152,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Person**](Person.md)
+[**PostHogPerson**](PostHogPerson.md)
 
 ### Authorization
 

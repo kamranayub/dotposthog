@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //ActivityLog activityLog = null;
-            //var response = instance.ActivityLogBookmarkActivityNotificationCreate(projectId, activityLog);
-            //Assert.IsType<ActivityLog>(response);
+            //PostHogActivityLog postHogActivityLog = null;
+            //var response = instance.ActivityLogBookmarkActivityNotificationCreate(projectId, postHogActivityLog);
+            //Assert.IsType<PostHogActivityLog>(response);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.ActivityLogImportantChangesRetrieve(projectId);
-            //Assert.IsType<ActivityLog>(response);
+            //Assert.IsType<PostHogActivityLog>(response);
         }
     }
 }

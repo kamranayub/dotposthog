@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="earlyaccessfeaturecreate"></a>
 # **EarlyAccessFeatureCreate**
-> EarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate (string projectId, EarlyAccessFeatureSerializerCreateOnly earlyAccessFeatureSerializerCreateOnly)
+> PostHogEarlyAccessFeatureSerializerCreateOnly EarlyAccessFeatureCreate (string projectId, PostHogEarlyAccessFeatureSerializerCreateOnly postHogEarlyAccessFeatureSerializerCreateOnly)
 
 
 
@@ -35,11 +35,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new EarlyAccessFeatureApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var earlyAccessFeatureSerializerCreateOnly = new EarlyAccessFeatureSerializerCreateOnly(); // EarlyAccessFeatureSerializerCreateOnly | 
+            var postHogEarlyAccessFeatureSerializerCreateOnly = new PostHogEarlyAccessFeatureSerializerCreateOnly(); // PostHogEarlyAccessFeatureSerializerCreateOnly | 
 
             try
             {
-                EarlyAccessFeatureSerializerCreateOnly result = apiInstance.EarlyAccessFeatureCreate(projectId, earlyAccessFeatureSerializerCreateOnly);
+                PostHogEarlyAccessFeatureSerializerCreateOnly result = apiInstance.EarlyAccessFeatureCreate(projectId, postHogEarlyAccessFeatureSerializerCreateOnly);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -59,7 +59,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EarlyAccessFeatureSerializerCreateOnly> response = apiInstance.EarlyAccessFeatureCreateWithHttpInfo(projectId, earlyAccessFeatureSerializerCreateOnly);
+    ApiResponse<PostHogEarlyAccessFeatureSerializerCreateOnly> response = apiInstance.EarlyAccessFeatureCreateWithHttpInfo(projectId, postHogEarlyAccessFeatureSerializerCreateOnly);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -77,11 +77,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **earlyAccessFeatureSerializerCreateOnly** | [**EarlyAccessFeatureSerializerCreateOnly**](EarlyAccessFeatureSerializerCreateOnly.md) |  |  |
+| **postHogEarlyAccessFeatureSerializerCreateOnly** | [**PostHogEarlyAccessFeatureSerializerCreateOnly**](PostHogEarlyAccessFeatureSerializerCreateOnly.md) |  |  |
 
 ### Return type
 
-[**EarlyAccessFeatureSerializerCreateOnly**](EarlyAccessFeatureSerializerCreateOnly.md)
+[**PostHogEarlyAccessFeatureSerializerCreateOnly**](PostHogEarlyAccessFeatureSerializerCreateOnly.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a id="earlyaccessfeaturelist"></a>
 # **EarlyAccessFeatureList**
-> PaginatedEarlyAccessFeatureList EarlyAccessFeatureList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedEarlyAccessFeatureList EarlyAccessFeatureList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -214,7 +214,7 @@ namespace Example
 
             try
             {
-                PaginatedEarlyAccessFeatureList result = apiInstance.EarlyAccessFeatureList(projectId, limit, offset);
+                PostHogPaginatedEarlyAccessFeatureList result = apiInstance.EarlyAccessFeatureList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -234,7 +234,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedEarlyAccessFeatureList> response = apiInstance.EarlyAccessFeatureListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedEarlyAccessFeatureList> response = apiInstance.EarlyAccessFeatureListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -257,7 +257,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedEarlyAccessFeatureList**](PaginatedEarlyAccessFeatureList.md)
+[**PostHogPaginatedEarlyAccessFeatureList**](PostHogPaginatedEarlyAccessFeatureList.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 
 <a id="earlyaccessfeaturepartialupdate"></a>
 # **EarlyAccessFeaturePartialUpdate**
-> EarlyAccessFeature EarlyAccessFeaturePartialUpdate (Guid id, string projectId, PatchedEarlyAccessFeature patchedEarlyAccessFeature = null)
+> PostHogEarlyAccessFeature EarlyAccessFeaturePartialUpdate (Guid id, string projectId, PostHogPatchedEarlyAccessFeature postHogPatchedEarlyAccessFeature = null)
 
 
 
@@ -301,11 +301,11 @@ namespace Example
             var apiInstance = new EarlyAccessFeatureApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this early access feature.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedEarlyAccessFeature = new PatchedEarlyAccessFeature(); // PatchedEarlyAccessFeature |  (optional) 
+            var postHogPatchedEarlyAccessFeature = new PostHogPatchedEarlyAccessFeature(); // PostHogPatchedEarlyAccessFeature |  (optional) 
 
             try
             {
-                EarlyAccessFeature result = apiInstance.EarlyAccessFeaturePartialUpdate(id, projectId, patchedEarlyAccessFeature);
+                PostHogEarlyAccessFeature result = apiInstance.EarlyAccessFeaturePartialUpdate(id, projectId, postHogPatchedEarlyAccessFeature);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -325,7 +325,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EarlyAccessFeature> response = apiInstance.EarlyAccessFeaturePartialUpdateWithHttpInfo(id, projectId, patchedEarlyAccessFeature);
+    ApiResponse<PostHogEarlyAccessFeature> response = apiInstance.EarlyAccessFeaturePartialUpdateWithHttpInfo(id, projectId, postHogPatchedEarlyAccessFeature);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -344,11 +344,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this early access feature. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedEarlyAccessFeature** | [**PatchedEarlyAccessFeature**](PatchedEarlyAccessFeature.md) |  | [optional]  |
+| **postHogPatchedEarlyAccessFeature** | [**PostHogPatchedEarlyAccessFeature**](PostHogPatchedEarlyAccessFeature.md) |  | [optional]  |
 
 ### Return type
 
-[**EarlyAccessFeature**](EarlyAccessFeature.md)
+[**PostHogEarlyAccessFeature**](PostHogEarlyAccessFeature.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 
 <a id="earlyaccessfeatureretrieve"></a>
 # **EarlyAccessFeatureRetrieve**
-> EarlyAccessFeature EarlyAccessFeatureRetrieve (Guid id, string projectId)
+> PostHogEarlyAccessFeature EarlyAccessFeatureRetrieve (Guid id, string projectId)
 
 
 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                EarlyAccessFeature result = apiInstance.EarlyAccessFeatureRetrieve(id, projectId);
+                PostHogEarlyAccessFeature result = apiInstance.EarlyAccessFeatureRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EarlyAccessFeature> response = apiInstance.EarlyAccessFeatureRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogEarlyAccessFeature> response = apiInstance.EarlyAccessFeatureRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -437,7 +437,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EarlyAccessFeature**](EarlyAccessFeature.md)
+[**PostHogEarlyAccessFeature**](PostHogEarlyAccessFeature.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 
 <a id="earlyaccessfeatureupdate"></a>
 # **EarlyAccessFeatureUpdate**
-> EarlyAccessFeature EarlyAccessFeatureUpdate (Guid id, string projectId, EarlyAccessFeature earlyAccessFeature)
+> PostHogEarlyAccessFeature EarlyAccessFeatureUpdate (Guid id, string projectId, PostHogEarlyAccessFeature postHogEarlyAccessFeature)
 
 
 
@@ -481,11 +481,11 @@ namespace Example
             var apiInstance = new EarlyAccessFeatureApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this early access feature.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var earlyAccessFeature = new EarlyAccessFeature(); // EarlyAccessFeature | 
+            var postHogEarlyAccessFeature = new PostHogEarlyAccessFeature(); // PostHogEarlyAccessFeature | 
 
             try
             {
-                EarlyAccessFeature result = apiInstance.EarlyAccessFeatureUpdate(id, projectId, earlyAccessFeature);
+                PostHogEarlyAccessFeature result = apiInstance.EarlyAccessFeatureUpdate(id, projectId, postHogEarlyAccessFeature);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -505,7 +505,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<EarlyAccessFeature> response = apiInstance.EarlyAccessFeatureUpdateWithHttpInfo(id, projectId, earlyAccessFeature);
+    ApiResponse<PostHogEarlyAccessFeature> response = apiInstance.EarlyAccessFeatureUpdateWithHttpInfo(id, projectId, postHogEarlyAccessFeature);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -524,11 +524,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this early access feature. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **earlyAccessFeature** | [**EarlyAccessFeature**](EarlyAccessFeature.md) |  |  |
+| **postHogEarlyAccessFeature** | [**PostHogEarlyAccessFeature**](PostHogEarlyAccessFeature.md) |  |  |
 
 ### Return type
 
-[**EarlyAccessFeature**](EarlyAccessFeature.md)
+[**PostHogEarlyAccessFeature**](PostHogEarlyAccessFeature.md)
 
 ### Authorization
 

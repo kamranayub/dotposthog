@@ -63,9 +63,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Funnel funnel = null;
-            //var response = instance.Funnels(projectId, format, funnel);
-            //Assert.IsType<FunnelStepsResults>(response);
+            //PostHogFunnel postHogFunnel = null;
+            //var response = instance.Funnels(projectId, format, postHogFunnel);
+            //Assert.IsType<PostHogFunnelStepsResults>(response);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsActivityRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsActivityRetrieve2(id, projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -104,9 +104,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsCancelCreate(projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsCancelCreate(projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -118,9 +118,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsCreate(projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsCreate(projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -145,9 +145,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsFunnelCorrelationCreate(projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsFunnelCorrelationCreate(projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsFunnelCorrelationRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsFunnelRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string shortId = null;
             //var response = instance.InsightsList(projectId, createdBy, format, limit, offset, shortId);
-            //Assert.IsType<PaginatedInsightList>(response);
+            //Assert.IsType<PostHogPaginatedInsightList>(response);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsMyLastViewedRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -216,9 +216,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //PatchedInsight patchedInsight = null;
-            //var response = instance.InsightsPartialUpdate(id, projectId, format, patchedInsight);
-            //Assert.IsType<Insight>(response);
+            //PostHogPatchedInsight postHogPatchedInsight = null;
+            //var response = instance.InsightsPartialUpdate(id, projectId, format, postHogPatchedInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -230,9 +230,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsPathCreate(projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsPathCreate(projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsPathRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsRetentionRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -274,7 +274,7 @@ namespace DotPostHog.Test.Api
             //int? fromDashboard = null;
             //bool? refresh = null;
             //var response = instance.InsightsRetrieve(id, projectId, format, fromDashboard, refresh);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -286,9 +286,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsTimingCreate(projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsTimingCreate(projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -301,7 +301,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.InsightsTrendRetrieve(projectId, format);
-            //Assert.IsType<Insight>(response);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -314,9 +314,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsUpdate(id, projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsUpdate(id, projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -329,9 +329,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Insight insight = null;
-            //var response = instance.InsightsViewedCreate(id, projectId, format, insight);
-            //Assert.IsType<Insight>(response);
+            //PostHogInsight postHogInsight = null;
+            //var response = instance.InsightsViewedCreate(id, projectId, format, postHogInsight);
+            //Assert.IsType<PostHogInsight>(response);
         }
 
         /// <summary>
@@ -343,9 +343,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Trend trend = null;
-            //var response = instance.Trends(projectId, format, trend);
-            //Assert.IsType<TrendResults>(response);
+            //PostHogTrend postHogTrend = null;
+            //var response = instance.Trends(projectId, format, postHogTrend);
+            //Assert.IsType<PostHogTrendResults>(response);
         }
     }
 }

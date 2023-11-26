@@ -33,8 +33,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        Integration IntegrationsChannelsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogIntegration</returns>
+        PostHogIntegration IntegrationsChannelsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -46,17 +46,17 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        ApiResponse<Integration> IntegrationsChannelsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        ApiResponse<PostHogIntegration> IntegrationsChannelsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        Integration IntegrationsCreate(string projectId, Integration integration, int operationIndex = 0);
+        /// <returns>PostHogIntegration</returns>
+        PostHogIntegration IntegrationsCreate(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -66,10 +66,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        ApiResponse<Integration> IntegrationsCreateWithHttpInfo(string projectId, Integration integration, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        ApiResponse<PostHogIntegration> IntegrationsCreateWithHttpInfo(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +100,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedIntegrationList</returns>
-        PaginatedIntegrationList IntegrationsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedIntegrationList</returns>
+        PostHogPaginatedIntegrationList IntegrationsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,8 +114,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedIntegrationList</returns>
-        ApiResponse<PaginatedIntegrationList> IntegrationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedIntegrationList</returns>
+        ApiResponse<PostHogPaginatedIntegrationList> IntegrationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -123,8 +123,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        Integration IntegrationsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogIntegration</returns>
+        PostHogIntegration IntegrationsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -136,8 +136,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        ApiResponse<Integration> IntegrationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        ApiResponse<PostHogIntegration> IntegrationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -158,8 +158,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        System.Threading.Tasks.Task<Integration> IntegrationsChannelsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogIntegration</returns>
+        System.Threading.Tasks.Task<PostHogIntegration> IntegrationsChannelsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -172,8 +172,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Integration>> IntegrationsChannelsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogIntegration>> IntegrationsChannelsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -182,11 +182,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        System.Threading.Tasks.Task<Integration> IntegrationsCreateAsync(string projectId, Integration integration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogIntegration</returns>
+        System.Threading.Tasks.Task<PostHogIntegration> IntegrationsCreateAsync(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -196,11 +196,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Integration>> IntegrationsCreateWithHttpInfoAsync(string projectId, Integration integration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogIntegration>> IntegrationsCreateWithHttpInfoAsync(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -240,8 +240,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedIntegrationList</returns>
-        System.Threading.Tasks.Task<PaginatedIntegrationList> IntegrationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedIntegrationList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedIntegrationList> IntegrationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -255,8 +255,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedIntegrationList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedIntegrationList>> IntegrationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedIntegrationList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedIntegrationList>> IntegrationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -268,8 +268,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        System.Threading.Tasks.Task<Integration> IntegrationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogIntegration</returns>
+        System.Threading.Tasks.Task<PostHogIntegration> IntegrationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -282,8 +282,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Integration>> IntegrationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogIntegration>> IntegrationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -411,10 +411,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        public Integration IntegrationsChannelsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogIntegration</returns>
+        public PostHogIntegration IntegrationsChannelsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = IntegrationsChannelsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = IntegrationsChannelsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -425,8 +425,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        public DotPostHog.Client.ApiResponse<Integration> IntegrationsChannelsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        public DotPostHog.Client.ApiResponse<PostHogIntegration> IntegrationsChannelsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -464,7 +464,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Integration>("/api/projects/{project_id}/integrations/{id}/channels/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogIntegration>("/api/projects/{project_id}/integrations/{id}/channels/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IntegrationsChannelsRetrieve", localVarResponse);
@@ -485,10 +485,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        public async System.Threading.Tasks.Task<Integration> IntegrationsChannelsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogIntegration</returns>
+        public async System.Threading.Tasks.Task<PostHogIntegration> IntegrationsChannelsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = await IntegrationsChannelsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = await IntegrationsChannelsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -500,8 +500,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Integration>> IntegrationsChannelsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogIntegration>> IntegrationsChannelsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -540,7 +540,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Integration>("/api/projects/{project_id}/integrations/{id}/channels/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogIntegration>("/api/projects/{project_id}/integrations/{id}/channels/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -559,12 +559,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        public Integration IntegrationsCreate(string projectId, Integration integration, int operationIndex = 0)
+        /// <returns>PostHogIntegration</returns>
+        public PostHogIntegration IntegrationsCreate(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = IntegrationsCreateWithHttpInfo(projectId, integration);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = IntegrationsCreateWithHttpInfo(projectId, postHogIntegration);
             return localVarResponse.Data;
         }
 
@@ -573,10 +573,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        public DotPostHog.Client.ApiResponse<Integration> IntegrationsCreateWithHttpInfo(string projectId, Integration integration, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        public DotPostHog.Client.ApiResponse<PostHogIntegration> IntegrationsCreateWithHttpInfo(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -584,10 +584,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling IntegrationsApi->IntegrationsCreate");
             }
 
-            // verify the required parameter 'integration' is set
-            if (integration == null)
+            // verify the required parameter 'postHogIntegration' is set
+            if (postHogIntegration == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'integration' when calling IntegrationsApi->IntegrationsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogIntegration' when calling IntegrationsApi->IntegrationsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -616,14 +616,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = integration;
+            localVarRequestOptions.Data = postHogIntegration;
 
             localVarRequestOptions.Operation = "IntegrationsApi.IntegrationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Integration>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogIntegration>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IntegrationsCreate", localVarResponse);
@@ -641,13 +641,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        public async System.Threading.Tasks.Task<Integration> IntegrationsCreateAsync(string projectId, Integration integration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogIntegration</returns>
+        public async System.Threading.Tasks.Task<PostHogIntegration> IntegrationsCreateAsync(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = await IntegrationsCreateWithHttpInfoAsync(projectId, integration, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = await IntegrationsCreateWithHttpInfoAsync(projectId, postHogIntegration, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -656,11 +656,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="integration"></param>
+        /// <param name="postHogIntegration"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Integration>> IntegrationsCreateWithHttpInfoAsync(string projectId, Integration integration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogIntegration>> IntegrationsCreateWithHttpInfoAsync(string projectId, PostHogIntegration postHogIntegration, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -668,10 +668,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling IntegrationsApi->IntegrationsCreate");
             }
 
-            // verify the required parameter 'integration' is set
-            if (integration == null)
+            // verify the required parameter 'postHogIntegration' is set
+            if (postHogIntegration == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'integration' when calling IntegrationsApi->IntegrationsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogIntegration' when calling IntegrationsApi->IntegrationsCreate");
             }
 
 
@@ -701,14 +701,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = integration;
+            localVarRequestOptions.Data = postHogIntegration;
 
             localVarRequestOptions.Operation = "IntegrationsApi.IntegrationsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Integration>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogIntegration>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -876,10 +876,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedIntegrationList</returns>
-        public PaginatedIntegrationList IntegrationsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedIntegrationList</returns>
+        public PostHogPaginatedIntegrationList IntegrationsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedIntegrationList> localVarResponse = IntegrationsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedIntegrationList> localVarResponse = IntegrationsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -891,8 +891,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedIntegrationList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedIntegrationList> IntegrationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedIntegrationList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedIntegrationList> IntegrationsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -937,7 +937,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedIntegrationList>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedIntegrationList>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IntegrationsList", localVarResponse);
@@ -959,10 +959,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedIntegrationList</returns>
-        public async System.Threading.Tasks.Task<PaginatedIntegrationList> IntegrationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedIntegrationList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedIntegrationList> IntegrationsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedIntegrationList> localVarResponse = await IntegrationsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedIntegrationList> localVarResponse = await IntegrationsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -975,8 +975,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedIntegrationList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedIntegrationList>> IntegrationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedIntegrationList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedIntegrationList>> IntegrationsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1022,7 +1022,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedIntegrationList>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedIntegrationList>("/api/projects/{project_id}/integrations/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1043,10 +1043,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Integration</returns>
-        public Integration IntegrationsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogIntegration</returns>
+        public PostHogIntegration IntegrationsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = IntegrationsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = IntegrationsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1057,8 +1057,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this integration.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Integration</returns>
-        public DotPostHog.Client.ApiResponse<Integration> IntegrationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogIntegration</returns>
+        public DotPostHog.Client.ApiResponse<PostHogIntegration> IntegrationsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1096,7 +1096,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Integration>("/api/projects/{project_id}/integrations/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogIntegration>("/api/projects/{project_id}/integrations/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IntegrationsRetrieve", localVarResponse);
@@ -1117,10 +1117,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Integration</returns>
-        public async System.Threading.Tasks.Task<Integration> IntegrationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogIntegration</returns>
+        public async System.Threading.Tasks.Task<PostHogIntegration> IntegrationsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Integration> localVarResponse = await IntegrationsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogIntegration> localVarResponse = await IntegrationsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1132,8 +1132,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Integration)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Integration>> IntegrationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogIntegration)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogIntegration>> IntegrationsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1172,7 +1172,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Integration>("/api/projects/{project_id}/integrations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogIntegration>("/api/projects/{project_id}/integrations/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

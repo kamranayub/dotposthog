@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Subscription subscription = null;
-            //var response = instance.SubscriptionsCreate(projectId, subscription);
-            //Assert.IsType<Subscription>(response);
+            //PostHogSubscription postHogSubscription = null;
+            //var response = instance.SubscriptionsCreate(projectId, postHogSubscription);
+            //Assert.IsType<PostHogSubscription>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.SubscriptionsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedSubscriptionList>(response);
+            //Assert.IsType<PostHogPaginatedSubscriptionList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedSubscription patchedSubscription = null;
-            //var response = instance.SubscriptionsPartialUpdate(id, projectId, patchedSubscription);
-            //Assert.IsType<Subscription>(response);
+            //PostHogPatchedSubscription postHogPatchedSubscription = null;
+            //var response = instance.SubscriptionsPartialUpdate(id, projectId, postHogPatchedSubscription);
+            //Assert.IsType<PostHogSubscription>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.SubscriptionsRetrieve(id, projectId);
-            //Assert.IsType<Subscription>(response);
+            //Assert.IsType<PostHogSubscription>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //Subscription subscription = null;
-            //var response = instance.SubscriptionsUpdate(id, projectId, subscription);
-            //Assert.IsType<Subscription>(response);
+            //PostHogSubscription postHogSubscription = null;
+            //var response = instance.SubscriptionsUpdate(id, projectId, postHogSubscription);
+            //Assert.IsType<PostHogSubscription>(response);
         }
     }
 }

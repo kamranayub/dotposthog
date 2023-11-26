@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Experiment experiment = null;
-            //var response = instance.ExperimentsCreate(projectId, experiment);
-            //Assert.IsType<Experiment>(response);
+            //PostHogExperiment postHogExperiment = null;
+            //var response = instance.ExperimentsCreate(projectId, postHogExperiment);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.ExperimentsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedExperimentList>(response);
+            //Assert.IsType<PostHogPaginatedExperimentList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedExperiment patchedExperiment = null;
-            //var response = instance.ExperimentsPartialUpdate(id, projectId, patchedExperiment);
-            //Assert.IsType<Experiment>(response);
+            //PostHogPatchedExperiment postHogPatchedExperiment = null;
+            //var response = instance.ExperimentsPartialUpdate(id, projectId, postHogPatchedExperiment);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.ExperimentsRequiresFlagImplementationRetrieve(projectId);
-            //Assert.IsType<Experiment>(response);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.ExperimentsResultsRetrieve(id, projectId);
-            //Assert.IsType<Experiment>(response);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.ExperimentsRetrieve(id, projectId);
-            //Assert.IsType<Experiment>(response);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.ExperimentsSecondaryResultsRetrieve(id, projectId);
-            //Assert.IsType<Experiment>(response);
+            //Assert.IsType<PostHogExperiment>(response);
         }
 
         /// <summary>
@@ -167,9 +167,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //Experiment experiment = null;
-            //var response = instance.ExperimentsUpdate(id, projectId, experiment);
-            //Assert.IsType<Experiment>(response);
+            //PostHogExperiment postHogExperiment = null;
+            //var response = instance.ExperimentsUpdate(id, projectId, postHogExperiment);
+            //Assert.IsType<PostHogExperiment>(response);
         }
     }
 }

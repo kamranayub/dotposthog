@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Dashboard dashboard = null;
-            //var response = instance.DashboardsCreate(projectId, dashboard);
-            //Assert.IsType<Dashboard>(response);
+            //PostHogDashboard postHogDashboard = null;
+            //var response = instance.DashboardsCreate(projectId, postHogDashboard);
+            //Assert.IsType<PostHogDashboard>(response);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Dashboard dashboard = null;
-            //var response = instance.DashboardsCreateFromTemplateJsonCreate(projectId, dashboard);
-            //Assert.IsType<Dashboard>(response);
+            //PostHogDashboard postHogDashboard = null;
+            //var response = instance.DashboardsCreateFromTemplateJsonCreate(projectId, postHogDashboard);
+            //Assert.IsType<PostHogDashboard>(response);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.DashboardsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedDashboardBasicList>(response);
+            //Assert.IsType<PostHogPaginatedDashboardBasicList>(response);
         }
 
         /// <summary>
@@ -115,9 +115,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedDashboard patchedDashboard = null;
-            //var response = instance.DashboardsMoveTilePartialUpdate(id, projectId, patchedDashboard);
-            //Assert.IsType<Dashboard>(response);
+            //PostHogPatchedDashboard postHogPatchedDashboard = null;
+            //var response = instance.DashboardsMoveTilePartialUpdate(id, projectId, postHogPatchedDashboard);
+            //Assert.IsType<PostHogDashboard>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //PatchedDashboard patchedDashboard = null;
-            //var response = instance.DashboardsPartialUpdate(id, projectId, patchedDashboard);
-            //Assert.IsType<Dashboard>(response);
+            //PostHogPatchedDashboard postHogPatchedDashboard = null;
+            //var response = instance.DashboardsPartialUpdate(id, projectId, postHogPatchedDashboard);
+            //Assert.IsType<PostHogDashboard>(response);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.DashboardsRetrieve(id, projectId);
-            //Assert.IsType<Dashboard>(response);
+            //Assert.IsType<PostHogDashboard>(response);
         }
 
         /// <summary>
@@ -156,9 +156,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int id = null;
             //string projectId = null;
-            //Dashboard dashboard = null;
-            //var response = instance.DashboardsUpdate(id, projectId, dashboard);
-            //Assert.IsType<Dashboard>(response);
+            //PostHogDashboard postHogDashboard = null;
+            //var response = instance.DashboardsUpdate(id, projectId, postHogDashboard);
+            //Assert.IsType<PostHogDashboard>(response);
         }
     }
 }

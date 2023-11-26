@@ -15,7 +15,7 @@ All URIs are relative to *http://localhost*
 
 <a id="cohortscreate"></a>
 # **CohortsCreate**
-> Cohort CohortsCreate (string projectId, Cohort cohort = null)
+> PostHogCohort CohortsCreate (string projectId, PostHogCohort postHogCohort = null)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new CohortsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var cohort = new Cohort(); // Cohort |  (optional) 
+            var postHogCohort = new PostHogCohort(); // PostHogCohort |  (optional) 
 
             try
             {
-                Cohort result = apiInstance.CohortsCreate(projectId, cohort);
+                PostHogCohort result = apiInstance.CohortsCreate(projectId, postHogCohort);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsCreateWithHttpInfo(projectId, cohort);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsCreateWithHttpInfo(projectId, postHogCohort);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **cohort** | [**Cohort**](Cohort.md) |  | [optional]  |
+| **postHogCohort** | [**PostHogCohort**](PostHogCohort.md) |  | [optional]  |
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="cohortsduplicateasstaticcohortretrieve"></a>
 # **CohortsDuplicateAsStaticCohortRetrieve**
-> Cohort CohortsDuplicateAsStaticCohortRetrieve (int id, string projectId)
+> PostHogCohort CohortsDuplicateAsStaticCohortRetrieve (int id, string projectId)
 
 
 
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                Cohort result = apiInstance.CohortsDuplicateAsStaticCohortRetrieve(id, projectId);
+                PostHogCohort result = apiInstance.CohortsDuplicateAsStaticCohortRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -237,7 +237,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsDuplicateAsStaticCohortRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -259,7 +259,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ No authorization required
 
 <a id="cohortslist"></a>
 # **CohortsList**
-> PaginatedCohortList CohortsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedCohortList CohortsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -307,7 +307,7 @@ namespace Example
 
             try
             {
-                PaginatedCohortList result = apiInstance.CohortsList(projectId, limit, offset);
+                PostHogPaginatedCohortList result = apiInstance.CohortsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -327,7 +327,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedCohortList> response = apiInstance.CohortsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedCohortList> response = apiInstance.CohortsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -350,7 +350,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedCohortList**](PaginatedCohortList.md)
+[**PostHogPaginatedCohortList**](PostHogPaginatedCohortList.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 
 <a id="cohortspartialupdate"></a>
 # **CohortsPartialUpdate**
-> Cohort CohortsPartialUpdate (int id, string projectId, PatchedCohort patchedCohort = null)
+> PostHogCohort CohortsPartialUpdate (int id, string projectId, PostHogPatchedCohort postHogPatchedCohort = null)
 
 
 
@@ -394,11 +394,11 @@ namespace Example
             var apiInstance = new CohortsApi(config);
             var id = 56;  // int | A unique integer value identifying this cohort.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedCohort = new PatchedCohort(); // PatchedCohort |  (optional) 
+            var postHogPatchedCohort = new PostHogPatchedCohort(); // PostHogPatchedCohort |  (optional) 
 
             try
             {
-                Cohort result = apiInstance.CohortsPartialUpdate(id, projectId, patchedCohort);
+                PostHogCohort result = apiInstance.CohortsPartialUpdate(id, projectId, postHogPatchedCohort);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -418,7 +418,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsPartialUpdateWithHttpInfo(id, projectId, patchedCohort);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedCohort);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -437,11 +437,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this cohort. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedCohort** | [**PatchedCohort**](PatchedCohort.md) |  | [optional]  |
+| **postHogPatchedCohort** | [**PostHogPatchedCohort**](PostHogPatchedCohort.md) |  | [optional]  |
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ No authorization required
 
 <a id="cohortspersonsretrieve"></a>
 # **CohortsPersonsRetrieve**
-> Cohort CohortsPersonsRetrieve (int id, string projectId, string format = null)
+> PostHogCohort CohortsPersonsRetrieve (int id, string projectId, string format = null)
 
 
 
@@ -489,7 +489,7 @@ namespace Example
 
             try
             {
-                Cohort result = apiInstance.CohortsPersonsRetrieve(id, projectId, format);
+                PostHogCohort result = apiInstance.CohortsPersonsRetrieve(id, projectId, format);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -509,7 +509,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsPersonsRetrieveWithHttpInfo(id, projectId, format);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsPersonsRetrieveWithHttpInfo(id, projectId, format);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -532,7 +532,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 
@@ -553,7 +553,7 @@ No authorization required
 
 <a id="cohortsretrieve"></a>
 # **CohortsRetrieve**
-> Cohort CohortsRetrieve (int id, string projectId)
+> PostHogCohort CohortsRetrieve (int id, string projectId)
 
 
 
@@ -579,7 +579,7 @@ namespace Example
 
             try
             {
-                Cohort result = apiInstance.CohortsRetrieve(id, projectId);
+                PostHogCohort result = apiInstance.CohortsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -599,7 +599,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -621,7 +621,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 
@@ -642,7 +642,7 @@ No authorization required
 
 <a id="cohortsupdate"></a>
 # **CohortsUpdate**
-> Cohort CohortsUpdate (int id, string projectId, Cohort cohort = null)
+> PostHogCohort CohortsUpdate (int id, string projectId, PostHogCohort postHogCohort = null)
 
 
 
@@ -665,11 +665,11 @@ namespace Example
             var apiInstance = new CohortsApi(config);
             var id = 56;  // int | A unique integer value identifying this cohort.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var cohort = new Cohort(); // Cohort |  (optional) 
+            var postHogCohort = new PostHogCohort(); // PostHogCohort |  (optional) 
 
             try
             {
-                Cohort result = apiInstance.CohortsUpdate(id, projectId, cohort);
+                PostHogCohort result = apiInstance.CohortsUpdate(id, projectId, postHogCohort);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -689,7 +689,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Cohort> response = apiInstance.CohortsUpdateWithHttpInfo(id, projectId, cohort);
+    ApiResponse<PostHogCohort> response = apiInstance.CohortsUpdateWithHttpInfo(id, projectId, postHogCohort);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -708,11 +708,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this cohort. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **cohort** | [**Cohort**](Cohort.md) |  | [optional]  |
+| **postHogCohort** | [**PostHogCohort**](PostHogCohort.md) |  | [optional]  |
 
 ### Return type
 
-[**Cohort**](Cohort.md)
+[**PostHogCohort**](PostHogCohort.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="tagslist"></a>
 # **TagsList**
-> PaginatedTaggedItemList TagsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedTaggedItemList TagsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -35,7 +35,7 @@ namespace Example
 
             try
             {
-                PaginatedTaggedItemList result = apiInstance.TagsList(projectId, limit, offset);
+                PostHogPaginatedTaggedItemList result = apiInstance.TagsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedTaggedItemList> response = apiInstance.TagsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedTaggedItemList> response = apiInstance.TagsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,7 +78,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedTaggedItemList**](PaginatedTaggedItemList.md)
+[**PostHogPaginatedTaggedItemList**](PostHogPaginatedTaggedItemList.md)
 
 ### Authorization
 

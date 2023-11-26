@@ -33,10 +33,10 @@ namespace DotPostHog.Api
         /// Projects for the current organization.
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        Team Create(Team team = default(Team), int operationIndex = 0);
+        /// <returns>PostHogTeam</returns>
+        PostHogTeam Create(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -45,10 +45,10 @@ namespace DotPostHog.Api
         /// Projects for the current organization.
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        ApiResponse<Team> CreateWithHttpInfo(Team team = default(Team), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        ApiResponse<PostHogTeam> CreateWithHttpInfo(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -82,8 +82,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTeamBasicList</returns>
-        PaginatedTeamBasicList List(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedTeamBasicList</returns>
+        PostHogPaginatedTeamBasicList List(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -95,8 +95,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTeamBasicList</returns>
-        ApiResponse<PaginatedTeamBasicList> ListWithHttpInfo(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedTeamBasicList</returns>
+        ApiResponse<PostHogPaginatedTeamBasicList> ListWithHttpInfo(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -105,10 +105,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        Team PartialUpdate(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0);
+        /// <returns>PostHogTeam</returns>
+        PostHogTeam PartialUpdate(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -118,10 +118,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        ApiResponse<Team> PartialUpdateWithHttpInfo(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        ApiResponse<PostHogTeam> PartialUpdateWithHttpInfo(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -131,8 +131,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        Team Retrieve(int id, int operationIndex = 0);
+        /// <returns>PostHogTeam</returns>
+        PostHogTeam Retrieve(int id, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -143,8 +143,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        ApiResponse<Team> RetrieveWithHttpInfo(int id, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        ApiResponse<PostHogTeam> RetrieveWithHttpInfo(int id, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -153,10 +153,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        Team Update(int id, Team team = default(Team), int operationIndex = 0);
+        /// <returns>PostHogTeam</returns>
+        PostHogTeam Update(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -166,10 +166,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        ApiResponse<Team> UpdateWithHttpInfo(int id, Team team = default(Team), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        ApiResponse<PostHogTeam> UpdateWithHttpInfo(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -186,11 +186,11 @@ namespace DotPostHog.Api
         /// Projects for the current organization.
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        System.Threading.Tasks.Task<Team> CreateAsync(Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTeam</returns>
+        System.Threading.Tasks.Task<PostHogTeam> CreateAsync(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -199,11 +199,11 @@ namespace DotPostHog.Api
         /// Projects for the current organization.
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Team>> CreateWithHttpInfoAsync(Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTeam>> CreateWithHttpInfoAsync(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -240,8 +240,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTeamBasicList</returns>
-        System.Threading.Tasks.Task<PaginatedTeamBasicList> ListAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedTeamBasicList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedTeamBasicList> ListAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -254,8 +254,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTeamBasicList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedTeamBasicList>> ListWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedTeamBasicList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedTeamBasicList>> ListWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -264,11 +264,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        System.Threading.Tasks.Task<Team> PartialUpdateAsync(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTeam</returns>
+        System.Threading.Tasks.Task<PostHogTeam> PartialUpdateAsync(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -278,11 +278,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Team>> PartialUpdateWithHttpInfoAsync(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTeam>> PartialUpdateWithHttpInfoAsync(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -293,8 +293,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        System.Threading.Tasks.Task<Team> RetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTeam</returns>
+        System.Threading.Tasks.Task<PostHogTeam> RetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -306,8 +306,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Team>> RetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTeam>> RetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -316,11 +316,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        System.Threading.Tasks.Task<Team> UpdateAsync(int id, Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTeam</returns>
+        System.Threading.Tasks.Task<PostHogTeam> UpdateAsync(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -330,11 +330,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Team>> UpdateWithHttpInfoAsync(int id, Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTeam>> UpdateWithHttpInfoAsync(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -459,12 +459,12 @@ namespace DotPostHog.Api
         ///  Projects for the current organization.
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        public Team Create(Team team = default(Team), int operationIndex = 0)
+        /// <returns>PostHogTeam</returns>
+        public PostHogTeam Create(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = CreateWithHttpInfo(team);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = CreateWithHttpInfo(postHogTeam);
             return localVarResponse.Data;
         }
 
@@ -472,10 +472,10 @@ namespace DotPostHog.Api
         ///  Projects for the current organization.
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        public DotPostHog.Client.ApiResponse<Team> CreateWithHttpInfo(Team team = default(Team), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTeam> CreateWithHttpInfo(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -502,14 +502,14 @@ namespace DotPostHog.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = team;
+            localVarRequestOptions.Data = postHogTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.Create";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Team>("/api/projects/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogTeam>("/api/projects/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Create", localVarResponse);
@@ -526,13 +526,13 @@ namespace DotPostHog.Api
         ///  Projects for the current organization.
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        public async System.Threading.Tasks.Task<Team> CreateAsync(Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTeam</returns>
+        public async System.Threading.Tasks.Task<PostHogTeam> CreateAsync(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = await CreateWithHttpInfoAsync(team, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = await CreateWithHttpInfoAsync(postHogTeam, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -540,11 +540,11 @@ namespace DotPostHog.Api
         ///  Projects for the current organization.
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Team>> CreateWithHttpInfoAsync(Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTeam>> CreateWithHttpInfoAsync(PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -572,14 +572,14 @@ namespace DotPostHog.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = team;
+            localVarRequestOptions.Data = postHogTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.Create";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Team>("/api/projects/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogTeam>("/api/projects/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -728,10 +728,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTeamBasicList</returns>
-        public PaginatedTeamBasicList List(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedTeamBasicList</returns>
+        public PostHogPaginatedTeamBasicList List(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedTeamBasicList> localVarResponse = ListWithHttpInfo(limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTeamBasicList> localVarResponse = ListWithHttpInfo(limit, offset);
             return localVarResponse.Data;
         }
 
@@ -742,8 +742,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTeamBasicList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedTeamBasicList> ListWithHttpInfo(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedTeamBasicList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedTeamBasicList> ListWithHttpInfo(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -781,7 +781,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedTeamBasicList>("/api/projects/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedTeamBasicList>("/api/projects/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("List", localVarResponse);
@@ -802,10 +802,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTeamBasicList</returns>
-        public async System.Threading.Tasks.Task<PaginatedTeamBasicList> ListAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedTeamBasicList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedTeamBasicList> ListAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedTeamBasicList> localVarResponse = await ListWithHttpInfoAsync(limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTeamBasicList> localVarResponse = await ListWithHttpInfoAsync(limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -817,8 +817,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTeamBasicList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedTeamBasicList>> ListWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedTeamBasicList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedTeamBasicList>> ListWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -857,7 +857,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedTeamBasicList>("/api/projects/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedTeamBasicList>("/api/projects/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -876,12 +876,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        public Team PartialUpdate(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0)
+        /// <returns>PostHogTeam</returns>
+        public PostHogTeam PartialUpdate(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = PartialUpdateWithHttpInfo(id, patchedTeam);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = PartialUpdateWithHttpInfo(id, postHogPatchedTeam);
             return localVarResponse.Data;
         }
 
@@ -890,10 +890,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        public DotPostHog.Client.ApiResponse<Team> PartialUpdateWithHttpInfo(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTeam> PartialUpdateWithHttpInfo(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -921,14 +921,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = patchedTeam;
+            localVarRequestOptions.Data = postHogPatchedTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.PartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PartialUpdate", localVarResponse);
@@ -946,13 +946,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        public async System.Threading.Tasks.Task<Team> PartialUpdateAsync(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTeam</returns>
+        public async System.Threading.Tasks.Task<PostHogTeam> PartialUpdateAsync(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = await PartialUpdateWithHttpInfoAsync(id, patchedTeam, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = await PartialUpdateWithHttpInfoAsync(id, postHogPatchedTeam, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -961,11 +961,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="patchedTeam"> (optional)</param>
+        /// <param name="postHogPatchedTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Team>> PartialUpdateWithHttpInfoAsync(int id, PatchedTeam patchedTeam = default(PatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTeam>> PartialUpdateWithHttpInfoAsync(int id, PostHogPatchedTeam postHogPatchedTeam = default(PostHogPatchedTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -994,14 +994,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = patchedTeam;
+            localVarRequestOptions.Data = postHogPatchedTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.PartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1021,10 +1021,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        public Team Retrieve(int id, int operationIndex = 0)
+        /// <returns>PostHogTeam</returns>
+        public PostHogTeam Retrieve(int id, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = RetrieveWithHttpInfo(id);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = RetrieveWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
@@ -1034,8 +1034,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        public DotPostHog.Client.ApiResponse<Team> RetrieveWithHttpInfo(int id, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTeam> RetrieveWithHttpInfo(int id, int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -1066,7 +1066,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Retrieve", localVarResponse);
@@ -1086,10 +1086,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        public async System.Threading.Tasks.Task<Team> RetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTeam</returns>
+        public async System.Threading.Tasks.Task<PostHogTeam> RetrieveAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = await RetrieveWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = await RetrieveWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1100,8 +1100,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this team.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Team>> RetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTeam>> RetrieveWithHttpInfoAsync(int id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1133,7 +1133,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1152,12 +1152,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Team</returns>
-        public Team Update(int id, Team team = default(Team), int operationIndex = 0)
+        /// <returns>PostHogTeam</returns>
+        public PostHogTeam Update(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = UpdateWithHttpInfo(id, team);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = UpdateWithHttpInfo(id, postHogTeam);
             return localVarResponse.Data;
         }
 
@@ -1166,10 +1166,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Team</returns>
-        public DotPostHog.Client.ApiResponse<Team> UpdateWithHttpInfo(int id, Team team = default(Team), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTeam</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTeam> UpdateWithHttpInfo(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0)
         {
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
 
@@ -1197,14 +1197,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = team;
+            localVarRequestOptions.Data = postHogTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.Update";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Update", localVarResponse);
@@ -1222,13 +1222,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Team</returns>
-        public async System.Threading.Tasks.Task<Team> UpdateAsync(int id, Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTeam</returns>
+        public async System.Threading.Tasks.Task<PostHogTeam> UpdateAsync(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Team> localVarResponse = await UpdateWithHttpInfoAsync(id, team, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTeam> localVarResponse = await UpdateWithHttpInfoAsync(id, postHogTeam, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1237,11 +1237,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this team.</param>
-        /// <param name="team"> (optional)</param>
+        /// <param name="postHogTeam"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Team)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Team>> UpdateWithHttpInfoAsync(int id, Team team = default(Team), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTeam)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTeam>> UpdateWithHttpInfoAsync(int id, PostHogTeam postHogTeam = default(PostHogTeam), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1270,14 +1270,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = team;
+            localVarRequestOptions.Data = postHogTeam;
 
             localVarRequestOptions.Operation = "ProjectsApi.Update";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Team>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogTeam>("/api/projects/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

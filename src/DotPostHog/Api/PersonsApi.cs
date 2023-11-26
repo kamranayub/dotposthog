@@ -36,8 +36,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -49,8 +49,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -62,8 +62,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -76,8 +76,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsCohortsRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsCohortsRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -101,8 +101,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsCohortsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsCohortsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsDeletePropertyCreate(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsDeletePropertyCreate(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -130,10 +130,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsDeletePropertyCreateWithHttpInfo(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsDeletePropertyCreateWithHttpInfo(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -172,10 +172,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsFunnelCorrelationCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsFunnelCorrelationCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -186,10 +186,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -200,60 +200,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsFunnelCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsFunnelCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -265,8 +213,35 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsFunnelCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsFunnelCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -277,8 +252,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsLifecycleRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -290,8 +265,33 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsLifecycleRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsLifecycleRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsLifecycleRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -308,8 +308,8 @@ namespace DotPostHog.Api
         /// <param name="properties">Filter Persons by person properties. (optional)</param>
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPersonList</returns>
-        PaginatedPersonList PersonsList(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPersonList</returns>
+        PostHogPaginatedPersonList PersonsList(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -327,8 +327,8 @@ namespace DotPostHog.Api
         /// <param name="properties">Filter Persons by person properties. (optional)</param>
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPersonList</returns>
-        ApiResponse<PaginatedPersonList> PersonsListWithHttpInfo(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPersonList</returns>
+        ApiResponse<PostHogPaginatedPersonList> PersonsListWithHttpInfo(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -339,10 +339,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsPartialUpdate(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -354,10 +354,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -367,10 +367,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsPathCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsPathCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -381,10 +381,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsPathCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsPathCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -395,8 +395,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -408,8 +408,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -421,60 +421,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsPropertiesTimelineRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this person.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsPropertiesTimelineRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this person.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsPropertiesTimelineRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -487,8 +435,33 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsPropertiesTimelineRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -499,10 +472,9 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsSplitCreate(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -514,10 +486,38 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsSplitCreateWithHttpInfo(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this person.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsSplitCreate(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this person.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsSplitCreateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -528,8 +528,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsStickinessRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsStickinessRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -541,8 +541,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsStickinessRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsStickinessRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -553,8 +553,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsTrendsRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsTrendsRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -566,8 +566,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsTrendsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsTrendsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -578,10 +578,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsUpdate(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsUpdate(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -593,10 +593,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsUpdateWithHttpInfo(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -609,10 +609,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsUpdatePropertyCreate(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsUpdatePropertyCreate(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -626,10 +626,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsUpdatePropertyCreateWithHttpInfo(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsUpdatePropertyCreateWithHttpInfo(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -640,8 +640,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        Person PersonsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>PostHogPerson</returns>
+        PostHogPerson PersonsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -653,8 +653,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        ApiResponse<Person> PersonsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        ApiResponse<PostHogPerson> PersonsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -675,8 +675,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -689,8 +689,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -703,8 +703,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -718,8 +718,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -731,8 +731,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsCohortsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsCohortsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -745,8 +745,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsCohortsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsCohortsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -758,11 +758,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsDeletePropertyCreateAsync(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsDeletePropertyCreateAsync(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -775,11 +775,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsDeletePropertyCreateWithHttpInfoAsync(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsDeletePropertyCreateWithHttpInfoAsync(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -820,11 +820,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsFunnelCorrelationCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCorrelationCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -835,11 +835,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -851,64 +851,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsFunnelCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsFunnelCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -921,8 +865,37 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsFunnelCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -934,8 +907,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsLifecycleRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -948,8 +921,35 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsLifecycleRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsLifecycleRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsLifecycleRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -967,8 +967,8 @@ namespace DotPostHog.Api
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPersonList</returns>
-        System.Threading.Tasks.Task<PaginatedPersonList> PersonsListAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPersonList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPersonList> PersonsListAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -987,8 +987,8 @@ namespace DotPostHog.Api
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPersonList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPersonList>> PersonsListWithHttpInfoAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPersonList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPersonList>> PersonsListWithHttpInfoAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -999,11 +999,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1015,11 +1015,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1029,11 +1029,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsPathCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsPathCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1044,11 +1044,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1060,64 +1060,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this person.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsPropertiesTimelineRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this person.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1130,8 +1074,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1144,8 +1088,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsPropertiesTimelineRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1159,8 +1103,35 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1171,11 +1142,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsSplitCreateAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1187,11 +1157,41 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsSplitCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this person.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsSplitCreateAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// To create or update persons, use a PostHog library of your choice and [use an identify call](/docs/integrate/identifying-users). This API endpoint is only for reading and deleting.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this person.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsSplitCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1203,8 +1203,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsStickinessRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsStickinessRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1217,8 +1217,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsStickinessRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsStickinessRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1230,8 +1230,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsTrendsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsTrendsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1244,8 +1244,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsTrendsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsTrendsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1256,11 +1256,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsUpdateAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsUpdateAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1272,11 +1272,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1289,11 +1289,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsUpdatePropertyCreateAsync(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsUpdatePropertyCreateAsync(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1307,11 +1307,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsUpdatePropertyCreateWithHttpInfoAsync(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsUpdatePropertyCreateWithHttpInfoAsync(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1323,8 +1323,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        System.Threading.Tasks.Task<Person> PersonsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPerson</returns>
+        System.Threading.Tasks.Task<PostHogPerson> PersonsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1337,8 +1337,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Person>> PersonsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPerson>> PersonsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1466,10 +1466,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsActivityRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsActivityRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsActivityRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1480,8 +1480,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsActivityRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1523,7 +1523,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsActivityRetrieve", localVarResponse);
@@ -1544,10 +1544,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsActivityRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsActivityRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsActivityRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1559,8 +1559,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsActivityRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1603,7 +1603,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1625,10 +1625,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsActivityRetrieve2(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsActivityRetrieve2WithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsActivityRetrieve2WithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1640,8 +1640,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsActivityRetrieve2WithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1684,7 +1684,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/{id}/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/{id}/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsActivityRetrieve2", localVarResponse);
@@ -1706,10 +1706,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsActivityRetrieve2Async(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsActivityRetrieve2WithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsActivityRetrieve2WithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1722,8 +1722,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1767,7 +1767,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1788,10 +1788,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsCohortsRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsCohortsRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsCohortsRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsCohortsRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -1802,8 +1802,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsCohortsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsCohortsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1845,7 +1845,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/cohorts/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/cohorts/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsCohortsRetrieve", localVarResponse);
@@ -1866,10 +1866,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsCohortsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsCohortsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsCohortsRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsCohortsRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1881,8 +1881,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsCohortsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsCohortsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1925,7 +1925,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/cohorts/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1947,12 +1947,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsDeletePropertyCreate(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsDeletePropertyCreate(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsDeletePropertyCreateWithHttpInfo(unset, id, projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsDeletePropertyCreateWithHttpInfo(unset, id, projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -1964,10 +1964,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsDeletePropertyCreateWithHttpInfo(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsDeletePropertyCreateWithHttpInfo(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'unset' is set
             if (unset == null)
@@ -2014,14 +2014,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsDeletePropertyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/{id}/delete_property/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/{id}/delete_property/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsDeletePropertyCreate", localVarResponse);
@@ -2042,13 +2042,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsDeletePropertyCreateAsync(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsDeletePropertyCreateAsync(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsDeletePropertyCreateWithHttpInfoAsync(unset, id, projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsDeletePropertyCreateWithHttpInfoAsync(unset, id, projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2060,11 +2060,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsDeletePropertyCreateWithHttpInfoAsync(string unset, int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsDeletePropertyCreateWithHttpInfoAsync(string unset, int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'unset' is set
             if (unset == null)
@@ -2112,14 +2112,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsDeletePropertyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/{id}/delete_property/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/delete_property/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2309,12 +2309,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsFunnelCorrelationCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsFunnelCorrelationCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsFunnelCorrelationCreateWithHttpInfo(projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsFunnelCorrelationCreateWithHttpInfo(projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -2324,10 +2324,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsFunnelCorrelationCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2366,14 +2366,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsFunnelCorrelationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsFunnelCorrelationCreate", localVarResponse);
@@ -2392,13 +2392,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsFunnelCorrelationCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCorrelationCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsFunnelCorrelationCreateWithHttpInfoAsync(projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsFunnelCorrelationCreateWithHttpInfoAsync(projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2408,11 +2408,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsFunnelCorrelationCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2452,14 +2452,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsFunnelCorrelationCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2480,10 +2480,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsFunnelCorrelationRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsFunnelCorrelationRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2494,8 +2494,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsFunnelCorrelationRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2537,7 +2537,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsFunnelCorrelationRetrieve", localVarResponse);
@@ -2558,10 +2558,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCorrelationRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2573,8 +2573,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsFunnelCorrelationRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2617,7 +2617,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/funnel/correlation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2637,12 +2637,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsFunnelCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsFunnelCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsFunnelCreateWithHttpInfo(projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsFunnelCreateWithHttpInfo(projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -2652,10 +2652,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsFunnelCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsFunnelCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2694,14 +2694,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsFunnelCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsFunnelCreate", localVarResponse);
@@ -2720,13 +2720,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsFunnelCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsFunnelCreateWithHttpInfoAsync(projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsFunnelCreateWithHttpInfoAsync(projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2736,11 +2736,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsFunnelCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsFunnelCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2780,14 +2780,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsFunnelCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2808,10 +2808,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsFunnelRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsFunnelRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsFunnelRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2822,8 +2822,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsFunnelRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2865,7 +2865,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsFunnelRetrieve", localVarResponse);
@@ -2886,10 +2886,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsFunnelRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsFunnelRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsFunnelRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2901,8 +2901,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsFunnelRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2945,7 +2945,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/funnel/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2966,10 +2966,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsLifecycleRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsLifecycleRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsLifecycleRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsLifecycleRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -2980,8 +2980,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsLifecycleRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsLifecycleRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3023,7 +3023,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/lifecycle/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/lifecycle/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsLifecycleRetrieve", localVarResponse);
@@ -3044,10 +3044,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsLifecycleRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsLifecycleRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsLifecycleRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsLifecycleRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3059,8 +3059,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsLifecycleRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsLifecycleRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3103,7 +3103,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/lifecycle/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/lifecycle/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3130,10 +3130,10 @@ namespace DotPostHog.Api
         /// <param name="properties">Filter Persons by person properties. (optional)</param>
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPersonList</returns>
-        public PaginatedPersonList PersonsList(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPersonList</returns>
+        public PostHogPaginatedPersonList PersonsList(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPersonList> localVarResponse = PersonsListWithHttpInfo(projectId, distinctId, email, format, limit, offset, properties, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPersonList> localVarResponse = PersonsListWithHttpInfo(projectId, distinctId, email, format, limit, offset, properties, search);
             return localVarResponse.Data;
         }
 
@@ -3150,8 +3150,8 @@ namespace DotPostHog.Api
         /// <param name="properties">Filter Persons by person properties. (optional)</param>
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPersonList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPersonList> PersonsListWithHttpInfo(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPersonList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPersonList> PersonsListWithHttpInfo(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3217,7 +3217,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPersonList>("/api/projects/{project_id}/persons/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPersonList>("/api/projects/{project_id}/persons/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsList", localVarResponse);
@@ -3244,10 +3244,10 @@ namespace DotPostHog.Api
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPersonList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPersonList> PersonsListAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPersonList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPersonList> PersonsListAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPersonList> localVarResponse = await PersonsListWithHttpInfoAsync(projectId, distinctId, email, format, limit, offset, properties, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPersonList> localVarResponse = await PersonsListWithHttpInfoAsync(projectId, distinctId, email, format, limit, offset, properties, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3265,8 +3265,8 @@ namespace DotPostHog.Api
         /// <param name="search">Search persons, either by email (full text search) or distinct_id (exact match). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPersonList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPersonList>> PersonsListWithHttpInfoAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<Property> properties = default(List<Property>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPersonList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPersonList>> PersonsListWithHttpInfoAsync(string projectId, string distinctId = default(string), string email = default(string), string format = default(string), int? limit = default(int?), int? offset = default(int?), List<PostHogProperty> properties = default(List<PostHogProperty>), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3333,7 +3333,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPersonList>("/api/projects/{project_id}/persons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPersonList>("/api/projects/{project_id}/persons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3354,12 +3354,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsPartialUpdate(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsPartialUpdate(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsPartialUpdateWithHttpInfo(id, projectId, format, patchedPerson);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsPartialUpdateWithHttpInfo(id, projectId, format, postHogPatchedPerson);
             return localVarResponse.Data;
         }
 
@@ -3370,10 +3370,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsPartialUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3413,14 +3413,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedPerson;
+            localVarRequestOptions.Data = postHogPatchedPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsPartialUpdate", localVarResponse);
@@ -3440,13 +3440,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsPartialUpdateAsync(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsPartialUpdateAsync(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsPartialUpdateWithHttpInfoAsync(id, projectId, format, patchedPerson, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsPartialUpdateWithHttpInfoAsync(id, projectId, format, postHogPatchedPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3457,11 +3457,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="patchedPerson"> (optional)</param>
+        /// <param name="postHogPatchedPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PatchedPerson patchedPerson = default(PatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsPartialUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPatchedPerson postHogPatchedPerson = default(PostHogPatchedPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3502,14 +3502,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = patchedPerson;
+            localVarRequestOptions.Data = postHogPatchedPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3529,12 +3529,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsPathCreate(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsPathCreate(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsPathCreateWithHttpInfo(projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsPathCreateWithHttpInfo(projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -3544,10 +3544,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsPathCreateWithHttpInfo(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsPathCreateWithHttpInfo(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3586,14 +3586,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsPathCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsPathCreate", localVarResponse);
@@ -3612,13 +3612,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsPathCreateAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsPathCreateAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsPathCreateWithHttpInfoAsync(projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsPathCreateWithHttpInfoAsync(projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3628,11 +3628,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsPathCreateWithHttpInfoAsync(string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3672,14 +3672,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsPathCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3700,10 +3700,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsPathRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsPathRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsPathRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -3714,8 +3714,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsPathRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3757,7 +3757,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsPathRetrieve", localVarResponse);
@@ -3778,10 +3778,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsPathRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsPathRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsPathRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3793,8 +3793,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsPathRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3837,7 +3837,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/path/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3859,10 +3859,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsPropertiesTimelineRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsPropertiesTimelineRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsPropertiesTimelineRetrieveWithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsPropertiesTimelineRetrieveWithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -3874,8 +3874,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsPropertiesTimelineRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsPropertiesTimelineRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3918,7 +3918,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/{id}/properties_timeline/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/{id}/properties_timeline/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsPropertiesTimelineRetrieve", localVarResponse);
@@ -3940,10 +3940,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsPropertiesTimelineRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsPropertiesTimelineRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3956,8 +3956,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsPropertiesTimelineRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4001,7 +4001,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/{id}/properties_timeline/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/properties_timeline/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4022,10 +4022,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsRetentionRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsRetentionRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsRetentionRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -4036,8 +4036,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsRetentionRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4079,7 +4079,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/retention/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/retention/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsRetentionRetrieve", localVarResponse);
@@ -4100,10 +4100,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsRetentionRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsRetentionRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsRetentionRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4115,8 +4115,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsRetentionRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4159,7 +4159,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/retention/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/retention/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4181,10 +4181,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsRetrieve(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsRetrieveWithHttpInfo(id, projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsRetrieveWithHttpInfo(id, projectId, format);
             return localVarResponse.Data;
         }
 
@@ -4196,8 +4196,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsRetrieveWithHttpInfo(int id, string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4240,7 +4240,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsRetrieve", localVarResponse);
@@ -4262,10 +4262,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsRetrieveAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsRetrieveWithHttpInfoAsync(id, projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4278,8 +4278,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsRetrieveWithHttpInfoAsync(int id, string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4323,7 +4323,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4344,12 +4344,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsSplitCreate(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsSplitCreate(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsSplitCreateWithHttpInfo(id, projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsSplitCreateWithHttpInfo(id, projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -4360,10 +4360,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsSplitCreateWithHttpInfo(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsSplitCreateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4403,14 +4403,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsSplitCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/{id}/split/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/{id}/split/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsSplitCreate", localVarResponse);
@@ -4430,13 +4430,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsSplitCreateAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsSplitCreateAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsSplitCreateWithHttpInfoAsync(id, projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsSplitCreateWithHttpInfoAsync(id, projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4447,11 +4447,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsSplitCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsSplitCreateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4492,14 +4492,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsSplitCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/{id}/split/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/split/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4520,10 +4520,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsStickinessRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsStickinessRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsStickinessRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsStickinessRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -4534,8 +4534,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsStickinessRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsStickinessRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4577,7 +4577,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/stickiness/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/stickiness/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsStickinessRetrieve", localVarResponse);
@@ -4598,10 +4598,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsStickinessRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsStickinessRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsStickinessRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsStickinessRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4613,8 +4613,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsStickinessRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsStickinessRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4657,7 +4657,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/stickiness/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/stickiness/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4678,10 +4678,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsTrendsRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsTrendsRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsTrendsRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsTrendsRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -4692,8 +4692,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsTrendsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsTrendsRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4735,7 +4735,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/trends/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/trends/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsTrendsRetrieve", localVarResponse);
@@ -4756,10 +4756,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsTrendsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsTrendsRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsTrendsRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsTrendsRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4771,8 +4771,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsTrendsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsTrendsRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4815,7 +4815,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/trends/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/trends/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4836,12 +4836,12 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsUpdate(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsUpdate(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsUpdateWithHttpInfo(id, projectId, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsUpdateWithHttpInfo(id, projectId, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -4852,10 +4852,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsUpdateWithHttpInfo(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsUpdateWithHttpInfo(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4895,14 +4895,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsUpdate", localVarResponse);
@@ -4922,13 +4922,13 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsUpdateAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsUpdateAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsUpdateWithHttpInfoAsync(id, projectId, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsUpdateWithHttpInfoAsync(id, projectId, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4939,11 +4939,11 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this person.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsUpdateWithHttpInfoAsync(int id, string projectId, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4984,14 +4984,14 @@ namespace DotPostHog.Api
             {
                 localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "format", format));
             }
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Person>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5014,12 +5014,12 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsUpdatePropertyCreate(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsUpdatePropertyCreate(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsUpdatePropertyCreateWithHttpInfo(id, key, projectId, value, format, person);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsUpdatePropertyCreateWithHttpInfo(id, key, projectId, value, format, postHogPerson);
             return localVarResponse.Data;
         }
 
@@ -5032,10 +5032,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsUpdatePropertyCreateWithHttpInfo(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsUpdatePropertyCreateWithHttpInfo(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0)
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -5089,14 +5089,14 @@ namespace DotPostHog.Api
             }
             localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "value", value));
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsUpdatePropertyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Person>("/api/projects/{project_id}/persons/{id}/update_property/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPerson>("/api/projects/{project_id}/persons/{id}/update_property/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsUpdatePropertyCreate", localVarResponse);
@@ -5118,13 +5118,13 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsUpdatePropertyCreateAsync(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsUpdatePropertyCreateAsync(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsUpdatePropertyCreateWithHttpInfoAsync(id, key, projectId, value, format, person, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsUpdatePropertyCreateWithHttpInfoAsync(id, key, projectId, value, format, postHogPerson, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5137,11 +5137,11 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="value">Specify the property value</param>
         /// <param name="format"> (optional)</param>
-        /// <param name="person"> (optional)</param>
+        /// <param name="postHogPerson"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsUpdatePropertyCreateWithHttpInfoAsync(int id, string key, string projectId, Object value, string format = default(string), Person person = default(Person), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsUpdatePropertyCreateWithHttpInfoAsync(int id, string key, string projectId, Object value, string format = default(string), PostHogPerson postHogPerson = default(PostHogPerson), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -5196,14 +5196,14 @@ namespace DotPostHog.Api
             }
             localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "key", key));
             localVarRequestOptions.QueryParameters.Add(DotPostHog.Client.ClientUtils.ParameterToMultiMap("", "value", value));
-            localVarRequestOptions.Data = person;
+            localVarRequestOptions.Data = postHogPerson;
 
             localVarRequestOptions.Operation = "PersonsApi.PersonsUpdatePropertyCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Person>("/api/projects/{project_id}/persons/{id}/update_property/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPerson>("/api/projects/{project_id}/persons/{id}/update_property/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -5224,10 +5224,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Person</returns>
-        public Person PersonsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>PostHogPerson</returns>
+        public PostHogPerson PersonsValuesRetrieve(string projectId, string format = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = PersonsValuesRetrieveWithHttpInfo(projectId, format);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = PersonsValuesRetrieveWithHttpInfo(projectId, format);
             return localVarResponse.Data;
         }
 
@@ -5238,8 +5238,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Person</returns>
-        public DotPostHog.Client.ApiResponse<Person> PersonsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPerson</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPerson> PersonsValuesRetrieveWithHttpInfo(string projectId, string format = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -5281,7 +5281,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Person>("/api/projects/{project_id}/persons/values/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPerson>("/api/projects/{project_id}/persons/values/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PersonsValuesRetrieve", localVarResponse);
@@ -5302,10 +5302,10 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Person</returns>
-        public async System.Threading.Tasks.Task<Person> PersonsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPerson</returns>
+        public async System.Threading.Tasks.Task<PostHogPerson> PersonsValuesRetrieveAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Person> localVarResponse = await PersonsValuesRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPerson> localVarResponse = await PersonsValuesRetrieveWithHttpInfoAsync(projectId, format, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5317,8 +5317,8 @@ namespace DotPostHog.Api
         /// <param name="format"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Person)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Person>> PersonsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPerson)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPerson>> PersonsValuesRetrieveWithHttpInfoAsync(string projectId, string format = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -5361,7 +5361,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Person>("/api/projects/{project_id}/persons/values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPerson>("/api/projects/{project_id}/persons/values/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

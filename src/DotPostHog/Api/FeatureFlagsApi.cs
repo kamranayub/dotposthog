@@ -35,8 +35,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsActivityRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsActivityRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,8 +47,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsActivityRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsActivityRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -59,8 +59,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsActivityRetrieve2(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsActivityRetrieve2(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -72,8 +72,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsActivityRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsActivityRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -105,10 +105,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsCreate(string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsCreate(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -118,10 +118,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsCreateWithHttpInfo(string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsCreateWithHttpInfo(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -131,37 +131,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this feature flag.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this feature flag.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsDashboardCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -172,10 +145,37 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsDashboardCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this feature flag.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogFeatureFlag"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsDashboardCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this feature flag.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogFeatureFlag"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsDashboardCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -210,10 +210,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsEnrichUsageDashboardCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsEnrichUsageDashboardCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -224,10 +224,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -237,8 +237,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsEvaluationReasonsRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsEvaluationReasonsRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -249,8 +249,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -262,8 +262,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedFeatureFlagList</returns>
-        PaginatedFeatureFlagList FeatureFlagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedFeatureFlagList</returns>
+        PostHogPaginatedFeatureFlagList FeatureFlagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -276,8 +276,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedFeatureFlagList</returns>
-        ApiResponse<PaginatedFeatureFlagList> FeatureFlagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedFeatureFlagList</returns>
+        ApiResponse<PostHogPaginatedFeatureFlagList> FeatureFlagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -287,8 +287,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsLocalEvaluationRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsLocalEvaluationRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -299,8 +299,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -310,8 +310,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsMyFlagsRetrieve(string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsMyFlagsRetrieve(string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -322,8 +322,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsMyFlagsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsMyFlagsRetrieveWithHttpInfo(string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -333,10 +333,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsPartialUpdate(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsPartialUpdate(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -347,10 +347,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsPartialUpdateWithHttpInfo(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -386,8 +386,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsRetrieve2(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsRetrieve2(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -399,18 +399,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlagRoleAccess</returns>
-        FeatureFlagRoleAccess FeatureFlagsRoleAccessCreate(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlagRoleAccess</returns>
+        PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessCreate(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -421,10 +421,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlagRoleAccess</returns>
-        ApiResponse<FeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateWithHttpInfo(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlagRoleAccess</returns>
+        ApiResponse<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateWithHttpInfo(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -458,8 +458,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedFeatureFlagRoleAccessList</returns>
-        PaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        PostHogPaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -473,8 +473,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedFeatureFlagRoleAccessList</returns>
-        ApiResponse<PaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListWithHttpInfo(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListWithHttpInfo(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -483,8 +483,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlagRoleAccess</returns>
-        FeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlagRoleAccess</returns>
+        PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -497,8 +497,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlagRoleAccess</returns>
-        ApiResponse<FeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveWithHttpInfo(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlagRoleAccess</returns>
+        ApiResponse<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveWithHttpInfo(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -508,10 +508,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsUpdate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsUpdate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -522,10 +522,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsUpdateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsUpdateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -534,10 +534,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        FeatureFlag FeatureFlagsUserBlastRadiusCreate(string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>PostHogFeatureFlag</returns>
+        PostHogFeatureFlag FeatureFlagsUserBlastRadiusCreate(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -547,10 +547,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        ApiResponse<FeatureFlag> FeatureFlagsUserBlastRadiusCreateWithHttpInfo(string projectId, FeatureFlag featureFlag, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        ApiResponse<PostHogFeatureFlag> FeatureFlagsUserBlastRadiusCreateWithHttpInfo(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -570,8 +570,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsActivityRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsActivityRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -583,8 +583,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsActivityRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsActivityRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -596,8 +596,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsActivityRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsActivityRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -610,8 +610,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -645,11 +645,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsCreateAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsCreateAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -659,11 +659,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsCreateWithHttpInfoAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsCreateWithHttpInfoAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -673,40 +673,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this feature flag.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this feature flag.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsDashboardCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -717,11 +688,40 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsDashboardCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this feature flag.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogFeatureFlag"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsDashboardCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Create, read, update and delete feature flags. [See docs](https://posthog.com/docs/user-guides/feature-flags) for more information on feature flags.  If you&#39;re looking to use feature flags on your application, you can either use our JavaScript Library or our dedicated endpoint to check if feature flags are enabled for a given user.
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this feature flag.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogFeatureFlag"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsDashboardCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -758,11 +758,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsEnrichUsageDashboardCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsEnrichUsageDashboardCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -773,11 +773,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -788,8 +788,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsEvaluationReasonsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsEvaluationReasonsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -801,8 +801,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -815,8 +815,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedFeatureFlagList</returns>
-        System.Threading.Tasks.Task<PaginatedFeatureFlagList> FeatureFlagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedFeatureFlagList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedFeatureFlagList> FeatureFlagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -830,8 +830,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedFeatureFlagList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedFeatureFlagList>> FeatureFlagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedFeatureFlagList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedFeatureFlagList>> FeatureFlagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -842,8 +842,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsLocalEvaluationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsLocalEvaluationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -855,8 +855,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -867,8 +867,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsMyFlagsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsMyFlagsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -880,8 +880,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -891,11 +891,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsPartialUpdateAsync(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsPartialUpdateAsync(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -906,11 +906,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -949,8 +949,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -963,8 +963,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -974,11 +974,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlagRoleAccess</returns>
-        System.Threading.Tasks.Task<FeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateAsync(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlagRoleAccess</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateAsync(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -989,11 +989,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlagRoleAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlagRoleAccess>> FeatureFlagsRoleAccessCreateWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlagRoleAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlagRoleAccess>> FeatureFlagsRoleAccessCreateWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1036,8 +1036,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedFeatureFlagRoleAccessList</returns>
-        System.Threading.Tasks.Task<PaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1052,8 +1052,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedFeatureFlagRoleAccessList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedFeatureFlagRoleAccessList>> FeatureFlagsRoleAccessListWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedFeatureFlagRoleAccessList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList>> FeatureFlagsRoleAccessListWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1066,8 +1066,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlagRoleAccess</returns>
-        System.Threading.Tasks.Task<FeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlagRoleAccess</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1081,8 +1081,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlagRoleAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlagRoleAccess>> FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlagRoleAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlagRoleAccess>> FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1092,11 +1092,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsUpdateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsUpdateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1107,11 +1107,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsUpdateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsUpdateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1120,11 +1120,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsUserBlastRadiusCreateAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsUserBlastRadiusCreateAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1134,11 +1134,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FeatureFlag>> FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogFeatureFlag>> FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1265,10 +1265,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsActivityRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsActivityRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsActivityRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsActivityRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -1278,8 +1278,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsActivityRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsActivityRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1316,7 +1316,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsActivityRetrieve", localVarResponse);
@@ -1336,10 +1336,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsActivityRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsActivityRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsActivityRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsActivityRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1350,8 +1350,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsActivityRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsActivityRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1389,7 +1389,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1410,10 +1410,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsActivityRetrieve2(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsActivityRetrieve2(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsActivityRetrieve2WithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsActivityRetrieve2WithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1424,8 +1424,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsActivityRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsActivityRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1463,7 +1463,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/activity/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/activity/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsActivityRetrieve2", localVarResponse);
@@ -1484,10 +1484,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsActivityRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsActivityRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsActivityRetrieve2WithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsActivityRetrieve2WithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1499,8 +1499,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsActivityRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1539,7 +1539,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/activity/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1698,12 +1698,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsCreate(string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsCreate(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsCreateWithHttpInfo(projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsCreateWithHttpInfo(projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -1712,10 +1712,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsCreateWithHttpInfo(string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsCreateWithHttpInfo(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1723,10 +1723,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1755,14 +1755,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlag>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsCreate", localVarResponse);
@@ -1780,13 +1780,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsCreateAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsCreateAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsCreateWithHttpInfoAsync(projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsCreateWithHttpInfoAsync(projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1795,11 +1795,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsCreateWithHttpInfoAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsCreateWithHttpInfoAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1807,10 +1807,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsCreate");
             }
 
 
@@ -1840,14 +1840,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1867,12 +1867,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsCreateStaticCohortForFlagCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(id, projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -1882,10 +1882,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1893,10 +1893,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1926,14 +1926,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsCreateStaticCohortForFlagCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/create_static_cohort_for_flag/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/create_static_cohort_for_flag/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsCreateStaticCohortForFlagCreate", localVarResponse);
@@ -1952,13 +1952,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsCreateStaticCohortForFlagCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(id, projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(id, projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1968,11 +1968,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsCreateStaticCohortForFlagCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1980,10 +1980,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsCreateStaticCohortForFlagCreate");
             }
 
 
@@ -2014,14 +2014,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsCreateStaticCohortForFlagCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/create_static_cohort_for_flag/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/create_static_cohort_for_flag/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2041,12 +2041,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsDashboardCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsDashboardCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsDashboardCreateWithHttpInfo(id, projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsDashboardCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -2056,10 +2056,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsDashboardCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsDashboardCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2067,10 +2067,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -2100,14 +2100,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsDashboardCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/dashboard/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/dashboard/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsDashboardCreate", localVarResponse);
@@ -2126,13 +2126,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsDashboardCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsDashboardCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsDashboardCreateWithHttpInfoAsync(id, projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsDashboardCreateWithHttpInfoAsync(id, projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2142,11 +2142,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsDashboardCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsDashboardCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2154,10 +2154,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsDashboardCreate");
             }
 
 
@@ -2188,14 +2188,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsDashboardCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/dashboard/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/dashboard/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2361,12 +2361,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsEnrichUsageDashboardCreate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsEnrichUsageDashboardCreate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(id, projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(id, projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -2376,10 +2376,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2387,10 +2387,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -2420,14 +2420,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsEnrichUsageDashboardCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/enrich_usage_dashboard/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/enrich_usage_dashboard/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsEnrichUsageDashboardCreate", localVarResponse);
@@ -2446,13 +2446,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsEnrichUsageDashboardCreateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsEnrichUsageDashboardCreateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(id, projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(id, projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2462,11 +2462,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsEnrichUsageDashboardCreateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2474,10 +2474,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsEnrichUsageDashboardCreate");
             }
 
 
@@ -2508,14 +2508,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsEnrichUsageDashboardCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/enrich_usage_dashboard/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/enrich_usage_dashboard/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2535,10 +2535,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsEvaluationReasonsRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsEvaluationReasonsRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -2548,8 +2548,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2586,7 +2586,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/evaluation_reasons/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/evaluation_reasons/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsEvaluationReasonsRetrieve", localVarResponse);
@@ -2606,10 +2606,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsEvaluationReasonsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsEvaluationReasonsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2620,8 +2620,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsEvaluationReasonsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2659,7 +2659,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/evaluation_reasons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/evaluation_reasons/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2681,10 +2681,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedFeatureFlagList</returns>
-        public PaginatedFeatureFlagList FeatureFlagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedFeatureFlagList</returns>
+        public PostHogPaginatedFeatureFlagList FeatureFlagsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedFeatureFlagList> localVarResponse = FeatureFlagsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagList> localVarResponse = FeatureFlagsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -2696,8 +2696,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedFeatureFlagList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedFeatureFlagList> FeatureFlagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedFeatureFlagList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagList> FeatureFlagsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2742,7 +2742,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedFeatureFlagList>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedFeatureFlagList>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsList", localVarResponse);
@@ -2764,10 +2764,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedFeatureFlagList</returns>
-        public async System.Threading.Tasks.Task<PaginatedFeatureFlagList> FeatureFlagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedFeatureFlagList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedFeatureFlagList> FeatureFlagsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedFeatureFlagList> localVarResponse = await FeatureFlagsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagList> localVarResponse = await FeatureFlagsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2780,8 +2780,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedFeatureFlagList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedFeatureFlagList>> FeatureFlagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedFeatureFlagList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagList>> FeatureFlagsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2827,7 +2827,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedFeatureFlagList>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedFeatureFlagList>("/api/projects/{project_id}/feature_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2847,10 +2847,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsLocalEvaluationRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsLocalEvaluationRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -2860,8 +2860,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsLocalEvaluationRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2898,7 +2898,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/local_evaluation/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/local_evaluation/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsLocalEvaluationRetrieve", localVarResponse);
@@ -2918,10 +2918,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsLocalEvaluationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsLocalEvaluationRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2932,8 +2932,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsLocalEvaluationRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2971,7 +2971,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/local_evaluation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/local_evaluation/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2991,10 +2991,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsMyFlagsRetrieve(string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsMyFlagsRetrieve(string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsMyFlagsRetrieveWithHttpInfo(projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsMyFlagsRetrieveWithHttpInfo(projectId);
             return localVarResponse.Data;
         }
 
@@ -3004,8 +3004,8 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsMyFlagsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsMyFlagsRetrieveWithHttpInfo(string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3042,7 +3042,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/my_flags/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/my_flags/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsMyFlagsRetrieve", localVarResponse);
@@ -3062,10 +3062,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsMyFlagsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsMyFlagsRetrieveAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3076,8 +3076,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsMyFlagsRetrieveWithHttpInfoAsync(string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3115,7 +3115,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/my_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/my_flags/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3135,12 +3135,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsPartialUpdate(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsPartialUpdate(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsPartialUpdateWithHttpInfo(id, projectId, patchedFeatureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -3150,10 +3150,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsPartialUpdateWithHttpInfo(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3188,14 +3188,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedFeatureFlag;
+            localVarRequestOptions.Data = postHogPatchedFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsPartialUpdate", localVarResponse);
@@ -3214,13 +3214,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsPartialUpdateAsync(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsPartialUpdateAsync(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsPartialUpdateWithHttpInfoAsync(id, projectId, patchedFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3230,11 +3230,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedFeatureFlag"> (optional)</param>
+        /// <param name="postHogPatchedFeatureFlag"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedFeatureFlag patchedFeatureFlag = default(PatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedFeatureFlag postHogPatchedFeatureFlag = default(PostHogPatchedFeatureFlag), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3270,14 +3270,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedFeatureFlag;
+            localVarRequestOptions.Data = postHogPatchedFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3456,10 +3456,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsRetrieve2(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsRetrieve2(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsRetrieve2WithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsRetrieve2WithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -3470,8 +3470,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsRetrieve2WithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3509,7 +3509,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsRetrieve2", localVarResponse);
@@ -3530,10 +3530,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsRetrieve2Async(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsRetrieve2WithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsRetrieve2WithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3545,8 +3545,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsRetrieve2WithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -3585,7 +3585,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3605,12 +3605,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlagRoleAccess</returns>
-        public FeatureFlagRoleAccess FeatureFlagsRoleAccessCreate(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlagRoleAccess</returns>
+        public PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessCreate(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> localVarResponse = FeatureFlagsRoleAccessCreateWithHttpInfo(parentLookupFeatureFlagId, projectId, featureFlagRoleAccess);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> localVarResponse = FeatureFlagsRoleAccessCreateWithHttpInfo(parentLookupFeatureFlagId, projectId, postHogFeatureFlagRoleAccess);
             return localVarResponse.Data;
         }
 
@@ -3620,10 +3620,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlagRoleAccess</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateWithHttpInfo(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlagRoleAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateWithHttpInfo(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -3637,10 +3637,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
             }
 
-            // verify the required parameter 'featureFlagRoleAccess' is set
-            if (featureFlagRoleAccess == null)
+            // verify the required parameter 'postHogFeatureFlagRoleAccess' is set
+            if (postHogFeatureFlagRoleAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlagRoleAccess' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlagRoleAccess' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -3670,14 +3670,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_feature_flag_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupFeatureFlagId)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlagRoleAccess;
+            localVarRequestOptions.Data = postHogFeatureFlagRoleAccess;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsRoleAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsRoleAccessCreate", localVarResponse);
@@ -3696,13 +3696,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlagRoleAccess</returns>
-        public async System.Threading.Tasks.Task<FeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateAsync(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlagRoleAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessCreateAsync(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> localVarResponse = await FeatureFlagsRoleAccessCreateWithHttpInfoAsync(parentLookupFeatureFlagId, projectId, featureFlagRoleAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> localVarResponse = await FeatureFlagsRoleAccessCreateWithHttpInfoAsync(parentLookupFeatureFlagId, projectId, postHogFeatureFlagRoleAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3712,11 +3712,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlagRoleAccess"></param>
+        /// <param name="postHogFeatureFlagRoleAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlagRoleAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess>> FeatureFlagsRoleAccessCreateWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, FeatureFlagRoleAccess featureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlagRoleAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess>> FeatureFlagsRoleAccessCreateWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, PostHogFeatureFlagRoleAccess postHogFeatureFlagRoleAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -3730,10 +3730,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
             }
 
-            // verify the required parameter 'featureFlagRoleAccess' is set
-            if (featureFlagRoleAccess == null)
+            // verify the required parameter 'postHogFeatureFlagRoleAccess' is set
+            if (postHogFeatureFlagRoleAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlagRoleAccess' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlagRoleAccess' when calling FeatureFlagsApi->FeatureFlagsRoleAccessCreate");
             }
 
 
@@ -3764,14 +3764,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_feature_flag_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupFeatureFlagId)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlagRoleAccess;
+            localVarRequestOptions.Data = postHogFeatureFlagRoleAccess;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsRoleAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3958,10 +3958,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedFeatureFlagRoleAccessList</returns>
-        public PaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        public PostHogPaginatedFeatureFlagRoleAccessList FeatureFlagsRoleAccessList(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedFeatureFlagRoleAccessList> localVarResponse = FeatureFlagsRoleAccessListWithHttpInfo(parentLookupFeatureFlagId, projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList> localVarResponse = FeatureFlagsRoleAccessListWithHttpInfo(parentLookupFeatureFlagId, projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -3974,8 +3974,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedFeatureFlagRoleAccessList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListWithHttpInfo(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListWithHttpInfo(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -4027,7 +4027,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedFeatureFlagRoleAccessList>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedFeatureFlagRoleAccessList>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsRoleAccessList", localVarResponse);
@@ -4050,10 +4050,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedFeatureFlagRoleAccessList</returns>
-        public async System.Threading.Tasks.Task<PaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedFeatureFlagRoleAccessList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedFeatureFlagRoleAccessList> FeatureFlagsRoleAccessListAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedFeatureFlagRoleAccessList> localVarResponse = await FeatureFlagsRoleAccessListWithHttpInfoAsync(parentLookupFeatureFlagId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList> localVarResponse = await FeatureFlagsRoleAccessListWithHttpInfoAsync(parentLookupFeatureFlagId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4067,8 +4067,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedFeatureFlagRoleAccessList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedFeatureFlagRoleAccessList>> FeatureFlagsRoleAccessListWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedFeatureFlagRoleAccessList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedFeatureFlagRoleAccessList>> FeatureFlagsRoleAccessListWithHttpInfoAsync(string parentLookupFeatureFlagId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -4121,7 +4121,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedFeatureFlagRoleAccessList>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedFeatureFlagRoleAccessList>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4143,10 +4143,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlagRoleAccess</returns>
-        public FeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlagRoleAccess</returns>
+        public PostHogFeatureFlagRoleAccess FeatureFlagsRoleAccessRetrieve(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> localVarResponse = FeatureFlagsRoleAccessRetrieveWithHttpInfo(id, parentLookupFeatureFlagId, projectId);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> localVarResponse = FeatureFlagsRoleAccessRetrieveWithHttpInfo(id, parentLookupFeatureFlagId, projectId);
             return localVarResponse.Data;
         }
 
@@ -4158,8 +4158,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupFeatureFlagId"></param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlagRoleAccess</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveWithHttpInfo(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlagRoleAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveWithHttpInfo(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -4204,7 +4204,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<FeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogFeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsRoleAccessRetrieve", localVarResponse);
@@ -4226,10 +4226,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlagRoleAccess</returns>
-        public async System.Threading.Tasks.Task<FeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlagRoleAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlagRoleAccess> FeatureFlagsRoleAccessRetrieveAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess> localVarResponse = await FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(id, parentLookupFeatureFlagId, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess> localVarResponse = await FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(id, parentLookupFeatureFlagId, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4242,8 +4242,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlagRoleAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlagRoleAccess>> FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlagRoleAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlagRoleAccess>> FeatureFlagsRoleAccessRetrieveWithHttpInfoAsync(int id, string parentLookupFeatureFlagId, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupFeatureFlagId' is set
             if (parentLookupFeatureFlagId == null)
@@ -4289,7 +4289,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<FeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogFeatureFlagRoleAccess>("/api/projects/{project_id}/feature_flags/{parent_lookup_feature_flag_id}/role_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4309,12 +4309,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsUpdate(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsUpdate(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsUpdateWithHttpInfo(id, projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsUpdateWithHttpInfo(id, projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -4324,10 +4324,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsUpdateWithHttpInfo(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsUpdateWithHttpInfo(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4335,10 +4335,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsUpdate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -4368,14 +4368,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsUpdate", localVarResponse);
@@ -4394,13 +4394,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsUpdateAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsUpdateAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsUpdateWithHttpInfoAsync(id, projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsUpdateWithHttpInfoAsync(id, projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4410,11 +4410,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this feature flag.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsUpdateWithHttpInfoAsync(int id, string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsUpdateWithHttpInfoAsync(int id, string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4422,10 +4422,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsUpdate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsUpdate");
             }
 
 
@@ -4456,14 +4456,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4482,12 +4482,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>FeatureFlag</returns>
-        public FeatureFlag FeatureFlagsUserBlastRadiusCreate(string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>PostHogFeatureFlag</returns>
+        public PostHogFeatureFlag FeatureFlagsUserBlastRadiusCreate(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = FeatureFlagsUserBlastRadiusCreateWithHttpInfo(projectId, featureFlag);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = FeatureFlagsUserBlastRadiusCreateWithHttpInfo(projectId, postHogFeatureFlag);
             return localVarResponse.Data;
         }
 
@@ -4496,10 +4496,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of FeatureFlag</returns>
-        public DotPostHog.Client.ApiResponse<FeatureFlag> FeatureFlagsUserBlastRadiusCreateWithHttpInfo(string projectId, FeatureFlag featureFlag, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogFeatureFlag</returns>
+        public DotPostHog.Client.ApiResponse<PostHogFeatureFlag> FeatureFlagsUserBlastRadiusCreateWithHttpInfo(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4507,10 +4507,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -4539,14 +4539,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsUserBlastRadiusCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<FeatureFlag>("/api/projects/{project_id}/feature_flags/user_blast_radius/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/user_blast_radius/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FeatureFlagsUserBlastRadiusCreate", localVarResponse);
@@ -4564,13 +4564,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of FeatureFlag</returns>
-        public async System.Threading.Tasks.Task<FeatureFlag> FeatureFlagsUserBlastRadiusCreateAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogFeatureFlag</returns>
+        public async System.Threading.Tasks.Task<PostHogFeatureFlag> FeatureFlagsUserBlastRadiusCreateAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<FeatureFlag> localVarResponse = await FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(projectId, featureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogFeatureFlag> localVarResponse = await FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(projectId, postHogFeatureFlag, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4579,11 +4579,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="featureFlag"></param>
+        /// <param name="postHogFeatureFlag"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (FeatureFlag)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<FeatureFlag>> FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(string projectId, FeatureFlag featureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogFeatureFlag)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogFeatureFlag>> FeatureFlagsUserBlastRadiusCreateWithHttpInfoAsync(string projectId, PostHogFeatureFlag postHogFeatureFlag, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -4591,10 +4591,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
             }
 
-            // verify the required parameter 'featureFlag' is set
-            if (featureFlag == null)
+            // verify the required parameter 'postHogFeatureFlag' is set
+            if (postHogFeatureFlag == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'featureFlag' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogFeatureFlag' when calling FeatureFlagsApi->FeatureFlagsUserBlastRadiusCreate");
             }
 
 
@@ -4624,14 +4624,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = featureFlag;
+            localVarRequestOptions.Data = postHogFeatureFlag;
 
             localVarRequestOptions.Operation = "FeatureFlagsApi.FeatureFlagsUserBlastRadiusCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<FeatureFlag>("/api/projects/{project_id}/feature_flags/user_blast_radius/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogFeatureFlag>("/api/projects/{project_id}/feature_flags/user_blast_radius/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

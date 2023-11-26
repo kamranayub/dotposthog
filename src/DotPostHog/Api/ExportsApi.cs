@@ -33,8 +33,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        ExportedAsset ExportsContentRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExportedAsset</returns>
+        PostHogExportedAsset ExportsContentRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -46,17 +46,17 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        ApiResponse<ExportedAsset> ExportsContentRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        ApiResponse<PostHogExportedAsset> ExportsContentRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        ExportedAsset ExportsCreate(string projectId, ExportedAsset exportedAsset, int operationIndex = 0);
+        /// <returns>PostHogExportedAsset</returns>
+        PostHogExportedAsset ExportsCreate(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -66,10 +66,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        ApiResponse<ExportedAsset> ExportsCreateWithHttpInfo(string projectId, ExportedAsset exportedAsset, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        ApiResponse<PostHogExportedAsset> ExportsCreateWithHttpInfo(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        ExportedAsset ExportsRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogExportedAsset</returns>
+        PostHogExportedAsset ExportsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -90,8 +90,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        ApiResponse<ExportedAsset> ExportsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        ApiResponse<PostHogExportedAsset> ExportsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -112,8 +112,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        System.Threading.Tasks.Task<ExportedAsset> ExportsContentRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExportedAsset</returns>
+        System.Threading.Tasks.Task<PostHogExportedAsset> ExportsContentRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -126,8 +126,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExportedAsset>> ExportsContentRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExportedAsset>> ExportsContentRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -136,11 +136,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        System.Threading.Tasks.Task<ExportedAsset> ExportsCreateAsync(string projectId, ExportedAsset exportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExportedAsset</returns>
+        System.Threading.Tasks.Task<PostHogExportedAsset> ExportsCreateAsync(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -150,11 +150,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExportedAsset>> ExportsCreateWithHttpInfoAsync(string projectId, ExportedAsset exportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExportedAsset>> ExportsCreateWithHttpInfoAsync(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -166,8 +166,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        System.Threading.Tasks.Task<ExportedAsset> ExportsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogExportedAsset</returns>
+        System.Threading.Tasks.Task<PostHogExportedAsset> ExportsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -180,8 +180,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExportedAsset>> ExportsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogExportedAsset>> ExportsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -309,10 +309,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        public ExportedAsset ExportsContentRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExportedAsset</returns>
+        public PostHogExportedAsset ExportsContentRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = ExportsContentRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = ExportsContentRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -323,8 +323,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        public DotPostHog.Client.ApiResponse<ExportedAsset> ExportsContentRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExportedAsset> ExportsContentRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -362,7 +362,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ExportedAsset>("/api/projects/{project_id}/exports/{id}/content/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExportedAsset>("/api/projects/{project_id}/exports/{id}/content/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExportsContentRetrieve", localVarResponse);
@@ -383,10 +383,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        public async System.Threading.Tasks.Task<ExportedAsset> ExportsContentRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExportedAsset</returns>
+        public async System.Threading.Tasks.Task<PostHogExportedAsset> ExportsContentRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = await ExportsContentRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = await ExportsContentRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -398,8 +398,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExportedAsset>> ExportsContentRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExportedAsset>> ExportsContentRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -438,7 +438,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ExportedAsset>("/api/projects/{project_id}/exports/{id}/content/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExportedAsset>("/api/projects/{project_id}/exports/{id}/content/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -457,12 +457,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        public ExportedAsset ExportsCreate(string projectId, ExportedAsset exportedAsset, int operationIndex = 0)
+        /// <returns>PostHogExportedAsset</returns>
+        public PostHogExportedAsset ExportsCreate(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = ExportsCreateWithHttpInfo(projectId, exportedAsset);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = ExportsCreateWithHttpInfo(projectId, postHogExportedAsset);
             return localVarResponse.Data;
         }
 
@@ -471,10 +471,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        public DotPostHog.Client.ApiResponse<ExportedAsset> ExportsCreateWithHttpInfo(string projectId, ExportedAsset exportedAsset, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExportedAsset> ExportsCreateWithHttpInfo(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -482,10 +482,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExportsApi->ExportsCreate");
             }
 
-            // verify the required parameter 'exportedAsset' is set
-            if (exportedAsset == null)
+            // verify the required parameter 'postHogExportedAsset' is set
+            if (postHogExportedAsset == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'exportedAsset' when calling ExportsApi->ExportsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExportedAsset' when calling ExportsApi->ExportsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -514,14 +514,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = exportedAsset;
+            localVarRequestOptions.Data = postHogExportedAsset;
 
             localVarRequestOptions.Operation = "ExportsApi.ExportsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<ExportedAsset>("/api/projects/{project_id}/exports/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogExportedAsset>("/api/projects/{project_id}/exports/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExportsCreate", localVarResponse);
@@ -539,13 +539,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        public async System.Threading.Tasks.Task<ExportedAsset> ExportsCreateAsync(string projectId, ExportedAsset exportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExportedAsset</returns>
+        public async System.Threading.Tasks.Task<PostHogExportedAsset> ExportsCreateAsync(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = await ExportsCreateWithHttpInfoAsync(projectId, exportedAsset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = await ExportsCreateWithHttpInfoAsync(projectId, postHogExportedAsset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -554,11 +554,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="exportedAsset"></param>
+        /// <param name="postHogExportedAsset"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExportedAsset>> ExportsCreateWithHttpInfoAsync(string projectId, ExportedAsset exportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExportedAsset>> ExportsCreateWithHttpInfoAsync(string projectId, PostHogExportedAsset postHogExportedAsset, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -566,10 +566,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling ExportsApi->ExportsCreate");
             }
 
-            // verify the required parameter 'exportedAsset' is set
-            if (exportedAsset == null)
+            // verify the required parameter 'postHogExportedAsset' is set
+            if (postHogExportedAsset == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'exportedAsset' when calling ExportsApi->ExportsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogExportedAsset' when calling ExportsApi->ExportsCreate");
             }
 
 
@@ -599,14 +599,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = exportedAsset;
+            localVarRequestOptions.Data = postHogExportedAsset;
 
             localVarRequestOptions.Operation = "ExportsApi.ExportsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ExportedAsset>("/api/projects/{project_id}/exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogExportedAsset>("/api/projects/{project_id}/exports/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -627,10 +627,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExportedAsset</returns>
-        public ExportedAsset ExportsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogExportedAsset</returns>
+        public PostHogExportedAsset ExportsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = ExportsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = ExportsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -641,8 +641,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this exported asset.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExportedAsset</returns>
-        public DotPostHog.Client.ApiResponse<ExportedAsset> ExportsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogExportedAsset</returns>
+        public DotPostHog.Client.ApiResponse<PostHogExportedAsset> ExportsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -680,7 +680,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ExportedAsset>("/api/projects/{project_id}/exports/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogExportedAsset>("/api/projects/{project_id}/exports/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExportsRetrieve", localVarResponse);
@@ -701,10 +701,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExportedAsset</returns>
-        public async System.Threading.Tasks.Task<ExportedAsset> ExportsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogExportedAsset</returns>
+        public async System.Threading.Tasks.Task<PostHogExportedAsset> ExportsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<ExportedAsset> localVarResponse = await ExportsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogExportedAsset> localVarResponse = await ExportsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -716,8 +716,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExportedAsset)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<ExportedAsset>> ExportsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogExportedAsset)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogExportedAsset>> ExportsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -756,7 +756,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ExportedAsset>("/api/projects/{project_id}/exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogExportedAsset>("/api/projects/{project_id}/exports/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

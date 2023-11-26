@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="resettokenpartialupdate"></a>
 # **ResetTokenPartialUpdate**
-> Team ResetTokenPartialUpdate (int id, PatchedTeam patchedTeam = null)
+> PostHogTeam ResetTokenPartialUpdate (int id, PostHogPatchedTeam postHogPatchedTeam = null)
 
 
 
@@ -32,11 +32,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new ResetTokenApi(config);
             var id = 56;  // int | A unique integer value identifying this team.
-            var patchedTeam = new PatchedTeam(); // PatchedTeam |  (optional) 
+            var postHogPatchedTeam = new PostHogPatchedTeam(); // PostHogPatchedTeam |  (optional) 
 
             try
             {
-                Team result = apiInstance.ResetTokenPartialUpdate(id, patchedTeam);
+                PostHogTeam result = apiInstance.ResetTokenPartialUpdate(id, postHogPatchedTeam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -56,7 +56,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.ResetTokenPartialUpdateWithHttpInfo(id, patchedTeam);
+    ApiResponse<PostHogTeam> response = apiInstance.ResetTokenPartialUpdateWithHttpInfo(id, postHogPatchedTeam);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -74,11 +74,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this team. |  |
-| **patchedTeam** | [**PatchedTeam**](PatchedTeam.md) |  | [optional]  |
+| **postHogPatchedTeam** | [**PostHogPatchedTeam**](PostHogPatchedTeam.md) |  | [optional]  |
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 

@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        Table WarehouseTablesCreate(string projectId, Table table, int operationIndex = 0);
+        /// <returns>PostHogTable</returns>
+        PostHogTable WarehouseTablesCreate(string projectId, PostHogTable postHogTable, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        ApiResponse<Table> WarehouseTablesCreateWithHttpInfo(string projectId, Table table, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTable</returns>
+        ApiResponse<PostHogTable> WarehouseTablesCreateWithHttpInfo(string projectId, PostHogTable postHogTable, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTableList</returns>
-        PaginatedTableList WarehouseTablesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedTableList</returns>
+        PostHogPaginatedTableList WarehouseTablesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTableList</returns>
-        ApiResponse<PaginatedTableList> WarehouseTablesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedTableList</returns>
+        ApiResponse<PostHogPaginatedTableList> WarehouseTablesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        Table WarehouseTablesPartialUpdate(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0);
+        /// <returns>PostHogTable</returns>
+        PostHogTable WarehouseTablesPartialUpdate(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        ApiResponse<Table> WarehouseTablesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTable</returns>
+        ApiResponse<PostHogTable> WarehouseTablesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -142,8 +142,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        Table WarehouseTablesRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogTable</returns>
+        PostHogTable WarehouseTablesRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -155,8 +155,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        ApiResponse<Table> WarehouseTablesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTable</returns>
+        ApiResponse<PostHogTable> WarehouseTablesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -166,10 +166,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        Table WarehouseTablesUpdate(Guid id, string projectId, Table table, int operationIndex = 0);
+        /// <returns>PostHogTable</returns>
+        PostHogTable WarehouseTablesUpdate(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        ApiResponse<Table> WarehouseTablesUpdateWithHttpInfo(Guid id, string projectId, Table table, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogTable</returns>
+        ApiResponse<PostHogTable> WarehouseTablesUpdateWithHttpInfo(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,11 +201,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        System.Threading.Tasks.Task<Table> WarehouseTablesCreateAsync(string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTable</returns>
+        System.Threading.Tasks.Task<PostHogTable> WarehouseTablesCreateAsync(string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,11 +215,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Table>> WarehouseTablesCreateWithHttpInfoAsync(string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTable>> WarehouseTablesCreateWithHttpInfoAsync(string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -260,8 +260,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTableList</returns>
-        System.Threading.Tasks.Task<PaginatedTableList> WarehouseTablesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedTableList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedTableList> WarehouseTablesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -276,8 +276,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTableList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedTableList>> WarehouseTablesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedTableList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedTableList>> WarehouseTablesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,11 +287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        System.Threading.Tasks.Task<Table> WarehouseTablesPartialUpdateAsync(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTable</returns>
+        System.Threading.Tasks.Task<PostHogTable> WarehouseTablesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,11 +302,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Table>> WarehouseTablesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTable>> WarehouseTablesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -318,8 +318,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        System.Threading.Tasks.Task<Table> WarehouseTablesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTable</returns>
+        System.Threading.Tasks.Task<PostHogTable> WarehouseTablesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Table>> WarehouseTablesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTable>> WarehouseTablesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -343,11 +343,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        System.Threading.Tasks.Task<Table> WarehouseTablesUpdateAsync(Guid id, string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogTable</returns>
+        System.Threading.Tasks.Task<PostHogTable> WarehouseTablesUpdateAsync(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,11 +358,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Table>> WarehouseTablesUpdateWithHttpInfoAsync(Guid id, string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogTable>> WarehouseTablesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -488,12 +488,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        public Table WarehouseTablesCreate(string projectId, Table table, int operationIndex = 0)
+        /// <returns>PostHogTable</returns>
+        public PostHogTable WarehouseTablesCreate(string projectId, PostHogTable postHogTable, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = WarehouseTablesCreateWithHttpInfo(projectId, table);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = WarehouseTablesCreateWithHttpInfo(projectId, postHogTable);
             return localVarResponse.Data;
         }
 
@@ -502,10 +502,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        public DotPostHog.Client.ApiResponse<Table> WarehouseTablesCreateWithHttpInfo(string projectId, Table table, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTable</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTable> WarehouseTablesCreateWithHttpInfo(string projectId, PostHogTable postHogTable, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -513,10 +513,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseTablesApi->WarehouseTablesCreate");
             }
 
-            // verify the required parameter 'table' is set
-            if (table == null)
+            // verify the required parameter 'postHogTable' is set
+            if (postHogTable == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'table' when calling WarehouseTablesApi->WarehouseTablesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogTable' when calling WarehouseTablesApi->WarehouseTablesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -545,14 +545,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = table;
+            localVarRequestOptions.Data = postHogTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<Table>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogTable>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseTablesCreate", localVarResponse);
@@ -570,13 +570,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        public async System.Threading.Tasks.Task<Table> WarehouseTablesCreateAsync(string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTable</returns>
+        public async System.Threading.Tasks.Task<PostHogTable> WarehouseTablesCreateAsync(string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = await WarehouseTablesCreateWithHttpInfoAsync(projectId, table, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = await WarehouseTablesCreateWithHttpInfoAsync(projectId, postHogTable, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -585,11 +585,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Table>> WarehouseTablesCreateWithHttpInfoAsync(string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTable>> WarehouseTablesCreateWithHttpInfoAsync(string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -597,10 +597,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseTablesApi->WarehouseTablesCreate");
             }
 
-            // verify the required parameter 'table' is set
-            if (table == null)
+            // verify the required parameter 'postHogTable' is set
+            if (postHogTable == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'table' when calling WarehouseTablesApi->WarehouseTablesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogTable' when calling WarehouseTablesApi->WarehouseTablesCreate");
             }
 
 
@@ -630,14 +630,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = table;
+            localVarRequestOptions.Data = postHogTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Table>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogTable>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -806,10 +806,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedTableList</returns>
-        public PaginatedTableList WarehouseTablesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedTableList</returns>
+        public PostHogPaginatedTableList WarehouseTablesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedTableList> localVarResponse = WarehouseTablesListWithHttpInfo(projectId, limit, offset, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTableList> localVarResponse = WarehouseTablesListWithHttpInfo(projectId, limit, offset, search);
             return localVarResponse.Data;
         }
 
@@ -822,8 +822,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedTableList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedTableList> WarehouseTablesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedTableList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedTableList> WarehouseTablesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -872,7 +872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedTableList>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedTableList>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseTablesList", localVarResponse);
@@ -895,10 +895,10 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedTableList</returns>
-        public async System.Threading.Tasks.Task<PaginatedTableList> WarehouseTablesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedTableList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedTableList> WarehouseTablesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedTableList> localVarResponse = await WarehouseTablesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedTableList> localVarResponse = await WarehouseTablesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -912,8 +912,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedTableList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedTableList>> WarehouseTablesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedTableList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedTableList>> WarehouseTablesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -963,7 +963,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedTableList>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedTableList>("/api/projects/{project_id}/warehouse_tables/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -983,12 +983,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        public Table WarehouseTablesPartialUpdate(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0)
+        /// <returns>PostHogTable</returns>
+        public PostHogTable WarehouseTablesPartialUpdate(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = WarehouseTablesPartialUpdateWithHttpInfo(id, projectId, patchedTable);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = WarehouseTablesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedTable);
             return localVarResponse.Data;
         }
 
@@ -998,10 +998,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        public DotPostHog.Client.ApiResponse<Table> WarehouseTablesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTable</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTable> WarehouseTablesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1036,14 +1036,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedTable;
+            localVarRequestOptions.Data = postHogPatchedTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseTablesPartialUpdate", localVarResponse);
@@ -1062,13 +1062,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        public async System.Threading.Tasks.Task<Table> WarehouseTablesPartialUpdateAsync(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTable</returns>
+        public async System.Threading.Tasks.Task<PostHogTable> WarehouseTablesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = await WarehouseTablesPartialUpdateWithHttpInfoAsync(id, projectId, patchedTable, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = await WarehouseTablesPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedTable, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1078,11 +1078,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedTable"> (optional)</param>
+        /// <param name="postHogPatchedTable"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Table>> WarehouseTablesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedTable patchedTable = default(PatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTable>> WarehouseTablesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = default(PostHogPatchedTable), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1118,14 +1118,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedTable;
+            localVarRequestOptions.Data = postHogPatchedTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1146,10 +1146,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        public Table WarehouseTablesRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogTable</returns>
+        public PostHogTable WarehouseTablesRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = WarehouseTablesRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = WarehouseTablesRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1160,8 +1160,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        public DotPostHog.Client.ApiResponse<Table> WarehouseTablesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTable</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTable> WarehouseTablesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1199,7 +1199,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseTablesRetrieve", localVarResponse);
@@ -1220,10 +1220,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        public async System.Threading.Tasks.Task<Table> WarehouseTablesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTable</returns>
+        public async System.Threading.Tasks.Task<PostHogTable> WarehouseTablesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = await WarehouseTablesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = await WarehouseTablesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1235,8 +1235,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Table>> WarehouseTablesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTable>> WarehouseTablesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1275,7 +1275,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1295,12 +1295,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Table</returns>
-        public Table WarehouseTablesUpdate(Guid id, string projectId, Table table, int operationIndex = 0)
+        /// <returns>PostHogTable</returns>
+        public PostHogTable WarehouseTablesUpdate(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = WarehouseTablesUpdateWithHttpInfo(id, projectId, table);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = WarehouseTablesUpdateWithHttpInfo(id, projectId, postHogTable);
             return localVarResponse.Data;
         }
 
@@ -1310,10 +1310,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Table</returns>
-        public DotPostHog.Client.ApiResponse<Table> WarehouseTablesUpdateWithHttpInfo(Guid id, string projectId, Table table, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogTable</returns>
+        public DotPostHog.Client.ApiResponse<PostHogTable> WarehouseTablesUpdateWithHttpInfo(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1321,10 +1321,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseTablesApi->WarehouseTablesUpdate");
             }
 
-            // verify the required parameter 'table' is set
-            if (table == null)
+            // verify the required parameter 'postHogTable' is set
+            if (postHogTable == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'table' when calling WarehouseTablesApi->WarehouseTablesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogTable' when calling WarehouseTablesApi->WarehouseTablesUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1354,14 +1354,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = table;
+            localVarRequestOptions.Data = postHogTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseTablesUpdate", localVarResponse);
@@ -1380,13 +1380,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Table</returns>
-        public async System.Threading.Tasks.Task<Table> WarehouseTablesUpdateAsync(Guid id, string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogTable</returns>
+        public async System.Threading.Tasks.Task<PostHogTable> WarehouseTablesUpdateAsync(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<Table> localVarResponse = await WarehouseTablesUpdateWithHttpInfoAsync(id, projectId, table, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogTable> localVarResponse = await WarehouseTablesUpdateWithHttpInfoAsync(id, projectId, postHogTable, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1396,11 +1396,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse table.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="table"></param>
+        /// <param name="postHogTable"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Table)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<Table>> WarehouseTablesUpdateWithHttpInfoAsync(Guid id, string projectId, Table table, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogTable)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogTable>> WarehouseTablesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogTable postHogTable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1408,10 +1408,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseTablesApi->WarehouseTablesUpdate");
             }
 
-            // verify the required parameter 'table' is set
-            if (table == null)
+            // verify the required parameter 'postHogTable' is set
+            if (postHogTable == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'table' when calling WarehouseTablesApi->WarehouseTablesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogTable' when calling WarehouseTablesApi->WarehouseTablesUpdate");
             }
 
 
@@ -1442,14 +1442,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = table;
+            localVarRequestOptions.Data = postHogTable;
 
             localVarRequestOptions.Operation = "WarehouseTablesApi.WarehouseTablesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Table>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogTable>("/api/projects/{project_id}/warehouse_tables/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

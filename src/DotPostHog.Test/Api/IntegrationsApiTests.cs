@@ -64,7 +64,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.IntegrationsChannelsRetrieve(id, projectId);
-            //Assert.IsType<Integration>(response);
+            //Assert.IsType<PostHogIntegration>(response);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Integration integration = null;
-            //var response = instance.IntegrationsCreate(projectId, integration);
-            //Assert.IsType<Integration>(response);
+            //PostHogIntegration postHogIntegration = null;
+            //var response = instance.IntegrationsCreate(projectId, postHogIntegration);
+            //Assert.IsType<PostHogIntegration>(response);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.IntegrationsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedIntegrationList>(response);
+            //Assert.IsType<PostHogPaginatedIntegrationList>(response);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //var response = instance.IntegrationsRetrieve(id, projectId);
-            //Assert.IsType<Integration>(response);
+            //Assert.IsType<PostHogIntegration>(response);
         }
     }
 }

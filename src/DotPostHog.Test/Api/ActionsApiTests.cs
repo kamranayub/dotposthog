@@ -65,7 +65,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.ActionsCountRetrieve(id, projectId, format);
-            //Assert.IsType<Action>(response);
+            //Assert.IsType<PostHogAction>(response);
         }
 
         /// <summary>
@@ -77,9 +77,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Action action = null;
-            //var response = instance.ActionsCreate(projectId, format, action);
-            //Assert.IsType<Action>(response);
+            //PostHogAction postHogAction = null;
+            //var response = instance.ActionsCreate(projectId, format, postHogAction);
+            //Assert.IsType<PostHogAction>(response);
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.ActionsList(projectId, format, limit, offset);
-            //Assert.IsType<PaginatedActionList>(response);
+            //Assert.IsType<PostHogPaginatedActionList>(response);
         }
 
         /// <summary>
@@ -120,9 +120,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //PatchedAction patchedAction = null;
-            //var response = instance.ActionsPartialUpdate(id, projectId, format, patchedAction);
-            //Assert.IsType<Action>(response);
+            //PostHogPatchedAction postHogPatchedAction = null;
+            //var response = instance.ActionsPartialUpdate(id, projectId, format, postHogPatchedAction);
+            //Assert.IsType<PostHogAction>(response);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.ActionsPeopleRetrieve(projectId, format);
-            //Assert.IsType<Action>(response);
+            //Assert.IsType<PostHogAction>(response);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.ActionsRetrieve(id, projectId, format);
-            //Assert.IsType<Action>(response);
+            //Assert.IsType<PostHogAction>(response);
         }
 
         /// <summary>
@@ -162,9 +162,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Action action = null;
-            //var response = instance.ActionsUpdate(id, projectId, format, action);
-            //Assert.IsType<Action>(response);
+            //PostHogAction postHogAction = null;
+            //var response = instance.ActionsUpdate(id, projectId, format, postHogAction);
+            //Assert.IsType<PostHogAction>(response);
         }
     }
 }

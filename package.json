@@ -4,7 +4,7 @@
   "description": "PostHog community .NET wrapper",
   "main": "index.js",
   "scripts": {
-    "generate": "npx @openapitools/openapi-generator-cli generate -i schema.yaml -g csharp -o . -c openapi-config.yaml",
+    "generate": "npx @openapitools/openapi-generator-cli generate -g csharp -o . -c openapi-config.yaml",
     "build": "dotnet build",
     "test": "dotnet test",
     "validate": "npx @openapitools/openapi-generator-cli validate -i schema.yaml"

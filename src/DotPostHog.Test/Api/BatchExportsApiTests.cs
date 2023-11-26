@@ -63,9 +63,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //BatchExport batchExport = null;
-            //var response = instance.BatchExportsBackfillCreate(id, projectId, batchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogBatchExport postHogBatchExport = null;
+            //var response = instance.BatchExportsBackfillCreate(id, projectId, postHogBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -76,9 +76,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //BatchExport batchExport = null;
-            //var response = instance.BatchExportsCreate(projectId, batchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogBatchExport postHogBatchExport = null;
+            //var response = instance.BatchExportsCreate(projectId, postHogBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.BatchExportsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedBatchExportList>(response);
+            //Assert.IsType<PostHogPaginatedBatchExportList>(response);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.BatchExportsLogsList(parentLookupBatchExportId, projectId, limit, offset);
-            //Assert.IsType<PaginatedBatchExportLogEntryList>(response);
+            //Assert.IsType<PostHogPaginatedBatchExportLogEntryList>(response);
         }
 
         /// <summary>
@@ -131,9 +131,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedBatchExport patchedBatchExport = null;
-            //var response = instance.BatchExportsPartialUpdate(id, projectId, patchedBatchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogPatchedBatchExport postHogPatchedBatchExport = null;
+            //var response = instance.BatchExportsPartialUpdate(id, projectId, postHogPatchedBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -145,9 +145,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //BatchExport batchExport = null;
-            //var response = instance.BatchExportsPauseCreate(id, projectId, batchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogBatchExport postHogBatchExport = null;
+            //var response = instance.BatchExportsPauseCreate(id, projectId, postHogBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.BatchExportsRetrieve(id, projectId);
-            //Assert.IsType<BatchExport>(response);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string cursor = null;
             //var response = instance.BatchExportsRunsList(parentLookupBatchExportId, projectId, cursor);
-            //Assert.IsType<PaginatedBatchExportRunList>(response);
+            //Assert.IsType<PostHogPaginatedBatchExportRunList>(response);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.BatchExportsRunsLogsList(parentLookupBatchExportId, parentLookupRunId, projectId, limit, offset);
-            //Assert.IsType<PaginatedBatchExportLogEntryList>(response);
+            //Assert.IsType<PostHogPaginatedBatchExportLogEntryList>(response);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace DotPostHog.Test.Api
             //string parentLookupBatchExportId = null;
             //string projectId = null;
             //var response = instance.BatchExportsRunsRetrieve(id, parentLookupBatchExportId, projectId);
-            //Assert.IsType<BatchExportRun>(response);
+            //Assert.IsType<PostHogBatchExportRun>(response);
         }
 
         /// <summary>
@@ -216,9 +216,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //BatchExport batchExport = null;
-            //var response = instance.BatchExportsUnpauseCreate(id, projectId, batchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogBatchExport postHogBatchExport = null;
+            //var response = instance.BatchExportsUnpauseCreate(id, projectId, postHogBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
 
         /// <summary>
@@ -230,9 +230,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //BatchExport batchExport = null;
-            //var response = instance.BatchExportsUpdate(id, projectId, batchExport);
-            //Assert.IsType<BatchExport>(response);
+            //PostHogBatchExport postHogBatchExport = null;
+            //var response = instance.BatchExportsUpdate(id, projectId, postHogBatchExport);
+            //Assert.IsType<PostHogBatchExport>(response);
         }
     }
 }

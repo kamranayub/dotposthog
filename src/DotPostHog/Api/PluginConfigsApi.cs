@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsCreate(string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsCreate(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsCreateWithHttpInfo(string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsCreateWithHttpInfo(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -90,18 +90,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsJobCreate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsJobCreate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -112,10 +112,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsJobCreateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsJobCreateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -124,8 +124,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginConfigList</returns>
-        PaginatedPluginConfigList PluginConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPluginConfigList</returns>
+        PostHogPaginatedPluginConfigList PluginConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,8 +138,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginConfigList</returns>
-        ApiResponse<PaginatedPluginConfigList> PluginConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPluginConfigList</returns>
+        ApiResponse<PostHogPaginatedPluginConfigList> PluginConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -149,8 +149,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginLogEntryList</returns>
-        PaginatedPluginLogEntryList PluginConfigsLogsList(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPluginLogEntryList</returns>
+        PostHogPaginatedPluginLogEntryList PluginConfigsLogsList(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -164,18 +164,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginLogEntryList</returns>
-        ApiResponse<PaginatedPluginLogEntryList> PluginConfigsLogsListWithHttpInfo(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPluginLogEntryList</returns>
+        ApiResponse<PostHogPaginatedPluginLogEntryList> PluginConfigsLogsListWithHttpInfo(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsPartialUpdate(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsPartialUpdate(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -186,19 +186,19 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsPartialUpdateWithHttpInfo(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsRearrangePartialUpdate(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsRearrangePartialUpdate(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -208,10 +208,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -219,31 +219,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsRetrieve(int id, string projectId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PluginConfigsUpdate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -254,10 +231,33 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PluginConfigsUpdateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PluginConfigsUpdate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PluginConfigsUpdateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -275,11 +275,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsCreateAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsCreateAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -289,11 +289,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsCreateWithHttpInfoAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsCreateWithHttpInfoAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -346,8 +346,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -357,11 +357,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsJobCreateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsJobCreateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -372,11 +372,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -389,8 +389,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginConfigList</returns>
-        System.Threading.Tasks.Task<PaginatedPluginConfigList> PluginConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPluginConfigList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPluginConfigList> PluginConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -404,8 +404,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginConfigList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPluginConfigList>> PluginConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginConfigList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPluginConfigList>> PluginConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -419,8 +419,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginLogEntryList</returns>
-        System.Threading.Tasks.Task<PaginatedPluginLogEntryList> PluginConfigsLogsListAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPluginLogEntryList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPluginLogEntryList> PluginConfigsLogsListAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -435,8 +435,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginLogEntryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPluginLogEntryList>> PluginConfigsLogsListWithHttpInfoAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginLogEntryList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPluginLogEntryList>> PluginConfigsLogsListWithHttpInfoAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -446,11 +446,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsPartialUpdateAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsPartialUpdateAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -461,11 +461,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -474,11 +474,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsRearrangePartialUpdateAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsRearrangePartialUpdateAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -488,11 +488,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -504,36 +504,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PluginConfigsUpdateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -544,11 +516,39 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PluginConfigsUpdateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsUpdateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PluginConfigsUpdateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -674,12 +674,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsCreate(string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsCreate(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsCreateWithHttpInfo(projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsCreateWithHttpInfo(projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -688,10 +688,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsCreateWithHttpInfo(string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsCreateWithHttpInfo(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -699,10 +699,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -731,14 +731,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PluginConfig>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsCreate", localVarResponse);
@@ -756,13 +756,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsCreateAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsCreateAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsCreateWithHttpInfoAsync(projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsCreateWithHttpInfoAsync(projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -771,11 +771,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsCreateWithHttpInfoAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsCreateWithHttpInfoAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -783,10 +783,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsCreate");
             }
 
 
@@ -816,14 +816,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -990,10 +990,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsFrontendRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsFrontendRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1004,8 +1004,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1043,7 +1043,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/frontend/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/frontend/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsFrontendRetrieve", localVarResponse);
@@ -1064,10 +1064,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsFrontendRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsFrontendRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1079,8 +1079,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1119,7 +1119,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/frontend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/frontend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1139,12 +1139,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsJobCreate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsJobCreate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsJobCreateWithHttpInfo(id, projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsJobCreateWithHttpInfo(id, projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1154,10 +1154,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsJobCreateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsJobCreateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1165,10 +1165,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsJobCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsJobCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsJobCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1198,14 +1198,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsJobCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/job/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/job/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsJobCreate", localVarResponse);
@@ -1224,13 +1224,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsJobCreateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsJobCreateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsJobCreateWithHttpInfoAsync(id, projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsJobCreateWithHttpInfoAsync(id, projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1240,11 +1240,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1252,10 +1252,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsJobCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsJobCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsJobCreate");
             }
 
 
@@ -1286,14 +1286,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsJobCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/job/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/job/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1315,10 +1315,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginConfigList</returns>
-        public PaginatedPluginConfigList PluginConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPluginConfigList</returns>
+        public PostHogPaginatedPluginConfigList PluginConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> localVarResponse = PluginConfigsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> localVarResponse = PluginConfigsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1330,8 +1330,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginConfigList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> PluginConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPluginConfigList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> PluginConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1376,7 +1376,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPluginConfigList>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPluginConfigList>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsList", localVarResponse);
@@ -1398,10 +1398,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginConfigList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPluginConfigList> PluginConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPluginConfigList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPluginConfigList> PluginConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> localVarResponse = await PluginConfigsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> localVarResponse = await PluginConfigsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1414,8 +1414,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginConfigList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPluginConfigList>> PluginConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginConfigList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList>> PluginConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1461,7 +1461,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPluginConfigList>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPluginConfigList>("/api/projects/{project_id}/plugin_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1484,10 +1484,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginLogEntryList</returns>
-        public PaginatedPluginLogEntryList PluginConfigsLogsList(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPluginLogEntryList</returns>
+        public PostHogPaginatedPluginLogEntryList PluginConfigsLogsList(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginLogEntryList> localVarResponse = PluginConfigsLogsListWithHttpInfo(parentLookupPluginConfigId, projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginLogEntryList> localVarResponse = PluginConfigsLogsListWithHttpInfo(parentLookupPluginConfigId, projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1500,8 +1500,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginLogEntryList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPluginLogEntryList> PluginConfigsLogsListWithHttpInfo(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPluginLogEntryList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPluginLogEntryList> PluginConfigsLogsListWithHttpInfo(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupPluginConfigId' is set
             if (parentLookupPluginConfigId == null)
@@ -1553,7 +1553,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPluginLogEntryList>("/api/projects/{project_id}/plugin_configs/{parent_lookup_plugin_config_id}/logs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPluginLogEntryList>("/api/projects/{project_id}/plugin_configs/{parent_lookup_plugin_config_id}/logs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsLogsList", localVarResponse);
@@ -1576,10 +1576,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginLogEntryList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPluginLogEntryList> PluginConfigsLogsListAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPluginLogEntryList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPluginLogEntryList> PluginConfigsLogsListAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginLogEntryList> localVarResponse = await PluginConfigsLogsListWithHttpInfoAsync(parentLookupPluginConfigId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginLogEntryList> localVarResponse = await PluginConfigsLogsListWithHttpInfoAsync(parentLookupPluginConfigId, projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1593,8 +1593,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginLogEntryList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPluginLogEntryList>> PluginConfigsLogsListWithHttpInfoAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginLogEntryList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPluginLogEntryList>> PluginConfigsLogsListWithHttpInfoAsync(string parentLookupPluginConfigId, string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupPluginConfigId' is set
             if (parentLookupPluginConfigId == null)
@@ -1647,7 +1647,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPluginLogEntryList>("/api/projects/{project_id}/plugin_configs/{parent_lookup_plugin_config_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPluginLogEntryList>("/api/projects/{project_id}/plugin_configs/{parent_lookup_plugin_config_id}/logs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1667,12 +1667,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsPartialUpdate(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsPartialUpdate(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsPartialUpdateWithHttpInfo(id, projectId, patchedPluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1682,10 +1682,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsPartialUpdateWithHttpInfo(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1720,14 +1720,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsPartialUpdate", localVarResponse);
@@ -1746,13 +1746,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsPartialUpdateAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsPartialUpdateAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsPartialUpdateWithHttpInfoAsync(id, projectId, patchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1762,11 +1762,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1802,14 +1802,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1828,12 +1828,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsRearrangePartialUpdate(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsRearrangePartialUpdate(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsRearrangePartialUpdateWithHttpInfo(projectId, patchedPluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsRearrangePartialUpdateWithHttpInfo(projectId, postHogPatchedPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1842,10 +1842,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1879,14 +1879,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsRearrangePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<PluginConfig>("/api/projects/{project_id}/plugin_configs/rearrange/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/rearrange/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsRearrangePartialUpdate", localVarResponse);
@@ -1904,13 +1904,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsRearrangePartialUpdateAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsRearrangePartialUpdateAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(projectId, patchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(projectId, postHogPatchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1919,11 +1919,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1958,14 +1958,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsRearrangePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/rearrange/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/rearrange/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1986,10 +1986,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -2000,8 +2000,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2039,7 +2039,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsRetrieve", localVarResponse);
@@ -2060,10 +2060,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2075,8 +2075,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2115,7 +2115,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2135,12 +2135,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PluginConfigsUpdate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PluginConfigsUpdate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PluginConfigsUpdateWithHttpInfo(id, projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PluginConfigsUpdateWithHttpInfo(id, projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -2150,10 +2150,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PluginConfigsUpdateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PluginConfigsUpdateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2161,10 +2161,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsUpdate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -2194,14 +2194,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PluginConfigsUpdate", localVarResponse);
@@ -2220,13 +2220,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PluginConfigsUpdateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PluginConfigsUpdateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PluginConfigsUpdateWithHttpInfoAsync(id, projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PluginConfigsUpdateWithHttpInfoAsync(id, projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2236,11 +2236,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PluginConfigsUpdateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PluginConfigsUpdateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2248,10 +2248,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PluginConfigsApi->PluginConfigsUpdate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PluginConfigsApi->PluginConfigsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PluginConfigsApi->PluginConfigsUpdate");
             }
 
 
@@ -2282,14 +2282,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PluginConfigsApi.PluginConfigsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<PluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogPluginConfig>("/api/projects/{project_id}/plugin_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -34,10 +34,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        DataWarehouseSavedQuery WarehouseSavedQueriesCreate(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0);
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        PostHogDataWarehouseSavedQuery WarehouseSavedQueriesCreate(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -47,10 +47,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesCreateWithHttpInfo(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesCreateWithHttpInfo(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -88,8 +88,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedDataWarehouseSavedQueryList</returns>
-        PaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        PostHogPaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -103,8 +103,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedDataWarehouseSavedQueryList</returns>
-        ApiResponse<PaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        DataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0);
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        PostHogDataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -142,8 +142,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        DataWarehouseSavedQuery WarehouseSavedQueriesRetrieve(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        PostHogDataWarehouseSavedQuery WarehouseSavedQueriesRetrieve(Guid id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -155,8 +155,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -166,10 +166,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        DataWarehouseSavedQuery WarehouseSavedQueriesUpdate(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0);
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        PostHogDataWarehouseSavedQuery WarehouseSavedQueriesUpdate(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -180,10 +180,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesUpdateWithHttpInfo(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesUpdateWithHttpInfo(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -201,11 +201,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesCreateAsync(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesCreateAsync(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -215,11 +215,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesCreateWithHttpInfoAsync(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesCreateWithHttpInfoAsync(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -260,8 +260,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedDataWarehouseSavedQueryList</returns>
-        System.Threading.Tasks.Task<PaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -276,8 +276,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedDataWarehouseSavedQueryList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedDataWarehouseSavedQueryList>> WarehouseSavedQueriesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedDataWarehouseSavedQueryList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList>> WarehouseSavedQueriesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -287,11 +287,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateAsync(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,11 +302,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -318,8 +318,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -332,8 +332,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -343,11 +343,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesUpdateAsync(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesUpdateAsync(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -358,11 +358,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesUpdateWithHttpInfoAsync(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -488,12 +488,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        public DataWarehouseSavedQuery WarehouseSavedQueriesCreate(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0)
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        public PostHogDataWarehouseSavedQuery WarehouseSavedQueriesCreate(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesCreateWithHttpInfo(projectId, dataWarehouseSavedQuery);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesCreateWithHttpInfo(projectId, postHogDataWarehouseSavedQuery);
             return localVarResponse.Data;
         }
 
@@ -502,10 +502,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        public DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesCreateWithHttpInfo(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesCreateWithHttpInfo(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -513,10 +513,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
             }
 
-            // verify the required parameter 'dataWarehouseSavedQuery' is set
-            if (dataWarehouseSavedQuery == null)
+            // verify the required parameter 'postHogDataWarehouseSavedQuery' is set
+            if (postHogDataWarehouseSavedQuery == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'dataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogDataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -545,14 +545,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseSavedQueriesCreate", localVarResponse);
@@ -570,13 +570,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        public async System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesCreateAsync(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        public async System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesCreateAsync(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesCreateWithHttpInfoAsync(projectId, dataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesCreateWithHttpInfoAsync(projectId, postHogDataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -585,11 +585,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesCreateWithHttpInfoAsync(string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesCreateWithHttpInfoAsync(string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -597,10 +597,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
             }
 
-            // verify the required parameter 'dataWarehouseSavedQuery' is set
-            if (dataWarehouseSavedQuery == null)
+            // verify the required parameter 'postHogDataWarehouseSavedQuery' is set
+            if (postHogDataWarehouseSavedQuery == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'dataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogDataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesCreate");
             }
 
 
@@ -630,14 +630,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -806,10 +806,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedDataWarehouseSavedQueryList</returns>
-        public PaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        public PostHogPaginatedDataWarehouseSavedQueryList WarehouseSavedQueriesList(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedDataWarehouseSavedQueryList> localVarResponse = WarehouseSavedQueriesListWithHttpInfo(projectId, limit, offset, search);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList> localVarResponse = WarehouseSavedQueriesListWithHttpInfo(projectId, limit, offset, search);
             return localVarResponse.Data;
         }
 
@@ -822,8 +822,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedDataWarehouseSavedQueryList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -872,7 +872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedDataWarehouseSavedQueryList>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedDataWarehouseSavedQueryList>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseSavedQueriesList", localVarResponse);
@@ -895,10 +895,10 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedDataWarehouseSavedQueryList</returns>
-        public async System.Threading.Tasks.Task<PaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedDataWarehouseSavedQueryList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedDataWarehouseSavedQueryList> WarehouseSavedQueriesListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedDataWarehouseSavedQueryList> localVarResponse = await WarehouseSavedQueriesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList> localVarResponse = await WarehouseSavedQueriesListWithHttpInfoAsync(projectId, limit, offset, search, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -912,8 +912,8 @@ namespace DotPostHog.Api
         /// <param name="search">A search term. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedDataWarehouseSavedQueryList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedDataWarehouseSavedQueryList>> WarehouseSavedQueriesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedDataWarehouseSavedQueryList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedDataWarehouseSavedQueryList>> WarehouseSavedQueriesListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), string search = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -963,7 +963,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedDataWarehouseSavedQueryList>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedDataWarehouseSavedQueryList>("/api/projects/{project_id}/warehouse_saved_queries/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -983,12 +983,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        public DataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0)
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        public PostHogDataWarehouseSavedQuery WarehouseSavedQueriesPartialUpdate(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesPartialUpdateWithHttpInfo(id, projectId, patchedDataWarehouseSavedQuery);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedDataWarehouseSavedQuery);
             return localVarResponse.Data;
         }
 
@@ -998,10 +998,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        public DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateWithHttpInfo(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateWithHttpInfo(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1036,14 +1036,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedDataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogPatchedDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseSavedQueriesPartialUpdate", localVarResponse);
@@ -1062,13 +1062,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        public async System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateAsync(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        public async System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesPartialUpdateAsync(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(id, projectId, patchedDataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedDataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1078,11 +1078,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedDataWarehouseSavedQuery"> (optional)</param>
+        /// <param name="postHogPatchedDataWarehouseSavedQuery"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PatchedDataWarehouseSavedQuery patchedDataWarehouseSavedQuery = default(PatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesPartialUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogPatchedDataWarehouseSavedQuery postHogPatchedDataWarehouseSavedQuery = default(PostHogPatchedDataWarehouseSavedQuery), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1118,14 +1118,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedDataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogPatchedDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1146,10 +1146,10 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        public DataWarehouseSavedQuery WarehouseSavedQueriesRetrieve(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        public PostHogDataWarehouseSavedQuery WarehouseSavedQueriesRetrieve(Guid id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1160,8 +1160,8 @@ namespace DotPostHog.Api
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        public DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveWithHttpInfo(Guid id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1199,7 +1199,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseSavedQueriesRetrieve", localVarResponse);
@@ -1220,10 +1220,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        public async System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        public async System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesRetrieveAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1235,8 +1235,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesRetrieveWithHttpInfoAsync(Guid id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1275,7 +1275,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1295,12 +1295,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DataWarehouseSavedQuery</returns>
-        public DataWarehouseSavedQuery WarehouseSavedQueriesUpdate(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0)
+        /// <returns>PostHogDataWarehouseSavedQuery</returns>
+        public PostHogDataWarehouseSavedQuery WarehouseSavedQueriesUpdate(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesUpdateWithHttpInfo(id, projectId, dataWarehouseSavedQuery);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = WarehouseSavedQueriesUpdateWithHttpInfo(id, projectId, postHogDataWarehouseSavedQuery);
             return localVarResponse.Data;
         }
 
@@ -1310,10 +1310,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DataWarehouseSavedQuery</returns>
-        public DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> WarehouseSavedQueriesUpdateWithHttpInfo(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogDataWarehouseSavedQuery</returns>
+        public DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesUpdateWithHttpInfo(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1321,10 +1321,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
             }
 
-            // verify the required parameter 'dataWarehouseSavedQuery' is set
-            if (dataWarehouseSavedQuery == null)
+            // verify the required parameter 'postHogDataWarehouseSavedQuery' is set
+            if (postHogDataWarehouseSavedQuery == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'dataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogDataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1354,14 +1354,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WarehouseSavedQueriesUpdate", localVarResponse);
@@ -1380,13 +1380,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DataWarehouseSavedQuery</returns>
-        public async System.Threading.Tasks.Task<DataWarehouseSavedQuery> WarehouseSavedQueriesUpdateAsync(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogDataWarehouseSavedQuery</returns>
+        public async System.Threading.Tasks.Task<PostHogDataWarehouseSavedQuery> WarehouseSavedQueriesUpdateAsync(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesUpdateWithHttpInfoAsync(id, projectId, dataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery> localVarResponse = await WarehouseSavedQueriesUpdateWithHttpInfoAsync(id, projectId, postHogDataWarehouseSavedQuery, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1396,11 +1396,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A UUID string identifying this data warehouse saved query.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="dataWarehouseSavedQuery"></param>
+        /// <param name="postHogDataWarehouseSavedQuery"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DataWarehouseSavedQuery)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<DataWarehouseSavedQuery>> WarehouseSavedQueriesUpdateWithHttpInfoAsync(Guid id, string projectId, DataWarehouseSavedQuery dataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogDataWarehouseSavedQuery)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogDataWarehouseSavedQuery>> WarehouseSavedQueriesUpdateWithHttpInfoAsync(Guid id, string projectId, PostHogDataWarehouseSavedQuery postHogDataWarehouseSavedQuery, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1408,10 +1408,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
             }
 
-            // verify the required parameter 'dataWarehouseSavedQuery' is set
-            if (dataWarehouseSavedQuery == null)
+            // verify the required parameter 'postHogDataWarehouseSavedQuery' is set
+            if (postHogDataWarehouseSavedQuery == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'dataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogDataWarehouseSavedQuery' when calling WarehouseSavedQueriesApi->WarehouseSavedQueriesUpdate");
             }
 
 
@@ -1442,14 +1442,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = dataWarehouseSavedQuery;
+            localVarRequestOptions.Data = postHogDataWarehouseSavedQuery;
 
             localVarRequestOptions.Operation = "WarehouseSavedQueriesApi.WarehouseSavedQueriesUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<DataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogDataWarehouseSavedQuery>("/api/projects/{project_id}/warehouse_saved_queries/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

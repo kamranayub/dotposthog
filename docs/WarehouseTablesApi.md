@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a id="warehousetablescreate"></a>
 # **WarehouseTablesCreate**
-> Table WarehouseTablesCreate (string projectId, Table table)
+> PostHogTable WarehouseTablesCreate (string projectId, PostHogTable postHogTable)
 
 
 
@@ -37,11 +37,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new WarehouseTablesApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var table = new Table(); // Table | 
+            var postHogTable = new PostHogTable(); // PostHogTable | 
 
             try
             {
-                Table result = apiInstance.WarehouseTablesCreate(projectId, table);
+                PostHogTable result = apiInstance.WarehouseTablesCreate(projectId, postHogTable);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Table> response = apiInstance.WarehouseTablesCreateWithHttpInfo(projectId, table);
+    ApiResponse<PostHogTable> response = apiInstance.WarehouseTablesCreateWithHttpInfo(projectId, postHogTable);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -79,11 +79,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **table** | [**Table**](Table.md) |  |  |
+| **postHogTable** | [**PostHogTable**](PostHogTable.md) |  |  |
 
 ### Return type
 
-[**Table**](Table.md)
+[**PostHogTable**](PostHogTable.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="warehousetableslist"></a>
 # **WarehouseTablesList**
-> PaginatedTableList WarehouseTablesList (string projectId, int? limit = null, int? offset = null, string search = null)
+> PostHogPaginatedTableList WarehouseTablesList (string projectId, int? limit = null, int? offset = null, string search = null)
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                PaginatedTableList result = apiInstance.WarehouseTablesList(projectId, limit, offset, search);
+                PostHogPaginatedTableList result = apiInstance.WarehouseTablesList(projectId, limit, offset, search);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -241,7 +241,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedTableList> response = apiInstance.WarehouseTablesListWithHttpInfo(projectId, limit, offset, search);
+    ApiResponse<PostHogPaginatedTableList> response = apiInstance.WarehouseTablesListWithHttpInfo(projectId, limit, offset, search);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -265,7 +265,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedTableList**](PaginatedTableList.md)
+[**PostHogPaginatedTableList**](PostHogPaginatedTableList.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 
 <a id="warehousetablespartialupdate"></a>
 # **WarehouseTablesPartialUpdate**
-> Table WarehouseTablesPartialUpdate (Guid id, string projectId, PatchedTable patchedTable = null)
+> PostHogTable WarehouseTablesPartialUpdate (Guid id, string projectId, PostHogPatchedTable postHogPatchedTable = null)
 
 
 
@@ -311,11 +311,11 @@ namespace Example
             var apiInstance = new WarehouseTablesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse table.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedTable = new PatchedTable(); // PatchedTable |  (optional) 
+            var postHogPatchedTable = new PostHogPatchedTable(); // PostHogPatchedTable |  (optional) 
 
             try
             {
-                Table result = apiInstance.WarehouseTablesPartialUpdate(id, projectId, patchedTable);
+                PostHogTable result = apiInstance.WarehouseTablesPartialUpdate(id, projectId, postHogPatchedTable);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -335,7 +335,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Table> response = apiInstance.WarehouseTablesPartialUpdateWithHttpInfo(id, projectId, patchedTable);
+    ApiResponse<PostHogTable> response = apiInstance.WarehouseTablesPartialUpdateWithHttpInfo(id, projectId, postHogPatchedTable);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -354,11 +354,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse table. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedTable** | [**PatchedTable**](PatchedTable.md) |  | [optional]  |
+| **postHogPatchedTable** | [**PostHogPatchedTable**](PostHogPatchedTable.md) |  | [optional]  |
 
 ### Return type
 
-[**Table**](Table.md)
+[**PostHogTable**](PostHogTable.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ No authorization required
 
 <a id="warehousetablesretrieve"></a>
 # **WarehouseTablesRetrieve**
-> Table WarehouseTablesRetrieve (Guid id, string projectId)
+> PostHogTable WarehouseTablesRetrieve (Guid id, string projectId)
 
 
 
@@ -407,7 +407,7 @@ namespace Example
 
             try
             {
-                Table result = apiInstance.WarehouseTablesRetrieve(id, projectId);
+                PostHogTable result = apiInstance.WarehouseTablesRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Table> response = apiInstance.WarehouseTablesRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogTable> response = apiInstance.WarehouseTablesRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -449,7 +449,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Table**](Table.md)
+[**PostHogTable**](PostHogTable.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ No authorization required
 
 <a id="warehousetablesupdate"></a>
 # **WarehouseTablesUpdate**
-> Table WarehouseTablesUpdate (Guid id, string projectId, Table table)
+> PostHogTable WarehouseTablesUpdate (Guid id, string projectId, PostHogTable postHogTable)
 
 
 
@@ -495,11 +495,11 @@ namespace Example
             var apiInstance = new WarehouseTablesApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this data warehouse table.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var table = new Table(); // Table | 
+            var postHogTable = new PostHogTable(); // PostHogTable | 
 
             try
             {
-                Table result = apiInstance.WarehouseTablesUpdate(id, projectId, table);
+                PostHogTable result = apiInstance.WarehouseTablesUpdate(id, projectId, postHogTable);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -519,7 +519,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Table> response = apiInstance.WarehouseTablesUpdateWithHttpInfo(id, projectId, table);
+    ApiResponse<PostHogTable> response = apiInstance.WarehouseTablesUpdateWithHttpInfo(id, projectId, postHogTable);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -538,11 +538,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this data warehouse table. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **table** | [**Table**](Table.md) |  |  |
+| **postHogTable** | [**PostHogTable**](PostHogTable.md) |  |  |
 
 ### Return type
 
-[**Table**](Table.md)
+[**PostHogTable**](PostHogTable.md)
 
 ### Authorization
 

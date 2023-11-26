@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsCreate(string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsCreate(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsCreateWithHttpInfo(string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsCreateWithHttpInfo(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -77,8 +77,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -90,18 +90,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsJobCreate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsJobCreate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -112,10 +112,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsJobCreateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsJobCreateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -124,8 +124,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginConfigList</returns>
-        PaginatedPluginConfigList PipelineTransformationsConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedPluginConfigList</returns>
+        PostHogPaginatedPluginConfigList PipelineTransformationsConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,18 +138,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginConfigList</returns>
-        ApiResponse<PaginatedPluginConfigList> PipelineTransformationsConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedPluginConfigList</returns>
+        ApiResponse<PostHogPaginatedPluginConfigList> PipelineTransformationsConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsPartialUpdate(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsPartialUpdate(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -160,19 +160,19 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsPartialUpdateWithHttpInfo(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsRearrangePartialUpdate(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsRearrangePartialUpdate(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -182,10 +182,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -193,31 +193,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsRetrieve(int id, string projectId, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        PluginConfig PipelineTransformationsConfigsUpdate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsRetrieve(int id, string projectId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -228,10 +205,33 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        ApiResponse<PluginConfig> PipelineTransformationsConfigsUpdateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PostHogPluginConfig</returns>
+        PostHogPluginConfig PipelineTransformationsConfigsUpdate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsUpdateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -249,11 +249,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsCreateAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsCreateAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -263,11 +263,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsCreateWithHttpInfoAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsCreateWithHttpInfoAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -306,8 +306,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -320,8 +320,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -331,11 +331,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsJobCreateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsJobCreateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -346,11 +346,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -363,8 +363,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginConfigList</returns>
-        System.Threading.Tasks.Task<PaginatedPluginConfigList> PipelineTransformationsConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedPluginConfigList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedPluginConfigList> PipelineTransformationsConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -378,8 +378,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginConfigList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedPluginConfigList>> PipelineTransformationsConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginConfigList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedPluginConfigList>> PipelineTransformationsConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -389,11 +389,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsPartialUpdateAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsPartialUpdateAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -404,11 +404,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -417,11 +417,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -431,11 +431,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -447,36 +447,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">A unique integer value identifying this plugin config.</param>
-        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsUpdateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -487,11 +459,39 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PluginConfig>> PipelineTransformationsConfigsUpdateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PostHogPluginConfig</returns>
+        System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsUpdateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A unique integer value identifying this plugin config.</param>
+        /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
+        /// <param name="postHogPluginConfig"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsUpdateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -617,12 +617,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsCreate(string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsCreate(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsCreateWithHttpInfo(projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsCreateWithHttpInfo(projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -631,10 +631,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsCreateWithHttpInfo(string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsCreateWithHttpInfo(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -642,10 +642,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -674,14 +674,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsCreate", localVarResponse);
@@ -699,13 +699,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsCreateAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsCreateAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsCreateWithHttpInfoAsync(projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsCreateWithHttpInfoAsync(projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -714,11 +714,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsCreateWithHttpInfoAsync(string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsCreateWithHttpInfoAsync(string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -726,10 +726,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsCreate");
             }
 
 
@@ -759,14 +759,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -933,10 +933,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsFrontendRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -947,8 +947,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -986,7 +986,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/frontend/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/frontend/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsFrontendRetrieve", localVarResponse);
@@ -1007,10 +1007,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsFrontendRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1022,8 +1022,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsFrontendRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1062,7 +1062,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/frontend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/frontend/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1082,12 +1082,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsJobCreate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsJobCreate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsJobCreateWithHttpInfo(id, projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsJobCreateWithHttpInfo(id, projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1097,10 +1097,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsJobCreateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsJobCreateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1108,10 +1108,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1141,14 +1141,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsJobCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/job/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/job/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsJobCreate", localVarResponse);
@@ -1167,13 +1167,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsJobCreateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsJobCreateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(id, projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(id, projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1183,11 +1183,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsJobCreateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1195,10 +1195,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsJobCreate");
             }
 
 
@@ -1229,14 +1229,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsJobCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/job/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/job/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1258,10 +1258,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedPluginConfigList</returns>
-        public PaginatedPluginConfigList PipelineTransformationsConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedPluginConfigList</returns>
+        public PostHogPaginatedPluginConfigList PipelineTransformationsConfigsList(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> localVarResponse = PipelineTransformationsConfigsListWithHttpInfo(projectId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> localVarResponse = PipelineTransformationsConfigsListWithHttpInfo(projectId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -1273,8 +1273,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedPluginConfigList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> PipelineTransformationsConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedPluginConfigList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> PipelineTransformationsConfigsListWithHttpInfo(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1319,7 +1319,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedPluginConfigList>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedPluginConfigList>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsList", localVarResponse);
@@ -1341,10 +1341,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedPluginConfigList</returns>
-        public async System.Threading.Tasks.Task<PaginatedPluginConfigList> PipelineTransformationsConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedPluginConfigList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedPluginConfigList> PipelineTransformationsConfigsListAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedPluginConfigList> localVarResponse = await PipelineTransformationsConfigsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList> localVarResponse = await PipelineTransformationsConfigsListWithHttpInfoAsync(projectId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1357,8 +1357,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedPluginConfigList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedPluginConfigList>> PipelineTransformationsConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedPluginConfigList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedPluginConfigList>> PipelineTransformationsConfigsListWithHttpInfoAsync(string projectId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1404,7 +1404,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedPluginConfigList>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedPluginConfigList>("/api/projects/{project_id}/pipeline_transformations_configs/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1424,12 +1424,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsPartialUpdate(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsPartialUpdate(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsPartialUpdateWithHttpInfo(id, projectId, patchedPluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1439,10 +1439,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsPartialUpdateWithHttpInfo(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsPartialUpdateWithHttpInfo(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1477,14 +1477,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsPartialUpdate", localVarResponse);
@@ -1503,13 +1503,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsPartialUpdateAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsPartialUpdateAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(id, projectId, patchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(id, projectId, postHogPatchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1519,11 +1519,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsPartialUpdateWithHttpInfoAsync(int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1559,14 +1559,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1585,12 +1585,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsRearrangePartialUpdate(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsRearrangePartialUpdate(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(projectId, patchedPluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(projectId, postHogPatchedPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1599,10 +1599,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfo(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1636,14 +1636,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsRearrangePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/rearrange/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/rearrange/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsRearrangePartialUpdate", localVarResponse);
@@ -1661,13 +1661,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsRearrangePartialUpdateAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(projectId, patchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(projectId, postHogPatchedPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1676,11 +1676,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="patchedPluginConfig"> (optional)</param>
+        /// <param name="postHogPatchedPluginConfig"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PatchedPluginConfig patchedPluginConfig = default(PatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsRearrangePartialUpdateWithHttpInfoAsync(string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = default(PostHogPatchedPluginConfig), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1715,14 +1715,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = patchedPluginConfig;
+            localVarRequestOptions.Data = postHogPatchedPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsRearrangePartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/rearrange/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/rearrange/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1743,10 +1743,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsRetrieve(int id, string projectId, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsRetrieve(int id, string projectId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsRetrieveWithHttpInfo(id, projectId);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsRetrieveWithHttpInfo(id, projectId);
             return localVarResponse.Data;
         }
 
@@ -1757,8 +1757,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsRetrieveWithHttpInfo(int id, string projectId, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1796,7 +1796,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsRetrieve", localVarResponse);
@@ -1817,10 +1817,10 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsRetrieveAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(id, projectId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1832,8 +1832,8 @@ namespace DotPostHog.Api
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsRetrieveWithHttpInfoAsync(int id, string projectId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1872,7 +1872,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1892,12 +1892,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PluginConfig</returns>
-        public PluginConfig PipelineTransformationsConfigsUpdate(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>PostHogPluginConfig</returns>
+        public PostHogPluginConfig PipelineTransformationsConfigsUpdate(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = PipelineTransformationsConfigsUpdateWithHttpInfo(id, projectId, pluginConfig);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = PipelineTransformationsConfigsUpdateWithHttpInfo(id, projectId, postHogPluginConfig);
             return localVarResponse.Data;
         }
 
@@ -1907,10 +1907,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PluginConfig</returns>
-        public DotPostHog.Client.ApiResponse<PluginConfig> PipelineTransformationsConfigsUpdateWithHttpInfo(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPluginConfig</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPluginConfig> PipelineTransformationsConfigsUpdateWithHttpInfo(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -1918,10 +1918,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1951,14 +1951,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PipelineTransformationsConfigsUpdate", localVarResponse);
@@ -1977,13 +1977,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PluginConfig</returns>
-        public async System.Threading.Tasks.Task<PluginConfig> PipelineTransformationsConfigsUpdateAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPluginConfig</returns>
+        public async System.Threading.Tasks.Task<PostHogPluginConfig> PipelineTransformationsConfigsUpdateAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PluginConfig> localVarResponse = await PipelineTransformationsConfigsUpdateWithHttpInfoAsync(id, projectId, pluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPluginConfig> localVarResponse = await PipelineTransformationsConfigsUpdateWithHttpInfoAsync(id, projectId, postHogPluginConfig, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1993,11 +1993,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this plugin config.</param>
         /// <param name="projectId">Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/.</param>
-        /// <param name="pluginConfig"></param>
+        /// <param name="postHogPluginConfig"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PluginConfig)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PluginConfig>> PipelineTransformationsConfigsUpdateWithHttpInfoAsync(int id, string projectId, PluginConfig pluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPluginConfig)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPluginConfig>> PipelineTransformationsConfigsUpdateWithHttpInfoAsync(int id, string projectId, PostHogPluginConfig postHogPluginConfig, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -2005,10 +2005,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'projectId' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
             }
 
-            // verify the required parameter 'pluginConfig' is set
-            if (pluginConfig == null)
+            // verify the required parameter 'postHogPluginConfig' is set
+            if (postHogPluginConfig == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'pluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogPluginConfig' when calling PipelineTransformationsConfigsApi->PipelineTransformationsConfigsUpdate");
             }
 
 
@@ -2039,14 +2039,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("project_id", DotPostHog.Client.ClientUtils.ParameterToString(projectId)); // path parameter
-            localVarRequestOptions.Data = pluginConfig;
+            localVarRequestOptions.Data = postHogPluginConfig;
 
             localVarRequestOptions.Operation = "PipelineTransformationsConfigsApi.PipelineTransformationsConfigsUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<PluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogPluginConfig>("/api/projects/{project_id}/pipeline_transformations_configs/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

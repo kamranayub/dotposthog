@@ -31,10 +31,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -44,10 +44,10 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -78,8 +78,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationResourceAccessList</returns>
-        PaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>PostHogPaginatedOrganizationResourceAccessList</returns>
+        PostHogPaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -92,18 +92,18 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationResourceAccessList</returns>
-        ApiResponse<PaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationResourceAccessList</returns>
+        ApiResponse<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -114,10 +114,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -125,8 +125,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -138,18 +138,18 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        OrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        PostHogOrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -160,10 +160,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        ApiResponse<OrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0);
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -181,11 +181,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -195,11 +195,11 @@ namespace DotPostHog.Api
         /// </remarks>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -239,8 +239,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationResourceAccessList</returns>
-        System.Threading.Tasks.Task<PaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogPaginatedOrganizationResourceAccessList</returns>
+        System.Threading.Tasks.Task<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -254,8 +254,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationResourceAccessList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationResourceAccessList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogPaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -265,11 +265,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -280,11 +280,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -296,8 +296,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -310,8 +310,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -321,11 +321,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -336,11 +336,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -466,12 +466,12 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessCreate(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, organizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessCreateWithHttpInfo(parentLookupOrganizationId, postHogOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -480,10 +480,10 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessCreateWithHttpInfo(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -491,10 +491,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling ResourceAccessApi->ResourceAccessCreate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling ResourceAccessApi->ResourceAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling ResourceAccessApi->ResourceAccessCreate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -523,14 +523,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessCreate", localVarResponse);
@@ -548,13 +548,13 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessCreateAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessCreateWithHttpInfoAsync(parentLookupOrganizationId, organizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessCreateWithHttpInfoAsync(parentLookupOrganizationId, postHogOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -563,11 +563,11 @@ namespace DotPostHog.Api
         /// </summary>
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessCreateWithHttpInfoAsync(string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -575,10 +575,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling ResourceAccessApi->ResourceAccessCreate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling ResourceAccessApi->ResourceAccessCreate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling ResourceAccessApi->ResourceAccessCreate");
             }
 
 
@@ -608,14 +608,14 @@ namespace DotPostHog.Api
             }
 
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessCreate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -783,10 +783,10 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaginatedOrganizationResourceAccessList</returns>
-        public PaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>PostHogPaginatedOrganizationResourceAccessList</returns>
+        public PostHogPaginatedOrganizationResourceAccessList ResourceAccessList(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> localVarResponse = ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> localVarResponse = ResourceAccessListWithHttpInfo(parentLookupOrganizationId, limit, offset);
             return localVarResponse.Data;
         }
 
@@ -798,8 +798,8 @@ namespace DotPostHog.Api
         /// <param name="limit">Number of results to return per page. (optional)</param>
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaginatedOrganizationResourceAccessList</returns>
-        public DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogPaginatedOrganizationResourceAccessList</returns>
+        public DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListWithHttpInfo(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -844,7 +844,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogPaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessList", localVarResponse);
@@ -866,10 +866,10 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaginatedOrganizationResourceAccessList</returns>
-        public async System.Threading.Tasks.Task<PaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogPaginatedOrganizationResourceAccessList</returns>
+        public async System.Threading.Tasks.Task<PostHogPaginatedOrganizationResourceAccessList> ResourceAccessListAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList> localVarResponse = await ResourceAccessListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList> localVarResponse = await ResourceAccessListWithHttpInfoAsync(parentLookupOrganizationId, limit, offset, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -882,8 +882,8 @@ namespace DotPostHog.Api
         /// <param name="offset">The initial index from which to return the results. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaginatedOrganizationResourceAccessList)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogPaginatedOrganizationResourceAccessList)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogPaginatedOrganizationResourceAccessList>> ResourceAccessListWithHttpInfoAsync(string parentLookupOrganizationId, int? limit = default(int?), int? offset = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -929,7 +929,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogPaginatedOrganizationResourceAccessList>("/api/organizations/{parent_lookup_organization_id}/resource_access/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -949,12 +949,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessPartialUpdate(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, patchedOrganizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessPartialUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -964,10 +964,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1002,14 +1002,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationResourceAccess;
+            localVarRequestOptions.Data = postHogPatchedOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessPartialUpdate", localVarResponse);
@@ -1028,13 +1028,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessPartialUpdateAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, patchedOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessPartialUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogPatchedOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1044,11 +1044,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="patchedOrganizationResourceAccess"> (optional)</param>
+        /// <param name="postHogPatchedOrganizationResourceAccess"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PatchedOrganizationResourceAccess patchedOrganizationResourceAccess = default(PatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessPartialUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogPatchedOrganizationResourceAccess postHogPatchedOrganizationResourceAccess = default(PostHogPatchedOrganizationResourceAccess), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1084,14 +1084,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = patchedOrganizationResourceAccess;
+            localVarRequestOptions.Data = postHogPatchedOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessPartialUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1112,10 +1112,10 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessRetrieve(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessRetrieveWithHttpInfo(id, parentLookupOrganizationId);
             return localVarResponse.Data;
         }
 
@@ -1126,8 +1126,8 @@ namespace DotPostHog.Api
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessRetrieveWithHttpInfo(int id, string parentLookupOrganizationId, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1165,7 +1165,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessRetrieve", localVarResponse);
@@ -1186,10 +1186,10 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessRetrieveAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessRetrieveWithHttpInfoAsync(id, parentLookupOrganizationId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1201,8 +1201,8 @@ namespace DotPostHog.Api
         /// <param name="parentLookupOrganizationId"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessRetrieveWithHttpInfoAsync(int id, string parentLookupOrganizationId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1241,7 +1241,7 @@ namespace DotPostHog.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1261,12 +1261,12 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>OrganizationResourceAccess</returns>
-        public OrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>PostHogOrganizationResourceAccess</returns>
+        public PostHogOrganizationResourceAccess ResourceAccessUpdate(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, organizationResourceAccess);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = ResourceAccessUpdateWithHttpInfo(id, parentLookupOrganizationId, postHogOrganizationResourceAccess);
             return localVarResponse.Data;
         }
 
@@ -1276,10 +1276,10 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of OrganizationResourceAccess</returns>
-        public DotPostHog.Client.ApiResponse<OrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0)
+        /// <returns>ApiResponse of PostHogOrganizationResourceAccess</returns>
+        public DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> ResourceAccessUpdateWithHttpInfo(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0)
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1287,10 +1287,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling ResourceAccessApi->ResourceAccessUpdate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling ResourceAccessApi->ResourceAccessUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling ResourceAccessApi->ResourceAccessUpdate");
             }
 
             DotPostHog.Client.RequestOptions localVarRequestOptions = new DotPostHog.Client.RequestOptions();
@@ -1320,14 +1320,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResourceAccessUpdate", localVarResponse);
@@ -1346,13 +1346,13 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OrganizationResourceAccess</returns>
-        public async System.Threading.Tasks.Task<OrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PostHogOrganizationResourceAccess</returns>
+        public async System.Threading.Tasks.Task<PostHogOrganizationResourceAccess> ResourceAccessUpdateAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            DotPostHog.Client.ApiResponse<OrganizationResourceAccess> localVarResponse = await ResourceAccessUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, organizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
+            DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess> localVarResponse = await ResourceAccessUpdateWithHttpInfoAsync(id, parentLookupOrganizationId, postHogOrganizationResourceAccess, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1362,11 +1362,11 @@ namespace DotPostHog.Api
         /// <exception cref="DotPostHog.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">A unique integer value identifying this organization resource access.</param>
         /// <param name="parentLookupOrganizationId"></param>
-        /// <param name="organizationResourceAccess"></param>
+        /// <param name="postHogOrganizationResourceAccess"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OrganizationResourceAccess)</returns>
-        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<OrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, OrganizationResourceAccess organizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PostHogOrganizationResourceAccess)</returns>
+        public async System.Threading.Tasks.Task<DotPostHog.Client.ApiResponse<PostHogOrganizationResourceAccess>> ResourceAccessUpdateWithHttpInfoAsync(int id, string parentLookupOrganizationId, PostHogOrganizationResourceAccess postHogOrganizationResourceAccess, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'parentLookupOrganizationId' is set
             if (parentLookupOrganizationId == null)
@@ -1374,10 +1374,10 @@ namespace DotPostHog.Api
                 throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'parentLookupOrganizationId' when calling ResourceAccessApi->ResourceAccessUpdate");
             }
 
-            // verify the required parameter 'organizationResourceAccess' is set
-            if (organizationResourceAccess == null)
+            // verify the required parameter 'postHogOrganizationResourceAccess' is set
+            if (postHogOrganizationResourceAccess == null)
             {
-                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'organizationResourceAccess' when calling ResourceAccessApi->ResourceAccessUpdate");
+                throw new DotPostHog.Client.ApiException(400, "Missing required parameter 'postHogOrganizationResourceAccess' when calling ResourceAccessApi->ResourceAccessUpdate");
             }
 
 
@@ -1408,14 +1408,14 @@ namespace DotPostHog.Api
 
             localVarRequestOptions.PathParameters.Add("id", DotPostHog.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.PathParameters.Add("parent_lookup_organization_id", DotPostHog.Client.ClientUtils.ParameterToString(parentLookupOrganizationId)); // path parameter
-            localVarRequestOptions.Data = organizationResourceAccess;
+            localVarRequestOptions.Data = postHogOrganizationResourceAccess;
 
             localVarRequestOptions.Operation = "ResourceAccessApi.ResourceAccessUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<OrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PostHogOrganizationResourceAccess>("/api/organizations/{parent_lookup_organization_id}/resource_access/{id}/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

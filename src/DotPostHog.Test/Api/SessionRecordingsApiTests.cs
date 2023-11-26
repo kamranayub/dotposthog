@@ -77,7 +77,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.SessionRecordingsList(projectId, limit, offset);
-            //Assert.IsType<PaginatedSessionRecordingList>(response);
+            //Assert.IsType<PostHogPaginatedSessionRecordingList>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.SessionRecordingsMatchingEventsRetrieve(projectId);
-            //Assert.IsType<SessionRecording>(response);
+            //Assert.IsType<PostHogSessionRecording>(response);
         }
 
         /// <summary>
@@ -101,9 +101,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //SessionRecording sessionRecording = null;
-            //var response = instance.SessionRecordingsPersistCreate(id, projectId, sessionRecording);
-            //Assert.IsType<SessionRecording>(response);
+            //PostHogSessionRecording postHogSessionRecording = null;
+            //var response = instance.SessionRecordingsPersistCreate(id, projectId, postHogSessionRecording);
+            //Assert.IsType<PostHogSessionRecording>(response);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //var response = instance.SessionRecordingsPropertiesRetrieve(projectId);
-            //Assert.IsType<SessionRecording>(response);
+            //Assert.IsType<PostHogSessionRecording>(response);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.SessionRecordingsRetrieve(id, projectId);
-            //Assert.IsType<SessionRecording>(response);
+            //Assert.IsType<PostHogSessionRecording>(response);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.SessionRecordingsSnapshotsRetrieve(id, projectId);
-            //Assert.IsType<SessionRecording>(response);
+            //Assert.IsType<PostHogSessionRecording>(response);
         }
     }
 }

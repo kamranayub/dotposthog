@@ -99,7 +99,7 @@ No authorization required
 
 <a id="sessionrecordingslist"></a>
 # **SessionRecordingsList**
-> PaginatedSessionRecordingList SessionRecordingsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedSessionRecordingList SessionRecordingsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -126,7 +126,7 @@ namespace Example
 
             try
             {
-                PaginatedSessionRecordingList result = apiInstance.SessionRecordingsList(projectId, limit, offset);
+                PostHogPaginatedSessionRecordingList result = apiInstance.SessionRecordingsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -146,7 +146,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedSessionRecordingList> response = apiInstance.SessionRecordingsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedSessionRecordingList> response = apiInstance.SessionRecordingsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -169,7 +169,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedSessionRecordingList**](PaginatedSessionRecordingList.md)
+[**PostHogPaginatedSessionRecordingList**](PostHogPaginatedSessionRecordingList.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 <a id="sessionrecordingsmatchingeventsretrieve"></a>
 # **SessionRecordingsMatchingEventsRetrieve**
-> SessionRecording SessionRecordingsMatchingEventsRetrieve (string projectId)
+> PostHogSessionRecording SessionRecordingsMatchingEventsRetrieve (string projectId)
 
 
 
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                SessionRecording result = apiInstance.SessionRecordingsMatchingEventsRetrieve(projectId);
+                PostHogSessionRecording result = apiInstance.SessionRecordingsMatchingEventsRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -237,7 +237,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecording> response = apiInstance.SessionRecordingsMatchingEventsRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogSessionRecording> response = apiInstance.SessionRecordingsMatchingEventsRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -258,7 +258,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecording**](SessionRecording.md)
+[**PostHogSessionRecording**](PostHogSessionRecording.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 <a id="sessionrecordingspersistcreate"></a>
 # **SessionRecordingsPersistCreate**
-> SessionRecording SessionRecordingsPersistCreate (Guid id, string projectId, SessionRecording sessionRecording = null)
+> PostHogSessionRecording SessionRecordingsPersistCreate (Guid id, string projectId, PostHogSessionRecording postHogSessionRecording = null)
 
 
 
@@ -302,11 +302,11 @@ namespace Example
             var apiInstance = new SessionRecordingsApi(config);
             var id = "id_example";  // Guid | A UUID string identifying this session recording.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var sessionRecording = new SessionRecording(); // SessionRecording |  (optional) 
+            var postHogSessionRecording = new PostHogSessionRecording(); // PostHogSessionRecording |  (optional) 
 
             try
             {
-                SessionRecording result = apiInstance.SessionRecordingsPersistCreate(id, projectId, sessionRecording);
+                PostHogSessionRecording result = apiInstance.SessionRecordingsPersistCreate(id, projectId, postHogSessionRecording);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -326,7 +326,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecording> response = apiInstance.SessionRecordingsPersistCreateWithHttpInfo(id, projectId, sessionRecording);
+    ApiResponse<PostHogSessionRecording> response = apiInstance.SessionRecordingsPersistCreateWithHttpInfo(id, projectId, postHogSessionRecording);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -345,11 +345,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **Guid** | A UUID string identifying this session recording. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **sessionRecording** | [**SessionRecording**](SessionRecording.md) |  | [optional]  |
+| **postHogSessionRecording** | [**PostHogSessionRecording**](PostHogSessionRecording.md) |  | [optional]  |
 
 ### Return type
 
-[**SessionRecording**](SessionRecording.md)
+[**PostHogSessionRecording**](PostHogSessionRecording.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ No authorization required
 
 <a id="sessionrecordingspropertiesretrieve"></a>
 # **SessionRecordingsPropertiesRetrieve**
-> SessionRecording SessionRecordingsPropertiesRetrieve (string projectId)
+> PostHogSessionRecording SessionRecordingsPropertiesRetrieve (string projectId)
 
 
 
@@ -395,7 +395,7 @@ namespace Example
 
             try
             {
-                SessionRecording result = apiInstance.SessionRecordingsPropertiesRetrieve(projectId);
+                PostHogSessionRecording result = apiInstance.SessionRecordingsPropertiesRetrieve(projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -415,7 +415,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecording> response = apiInstance.SessionRecordingsPropertiesRetrieveWithHttpInfo(projectId);
+    ApiResponse<PostHogSessionRecording> response = apiInstance.SessionRecordingsPropertiesRetrieveWithHttpInfo(projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -436,7 +436,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecording**](SessionRecording.md)
+[**PostHogSessionRecording**](PostHogSessionRecording.md)
 
 ### Authorization
 
@@ -457,7 +457,7 @@ No authorization required
 
 <a id="sessionrecordingsretrieve"></a>
 # **SessionRecordingsRetrieve**
-> SessionRecording SessionRecordingsRetrieve (Guid id, string projectId)
+> PostHogSessionRecording SessionRecordingsRetrieve (Guid id, string projectId)
 
 
 
@@ -483,7 +483,7 @@ namespace Example
 
             try
             {
-                SessionRecording result = apiInstance.SessionRecordingsRetrieve(id, projectId);
+                PostHogSessionRecording result = apiInstance.SessionRecordingsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -503,7 +503,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecording> response = apiInstance.SessionRecordingsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogSessionRecording> response = apiInstance.SessionRecordingsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -525,7 +525,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecording**](SessionRecording.md)
+[**PostHogSessionRecording**](PostHogSessionRecording.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ No authorization required
 
 <a id="sessionrecordingssnapshotsretrieve"></a>
 # **SessionRecordingsSnapshotsRetrieve**
-> SessionRecording SessionRecordingsSnapshotsRetrieve (Guid id, string projectId)
+> PostHogSessionRecording SessionRecordingsSnapshotsRetrieve (Guid id, string projectId)
 
 
 
@@ -574,7 +574,7 @@ namespace Example
 
             try
             {
-                SessionRecording result = apiInstance.SessionRecordingsSnapshotsRetrieve(id, projectId);
+                PostHogSessionRecording result = apiInstance.SessionRecordingsSnapshotsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -594,7 +594,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<SessionRecording> response = apiInstance.SessionRecordingsSnapshotsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogSessionRecording> response = apiInstance.SessionRecordingsSnapshotsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -616,7 +616,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SessionRecording**](SessionRecording.md)
+[**PostHogSessionRecording**](PostHogSessionRecording.md)
 
 ### Authorization
 

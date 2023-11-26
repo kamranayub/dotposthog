@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //ViewLink viewLink = null;
-            //var response = instance.WarehouseViewLinksCreate(projectId, viewLink);
-            //Assert.IsType<ViewLink>(response);
+            //PostHogViewLink postHogViewLink = null;
+            //var response = instance.WarehouseViewLinksCreate(projectId, postHogViewLink);
+            //Assert.IsType<PostHogViewLink>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //int? offset = null;
             //string search = null;
             //var response = instance.WarehouseViewLinksList(projectId, limit, offset, search);
-            //Assert.IsType<PaginatedViewLinkList>(response);
+            //Assert.IsType<PostHogPaginatedViewLinkList>(response);
         }
 
         /// <summary>
@@ -103,9 +103,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //PatchedViewLink patchedViewLink = null;
-            //var response = instance.WarehouseViewLinksPartialUpdate(id, projectId, patchedViewLink);
-            //Assert.IsType<ViewLink>(response);
+            //PostHogPatchedViewLink postHogPatchedViewLink = null;
+            //var response = instance.WarehouseViewLinksPartialUpdate(id, projectId, postHogPatchedViewLink);
+            //Assert.IsType<PostHogViewLink>(response);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DotPostHog.Test.Api
             //Guid id = null;
             //string projectId = null;
             //var response = instance.WarehouseViewLinksRetrieve(id, projectId);
-            //Assert.IsType<ViewLink>(response);
+            //Assert.IsType<PostHogViewLink>(response);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //Guid id = null;
             //string projectId = null;
-            //ViewLink viewLink = null;
-            //var response = instance.WarehouseViewLinksUpdate(id, projectId, viewLink);
-            //Assert.IsType<ViewLink>(response);
+            //PostHogViewLink postHogViewLink = null;
+            //var response = instance.WarehouseViewLinksUpdate(id, projectId, postHogViewLink);
+            //Assert.IsType<PostHogViewLink>(response);
         }
     }
 }

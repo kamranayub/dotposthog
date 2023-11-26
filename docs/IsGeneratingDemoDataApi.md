@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="isgeneratingdemodataretrieve"></a>
 # **IsGeneratingDemoDataRetrieve**
-> Team IsGeneratingDemoDataRetrieve (int id)
+> PostHogTeam IsGeneratingDemoDataRetrieve (int id)
 
 
 
@@ -35,7 +35,7 @@ namespace Example
 
             try
             {
-                Team result = apiInstance.IsGeneratingDemoDataRetrieve(id);
+                PostHogTeam result = apiInstance.IsGeneratingDemoDataRetrieve(id);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -55,7 +55,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<Team> response = apiInstance.IsGeneratingDemoDataRetrieveWithHttpInfo(id);
+    ApiResponse<PostHogTeam> response = apiInstance.IsGeneratingDemoDataRetrieveWithHttpInfo(id);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -76,7 +76,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Team**](Team.md)
+[**PostHogTeam**](PostHogTeam.md)
 
 ### Authorization
 

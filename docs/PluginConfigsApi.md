@@ -17,7 +17,7 @@ All URIs are relative to *http://localhost*
 
 <a id="pluginconfigscreate"></a>
 # **PluginConfigsCreate**
-> PluginConfig PluginConfigsCreate (string projectId, PluginConfig pluginConfig)
+> PostHogPluginConfig PluginConfigsCreate (string projectId, PostHogPluginConfig postHogPluginConfig)
 
 
 
@@ -39,11 +39,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new PluginConfigsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var pluginConfig = new PluginConfig(); // PluginConfig | 
+            var postHogPluginConfig = new PostHogPluginConfig(); // PostHogPluginConfig | 
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsCreate(projectId, pluginConfig);
+                PostHogPluginConfig result = apiInstance.PluginConfigsCreate(projectId, postHogPluginConfig);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -63,7 +63,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsCreateWithHttpInfo(projectId, pluginConfig);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsCreateWithHttpInfo(projectId, postHogPluginConfig);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -81,11 +81,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **pluginConfig** | [**PluginConfig**](PluginConfig.md) |  |  |
+| **postHogPluginConfig** | [**PostHogPluginConfig**](PostHogPluginConfig.md) |  |  |
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 
 <a id="pluginconfigsfrontendretrieve"></a>
 # **PluginConfigsFrontendRetrieve**
-> PluginConfig PluginConfigsFrontendRetrieve (int id, string projectId)
+> PostHogPluginConfig PluginConfigsFrontendRetrieve (int id, string projectId)
 
 
 
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsFrontendRetrieve(id, projectId);
+                PostHogPluginConfig result = apiInstance.PluginConfigsFrontendRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -237,7 +237,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsFrontendRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsFrontendRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -259,7 +259,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ No authorization required
 
 <a id="pluginconfigsjobcreate"></a>
 # **PluginConfigsJobCreate**
-> PluginConfig PluginConfigsJobCreate (int id, string projectId, PluginConfig pluginConfig)
+> PostHogPluginConfig PluginConfigsJobCreate (int id, string projectId, PostHogPluginConfig postHogPluginConfig)
 
 
 
@@ -303,11 +303,11 @@ namespace Example
             var apiInstance = new PluginConfigsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin config.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var pluginConfig = new PluginConfig(); // PluginConfig | 
+            var postHogPluginConfig = new PostHogPluginConfig(); // PostHogPluginConfig | 
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsJobCreate(id, projectId, pluginConfig);
+                PostHogPluginConfig result = apiInstance.PluginConfigsJobCreate(id, projectId, postHogPluginConfig);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -327,7 +327,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsJobCreateWithHttpInfo(id, projectId, pluginConfig);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsJobCreateWithHttpInfo(id, projectId, postHogPluginConfig);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -346,11 +346,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin config. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **pluginConfig** | [**PluginConfig**](PluginConfig.md) |  |  |
+| **postHogPluginConfig** | [**PostHogPluginConfig**](PostHogPluginConfig.md) |  |  |
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ No authorization required
 
 <a id="pluginconfigslist"></a>
 # **PluginConfigsList**
-> PaginatedPluginConfigList PluginConfigsList (string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedPluginConfigList PluginConfigsList (string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -398,7 +398,7 @@ namespace Example
 
             try
             {
-                PaginatedPluginConfigList result = apiInstance.PluginConfigsList(projectId, limit, offset);
+                PostHogPaginatedPluginConfigList result = apiInstance.PluginConfigsList(projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -418,7 +418,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedPluginConfigList> response = apiInstance.PluginConfigsListWithHttpInfo(projectId, limit, offset);
+    ApiResponse<PostHogPaginatedPluginConfigList> response = apiInstance.PluginConfigsListWithHttpInfo(projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -441,7 +441,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedPluginConfigList**](PaginatedPluginConfigList.md)
+[**PostHogPaginatedPluginConfigList**](PostHogPaginatedPluginConfigList.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ No authorization required
 
 <a id="pluginconfigslogslist"></a>
 # **PluginConfigsLogsList**
-> PaginatedPluginLogEntryList PluginConfigsLogsList (string parentLookupPluginConfigId, string projectId, int? limit = null, int? offset = null)
+> PostHogPaginatedPluginLogEntryList PluginConfigsLogsList (string parentLookupPluginConfigId, string projectId, int? limit = null, int? offset = null)
 
 
 
@@ -490,7 +490,7 @@ namespace Example
 
             try
             {
-                PaginatedPluginLogEntryList result = apiInstance.PluginConfigsLogsList(parentLookupPluginConfigId, projectId, limit, offset);
+                PostHogPaginatedPluginLogEntryList result = apiInstance.PluginConfigsLogsList(parentLookupPluginConfigId, projectId, limit, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -510,7 +510,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PaginatedPluginLogEntryList> response = apiInstance.PluginConfigsLogsListWithHttpInfo(parentLookupPluginConfigId, projectId, limit, offset);
+    ApiResponse<PostHogPaginatedPluginLogEntryList> response = apiInstance.PluginConfigsLogsListWithHttpInfo(parentLookupPluginConfigId, projectId, limit, offset);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -534,7 +534,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PaginatedPluginLogEntryList**](PaginatedPluginLogEntryList.md)
+[**PostHogPaginatedPluginLogEntryList**](PostHogPaginatedPluginLogEntryList.md)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ No authorization required
 
 <a id="pluginconfigspartialupdate"></a>
 # **PluginConfigsPartialUpdate**
-> PluginConfig PluginConfigsPartialUpdate (int id, string projectId, PatchedPluginConfig patchedPluginConfig = null)
+> PostHogPluginConfig PluginConfigsPartialUpdate (int id, string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = null)
 
 
 
@@ -578,11 +578,11 @@ namespace Example
             var apiInstance = new PluginConfigsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin config.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedPluginConfig = new PatchedPluginConfig(); // PatchedPluginConfig |  (optional) 
+            var postHogPatchedPluginConfig = new PostHogPatchedPluginConfig(); // PostHogPatchedPluginConfig |  (optional) 
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsPartialUpdate(id, projectId, patchedPluginConfig);
+                PostHogPluginConfig result = apiInstance.PluginConfigsPartialUpdate(id, projectId, postHogPatchedPluginConfig);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -602,7 +602,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsPartialUpdateWithHttpInfo(id, projectId, patchedPluginConfig);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsPartialUpdateWithHttpInfo(id, projectId, postHogPatchedPluginConfig);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -621,11 +621,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin config. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedPluginConfig** | [**PatchedPluginConfig**](PatchedPluginConfig.md) |  | [optional]  |
+| **postHogPatchedPluginConfig** | [**PostHogPatchedPluginConfig**](PostHogPatchedPluginConfig.md) |  | [optional]  |
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -646,7 +646,7 @@ No authorization required
 
 <a id="pluginconfigsrearrangepartialupdate"></a>
 # **PluginConfigsRearrangePartialUpdate**
-> PluginConfig PluginConfigsRearrangePartialUpdate (string projectId, PatchedPluginConfig patchedPluginConfig = null)
+> PostHogPluginConfig PluginConfigsRearrangePartialUpdate (string projectId, PostHogPatchedPluginConfig postHogPatchedPluginConfig = null)
 
 
 
@@ -668,11 +668,11 @@ namespace Example
             config.BasePath = "http://localhost";
             var apiInstance = new PluginConfigsApi(config);
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var patchedPluginConfig = new PatchedPluginConfig(); // PatchedPluginConfig |  (optional) 
+            var postHogPatchedPluginConfig = new PostHogPatchedPluginConfig(); // PostHogPatchedPluginConfig |  (optional) 
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsRearrangePartialUpdate(projectId, patchedPluginConfig);
+                PostHogPluginConfig result = apiInstance.PluginConfigsRearrangePartialUpdate(projectId, postHogPatchedPluginConfig);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -692,7 +692,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsRearrangePartialUpdateWithHttpInfo(projectId, patchedPluginConfig);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsRearrangePartialUpdateWithHttpInfo(projectId, postHogPatchedPluginConfig);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -710,11 +710,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **patchedPluginConfig** | [**PatchedPluginConfig**](PatchedPluginConfig.md) |  | [optional]  |
+| **postHogPatchedPluginConfig** | [**PostHogPatchedPluginConfig**](PostHogPatchedPluginConfig.md) |  | [optional]  |
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -735,7 +735,7 @@ No authorization required
 
 <a id="pluginconfigsretrieve"></a>
 # **PluginConfigsRetrieve**
-> PluginConfig PluginConfigsRetrieve (int id, string projectId)
+> PostHogPluginConfig PluginConfigsRetrieve (int id, string projectId)
 
 
 
@@ -761,7 +761,7 @@ namespace Example
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsRetrieve(id, projectId);
+                PostHogPluginConfig result = apiInstance.PluginConfigsRetrieve(id, projectId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -781,7 +781,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsRetrieveWithHttpInfo(id, projectId);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsRetrieveWithHttpInfo(id, projectId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -803,7 +803,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 
@@ -824,7 +824,7 @@ No authorization required
 
 <a id="pluginconfigsupdate"></a>
 # **PluginConfigsUpdate**
-> PluginConfig PluginConfigsUpdate (int id, string projectId, PluginConfig pluginConfig)
+> PostHogPluginConfig PluginConfigsUpdate (int id, string projectId, PostHogPluginConfig postHogPluginConfig)
 
 
 
@@ -847,11 +847,11 @@ namespace Example
             var apiInstance = new PluginConfigsApi(config);
             var id = 56;  // int | A unique integer value identifying this plugin config.
             var projectId = "projectId_example";  // string | Project ID of the project you're trying to access. To find the ID of the project, make a call to /api/projects/.
-            var pluginConfig = new PluginConfig(); // PluginConfig | 
+            var postHogPluginConfig = new PostHogPluginConfig(); // PostHogPluginConfig | 
 
             try
             {
-                PluginConfig result = apiInstance.PluginConfigsUpdate(id, projectId, pluginConfig);
+                PostHogPluginConfig result = apiInstance.PluginConfigsUpdate(id, projectId, postHogPluginConfig);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -871,7 +871,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<PluginConfig> response = apiInstance.PluginConfigsUpdateWithHttpInfo(id, projectId, pluginConfig);
+    ApiResponse<PostHogPluginConfig> response = apiInstance.PluginConfigsUpdateWithHttpInfo(id, projectId, postHogPluginConfig);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -890,11 +890,11 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **id** | **int** | A unique integer value identifying this plugin config. |  |
 | **projectId** | **string** | Project ID of the project you&#39;re trying to access. To find the ID of the project, make a call to /api/projects/. |  |
-| **pluginConfig** | [**PluginConfig**](PluginConfig.md) |  |  |
+| **postHogPluginConfig** | [**PostHogPluginConfig**](PostHogPluginConfig.md) |  |  |
 
 ### Return type
 
-[**PluginConfig**](PluginConfig.md)
+[**PostHogPluginConfig**](PostHogPluginConfig.md)
 
 ### Authorization
 

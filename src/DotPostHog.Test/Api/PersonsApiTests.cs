@@ -64,7 +64,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsActivityRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsActivityRetrieve2(id, projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsCohortsRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -105,9 +105,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsDeletePropertyCreate(unset, id, projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsDeletePropertyCreate(unset, id, projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -133,9 +133,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsFunnelCorrelationCreate(projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsFunnelCorrelationCreate(projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsFunnelCorrelationRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -160,9 +160,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsFunnelCreate(projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsFunnelCreate(projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsFunnelRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsLifecycleRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -204,10 +204,10 @@ namespace DotPostHog.Test.Api
             //string format = null;
             //int? limit = null;
             //int? offset = null;
-            //List<Property> properties = null;
+            //List<PostHogProperty> properties = null;
             //string search = null;
             //var response = instance.PersonsList(projectId, distinctId, email, format, limit, offset, properties, search);
-            //Assert.IsType<PaginatedPersonList>(response);
+            //Assert.IsType<PostHogPaginatedPersonList>(response);
         }
 
         /// <summary>
@@ -220,9 +220,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //PatchedPerson patchedPerson = null;
-            //var response = instance.PersonsPartialUpdate(id, projectId, format, patchedPerson);
-            //Assert.IsType<Person>(response);
+            //PostHogPatchedPerson postHogPatchedPerson = null;
+            //var response = instance.PersonsPartialUpdate(id, projectId, format, postHogPatchedPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -234,9 +234,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsPathCreate(projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsPathCreate(projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsPathRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsPropertiesTimelineRetrieve(id, projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsRetentionRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsRetrieve(id, projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -303,9 +303,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsSplitCreate(id, projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsSplitCreate(id, projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsStickinessRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsTrendsRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -344,9 +344,9 @@ namespace DotPostHog.Test.Api
             //int id = null;
             //string projectId = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsUpdate(id, projectId, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsUpdate(id, projectId, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -361,9 +361,9 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //Object value = null;
             //string format = null;
-            //Person person = null;
-            //var response = instance.PersonsUpdatePropertyCreate(id, key, projectId, value, format, person);
-            //Assert.IsType<Person>(response);
+            //PostHogPerson postHogPerson = null;
+            //var response = instance.PersonsUpdatePropertyCreate(id, key, projectId, value, format, postHogPerson);
+            //Assert.IsType<PostHogPerson>(response);
         }
 
         /// <summary>
@@ -376,7 +376,7 @@ namespace DotPostHog.Test.Api
             //string projectId = null;
             //string format = null;
             //var response = instance.PersonsValuesRetrieve(projectId, format);
-            //Assert.IsType<Person>(response);
+            //Assert.IsType<PostHogPerson>(response);
         }
     }
 }

@@ -63,9 +63,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
             //string format = null;
-            //Trend trend = null;
-            //var response = instance.Trends(projectId, format, trend);
-            //Assert.IsType<TrendResults>(response);
+            //PostHogTrend postHogTrend = null;
+            //var response = instance.Trends(projectId, format, postHogTrend);
+            //Assert.IsType<PostHogTrendResults>(response);
         }
     }
 }

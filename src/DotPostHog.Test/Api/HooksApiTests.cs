@@ -62,9 +62,9 @@ namespace DotPostHog.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string projectId = null;
-            //Hook hook = null;
-            //var response = instance.HooksCreate(projectId, hook);
-            //Assert.IsType<Hook>(response);
+            //PostHogHook postHogHook = null;
+            //var response = instance.HooksCreate(projectId, postHogHook);
+            //Assert.IsType<PostHogHook>(response);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DotPostHog.Test.Api
             //int? limit = null;
             //int? offset = null;
             //var response = instance.HooksList(projectId, limit, offset);
-            //Assert.IsType<PaginatedHookList>(response);
+            //Assert.IsType<PostHogPaginatedHookList>(response);
         }
 
         /// <summary>
@@ -102,9 +102,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //PatchedHook patchedHook = null;
-            //var response = instance.HooksPartialUpdate(id, projectId, patchedHook);
-            //Assert.IsType<Hook>(response);
+            //PostHogPatchedHook postHogPatchedHook = null;
+            //var response = instance.HooksPartialUpdate(id, projectId, postHogPatchedHook);
+            //Assert.IsType<PostHogHook>(response);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace DotPostHog.Test.Api
             //string id = null;
             //string projectId = null;
             //var response = instance.HooksRetrieve(id, projectId);
-            //Assert.IsType<Hook>(response);
+            //Assert.IsType<PostHogHook>(response);
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace DotPostHog.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //string projectId = null;
-            //Hook hook = null;
-            //var response = instance.HooksUpdate(id, projectId, hook);
-            //Assert.IsType<Hook>(response);
+            //PostHogHook postHogHook = null;
+            //var response = instance.HooksUpdate(id, projectId, postHogHook);
+            //Assert.IsType<PostHogHook>(response);
         }
     }
 }
