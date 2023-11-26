@@ -19970,7 +19970,6 @@ components:
           enum:
           - 0
           - 1
-          - null
           maximum: 32767
           minimum: -32768
           nullable: true
@@ -21727,7 +21726,6 @@ components:
           enum:
           - 0
           - 1
-          - null
           maximum: 32767
           minimum: -32768
           nullable: true

@@ -15892,7 +15892,6 @@ components:
           enum:
           - 0
           - 1
-          - null
           type: integer
           nullable: true
           minimum: -32768
@@ -17382,7 +17381,6 @@ components:
           enum:
           - 0
           - 1
-          - null
           type: integer
           nullable: true
           minimum: -32768

@@ -2729,12 +2729,7 @@ namespace DotPostHog.Model
             /// <summary>
             /// Enum NUMBER_1 for value: 1
             /// </summary>
-            NUMBER_1 = 1,
-
-            /// <summary>
-            /// Enum NUMBER_null for value: null
-            /// </summary>
-            NUMBER_null = null
+            NUMBER_1 = 1
         }
 
 
