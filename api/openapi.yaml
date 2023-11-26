@@ -13,6 +13,7 @@ paths:
         Capture an event. Events are the core of PostHog, and are what you use
         to track user behavior, and then analyze and visualize in
         PostHog.
+      operationId: capture_send
       parameters:
       - explode: true
         in: query
@@ -91,6 +92,8 @@ paths:
             can happen if you send an invalid JSON payload among
             other things.
       summary: Sending an event
+      tags:
+      - capture
   /batch/:
     post:
       description: |
@@ -102,6 +105,7 @@ paths:
 
         > Note: Timestamp is optional. If not set, it'll automatically
         be set to the current time.
+      operationId: capture_send_batch
       parameters:
       - explode: true
         in: query
@@ -181,6 +185,8 @@ paths:
             can happen if you send an invalid JSON payload among
             other things.
       summary: Sending multiple events
+      tags:
+      - capture
   /api/organizations/{parent_lookup_organization_id}/domains/:
     get:
       operationId: domains_list

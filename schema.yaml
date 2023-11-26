@@ -6,6 +6,9 @@ info:
 paths:
   /capture/:
     post:
+      operationId: capture_send
+      tags:
+        - capture
       summary: Sending an event
       description: |
         > Note: Timestamp is optional. If not set, it'll automatically be set to the current time.
@@ -90,6 +93,9 @@ paths:
           visualize in PostHog.
   /batch/:
       post:
+        operationId: capture_send_batch
+        tags:
+        - capture
         summary: Sending multiple events
         description: |
           You can send multiple events in one go with the Batch API.

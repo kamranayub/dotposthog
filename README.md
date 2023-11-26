@@ -135,6 +135,8 @@ Class | Method | HTTP request | Description
 *BatchExportsApi* | [**BatchExportsRunsRetrieve**](docs/BatchExportsApi.md#batchexportsrunsretrieve) | **GET** /api/projects/{project_id}/batch_exports/{parent_lookup_batch_export_id}/runs/{id}/ | 
 *BatchExportsApi* | [**BatchExportsUnpauseCreate**](docs/BatchExportsApi.md#batchexportsunpausecreate) | **POST** /api/projects/{project_id}/batch_exports/{id}/unpause/ | 
 *BatchExportsApi* | [**BatchExportsUpdate**](docs/BatchExportsApi.md#batchexportsupdate) | **PUT** /api/projects/{project_id}/batch_exports/{id}/ | 
+*CaptureApi* | [**CaptureSend**](docs/CaptureApi.md#capturesend) | **POST** /capture/ | Sending an event
+*CaptureApi* | [**CaptureSendBatch**](docs/CaptureApi.md#capturesendbatch) | **POST** /batch/ | Sending multiple events
 *CohortsApi* | [**CohortsCreate**](docs/CohortsApi.md#cohortscreate) | **POST** /api/projects/{project_id}/cohorts/ | 
 *CohortsApi* | [**CohortsDestroy**](docs/CohortsApi.md#cohortsdestroy) | **DELETE** /api/projects/{project_id}/cohorts/{id}/ | 
 *CohortsApi* | [**CohortsDuplicateAsStaticCohortRetrieve**](docs/CohortsApi.md#cohortsduplicateasstaticcohortretrieve) | **GET** /api/projects/{project_id}/cohorts/{id}/duplicate_as_static_cohort/ | 
@@ -159,8 +161,6 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**DashboardsRetrieve**](docs/DashboardsApi.md#dashboardsretrieve) | **GET** /api/projects/{project_id}/dashboards/{id}/ | 
 *DashboardsApi* | [**DashboardsUpdate**](docs/DashboardsApi.md#dashboardsupdate) | **PUT** /api/projects/{project_id}/dashboards/{id}/ | 
 *DataManagementApi* | [**DataManagementActivityRetrieve**](docs/DataManagementApi.md#datamanagementactivityretrieve) | **GET** /api/projects/{project_id}/data_management/activity/ | 
-*DefaultApi* | [**BatchPost**](docs/DefaultApi.md#batchpost) | **POST** /batch/ | Sending multiple events
-*DefaultApi* | [**CapturePost**](docs/DefaultApi.md#capturepost) | **POST** /capture/ | Sending an event
 *DomainsApi* | [**DomainsCreate**](docs/DomainsApi.md#domainscreate) | **POST** /api/organizations/{parent_lookup_organization_id}/domains/ | 
 *DomainsApi* | [**DomainsDestroy**](docs/DomainsApi.md#domainsdestroy) | **DELETE** /api/organizations/{parent_lookup_organization_id}/domains/{id}/ | 
 *DomainsApi* | [**DomainsList**](docs/DomainsApi.md#domainslist) | **GET** /api/organizations/{parent_lookup_organization_id}/domains/ | 
