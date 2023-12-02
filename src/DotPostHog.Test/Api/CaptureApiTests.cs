@@ -61,7 +61,7 @@ namespace DotPostHog.Test.Api
     /// <summary>
     /// Test CaptureSend
     /// </summary>
-    [Fact]
+    [Fact(Skip = "For local integration testing")]
     public void CaptureIdentifyTest()
     {
       string ip = null;
