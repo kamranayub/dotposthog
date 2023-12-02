@@ -4,28 +4,34 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>DotPostHog</AssemblyName>
+
+    <!-- Nuget Publishing -->
     <PackageId>DotPostHog</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
+    <Authors>Kamran Ayub</Authors>
+    <AssemblyTitle>DotPostHog</AssemblyTitle>
+    <Description>A community .NET Standard SDK for the PostHog public and private API. Supports basic analytics.</Description>
+    <Copyright>Copyright 2023 Kamran Ayub</Copyright>
     <RootNamespace>DotPostHog</RootNamespace>
-    <Version>1.0.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\DotPostHog.xml</DocumentationFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>http://github.com/kamranayub/dotposthog</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kamranayub/dotposthog.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <RepositoryBranch>main</RepositoryBranch>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageReleaseNotes>See https://github.com/kamranayub/dotposthog/releases</PackageReleaseNotes>
     <PackageTags>posthog dotnet feature-flags events analytics</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="2.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
-    <PackageReference Include="Polly" Version="8.1.0" />
+    <PackageReference Include="Polly" Version="8.2.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 

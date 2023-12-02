@@ -18,8 +18,8 @@ jobs:
       - name: Set VERSION variable from tag
         run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Pack
-        run: dotnet pack -c Release IGDB/IGDB.csproj /p:Version=${VERSION} --output .
+        run: dotnet pack -c Release src/DotPostHog/DotPostHog.csproj /p:Version=${VERSION} --output .
       - name: Push
-        run: dotnet nuget push IGDB.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
+        run: dotnet nuget push DotPostHog.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
         env:
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
