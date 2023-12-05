@@ -105,7 +105,11 @@ namespace DotPostHog
       _requestContext = requestContext;
       _captureApi = captureApi;
 
-      _superProperties = new Dictionary<string, object>();
+      _superProperties = new Dictionary<string, object>() {
+        { "$lib", "DotPostHog" },
+        { "$lib_version", GetAssemblyVersion() },
+        { "$ip", _requestContext.Ip }
+      };
       _superPropertiesOnce = new Dictionary<string, object>();
       _personSysSetProperties = new Dictionary<string, object>();
       _personSysSetPropertiesOnce = new Dictionary<string, object>();
@@ -228,6 +232,13 @@ namespace DotPostHog
       }
 
       return mergedProperties;
+    }
+
+    private string GetAssemblyVersion()
+    {
+      var assembly = typeof(PostHogAnalytics).Assembly;
+      var assemblyName = assembly.GetName();
+      return assemblyName.Version.ToString();
     }
   }
 }
