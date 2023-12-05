@@ -78,7 +78,10 @@ namespace DotPostHog
     {
       var config = new Client.Configuration()
       {
-        BasePath = host
+        BasePath = host,
+        DefaultHeaders = new Dictionary<string, string>() {
+          {"HTTP_X_FORWARDED_FOR", requestContext.Ip}
+        }
       };
 
       return new PostHogAnalytics(publicApiKey, new CaptureApi(config), requestContext);
