@@ -140,12 +140,32 @@ namespace DotPostHog
 
       props.Merge(userProps);
 
+      if (props.ContainsKey("distinct_id"))
+      {
+        props["distinct_id"] = distinctId;
+      }
+
       var body = new PostHogEvent()
       {
         VarEvent = "$identify",
         ApiKey = _publicApiKey,
         DistinctId = distinctId,
         Properties = props
+      };
+      return _captureApi.CaptureSend(ip, null, body);
+    }
+
+    public PostHogEventsCaptureResponse Alias(string distinctId, string aliasId)
+    {
+      var ip = _requestContext.Ip;
+      var body = new PostHogEvent()
+      {
+        VarEvent = "$create_alias",
+        ApiKey = _publicApiKey,
+        DistinctId = distinctId,
+        Properties = new PostHogEventProperties() {
+          { "alias", aliasId }
+        }
       };
       return _captureApi.CaptureSend(ip, null, body);
     }
