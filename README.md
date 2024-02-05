@@ -1,5 +1,7 @@
 # DotPostHog - a .NET Standard community SDK for the PostHog API
 
+[![.NET](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml/badge.svg)](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml) [![Nuget](https://img.shields.io/nuget/v/DotPostHog.svg)](https://www.nuget.org/packages/DotPostHog/)
+
 **This is an experimental beta SDK available in pre-release.**
 
 Currently, you can use the `IPostHogAnalytics` interface and set up a basic analytics client with `PostHogAnalytics.Create`:
