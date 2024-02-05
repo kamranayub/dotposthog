@@ -10,9 +10,12 @@ Currently, you can use the `IPostHogAnalytics` interface and set up a basic anal
 
 There are only a limited set of features supported:
 
-- Capture event
-- Identify user
-- Super properties (scoped to lifetime of client)
+- `Capture`
+- `Identify`
+- `Alias`
+- `SetPersonProperties`
+- `Register`
+- `RegisterOnce`
 
 There is no batching or flushing mechanism (yet) and the API is synchronous.
 
