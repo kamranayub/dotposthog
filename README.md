@@ -1,5 +1,7 @@
 # DotPostHog - a .NET Standard community SDK for the PostHog API
 
+[![.NET](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml/badge.svg)](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml) [![Nuget](https://img.shields.io/nuget/v/DotPostHog.svg)](https://www.nuget.org/packages/DotPostHog/)
+
 **This is an experimental beta SDK available in pre-release.**
 
 Currently, you can use the `IPostHogAnalytics` interface and set up a basic analytics client with `PostHogAnalytics.Create`:
@@ -10,9 +12,12 @@ Currently, you can use the `IPostHogAnalytics` interface and set up a basic anal
 
 There are only a limited set of features supported:
 
-- Capture event
-- Identify user
-- Super properties (scoped to lifetime of client)
+- `Capture`
+- `Identify`
+- `Alias`
+- `SetPersonProperties`
+- `Register`
+- `RegisterOnce`
 
 There is no batching or flushing mechanism (yet) and the API is synchronous.
 
