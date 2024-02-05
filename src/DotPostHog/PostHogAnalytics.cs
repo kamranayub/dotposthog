@@ -23,6 +23,14 @@ namespace DotPostHog
     PostHogEventsCaptureResponse Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null);
 
     /// <summary>
+    /// Aliases a user in PostHog. Alias ID should not match any existing distinct ID.
+    /// </summary>
+    /// <param name="distinctId">New distinct ID</param>
+    /// <param name="aliasId">Old distinct ID</param>
+    /// <returns></returns>
+    PostHogEventsCaptureResponse Alias(string distinctId, string aliasId);
+
+    /// <summary>
     /// Captures an event in PostHog
     /// </summary>
     /// <returns></returns>
