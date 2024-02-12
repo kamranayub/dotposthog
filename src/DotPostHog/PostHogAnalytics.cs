@@ -179,6 +179,7 @@ namespace DotPostHog
       var body = new PostHogEvent()
       {
         VarEvent = eventName,
+        Timestamp = DateTime.UtcNow,
         Properties = props
       };
       _batcher.Add(body);
@@ -199,6 +200,7 @@ namespace DotPostHog
       var body = new PostHogEvent()
       {
         VarEvent = "$identify",
+        Timestamp = DateTime.UtcNow,
         DistinctId = distinctId,
         Properties = props
       };
@@ -210,6 +212,7 @@ namespace DotPostHog
       var body = new PostHogEvent()
       {
         VarEvent = "$create_alias",
+        Timestamp = DateTime.UtcNow,
         DistinctId = distinctId,
         Properties = new PostHogEventProperties() {
           { "alias", aliasId }
