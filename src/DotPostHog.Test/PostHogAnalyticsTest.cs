@@ -29,7 +29,7 @@ namespace DotPostHog.Test
     {
       _instance.Capture("test");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -45,7 +45,7 @@ namespace DotPostHog.Test
       _instance.Capture("test4");
       _instance.Capture("test5");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -62,7 +62,7 @@ namespace DotPostHog.Test
       _instance.Capture("test5");
       _instance.Flush();
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -79,7 +79,7 @@ namespace DotPostHog.Test
       _instance.Capture("test5");
       ((PostHogAnalytics)_instance).Dispose();
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -94,7 +94,7 @@ namespace DotPostHog.Test
         {"prop1", "test"}
       });
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -110,7 +110,7 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -126,7 +126,7 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -150,7 +150,7 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -169,7 +169,7 @@ namespace DotPostHog.Test
         {"super", "good"}
       });
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -181,7 +181,7 @@ namespace DotPostHog.Test
     {
       _instance.Identify("user1");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -196,7 +196,7 @@ namespace DotPostHog.Test
         {"email", "test@user.com"}
       });
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -211,7 +211,7 @@ namespace DotPostHog.Test
         {"initial_url", "/landing-page"}
       });
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -230,7 +230,7 @@ namespace DotPostHog.Test
         {"initial_url", "/landing-page"}
       });
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -254,7 +254,7 @@ namespace DotPostHog.Test
 
       _instance.Identify("user1");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -271,7 +271,7 @@ namespace DotPostHog.Test
       });
       _instance.Identify("user1");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -287,7 +287,7 @@ namespace DotPostHog.Test
       });
       _instance.Identify("user1");
 
-      Task.Delay(100).Wait();
+      Task.Delay(10).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
