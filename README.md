@@ -7,7 +7,6 @@
 Currently, you can use the `IPostHogAnalytics` interface and set up a basic analytics client with `PostHogAnalytics.Create`:
 
 - `publicApiKey` -- Your PostHog [_project_ API key](https://app.posthog.com/settings/project)
-- `requestContext` -- An implementation of `IPostHogRequestContext` that provides access to some HTTP request properties like the user's IP
 - `host` -- _Optional_. An alternative host, like your reverse proxy or `https://eu.posthog.com` for EU cloud.
 
 There are only a limited set of features supported:
@@ -19,47 +18,27 @@ There are only a limited set of features supported:
 - `Register`
 - `RegisterOnce`
 
-### Batching and Flushing
-
-There is batching implemented through the PeriodicBatching package. A single batcher will run for all requests, and will
-automatically be flushed when the PostHogAnalytics instance is disposed of.
-
 ## Setup Example
 
-The Analytics client is designed to be created via dependency injection, through whatever framework you're using.
+The Analytics client is designed to be created via dependency injection **as a singleton**, through whatever framework you're using.
 
 Here's an example using Ninject for illustration:
 
 ```c#
-kernel.Bind<IPostHogRequestContext>().To<PostHogHttpRequestContext>().InRequestScope();
-kernel.Bind<IPostHogAnalytics>().ToMethod(ctx =>
-{
-    var requestCtx = ctx.Kernel.Get<IPostHogRequestContext>();
-    var analytics = PostHogAnalytics.Create("ph-xxx", requestCtx);
-
-    return analytics;
-}).InRequestScope();
+kernel.Bind<IPostHogAnalytics>()
+  .ToMethod(x => PostHogAnalytics.Create(postHogApiKey))
+  .InSingletonScope();
 ```
 
-And a basic implementation of a `HttpRequest` wrapper for `IPostHogRequestContext`:
+### Singleton Lifetime and Batching Semantics
 
-```c#
-internal class PostHogHttpRequestContext : IPostHogRequestContext
-{
-    private readonly HttpRequestBase _httpRequest;
+The `PostHogAnalytics` client is meant to be scoped as a singleton. There is batching implemented through the PeriodicBatching package. 
 
-    public PostHogHttpRequestContext(HttpContextBase httpContext)
-    {
-        _httpRequest = httpContext.Request;
-    }
+It will batch up to 500 events (max) and periodically flush them (every 5s default). Events will automatically be flushed when the PostHogAnalytics instance is disposed of but you can also manually call `Flush()` if you need to.
 
-    public string Ip => _httpRequest.UserHostAddress; // TODO: X-Forwarded-For?
-}
-```
+This means you should not set Super (or Person) Properties unless they apply across requests. 
 
-### Lifetime and Scope
-
-The `PostHogAnalytics` client is meant to be scoped to the request. Otherwise, the request context and Super Properties will be applied _across_ requests.
+It also means that GeoIP is disabled otherwise all events would inherit the GeoIP of the server, not the user request.
 
 ## Troubleshooting: TLS 1.2 support on Windows Server 2012 R2 and earlier
 
