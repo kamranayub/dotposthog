@@ -35,6 +35,20 @@ namespace DotPostHog.Test
     }
 
     [Fact]
+    public void ShouldBeAbleToCaptureABatchOfEvents()
+    {
+      _instance.Capture("test1");
+      _instance.Capture("test2");
+      _instance.Capture("test3");
+      _instance.Capture("test4");
+      _instance.Capture("test5");
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
+    }
+
+    [Fact]
     public void ShouldBeAbleToCaptureEventWithProperties()
     {
       _instance.Capture("test", new PostHogEventProperties()
