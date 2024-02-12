@@ -74,76 +74,21 @@ namespace DotPostHog
     void Unregister(string property);
   }
 
-  public class BatchingCaptureAdapter : IDisposable
+  /// <summary>
+  /// Configuration for PostHog event batching. Batches will flush when either the size limit is reached or the period has elapsed.
+  /// </summary>
+  public class PostHogEventBatchingConfiguration
   {
-    private static IPeriodicBatching<PostHogEvent> _batcher;
-    private readonly string _publicApiKey;
-    private readonly ICaptureApi _captureApi;
 
-    public BatchingCaptureAdapter(string publicApiKey, ICaptureApi captureApi)
-    {
-      _publicApiKey = publicApiKey;
-      _captureApi = captureApi;
+    /// <summary>
+    /// The limit of events to send in a single batch. Defaults to 500.
+    /// </summary>
+    public int BatchSizeLimit { get; set; } = 500;
 
-      var batchingConfig = new PeriodicBatchingConfiguration<PostHogEvent>
-      {
-        // PostHog limits batch content length to 20MB,
-        // and we don't exactly know how big that will be based on 
-        // number of events
-        BatchSizeLimit = 500,
-        BatchingFunc = PostEventBatch
-      };
-      _batcher = new PeriodicBatching<PostHogEvent>(batchingConfig);
-    }
-
-    private async Task PostEventBatch(List<PostHogEvent> events)
-    {
-      if (events.Count <= 0)
-      {
-        return;
-      }
-
-      var body = new PostHogEventsCaptureRequest(
-        new PostHogEventsCaptureRequestAnyOf(_publicApiKey, events.ToList()));
-
-      await _captureApi.CaptureSendBatchAsync(null, null, body);
-    }
-
-    public void Enqueue(PostHogEvent body)
-    {
-      _batcher.Add(body);
-    }
-
-    public void Flush()
-    {
-      _batcher.Flush();
-    }
-
-    bool _disposed;
-
-    public void Dispose()
-    {
-      Dispose(true);
-      GC.SuppressFinalize(this);
-    }
-
-    ~BatchingCaptureAdapter()
-    {
-      Dispose(false);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-      if (_disposed)
-        return;
-
-      if (disposing)
-      {
-        _batcher.Dispose();
-      }
-
-      _disposed = true;
-    }
+    /// <summary>
+    /// The time period interval to wait before flushing a batch. Defaults to 5000ms.
+    /// </summary>
+    public TimeSpan Period { get; set; } = TimeSpan.FromMilliseconds(5000);
   }
 
   public class PostHogAnalytics : IPostHogAnalytics, IDisposable
@@ -152,37 +97,67 @@ namespace DotPostHog
     private readonly Dictionary<string, object> _superPropertiesOnce;
     private readonly Dictionary<string, object> _personSysSetProperties;
     private readonly Dictionary<string, object> _personSysSetPropertiesOnce;
-    private readonly BatchingCaptureAdapter _batcher;
+    private readonly string _publicApiKey;
+    private readonly ICaptureApi _captureApi;
+    private readonly IPeriodicBatching<PostHogEvent> _batcher;
 
     /// <summary>
     /// Creates a new instance of PostHogAnalytics
     /// </summary>
     /// <param name="publicApiKey">Your PostHog public API key</param>
     /// <param name="host">The PostHog host to send events to. Defaults to https://app.posthog.com</param>
-    public static IPostHogAnalytics Create(string publicApiKey, string host = "https://app.posthog.com")
+    /// <param name="batchConfig">Optional event batching configuration</param>
+    public static IPostHogAnalytics Create(string publicApiKey, string host = "https://app.posthog.com", PostHogEventBatchingConfiguration batchConfig = null)
     {
       var config = new Client.Configuration()
       {
         BasePath = host
       };
 
-      return new PostHogAnalytics(publicApiKey, new CaptureApi(config));
+      return new PostHogAnalytics(publicApiKey, new CaptureApi(config), batchConfig ?? new PostHogEventBatchingConfiguration());
     }
 
     /// <summary>
     /// Bring your own implementation of ICaptureApi. Used mainly for testing.
     /// </summary>
-    /// <param name="publicApiKey"></param>
-    /// <param name="customCaptureApi"></param>
+    /// <param name="publicApiKey">Your PostHog public API key</param>
+    /// <param name="customCaptureApi">A custom implementation of ICaptureApi (e.g. for testing purposes)</param>
+    /// <param name="batchConfig">Optional event batching configuration</param>
     /// <returns></returns>
-    public static IPostHogAnalytics CreateCustom(string publicApiKey, ICaptureApi customCaptureApi)
+    public static IPostHogAnalytics CreateCustom(string publicApiKey, ICaptureApi customCaptureApi, PostHogEventBatchingConfiguration batchConfig = null)
     {
-      return new PostHogAnalytics(publicApiKey, customCaptureApi);
+      return new PostHogAnalytics(publicApiKey, customCaptureApi, batchConfig ?? new PostHogEventBatchingConfiguration());
     }
 
-    private PostHogAnalytics(string publicApiKey, ICaptureApi captureApi)
+    private PostHogAnalytics(string publicApiKey, ICaptureApi captureApi, PostHogEventBatchingConfiguration batchConfig)
     {
-      _batcher = new BatchingCaptureAdapter(publicApiKey, captureApi);
+      if (string.IsNullOrEmpty(publicApiKey))
+      {
+        throw new ArgumentException($"'{nameof(publicApiKey)}' cannot be null or empty.", nameof(publicApiKey));
+      }
+
+      if (captureApi is null)
+      {
+        throw new ArgumentNullException(nameof(captureApi));
+      }
+
+      if (batchConfig is null)
+      {
+        throw new ArgumentNullException(nameof(batchConfig));
+      }
+
+      var batchingConfig = new PeriodicBatchingConfiguration<PostHogEvent>
+      {
+        // PostHog limits batch content length to 20MB,
+        // and we don't exactly know how big that will be based on 
+        // number of events
+        BatchSizeLimit = batchConfig.BatchSizeLimit,
+        Period = batchConfig.Period,
+        BatchingFunc = PostEventBatch
+      };
+      _batcher = new PeriodicBatching<PostHogEvent>(batchingConfig);
+      _publicApiKey = publicApiKey;
+      _captureApi = captureApi;
 
       _superProperties = new Dictionary<string, object>() {
         { "$lib", "DotPostHog" },
@@ -206,7 +181,7 @@ namespace DotPostHog
         VarEvent = eventName,
         Properties = props
       };
-      _batcher.Enqueue(body);
+      _batcher.Add(body);
     }
 
     public void Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null)
@@ -227,7 +202,7 @@ namespace DotPostHog
         DistinctId = distinctId,
         Properties = props
       };
-      _batcher.Enqueue(body);
+      _batcher.Add(body);
     }
 
     public void Alias(string distinctId, string aliasId)
@@ -240,7 +215,20 @@ namespace DotPostHog
           { "alias", aliasId }
         }
       };
-      _batcher.Enqueue(body);
+      _batcher.Add(body);
+    }
+
+    private async Task PostEventBatch(List<PostHogEvent> events)
+    {
+      if (events.Count <= 0)
+      {
+        return;
+      }
+
+      var body = new PostHogEventsCaptureRequest(
+        new PostHogEventsCaptureRequestAnyOf(_publicApiKey, events.ToList()));
+
+      await _captureApi.CaptureSendBatchAsync(null, null, body);
     }
 
     public void Flush()

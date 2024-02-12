@@ -8,6 +8,7 @@ Currently, you can use the `IPostHogAnalytics` interface and set up a basic anal
 
 - `publicApiKey` -- Your PostHog [_project_ API key](https://app.posthog.com/settings/project)
 - `host` -- _Optional_. An alternative host, like your reverse proxy or `https://eu.posthog.com` for EU cloud.
+- `batchConfig` -- _Optional_. Configuration for event batching.
 
 There are only a limited set of features supported:
 
@@ -35,6 +36,22 @@ kernel.Bind<IPostHogAnalytics>()
 The `PostHogAnalytics` client is meant to be scoped as a singleton. There is batching implemented through the [PeriodicBatching package](https://github.com/ThiagoBarradas/periodic-batching). 
 
 It will batch up to 500 events (max) and periodically flush them (every 5s default). Events will automatically be flushed when the PostHogAnalytics instance is disposed of but you can also manually call `Flush()` if you need to.
+
+**Customizing Batch Configuration**
+
+Pass a `PostHogEventBatchingConfiguration` to the `Create` method, like so:
+
+```c#
+PostHogAnalytics.Create(postHogApiKey, 
+  batchConfig: new PostHogEventBatchingConfiguration() {
+    BatchSizeLimit = 1000,
+    Period = TimeSpan.FromSeconds(10)
+})
+```
+
+> PostHog limits batches to 20MB, so the default 500 should be well under this limit. If you run into errors with events not being sent, you may need to adjust the `BatchSizeLimit` for your needs.
+
+**Important Notes**
 
 This means you should not set Super (or Person) Properties unless they apply across requests. 
 
