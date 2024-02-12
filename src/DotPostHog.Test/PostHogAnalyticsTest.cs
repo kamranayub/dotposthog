@@ -48,6 +48,21 @@ namespace DotPostHog.Test
           x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
     }
 
+        [Fact]
+    public void ShouldBeAbleToFlushABatchOfEvents()
+    {
+      _instance.Capture("test1");
+      _instance.Capture("test2");
+      _instance.Capture("test3");
+      _instance.Capture("test4");
+      _instance.Capture("test5");
+      _instance.Flush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
+    }
+
     [Fact]
     public void ShouldBeAbleToCaptureEventWithProperties()
     {
