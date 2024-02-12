@@ -29,6 +29,8 @@ namespace DotPostHog.Test
     {
       _instance.Capture("test");
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 1), 0, default), Times.Once);
@@ -42,6 +44,8 @@ namespace DotPostHog.Test
       _instance.Capture("test3");
       _instance.Capture("test4");
       _instance.Capture("test5");
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -58,6 +62,8 @@ namespace DotPostHog.Test
       _instance.Capture("test5");
       _instance.Flush();
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
@@ -73,6 +79,8 @@ namespace DotPostHog.Test
       _instance.Capture("test5");
       ((PostHogAnalytics)_instance).Dispose();
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
@@ -85,6 +93,8 @@ namespace DotPostHog.Test
       {
         {"prop1", "test"}
       });
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -100,6 +110,8 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
           x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "test"), 0, default), Times.Once);
@@ -113,6 +125,8 @@ namespace DotPostHog.Test
         {"super_once", "test"}
       });
       _instance.Capture("test");
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
@@ -136,6 +150,8 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
           x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "good"), 0, default), Times.Once);
@@ -153,6 +169,8 @@ namespace DotPostHog.Test
         {"super", "good"}
       });
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x => (string)
           x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "good"), 0, default), Times.Once);
@@ -162,6 +180,8 @@ namespace DotPostHog.Test
     public void ShouldBeAbleToIdentifyUser()
     {
       _instance.Identify("user1");
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -176,6 +196,8 @@ namespace DotPostHog.Test
         {"email", "test@user.com"}
       });
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com"), 0, default), Times.Once);
@@ -188,6 +210,8 @@ namespace DotPostHog.Test
       {
         {"initial_url", "/landing-page"}
       });
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -205,6 +229,8 @@ namespace DotPostHog.Test
       {
         {"initial_url", "/landing-page"}
       });
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
@@ -228,6 +254,8 @@ namespace DotPostHog.Test
 
       _instance.Identify("user1");
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com" &&
@@ -243,6 +271,8 @@ namespace DotPostHog.Test
       });
       _instance.Identify("user1");
 
+      Task.Delay(100).Wait();
+
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
           (string)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "test"), 0, default), Times.Once);
@@ -256,6 +286,8 @@ namespace DotPostHog.Test
         {"super", "test"}
       });
       _instance.Identify("user1");
+
+      Task.Delay(100).Wait();
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
