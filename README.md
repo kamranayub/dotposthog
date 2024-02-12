@@ -19,7 +19,10 @@ There are only a limited set of features supported:
 - `Register`
 - `RegisterOnce`
 
-There is no batching or flushing mechanism (yet) and the API is synchronous.
+### Batching and Flushing
+
+There is batching implemented through the PeriodicBatching package. A single batcher will run for all requests, and will
+automatically be flushed when the PostHogAnalytics instance is disposed of.
 
 ## Setup Example
 
