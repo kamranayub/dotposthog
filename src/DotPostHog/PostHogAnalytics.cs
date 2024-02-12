@@ -1,7 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using DotPostHog.Api;
 using DotPostHog.Model;
+using PeriodicBatching;
+using PeriodicBatching.Interfaces;
+using PeriodicBatching.Models;
 
 namespace DotPostHog
 {
@@ -20,7 +27,7 @@ namespace DotPostHog
     /// Identifies a user in PostHog
     /// </summary>
     /// <returns></returns>
-    PostHogEventsCaptureResponse Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null);
+    void Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null);
 
     /// <summary>
     /// Aliases a user in PostHog. Alias ID should not match any existing distinct ID.
@@ -28,13 +35,19 @@ namespace DotPostHog
     /// <param name="distinctId">New distinct ID</param>
     /// <param name="aliasId">Old distinct ID</param>
     /// <returns></returns>
-    PostHogEventsCaptureResponse Alias(string distinctId, string aliasId);
+    void Alias(string distinctId, string aliasId);
 
     /// <summary>
     /// Captures an event in PostHog
     /// </summary>
     /// <returns></returns>
-    PostHogEventsCaptureResponse Capture(string eventName, PostHogEventProperties properties = null);
+    void Capture(string eventName, PostHogEventProperties properties = null);
+
+    /// <summary>
+    /// Immediately flushes the event queue to PostHog. This is automatically called when the instance is disposed.
+    /// </summary>
+    /// <returns></returns>
+    void Flush();
 
     /// <summary>
     /// Sets a user's properties as its own event
@@ -61,12 +74,24 @@ namespace DotPostHog
     void Unregister(string property);
   }
 
-  public interface IPostHogRequestContext
+  /// <summary>
+  /// Configuration for PostHog event batching. Batches will flush when either the size limit is reached or the period has elapsed.
+  /// </summary>
+  public class PostHogEventBatchingConfiguration
   {
-    string Ip { get; }
+
+    /// <summary>
+    /// The limit of events to send in a single batch. Defaults to 500.
+    /// </summary>
+    public int BatchSizeLimit { get; set; } = 500;
+
+    /// <summary>
+    /// The time period interval to wait before flushing a batch. Defaults to 5000ms.
+    /// </summary>
+    public TimeSpan Period { get; set; } = TimeSpan.FromMilliseconds(5000);
   }
 
-  public class PostHogAnalytics : IPostHogAnalytics
+  public class PostHogAnalytics : IPostHogAnalytics, IDisposable
   {
     private readonly Dictionary<string, object> _superProperties;
     private readonly Dictionary<string, object> _superPropertiesOnce;
@@ -74,58 +99,78 @@ namespace DotPostHog
     private readonly Dictionary<string, object> _personSysSetPropertiesOnce;
     private readonly string _publicApiKey;
     private readonly ICaptureApi _captureApi;
-    private readonly IPostHogRequestContext _requestContext;
+    private readonly IPeriodicBatching<PostHogEvent> _batcher;
 
     /// <summary>
     /// Creates a new instance of PostHogAnalytics
     /// </summary>
     /// <param name="publicApiKey">Your PostHog public API key</param>
-    /// <param name="requestContext">An implementation of IPostHogRequestContext that provides access to request properties</param> 
     /// <param name="host">The PostHog host to send events to. Defaults to https://app.posthog.com</param>
-    public static IPostHogAnalytics Create(string publicApiKey, IPostHogRequestContext requestContext, string host = "https://app.posthog.com")
+    /// <param name="batchConfig">Optional event batching configuration</param>
+    public static IPostHogAnalytics Create(string publicApiKey, string host = "https://app.posthog.com", PostHogEventBatchingConfiguration batchConfig = null)
     {
       var config = new Client.Configuration()
       {
-        BasePath = host,
-        DefaultHeaders = new Dictionary<string, string>() {
-          {"HTTP_X_FORWARDED_FOR", requestContext.Ip}
-        }
+        BasePath = host
       };
 
-      return new PostHogAnalytics(publicApiKey, new CaptureApi(config), requestContext);
+      return new PostHogAnalytics(publicApiKey, new CaptureApi(config), batchConfig ?? new PostHogEventBatchingConfiguration());
     }
 
     /// <summary>
     /// Bring your own implementation of ICaptureApi. Used mainly for testing.
     /// </summary>
-    /// <param name="publicApiKey"></param>
-    /// <param name="requestContext"></param>
-    /// <param name="customCaptureApi"></param>
+    /// <param name="publicApiKey">Your PostHog public API key</param>
+    /// <param name="customCaptureApi">A custom implementation of ICaptureApi (e.g. for testing purposes)</param>
+    /// <param name="batchConfig">Optional event batching configuration</param>
     /// <returns></returns>
-    public static IPostHogAnalytics CreateCustom(string publicApiKey, IPostHogRequestContext requestContext, ICaptureApi customCaptureApi)
+    public static IPostHogAnalytics CreateCustom(string publicApiKey, ICaptureApi customCaptureApi, PostHogEventBatchingConfiguration batchConfig = null)
     {
-      return new PostHogAnalytics(publicApiKey, customCaptureApi, requestContext);
+      return new PostHogAnalytics(publicApiKey, customCaptureApi, batchConfig ?? new PostHogEventBatchingConfiguration());
     }
 
-    private PostHogAnalytics(string publicApiKey, ICaptureApi captureApi, IPostHogRequestContext requestContext)
+    private PostHogAnalytics(string publicApiKey, ICaptureApi captureApi, PostHogEventBatchingConfiguration batchConfig)
     {
+      if (string.IsNullOrEmpty(publicApiKey))
+      {
+        throw new ArgumentException($"'{nameof(publicApiKey)}' cannot be null or empty.", nameof(publicApiKey));
+      }
+
+      if (captureApi is null)
+      {
+        throw new ArgumentNullException(nameof(captureApi));
+      }
+
+      if (batchConfig is null)
+      {
+        throw new ArgumentNullException(nameof(batchConfig));
+      }
+
+      var batchingConfig = new PeriodicBatchingConfiguration<PostHogEvent>
+      {
+        // PostHog limits batch content length to 20MB,
+        // and we don't exactly know how big that will be based on 
+        // number of events
+        BatchSizeLimit = batchConfig.BatchSizeLimit,
+        Period = batchConfig.Period,
+        BatchingFunc = PostEventBatch
+      };
+      _batcher = new PeriodicBatching<PostHogEvent>(batchingConfig);
       _publicApiKey = publicApiKey;
-      _requestContext = requestContext;
       _captureApi = captureApi;
 
       _superProperties = new Dictionary<string, object>() {
         { "$lib", "DotPostHog" },
         { "$lib_version", GetAssemblyVersion() },
-        { "$ip", _requestContext.Ip }
+        { "$geoip_disable", true } // Otherwise it will grab the server IP. This matches Node.js SDK behavior.
       };
       _superPropertiesOnce = new Dictionary<string, object>();
       _personSysSetProperties = new Dictionary<string, object>();
       _personSysSetPropertiesOnce = new Dictionary<string, object>();
     }
 
-    public PostHogEventsCaptureResponse Capture(string eventName, PostHogEventProperties properties = null)
+    public void Capture(string eventName, PostHogEventProperties properties = null)
     {
-      var ip = _requestContext.Ip;
       var props = MergeSuperProperties(properties);
       var userProps = MergeUserProperties(null, null);
 
@@ -134,15 +179,13 @@ namespace DotPostHog
       var body = new PostHogEvent()
       {
         VarEvent = eventName,
-        ApiKey = _publicApiKey,
         Properties = props
       };
-      return _captureApi.CaptureSend(ip, null, body);
+      _batcher.Add(body);
     }
 
-    public PostHogEventsCaptureResponse Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null)
+    public void Identify(string distinctId, IDictionary<string, object> sysSet = null, IDictionary<string, object> sysSetOnce = null)
     {
-      var ip = _requestContext.Ip;
       var props = MergeSuperProperties(null);
       var userProps = MergeUserProperties(sysSet, sysSetOnce);
 
@@ -156,26 +199,68 @@ namespace DotPostHog
       var body = new PostHogEvent()
       {
         VarEvent = "$identify",
-        ApiKey = _publicApiKey,
         DistinctId = distinctId,
         Properties = props
       };
-      return _captureApi.CaptureSend(ip, null, body);
+      _batcher.Add(body);
     }
 
-    public PostHogEventsCaptureResponse Alias(string distinctId, string aliasId)
+    public void Alias(string distinctId, string aliasId)
     {
-      var ip = _requestContext.Ip;
       var body = new PostHogEvent()
       {
         VarEvent = "$create_alias",
-        ApiKey = _publicApiKey,
         DistinctId = distinctId,
         Properties = new PostHogEventProperties() {
           { "alias", aliasId }
         }
       };
-      return _captureApi.CaptureSend(ip, null, body);
+      _batcher.Add(body);
+    }
+
+    private async Task PostEventBatch(List<PostHogEvent> events)
+    {
+      if (events.Count <= 0)
+      {
+        return;
+      }
+
+      var body = new PostHogEventsCaptureRequest(
+        new PostHogEventsCaptureRequestAnyOf(_publicApiKey, events.ToList()));
+
+      await _captureApi.CaptureSendBatchAsync(null, null, body);
+    }
+
+    public void Flush()
+    {
+      _batcher.Flush();
+    }
+
+    private bool _disposed = false;
+
+    public void Dispose()
+    {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+    }
+
+    ~PostHogAnalytics()
+    {
+      Dispose(false);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+      if (_disposed)
+        return;
+
+      if (disposing)
+      {
+        // This will close and flush the batcher
+        _batcher.Dispose();
+      }
+
+      _disposed = true;
     }
 
     public void Register(IDictionary<string, object> properties)

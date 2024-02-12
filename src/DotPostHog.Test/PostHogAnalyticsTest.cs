@@ -1,35 +1,89 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using DotPostHog.Api;
 using DotPostHog.Model;
 using Moq;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DotPostHog.Test
 {
   public class PostHogAnalyticsTest
   {
 
-    private IPostHogAnalytics _instance;
+    private readonly IPostHogAnalytics _instance;
     private Mock<ICaptureApi> _mockCaptureApi;
-    private IPostHogRequestContext _requestContext;
 
     public PostHogAnalyticsTest()
     {
       _mockCaptureApi = new Mock<ICaptureApi>();
-      _requestContext = new TestRequestContext()
-      {
-        Ip = "127.0.0.1"
-      };
-      _instance = PostHogAnalytics.CreateCustom("test", _requestContext, _mockCaptureApi.Object);
+      _instance = PostHogAnalytics.CreateCustom("test", _mockCaptureApi.Object);
     }
 
     [Fact]
     public void ShouldBeAbleToCaptureEvent()
     {
       _instance.Capture("test");
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => x.VarEvent == "test"), 0), Times.Once);
+
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 1), 0, default), Times.Once);
+    }
+
+    [Fact]
+    public void ShouldBeAbleToCaptureABatchOfEvents()
+    {
+      _instance.Capture("test1");
+      _instance.Capture("test2");
+      _instance.Capture("test3");
+      _instance.Capture("test4");
+      _instance.Capture("test5");
+
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
+    }
+
+    [Fact]
+    public void ShouldBeAbleToFlushABatchOfEvents()
+    {
+      _instance.Capture("test1");
+      _instance.Capture("test2");
+      _instance.Capture("test3");
+      _instance.Capture("test4");
+      _instance.Capture("test5");
+      _instance.Flush();
+
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
+    }
+
+    [Fact]
+    public void ShouldFlushBatchWhenDisposed()
+    {
+      _instance.Capture("test1");
+      _instance.Capture("test2");
+      _instance.Capture("test3");
+      _instance.Capture("test4");
+      _instance.Capture("test5");
+      ((PostHogAnalytics)_instance).Dispose();
+
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch.Count == 5), 0, default), Times.Once);
     }
 
     [Fact]
@@ -40,8 +94,11 @@ namespace DotPostHog.Test
         {"prop1", "test"}
       });
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["prop1"] == "test"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x => (string)
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["prop1"] == "test"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -53,8 +110,11 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super"] == "test"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x => (string)
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "test"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -66,8 +126,11 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super_once"] == "test"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x => (string)
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super_once"] == "test"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -87,8 +150,11 @@ namespace DotPostHog.Test
       });
       _instance.Capture("test");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super"] == "good"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x => (string)
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "good"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -103,8 +169,11 @@ namespace DotPostHog.Test
         {"super", "good"}
       });
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super"] == "good"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x => (string)
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "good"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -112,8 +181,11 @@ namespace DotPostHog.Test
     {
       _instance.Identify("user1");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => x.VarEvent == "$identify" && x.DistinctId == "user1"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].VarEvent == "$identify" && x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].DistinctId == "user1"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -124,8 +196,11 @@ namespace DotPostHog.Test
         {"email", "test@user.com"}
       });
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)((Dictionary<string, object>)x.Properties["$set"])["email"] == "test@user.com"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -136,8 +211,11 @@ namespace DotPostHog.Test
         {"initial_url", "/landing-page"}
       });
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)((Dictionary<string, object>)x.Properties["$set_once"])["initial_url"] == "/landing-page"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set_once"])["initial_url"] == "/landing-page"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -152,8 +230,12 @@ namespace DotPostHog.Test
         {"initial_url", "/landing-page"}
       });
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)((Dictionary<string, object>)x.Properties["$set"])["email"] == "test@user.com" && (string)((Dictionary<string, object>)x.Properties["$set_once"])["initial_url"] == "/landing-page"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com" &&
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set_once"])["initial_url"] == "/landing-page"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -172,8 +254,12 @@ namespace DotPostHog.Test
 
       _instance.Identify("user1");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)((Dictionary<string, object>)x.Properties["$set"])["email"] == "test@user.com" && (string)((Dictionary<string, object>)x.Properties["$set_once"])["initial_url"] == "/landing-page"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com" &&
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set_once"])["initial_url"] == "/landing-page"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -185,8 +271,11 @@ namespace DotPostHog.Test
       });
       _instance.Identify("user1");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super"] == "test"), 0), Times.Once);
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "test"), 0, default), Times.Once);
     }
 
     [Fact]
@@ -198,13 +287,19 @@ namespace DotPostHog.Test
       });
       _instance.Identify("user1");
 
-      _mockCaptureApi.Verify(x => x.CaptureSend(_requestContext.Ip, null,
-        It.Is<PostHogEvent>(x => (string)x.Properties["super"] == "test"), 0), Times.Once);
-    }
-  }
+      DangerouslyWaitForInitialFlush();
 
-  public class TestRequestContext : IPostHogRequestContext
-  {
-    public string Ip { get; set; }
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["super"] == "test"), 0, default), Times.Once);
+    }
+
+    /// <summary>
+    /// Due to the internal implementation of Periodic Batching, we need to wait for the initial flush to complete
+    /// but there's no easy way to do this without exposing internal state. This is a hack to wait for the initial flush.
+    /// </summary>
+    private void DangerouslyWaitForInitialFlush() {
+      Task.Delay(25).Wait();
+    }
   }
 }
