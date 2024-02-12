@@ -32,7 +32,7 @@ kernel.Bind<IPostHogAnalytics>()
 
 ### Singleton Lifetime and Batching Semantics
 
-The `PostHogAnalytics` client is meant to be scoped as a singleton. There is batching implemented through the PeriodicBatching package. 
+The `PostHogAnalytics` client is meant to be scoped as a singleton. There is batching implemented through the [PeriodicBatching package](https://github.com/ThiagoBarradas/periodic-batching). 
 
 It will batch up to 500 events (max) and periodically flush them (every 5s default). Events will automatically be flushed when the PostHogAnalytics instance is disposed of but you can also manually call `Flush()` if you need to.
 
