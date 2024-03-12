@@ -6,16 +6,16 @@ namespace DotPostHog
   {
     public static IDictionary<TKey, TValue> Merge<TKey, TValue>(this IDictionary<TKey, TValue> first, IDictionary<TKey, TValue> second) where TValue : class
     {
+      if (first == null) return null;
       if (second == null || second.Count == 0) return first;
 
       foreach (var item in second)
       {
-        if (typeof(IDictionary<TKey, TValue>).IsAssignableFrom(item.Value.GetType()))
+        if (item.Value != null && typeof(IDictionary<TKey, TValue>).IsAssignableFrom(item.Value.GetType()))
         {
-          if (first.ContainsKey(item.Key))
+          if (first.ContainsKey(item.Key) && first[item.Key] != null)
           {
             first[item.Key] = Merge(first[item.Key] as IDictionary<TKey, TValue>, item.Value as IDictionary<TKey, TValue>) as TValue;
-
           }
           else
           {
