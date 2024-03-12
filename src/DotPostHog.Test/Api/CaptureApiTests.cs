@@ -38,10 +38,7 @@ namespace DotPostHog.Test.Api
     {
       instance = new CaptureApi("https://app.posthog.com");
       apiKey = Environment.GetEnvironmentVariable("POSTHOG_API_KEY");
-      if (apiKey == null)
-      {
-        throw new Exception("POSTHOG_API_KEY environment variable must be set");
-      }
+
     }
 
     public void Dispose()
@@ -64,6 +61,11 @@ namespace DotPostHog.Test.Api
     [Fact(Skip = "For local integration testing")]
     public void CaptureIdentifyTest()
     {
+      if (apiKey == null)
+      {
+        throw new Exception("POSTHOG_API_KEY environment variable must be set");
+      }
+
       string ip = null;
       string compression = null;
       PostHogEvent body = new PostHogEvent()

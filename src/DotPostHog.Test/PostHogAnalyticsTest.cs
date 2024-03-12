@@ -177,6 +177,23 @@ namespace DotPostHog.Test
     }
 
     [Fact]
+    public void ShouldBeAbleToCaptureEventWithSetProps()
+    {
+      _instance.Capture("signup", new PostHogEventProperties()
+      {
+        SysSet = new Dictionary<string, object>() {
+          {"email", "test@user.com"}
+        }
+      });
+
+      DangerouslyWaitForInitialFlush();
+
+      _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
+        It.Is<PostHogEventsCaptureRequest>(x =>
+          (string)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties.SysSet["email"] == "test@user.com"), 0, default), Times.Once);
+    }
+
+    [Fact]
     public void ShouldBeAbleToIdentifyUser()
     {
       _instance.Identify("user1");
@@ -298,7 +315,8 @@ namespace DotPostHog.Test
     /// Due to the internal implementation of Periodic Batching, we need to wait for the initial flush to complete
     /// but there's no easy way to do this without exposing internal state. This is a hack to wait for the initial flush.
     /// </summary>
-    private void DangerouslyWaitForInitialFlush() {
+    private void DangerouslyWaitForInitialFlush()
+    {
       Task.Delay(25).Wait();
     }
   }

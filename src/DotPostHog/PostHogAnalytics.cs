@@ -296,7 +296,9 @@ namespace DotPostHog
 
     private PostHogEventProperties MergeSuperProperties(PostHogEventProperties properties)
     {
-      var mergedProperties = new PostHogEventProperties();
+      var mergedProperties = new PostHogEventProperties(
+        properties?.SysSet,
+        properties?.SysSetOnce);
 
       mergedProperties.Merge(_superProperties);
 
