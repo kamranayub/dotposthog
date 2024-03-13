@@ -190,7 +190,7 @@ namespace DotPostHog.Test
 
       _mockCaptureApi.Verify(x => x.CaptureSendBatchAsync(null, null,
         It.Is<PostHogEventsCaptureRequest>(x =>
-          (string)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties.SysSet["email"] == "test@user.com"), 0, default), Times.Once);
+          (string)((Dictionary<string, object>)x.GetPostHogEventsCaptureRequestAnyOf().Batch[0].Properties["$set"])["email"] == "test@user.com"), 0, default), Times.Once);
     }
 
     [Fact]

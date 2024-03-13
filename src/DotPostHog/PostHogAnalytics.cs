@@ -172,7 +172,7 @@ namespace DotPostHog
     public void Capture(string eventName, PostHogEventProperties properties = null)
     {
       var props = MergeSuperProperties(properties);
-      var userProps = MergeUserProperties(null, null);
+      var userProps = MergeUserProperties();
 
       props.Merge(userProps);
 
@@ -296,9 +296,7 @@ namespace DotPostHog
 
     private PostHogEventProperties MergeSuperProperties(PostHogEventProperties properties)
     {
-      var mergedProperties = new PostHogEventProperties(
-        properties?.SysSet,
-        properties?.SysSetOnce);
+      var mergedProperties = new PostHogEventProperties();
 
       mergedProperties.Merge(_superProperties);
 
@@ -307,6 +305,11 @@ namespace DotPostHog
 
       if (properties != null)
       {
+        // Normalize to $set and $set_once because they will always override SysSet and SysSetOnce when serializing
+        mergedProperties.Merge(new Dictionary<string, object>() {
+          { "$set", properties.SysSet },
+          { "$set_once", properties.SysSetOnce }
+        });
         mergedProperties.Merge(properties);
       }
 
