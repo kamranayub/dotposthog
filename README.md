@@ -2,7 +2,12 @@
 
 [![.NET](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml/badge.svg)](https://github.com/kamranayub/dotposthog/actions/workflows/build.yml) [![Nuget](https://img.shields.io/nuget/v/DotPostHog.svg)](https://www.nuget.org/packages/DotPostHog/)
 
-**This is an experimental beta SDK available in pre-release.**
+> [!WARNING]
+> This is an experimental community SDK available in pre-release. PostHog has an **official** SDK available now!
+>
+> https://posthog.com/docs/libraries/dotnet
+>
+> You should probably use that! It supports ASP.NET Core and feature flags. It has unofficial support for .NET Framework too.
 
 Currently, you can use the `IPostHogAnalytics` interface and set up a basic analytics client with `PostHogAnalytics.Create`:
 
